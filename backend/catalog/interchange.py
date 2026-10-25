@@ -87,12 +87,15 @@ def export_file(path,kind):
 
 def run_job(job):
     root=settings.EXPORT_ROOT; root.mkdir(parents=True,exist_ok=True)
-    final=root/f'{job.id}.{ "json" if job.kind=="import" else ("dump" if job.kind=="sql" else "jsonl" if job.kind in ["discover","research"] else job.kind)}'
+    final=root/f'{job.id}.{ "json" if job.kind=="import" else ("dump" if job.kind=="sql" else "jsonl" if job.kind in ["discover","research","prices"] else job.kind)}'
     temp=root/f'{job.id}.tmp'
     try:
         if job.kind in ['discover','research']:
             from .ingestion import discover_to_file,research_to_file
             (discover_to_file if job.kind=='discover' else research_to_file)(temp)
+        elif job.kind=='prices':
+            from .price_archive import price_archive_to_file
+            price_archive_to_file(temp)
         elif job.kind=='import':
             doc=json.loads((root/f'{job.id}.input').read_text())
             result=import_document(doc)

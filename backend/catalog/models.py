@@ -40,6 +40,12 @@ class Brand(Entity):
 NAVIGATION_GROUPS=[('floral','Flowers'),('citrus','Citrus'),('herbal','Leaves & herbs'),('spice','Spices & seeds'),('fruit','Fruit & kernels'),('roots','Roots'),('grain','Grains')]
 
 class Ingredient(Entity):
+    plant_part=models.CharField(max_length=120,blank=True,default='')
+    sensory_role=models.TextField(blank=True,default='')
+    preparation=models.TextField(blank=True,default='')
+    technical_notes=models.TextField(blank=True,default='')
+    profile_source=models.ForeignKey(Source,on_delete=models.PROTECT,null=True,blank=True,related_name='ingredient_profiles')
+
     navigation_group=models.CharField(max_length=16,choices=[('','Unclassified')]+NAVIGATION_GROUPS,blank=True,default='',db_index=True)
     slug=models.SlugField(unique=True)
     name=models.CharField(max_length=120)
@@ -195,7 +201,7 @@ class Collection(Entity):
     class Meta: constraints=[models.UniqueConstraint(fields=['user','product'],name='unique_collection_item')]
 
 class Job(Entity):
-    kind=models.CharField(max_length=20,choices=[(x,x.title()) for x in ['json','jsonl','sql','import','discover','research']])
+    kind=models.CharField(max_length=20,choices=[(x,x.title()) for x in ['json','jsonl','sql','import','discover','research','prices']])
     status=models.CharField(max_length=12,default='queued',db_index=True,choices=[(x,x.title()) for x in ['queued','running','done','failed']])
     created_by=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.SET_NULL,null=True)
     created_at=models.DateTimeField(auto_now_add=True)
@@ -265,7 +271,7 @@ class DiscoveryCandidate(Entity):
     category=models.CharField(max_length=40)
     source_url=models.URLField(max_length=1000)
     payload=models.JSONField()
-    status=models.CharField(max_length=20,choices=[('pending','Pending review'),('accepted','Accepted as draft'),('rejected','Rejected')],default='pending',db_index=True)
+    status=models.CharField(max_length=20,choices=[('pending','Pending review'),('accepted','Accepted'),('rejected','Rejected')],default='pending',db_index=True)
     image_path=models.CharField(max_length=250,blank=True)
     image_metadata=models.JSONField(default=dict)
     class Meta: constraints=[models.UniqueConstraint(fields=['provider','external_id'],name='unique_external_candidate')]

@@ -1,0 +1,1620 @@
+[
+  {
+    "product": "bombay-sapphire",
+    "source": {
+      "url": "https://www.bacardilimited.com/media/news-archive/bombay-sapphire-returns-historic-laverstoke-mill-to-its-former-glory-opens-state-of-the-art-gin-distillery-world-class-visitor-experience/",
+      "publisher": "Bacardi Limited",
+      "kind": "manufacturer"
+    },
+    "history": "Laverstoke Mill in Hampshire opened to visitors in October 2014 after its conversion into the Bombay Sapphire distillery. The restored mill and its botanical glasshouses connect industrial heritage with the gin’s ten-ingredient identity. The old mill is not evidence that this modern expression has existed unchanged for centuries.",
+    "process": "Ten botanicals flavour the gin through vapour infusion. The producer lists juniper, lemon peel, grains of paradise, coriander, cubeb, orris, almond, cassia, liquorice and angelica. Existing market bottlings retain their own strength citations.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown."
+  },
+  {
+    "product": "hendricks-original",
+    "source": {
+      "url": "https://thegincooperative.com/a-history-of-hendricks/",
+      "publisher": "The Gin Cooperative",
+      "kind": "secondary"
+    },
+    "history": "Hendrick’s grew from experiments by Lesley Gracie and David Stewart with two contrasting stills. The brand’s emergence around 2000 helped bring a cucumber-and-rose identity into contemporary gin culture. The dark apothecary bottle belongs to that deliberately unusual presentation rather than proving a medicinal function.",
+    "process": "A richer Bennett-still distillate and a lighter Carter-Head distillate are blended before cucumber and rose essences are added. These infusions differ from botanicals distilled in the still.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown."
+  },
+  {
+    "product": "roku-japanese-craft",
+    "source": {
+      "url": "https://house.suntory.com/roku-gin/roku-craft-gin",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Roku presents Japanese seasonality through six local botanicals, paired with eight traditional gin ingredients. The hexagonal bottle makes those six seasonal ingredients part of the object’s design. It belongs to Suntory’s wider programme of Japanese craft spirits; the six Japanese botanicals are a signature subset, not the entire recipe.",
+    "process": "Botanicals are distilled separately to suit their characteristics and then blended. Cherry blossom and leaf, two teas, yuzu and sansho are the seasonal signature.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 14,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown."
+  },
+  {
+    "product": "tanqueray-london-dry",
+    "source": {
+      "url": "https://theginisin.com/gin-reviews/tanqueray/",
+      "publisher": "the GIN is IN",
+      "kind": "secondary"
+    },
+    "history": "Charles Tanqueray began his gin business in Bloomsbury in 1830. The familiar green bottle now represents a London Dry tradition produced at Cameronbridge in Scotland. London Dry describes the production style; it does not mean every contemporary bottle was distilled in London. Different markets carry different strengths.",
+    "process": "A concise botanical selection centres on juniper, coriander, angelica and liquorice. Citrus-like tasting notes do not establish a citrus ingredient.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/tanqueray/",
+        "publisher": "the GIN is IN",
+        "summary": "The reviewer values its emphatic juniper and dependable G&T role, but finds it dominant in delicate cocktails.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "the-botanist-islay",
+    "source": {
+      "url": "https://www.theginguide.com/the-botanist-gin-review-and-tasting-notes.html",
+      "publisher": "The Gin Guide",
+      "kind": "secondary"
+    },
+    "history": "The Botanist is made at Bruichladdich on Islay, a distillery best known for whisky. Its local-foraging approach adds 22 island botanicals to nine traditional gin botanicals. The adapted Lomond still, Ugly Betty, gives this gin a production story rooted in the reuse of distilling equipment rather than a newly invented apparatus.",
+    "process": "Nine traditional botanicals accompany 22 foraged Islay ingredients. The slow distillation uses the adapted Lomond still. The 22-foraged declaration should not be mistaken for a 22-ingredient total.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 31,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/the-botanist/",
+        "publisher": "the GIN is IN",
+        "summary": "The reviewer finds the large botanical set coherent: juniper, citrus and cool herbs stay balanced rather than competing for attention.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "beefeater-london-dry-gin",
+    "source": {
+      "url": "https://www.beefeatergin.com/en-US/our-gins/london-dry-gin",
+      "publisher": "Beefeater",
+      "kind": "manufacturer"
+    },
+    "history": "Beefeater’s identity comes from James Burrough’s London distilling business and its nineteenth-century recipe. The name refers to the Tower of London’s Yeoman Warders. Its contemporary Kennington distillery keeps production in the city, while market strengths and labels have changed over time.",
+    "process": "Nine botanicals steep in spirit for 24 hours before redistillation. Angelica root and angelica seed are separate named inputs.",
+    "inputs": [
+      "Juniper",
+      "Lemon peel",
+      "Seville orange peel",
+      "Almond",
+      "Angelica root",
+      "Angelica seed",
+      "Coriander",
+      "Orris root",
+      "Liquorice root"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 9,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.wineenthusiast.com/buying-guide/beefeater-london-dry-gin/",
+        "publisher": "Wine Enthusiast — Kara Newman",
+        "summary": "The 2016 review praises a clean juniper-and-citrus profile with peppery warmth, particularly suited to diluted drinks. The reviewed sample was 47% ABV.",
+        "score": 92,
+        "score_max": 100,
+        "published_on": "2016-08-01"
+      }
+    ]
+  },
+  {
+    "product": "plymouth-original-gin",
+    "source": {
+      "url": "https://www.plymouthgin.com/en/product/plymouth-gin/",
+      "publisher": "Plymouth Gin",
+      "kind": "manufacturer"
+    },
+    "history": "Plymouth identifies its gin with the historic Black Friars distillery and a recipe dated by the producer to 1793. Its location in an English naval port is central to the brand’s cultural identity. Original Strength is distinct from Navy Strength and from sloe liqueur; these are not interchangeable reviews or bottlings.",
+    "process": "Grain spirit and water carry seven named botanicals, with citrus, roots and juniper forming the core.",
+    "inputs": [
+      "Juniper",
+      "Coriander",
+      "Orange peel",
+      "Lemon peel",
+      "Angelica root",
+      "Green cardamom",
+      "Orris root"
+    ],
+    "abv": 41.2,
+    "volume_ml": 700,
+    "declared_count": 7,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/plymouth/",
+        "publisher": "the GIN is IN",
+        "summary": "The reviewer especially praises its soft juniper-citrus balance and versatility across Martinis and other classic cocktails.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "ki-no-bi-kyoto-dry-gin",
+    "source": {
+      "url": "https://www.kinobigin.com/en/products/ki-no-bi/",
+      "publisher": "The Kyoto Distillery",
+      "kind": "manufacturer"
+    },
+    "history": "KI NO BI connects Kyoto distilling with local tea, citrus and design craft. The name refers to the beauty of the seasons. Its label was developed with Kira Karacho, associated with the long-established Karacho atelier. Its Japanese identity is expressed through sourcing and separate botanical distillation, not simply through a Japanese brand name.",
+    "process": "Eleven botanicals are distilled in six groups, then blended with Fushimi water and a rice-spirit base.",
+    "inputs": [
+      "Juniper",
+      "Orris root",
+      "Akamatsu",
+      "Yuzu peel",
+      "Lemon peel",
+      "Sansho pepper",
+      "Kinome",
+      "Ginger",
+      "Gyokuro tea",
+      "Bamboo leaf",
+      "Red shiso"
+    ],
+    "abv": 45.7,
+    "volume_ml": 700,
+    "declared_count": 11,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/ki-no-bi-gin/",
+        "publisher": "the GIN is IN",
+        "summary": "The reviewer likes its yuzu, tea and cooling herbal complexity, while finding its bitterness requires deliberate cocktail pairing.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "malfy-originale",
+    "source": {
+      "url": "https://www.malfygin.com/en/about-us/",
+      "publisher": "Malfy Gin",
+      "kind": "manufacturer"
+    },
+    "history": "Malfy’s coastal Italian imagery is inspiration rather than a claim that the distillery stands on the Amalfi Coast. The producer locates distillation at Torino Distillati in Moncalieri. Originale is the dry-style expression, distinct from the lemon, orange and pink-grapefruit versions. Regional bottlings must be checked separately.",
+    "process": "The producer describes lower-temperature vacuum distillation. Only product-specific disclosed ingredients are indexed; citrus named for other Malfy expressions is not automatically assigned to Originale.",
+    "inputs": [
+      "Juniper",
+      "Lemon peel"
+    ],
+    "abv": 41,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Juniper and Italian lemon are publicly described for Originale. Other named botanicals need expression-specific confirmation; no complete formula is asserted.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/malfy-originale-gin/",
+        "publisher": "the GIN is IN",
+        "summary": "The review is critical of heat and astringency neat, finding the gin more useful with assertive mixers than in a Martini.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "citadelle-original",
+    "source": {
+      "url": "https://news.maisonferrand.com/citadelle-gin-story-part-2/",
+      "publisher": "Maison Ferrand",
+      "kind": "manufacturer"
+    },
+    "history": "Citadelle’s modern project culminated in its official launch in 1996 after Alexandre Gabriel’s work to use Charentais stills outside the cognac-distilling season. Its historical references should not be confused with continuous production of the current expression since the eighteenth century. The house identifies nineteen botanicals as Original’s signature.",
+    "process": "The producer describes research into botanical extraction and the use of Charentais stills. Nineteen botanicals are declared; the named subset below comes from the producer’s account.",
+    "inputs": [
+      "Juniper",
+      "Lemon peel",
+      "Fennel",
+      "Nutmeg",
+      "Cinnamon"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 19,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown."
+  },
+  {
+    "product": "sipsmith-london-dry-gin",
+    "source": {
+      "url": "https://sipsmith.com/our-story/",
+      "publisher": "Sipsmith",
+      "kind": "manufacturer"
+    },
+    "history": "Sam Galsworthy, Fairfax Hall and Jared Brown developed Sipsmith around a small copper still named Prudence. The producer recounts a licensing campaign in 2008 and the first finished recipe in March 2009. That story connects Sipsmith with the revival of smaller London distilleries rather than an unbroken eighteenth-century business.",
+    "process": "Copper-pot distillation produces the classic London Dry expression. The ten named botanicals are separately supported by Difford’s production account.",
+    "inputs": [
+      "Juniper",
+      "Coriander",
+      "Angelica root",
+      "Liquorice root",
+      "Orris root",
+      "Almond",
+      "Cassia bark",
+      "Cinnamon",
+      "Seville orange peel",
+      "Lemon peel"
+    ],
+    "abv": 41.6,
+    "volume_ml": 750,
+    "declared_count": 10,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "input_source": {
+      "url": "https://www.diffordsguide.com/beer-wine-spirits/564/sipsmith-london-dry-gin",
+      "publisher": "Difford's Guide",
+      "kind": "secondary"
+    },
+    "critics": [
+      {
+        "url": "https://www.besttastingspirits.com/review-sipsmith-london-dry-gin/",
+        "publisher": "Best Tasting Spirits — Jeff Ellingson",
+        "summary": "The reviewer praises clearly separated citrus, juniper and spice flavours, supported by a soft wheat-spirit texture.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2020-04-08"
+      }
+    ]
+  },
+  {
+    "product": "gin-mare-mediterranean-gin",
+    "source": {
+      "url": "https://www.ginmare.com/product/",
+      "publisher": "Gin Mare",
+      "kind": "manufacturer"
+    },
+    "history": "Gin Mare locates its origins in a former chapel in a fishing village near Barcelona. Its Mediterranean identity is expressed through culinary ingredients including olive and herbs, connecting the gin with food culture as well as cocktails. The original expression is distinct from the later citrus-led Capri release.",
+    "process": "Individual botanical macerations and distillations are combined to form the gin.",
+    "inputs": [
+      "Arbequina olive",
+      "Rosemary",
+      "Basil",
+      "Thyme",
+      "Orange peel",
+      "Lemon peel",
+      "Coriander",
+      "Juniper",
+      "Green cardamom"
+    ],
+    "abv": 42.7,
+    "volume_ml": 700,
+    "declared_count": 9,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.theginguide.com/gin-mare.html",
+        "publisher": "The Gin Guide",
+        "summary": "The guide describes a savoury, herb-led gin, with rosemary and basil alongside juniper and a persistent olive-and-thyme finish.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "nord-s-atlantic-galician-gin",
+    "source": {
+      "url": "https://pub-mediabox-storage.rxweb-prd.com/exhibitor/document/exh-fc3b0aa2-ddd1-495e-9025-7f432a45631f/d33431fb-6c02-4017-9d0c-0d84064421e2.pdf",
+      "publisher": "Nordés — producer trade sheet",
+      "kind": "manufacturer"
+    },
+    "history": "Nordés builds its identity around Galicia and Albariño grapes rather than the usual grain-only gin base. Six locally associated herbs sit within an eleven-botanical selection. The white bottle’s Atlantic imagery accompanies a regional ingredient story; it does not establish seawater as an ingredient.",
+    "process": "Selected neutral alcohols and Albariño grapes provide the base, with maceration of eleven named botanicals.",
+    "inputs": [
+      "Albariño grape",
+      "Sage",
+      "Lemon verbena",
+      "Bay leaf",
+      "Peppermint",
+      "Eucalyptus",
+      "Glasswort",
+      "Juniper",
+      "Green cardamom",
+      "Ginger",
+      "Hibiscus",
+      "Black tea"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": 11,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theginisin.com/gin-reviews/nordes-atlantic-galician-gin/",
+        "publisher": "the GIN is IN",
+        "summary": "The reviewer finds striking fruit-and-flower complexity but is sometimes overwhelmed by its perfume-like character; juniper is comparatively quiet.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "isle-of-harris-gin",
+    "source": {
+      "url": "https://www.harrisdistillery.com/pages/isle-of-harris-gin",
+      "publisher": "Isle of Harris Distillery",
+      "kind": "manufacturer"
+    },
+    "history": "Harris Gin emerged from an island distillery built with a community and employment ambition. Sugar kelp gathered from local sea-lochs gives its provenance a concrete ingredient connection. The copper gin still, the Dotach, stands alongside whisky-making equipment; the gin’s cultural story belongs to both place and island livelihoods.",
+    "process": "Sugar kelp accompanies eight other named botanicals in the copper-still gin.",
+    "inputs": [
+      "Sugar kelp",
+      "Juniper",
+      "Coriander",
+      "Cubeb",
+      "Cassia bark",
+      "Angelica root",
+      "Bitter orange peel",
+      "Orris root",
+      "Liquorice root"
+    ],
+    "abv": 45,
+    "volume_ml": 700,
+    "declared_count": 9,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.whiskyshop.com/blog/review-isle-of-harris-gin",
+        "publisher": "The Whisky Shop — staff tasting",
+        "summary": "The retailer’s tasting team emphasises citrus freshness, an earthy maritime character and a light herbal finish. This is a commercial retailer’s perspective.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2023-08-25"
+      }
+    ]
+  },
+  {
+    "product": "isle-of-raasay-hebridean-gin",
+    "source": {
+      "url": "https://raasaydistillery.com/product/hebridean-gin/",
+      "publisher": "Isle of Raasay Distillery",
+      "kind": "manufacturer"
+    },
+    "history": "Raasay presents its gin as a legal island-made spirit in a place with a history of illicit distilling. Its textured bottle draws on the island’s rocks, fossils and juniper. The recipe also includes the distillery’s own spirit, linking the gin with the site’s wider distilling practice.",
+    "process": "Nine named botanical ingredients accompany Raasay spirit, described by the producer as ten components. Current wording says double-distilled spirit; older accounts describe triple distillation.",
+    "inputs": [
+      "Juniper",
+      "Rhubarb root",
+      "Lemon peel",
+      "Sweet orange peel",
+      "Coriander",
+      "Angelica root",
+      "Liquorice root",
+      "Orris root",
+      "Cubeb"
+    ],
+    "abv": 46,
+    "volume_ml": 700,
+    "declared_count": 10,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.thescottishginsociety.com/2019/09/18/raasay-gin/",
+        "publisher": "The Scottish Gin Society",
+        "summary": "The reviewer praises its texture and balance, following juniper and citrus into rhubarb and a dry, zesty finish.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2019-09-18"
+      }
+    ]
+  },
+  {
+    "product": "kyr-gin",
+    "source": {
+      "url": "https://kyrodistillery.co.uk/products/kyro-gin",
+      "publisher": "Kyrö Distillery",
+      "kind": "manufacturer"
+    },
+    "history": "Kyrö’s gin takes the Napue name from the village where the distillery is based. The producer connects Finnish rye with freshly distilled local plants and cites the gin’s 2015 G&T award as an early milestone. Its rye and wild-botanical identity distinguishes it from a neutral-base imitation of a London Dry formula.",
+    "process": "Rye spirit is combined with cold maceration, vapour distillation and separate distillation of fresh botanicals.",
+    "inputs": [
+      "Rye",
+      "Birch leaf",
+      "Sea buckthorn",
+      "Cranberry",
+      "Meadowsweet"
+    ],
+    "abv": 42.6,
+    "volume_ml": 500,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://ginspiration.de/Gins-and-cocktails/kyroe-napue-rye-gin/",
+        "publisher": "Ginspiration",
+        "summary": "The tasting highlights recognizable rye character behind pine-like juniper, citrus and sea buckthorn, finishing with pepper and grain warmth.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "st-george-terroir-gin",
+    "source": {
+      "url": "https://stgeorgespirits.com/spirits/terroir-gin",
+      "publisher": "St. George Spirits",
+      "kind": "manufacturer"
+    },
+    "history": "Terroir belongs to St. George’s exploration of Californian landscapes through distilling. First released in 2011, it uses forest-associated plants rather than simply decorating a classic recipe with a geographical name. Douglas fir is gathered seasonally in Mendocino, while the distillery is in Alameda.",
+    "process": "Fir and sage are distilled separately; bay laurel and juniper are vapour-infused. Coriander is wok-roasted before pot distillation with the remaining botanicals.",
+    "inputs": [
+      "Douglas fir",
+      "California bay laurel",
+      "Coriander",
+      "Angelica root",
+      "Orris root",
+      "Lemon peel",
+      "Seville orange peel",
+      "Sage",
+      "Cinnamon",
+      "Green cardamom",
+      "Fennel",
+      "Juniper"
+    ],
+    "abv": 45,
+    "volume_ml": 750,
+    "declared_count": 12,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://distiller.com/spirits/st-george-terroir-gin",
+        "publisher": "Distiller — Stephanie Moreno",
+        "summary": "Moreno finds fir and sage more prominent than juniper, with pepper in a substantial texture; she suggests a Gibson or Bramble.",
+        "score": 90,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "ferdinand-s-saar-dry-gin",
+    "source": {
+      "url": "https://www.ferdinandsgin.com/",
+      "publisher": "Ferdinand's",
+      "kind": "manufacturer"
+    },
+    "history": "Ferdinand’s began in 2013 as a collaboration between a distiller, wine grower and spirits entrepreneurs in the Saar region. The name honours Ferdinand Geltz. The Riesling contribution comes from the Zilliken estate’s Saarburger Rausch, connecting wine-growing and fruit-distilling traditions near Luxembourg rather than claiming a wholly secret exotic origin.",
+    "process": "More than thirty botanicals accompany a Riesling infusion. The producer names regional peach, quince, Rubinette apple and lavender; the remainder is not reconstructed.",
+    "inputs": [
+      "Riesling wine",
+      "Peach",
+      "Quince",
+      "Apple",
+      "Lavender"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 30,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/4417/ferdinands-saar-gin",
+        "publisher": "Difford's Guide",
+        "summary": "The sampled gin combines intense floral and citrus impressions with vanilla-like sweetness, pepper and pine; juniper shares attention with other flavours.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "christian-drouin-le-gin",
+    "source": {
+      "url": "https://www.calvados-drouin.com/en/product/50/le-gin",
+      "publisher": "Christian Drouin",
+      "kind": "manufacturer"
+    },
+    "history": "Guillaume Drouin developed Le Gin by pairing juniper with the cider-apple world of Calvados. More than thirty apple varieties accompany eight botanicals. The separate distillations and final assembly borrow from an eau-de-vie blender’s practice, making Normandy’s apple tradition central to this gin’s identity.",
+    "process": "Each botanical is distilled separately and blended in proportions adjusted for the batch.",
+    "inputs": [
+      "Apple",
+      "Juniper",
+      "Rose",
+      "Lemon peel",
+      "Ginger",
+      "Vanilla",
+      "Cinnamon",
+      "Almond",
+      "Green cardamom"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 8,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://degustations-vinsplaisirs.com/wp-content/uploads/2024/12/Gin-Chirstian-Drouin.pdf",
+        "publisher": "La Maison du Whisky — distributor tasting sheet",
+        "summary": "The distributor’s tasting describes a rounded floral-and-fruit profile with citrus acidity, cocoa-like texture and a long ginger-spiced finish. Commercial perspective.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "dingle-original-gin",
+    "source": {
+      "url": "https://dingledistillery.ie/our-spirits/gin/dingle-gin/",
+      "publisher": "Dingle Distillery",
+      "kind": "manufacturer"
+    },
+    "history": "Dingle Gin connects its London Dry style with the Kerry landscape through locally associated berries and heather. The distillery highlights its 2019 World’s Best Gin recognition. The botanical selection and copper-still method are the relevant production story; award language is a producer-reported distinction, not a guarantee of personal preference.",
+    "process": "Botanicals macerate for 24 hours before distillation. Rowan, hawthorn, heather and citrus are named in the current producer account.",
+    "inputs": [
+      "Juniper",
+      "Rowan berry",
+      "Hawthorn berry",
+      "Orange peel",
+      "Lemon peel",
+      "Heather"
+    ],
+    "abv": 42.5,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/4343/dingle-gin",
+        "publisher": "Difford's Guide",
+        "summary": "The 2014 sample is described as peppery and juniper-led, with fresh green and floral impressions and persistent coriander spice.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "suntory-toki-blended-japanese-whisky",
+    "source": {
+      "url": "https://house.suntory.com/toki-whisky/suntory-whisky-toki",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Toki pairs Suntory’s blending tradition with a modern international highball identity. Its spare rectangular bottle and off-centre calligraphy distinguish it from the house’s older age-statement malts. This is a blended Japanese whisky, not a single-distillery malt; the house identifies it as meeting Japanese-whisky labelling standards.",
+    "process": "A blend of malt and grain whiskies from Suntory’s distilleries. Malt and grain distillates are components, not a full percentage mash bill. Fruit and herb tasting descriptors are not added ingredients.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://torontowhiskysociety.ca/2016/11/21/review-suntory-toki/",
+        "publisher": "Toronto Whisky Society",
+        "summary": "The reviewer enjoys layered white-fruit and floral character, but finds the finish short and less powerful than the palate.",
+        "score": 87,
+        "score_max": 100,
+        "published_on": "2016-11-21"
+      }
+    ]
+  },
+  {
+    "product": "suntory-hibiki-japanese-harmony",
+    "source": {
+      "url": "https://house.suntory.com/hibiki-whisky/hibiki-japanese-harmony",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Japanese Harmony belongs to Suntory’s Hibiki blending house rather than a separate Hibiki distillery. Its role is to express an assembly of malt and grain whiskies without an age statement. The producer foregrounds floral aromas and Mizunara-associated finish notes; these are tasting language, not a list of added flowers or spices.",
+    "process": "Malt and grain whiskies are blended. The exact component proportions and ages are not publicly specified on the current product page.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/5154/hibiki-japanese-harmony",
+        "publisher": "Difford's Guide",
+        "summary": "The 2015 tasting finds generous fruit, spice and floral complexity, but considers the oak too prominent for complete harmony.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "suntory-yamazaki-12-years-old",
+    "source": {
+      "url": "https://house.suntory.com/yamazaki-whisky/yamazaki-12-years-old",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Yamazaki 12 is part of the single-malt range from Suntory’s Yamazaki distillery, established in 1923. Its identity comes from one malt distillery rather than the multi-distillery assembly behind Hibiki or Toki. The producer connects the range with American, Spanish and Japanese Mizunara oak maturation.",
+    "process": "Malt whisky aged for twelve years. Oak-cask choices contribute to maturation; coconut, peach and spice sensory notes do not establish added fruit or botanicals.",
+    "inputs": [
+      "Malted barley"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.liquor.com/yamazaki-12-single-malt-whisky-review-8386462",
+        "publisher": "Liquor.com — tasting panel",
+        "summary": "The panel praises balance and a sustained finish, while questioning affordability and availability.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "suntory-hakushu-12-years-old",
+    "source": {
+      "url": "https://house.suntory.com/hakushu-whisky/hakushu-12-years-old",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Hakushu’s identity is tied to Suntory’s mountain-forest distillery near Mount Kaikomagatake. The twelve-year expression offers a different house reference from Yamazaki, with an emphasis on freshness and gentle smoke. Its forest association describes place and style, not a recipe containing pine needles or mint.",
+    "process": "Twelve-year single malt whisky. The product’s herbal and smoky sensory vocabulary is recorded separately from production inputs.",
+    "inputs": [
+      "Malted barley"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.thedramble.com/tastings/hakushu/hakushu-12-year-old/",
+        "publisher": "The Dramble — Matt",
+        "summary": "The reviewer appreciates deeper fruit, a leafy forest character and light smoke, but finds the finish short and the historical asking price difficult to justify.",
+        "score": 84,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "suntory-chita-single-grain-whisky",
+    "source": {
+      "url": "https://house.suntory.com/chita-whisky/chita-single-grain-whisky",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Chita offers the grain-whisky side of Suntory as a named bottling, rather than only as a component of blends. It comes from the Chita Peninsula distillery. Single grain refers to production at one distillery and does not, on its own, establish that only one cereal was used.",
+    "process": "Grain whisky made at Chita; exact mash proportions remain undisclosed. A grain-whisky component is indexed without inventing a corn percentage.",
+    "inputs": [
+      "Grain whisky"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.thedramble.com/tastings/chita/chita-single-grain/",
+        "publisher": "The Dramble — Matt",
+        "summary": "The reviewer finds fruit, cereal and vanilla appealing but not challenging, and prefers the whisky lengthened as a highball or mizuwari.",
+        "score": 80,
+        "score_max": 100,
+        "published_on": "2017-08-08"
+      }
+    ]
+  },
+  {
+    "product": "suntory-ao-blended-world-whisky",
+    "source": {
+      "url": "https://house.suntory.com/ao-whisky/ao-world-whisky",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Ao is explicitly a world blend, bringing together whisky traditions from five countries. Its ocean-linked identity differs from the Japanese-whisky provenance claimed for Toki or Hibiki. The Suntory brand name therefore does not make every component Japanese.",
+    "process": "Whiskies from Japan, Scotland, Ireland, Canada and the United States are blended. Component percentages and a complete cereal mash bill are undisclosed.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 43,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.drinkhacker.com/2021/02/03/review-suntory-ao-world-whisky/",
+        "publisher": "Drinkhacker — Christopher Null",
+        "summary": "Null praises the integration of grain, citrus, honey and earthy wood notes; individual national components are difficult to distinguish.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2021-02-03"
+      }
+    ]
+  },
+  {
+    "product": "suntory-kakubin-blended-whisky",
+    "source": {
+      "url": "https://house.suntory.com/kakubin-whisky/kakubin",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Kakubin launched in 1937 and remains central to Suntory’s domestic whisky identity. The recognisable square bottle and highball culture distinguish it from the later export-oriented Toki. The producer names Yamazaki, Hakushu and Chita as sources of component whiskies.",
+    "process": "Malt and grain whiskies from three Suntory distilleries are blended. No age statement or exact component proportions are established here.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.worldwhiskiesawards.com/winner-whisky/category-winner-62749-world-whiskies-awards-2026",
+        "publisher": "World Whiskies Awards — 2026 panel",
+        "summary": "The competition panel describes mild grain-and-fruit balance, a pleasant mouthfeel and light orange-and-cocoa sweetness. These are tasting impressions, not ingredients.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "suntory-haku-vodka",
+    "source": {
+      "url": "https://house.suntory.com/haku-vodka/haku-craft-vodka",
+      "publisher": "The House of Suntory",
+      "kind": "manufacturer"
+    },
+    "history": "Haku puts Japanese rice at the centre of Suntory’s vodka identity. Its name and design refer to rice and clarity, placing it beside the house’s gins and whiskies while giving it a different raw material and production path. It is an unaged vodka, not a rice wine or botanical infusion.",
+    "process": "Japanese white-rice spirit is distilled and filtered through bamboo charcoal. Charcoal is a processing material, not a declared drinking ingredient.",
+    "inputs": [
+      "White rice"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.tastings.com/Spirits-Review/Haku-Vodka-Japan-03-01-2023.aspx?Id=WS",
+        "publisher": "Tastings — Beverage Testing Institute",
+        "summary": "The archived 2023 tasting rated the 40% vodka highly. The publisher explicitly says that rating does not certify current-market samples.",
+        "score": 88,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "monkey-47-schwarzwald",
+    "source": {
+      "url": "https://monkey47.com/nutritional-information",
+      "publisher": "Black Forest Distillers",
+      "kind": "manufacturer"
+    },
+    "history": "Monkey 47 connects the Black Forest’s fruit-distilling landscape with a forty-seven-botanical gin identity. The producer’s current nutritional disclosure identifies molasses-derived alcohol rather than leaving the base to inference. Its numbered name describes a botanical declaration and bottling strength, not proof of unusual neurological activity.",
+    "process": "Molasses-derived neutral alcohol, water and botanicals form the disclosed inputs. Existing individual botanical assertions retain their own source references.",
+    "inputs": [
+      "Molasses",
+      "Water"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": 47,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown."
+  },
+  {
+    "product": "bacardi-carta-blanca",
+    "source": {
+      "url": "https://www.bacardi.com/us/en/our-rums/superior-rum/",
+      "publisher": "Bacardí",
+      "kind": "manufacturer"
+    },
+    "history": "Bacardí dates Superior to Don Facundo Bacardí Massó’s work in 1862. The white rum’s history is strongly connected with cocktails such as the Daiquiri and Mojito. Its clear appearance does not mean that no oak maturation took place: the producer describes ageing followed by charcoal filtration.",
+    "process": "The spirit is matured in American white oak and charcoal filtered. Almond and lime tasting notes are not ingredient declarations.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.wineenthusiast.com/buying-guide/bacardi-superior/",
+        "publisher": "Wine Enthusiast — Kara Newman",
+        "summary": "The 2016 tasting finds a neutral, cocktail-friendly white rum with faint citrus, a dry profile and a peppery finish.",
+        "score": 89,
+        "score_max": 100,
+        "published_on": "2016-06-01"
+      }
+    ]
+  },
+  {
+    "product": "havana-club-7",
+    "source": {
+      "url": "https://havana-club.com/en-gb/product/havana-club-7/",
+      "publisher": "Havana Club",
+      "kind": "manufacturer"
+    },
+    "history": "Havana Club 7 is presented by its Cuban producer as an expression of the work of the Maestros del Ron Cubano. The producer associates its creation with José Navarro. Its seven-year identity and continuous ageing approach distinguish it from the brand’s younger mixing rums and from similarly named non-Cuban products.",
+    "process": "Cuban rum matured in ex-bourbon barrels through a process of ageing and blending. Oak, tobacco, cocoa and tropical fruit are sensory descriptors, not automatically added ingredients.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://theruminator.co/reviews/cuba-havana-club-7/",
+        "publisher": "The Ruminator",
+        "summary": "The reviewer finds vanilla, molasses and strong oak, but the updated verdict questions body and depth against richer aged rums. The opinion evolved with later tastings.",
+        "score": 6,
+        "score_max": 10,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "jack-daniels-old-no7",
+    "source": {
+      "url": "https://maltmileage.wordpress.com/2017/09/18/qa-with-jeff-arnett-master-distiller-at-jack-daniels-tennessee-united-states/",
+      "publisher": "Malt Mileage — interview with Jeff Arnett",
+      "kind": "secondary"
+    },
+    "history": "Old No. 7’s Tennessee identity is grounded in the Lynchburg distillery’s grain recipe, Cave Spring water, yeast and charcoal mellowing. In a published interview, master distiller Jeff Arnett explains those as complementary production choices rather than a single secret ingredient. Barrels are selected for flavour maturity rather than a universal age statement.",
+    "process": "The disclosed grain bill is 80% corn, 12% malted barley and 8% rye. New spirit passes through sugar-maple charcoal before maturation in new toasted and charred oak. Charcoal and oak are process materials.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://whiskycritic.com/whiskycritic-review-jack-daniels-old-no-7",
+        "publisher": "WhiskyCritic — Alex Bean",
+        "summary": "The reviewer separates popularity from quality and finds a usable but unremarkable whiskey, with a medicinal edge and lingering bite.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2014-02-13"
+      }
+    ]
+  },
+  {
+    "product": "jameson-original",
+    "source": {
+      "url": "https://www.jamesonwhiskey.com/en-us/faq/",
+      "publisher": "Jameson",
+      "kind": "manufacturer"
+    },
+    "history": "Jameson traces its origins to Bow Street in Dublin in 1780, while contemporary production takes place in Midleton, County Cork. The original blend brings pot-still and grain whiskey together. That distinction explains why the bottle is neither a single malt nor a single-pot-still expression, despite containing pot-still whiskey.",
+    "process": "Yeast ferments malted barley, unmalted barley and maize. Pot and column distillates are triple-distilled, blended and matured in oak.",
+    "inputs": [
+      "Malted barley",
+      "Unmalted barley",
+      "Corn",
+      "Yeast",
+      "Water"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.whiskymag.com/tastings/12-jameson/",
+        "publisher": "Whisky Magazine — Dave tasting",
+        "summary": "The displayed tasting finds a light, grassy palate and some young-spirit harshness; it is a critical perspective rather than a producer endorsement.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "disaronno-originale",
+    "source": {
+      "url": "https://disaronno.com/en/our-story/",
+      "publisher": "Disaronno",
+      "kind": "manufacturer"
+    },
+    "history": "Disaronno distinguishes its Renaissance origin legend from the commercial history of the Reina family’s Saronno shop in the early twentieth century. ILLVA Saronno was founded in 1947. Its Murano-associated bottle design later became part of its recognisable identity. The innkeeper-and-painter narrative is preserved as a brand legend.",
+    "process": "A proprietary Italian liqueur. Existing supplier-reported apricot-kernel input remains reported rather than a manufacturer-certified complete recipe. Almond-like aroma is not an allergen declaration.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.liquor.com/disaronno-originale-amaretto-liqueur-review-5219211",
+        "publisher": "Liquor.com — Amy Zavatto",
+        "summary": "The review values its bold cocktail character, while noting that concentrated marzipan aromas can divide drinkers.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "absolut-original",
+    "source": {
+      "url": "https://www.absolut.com/en-us/products/absolut-vodka/",
+      "publisher": "Absolut",
+      "kind": "manufacturer"
+    },
+    "history": "The modern Absolut bottle arrived internationally in 1979 with an apothecary-inspired shape. Its geographical production story remains Swedish: the producer locates distillation and bottling around Åhus. Local winter wheat and well water provide a concrete agricultural connection behind the global advertising identity.",
+    "process": "Swedish winter wheat and local well water are the principal disclosed inputs. Distillation and bottling take place around Åhus.",
+    "inputs": [
+      "Winter wheat",
+      "Water"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/630/absolut-vodka",
+        "publisher": "Difford's Guide",
+        "summary": "The 2020 sample is described as clean and restrained, with bready grain impressions and a noticeable peppery finish.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "campari-bitter",
+    "source": {
+      "url": "https://www.campari.com/en-us/our-history/",
+      "publisher": "Campari",
+      "kind": "manufacturer"
+    },
+    "history": "Gaspare Campari created the red bitter in 1860. The business became closely linked with Milan’s Galleria Vittorio Emanuele II, followed by the Sesto San Giovanni plant in 1904. Art, advertising and aperitivo culture are central to its history; this cultural visibility does not reveal the guarded botanical formula.",
+    "process": "A proprietary bitter liqueur made through botanical extraction and blending. No individual secret botanical is inferred from orange, gentian or quinine-like tasting language.",
+    "inputs": [],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.liquor.com/campari-review-7229850",
+        "publisher": "Liquor.com — tasting panel",
+        "summary": "The panel values its cocktail bitterness and complexity, but considers dilution important and recognises that the style can polarise drinkers.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "cointreau-original",
+    "source": {
+      "url": "https://www.cointreau.com/int/en/products/cointreau-lunique",
+      "publisher": "Cointreau",
+      "kind": "manufacturer"
+    },
+    "history": "Cointreau’s clear orange liqueur is concealed in an amber bottle, an enduring part of its visual identity. Its place in cocktail culture includes the Margarita, Sidecar and Cosmopolitan. The house describes more than 170 years of history while continuing to present L’Unique as a full-strength orange triple sec.",
+    "process": "Sweet and bitter orange peels are combined through distillation. Peels are production ingredients; the complete distillation and sweetening proportions remain proprietary.",
+    "inputs": [
+      "Sweet orange peel",
+      "Bitter orange peel"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.liquor.com/cointreau-review-7373041",
+        "publisher": "Liquor.com — tasting panel",
+        "summary": "The panel praises natural orange complexity and cocktail versatility, while noting a relatively high price.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "the-glenlivet-12-year-old",
+    "source": {
+      "url": "https://www.theglenlivet.com/en-us/product/12-year-old-single-malt-scotch/",
+      "publisher": "The Glenlivet",
+      "kind": "manufacturer"
+    },
+    "history": "The Glenlivet 12 expresses the distillery’s Speyside single-malt style through double-oak maturation. Josie’s Well and the shape of its copper stills are part of the producer’s explanation of its fruity character. This is a twelve-year single malt from one distillery, not a blend of independent distilleries.",
+    "process": "Malt spirit is matured in European and American oak. Vanilla and tropical-fruit aromas are sensory impressions, not added ingredients.",
+    "inputs": [
+      "Malted barley",
+      "Water"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.liquor.com/glenlivet-12-year-scotch-review-5219201",
+        "publisher": "Liquor.com — Amy Zavatto",
+        "summary": "Zavatto finds an elegant, balanced Speyside malt suited to drinkers seeking a fruity style without peat smoke.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "aberlour-12-year-old",
+    "source": {
+      "url": "https://www.aberlour.com/en-us/our-whisky/12-year-old-scotch-whisky/",
+      "publisher": "Aberlour",
+      "kind": "manufacturer"
+    },
+    "history": "Aberlour’s twelve-year expression presents the house’s Speyside spirit through double-cask maturation. The two cask influences are part of one finished single malt rather than two separate products. The producer foregrounds the interaction of its citrus-led new spirit with traditional oak and sherry casks.",
+    "process": "Single malt matured for twelve years in traditional oak and sherry butts. Separate non-chill-filtered higher-strength editions should not be conflated with this reference.",
+    "inputs": [
+      "Malted barley"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.whiskypirate.com/reviews/2017/10/9/review-aberlour-12",
+        "publisher": "Whisky Pirate",
+        "summary": "The 43% sample is praised for lively citrus, cinnamon, sherry sweetness and a warm, drying finish. It is a different market strength from the 40% reference.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "chivas-regal-12-year-old",
+    "source": {
+      "url": "https://www.chivas.com/en/collection/chivas-12/",
+      "publisher": "Chivas Regal",
+      "kind": "manufacturer"
+    },
+    "history": "Chivas 12 is a blended Scotch centred on malt and grain whisky, with the producer naming Strathisla and Strathclyde as key parts. Its house identity is therefore about consistent blending rather than a single-distillery malt. The twelve-year age statement belongs to the blend’s maturation identity.",
+    "process": "Malt and grain whiskies are blended after maturation. Exact percentages and the complete component inventory remain undisclosed.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.drinkhacker.com/2021/06/21/review-chivas-regal-12-years-old/",
+        "publisher": "Drinkhacker — Christopher Null",
+        "summary": "Null finds a mild, simple blend with cereal, honey and subtle herb notes, more convincing in refreshing mixed drinks than as a demanding neat pour.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2021-06-21"
+      }
+    ]
+  },
+  {
+    "product": "ballantine-s-finest",
+    "source": {
+      "url": "https://www.ballantines.com/en/range/ballantines-finest/",
+      "publisher": "Ballantine's",
+      "kind": "manufacturer"
+    },
+    "history": "Finest was introduced in 1910 and remains Ballantine’s principal everyday blend. The producer describes more than forty malt and grain whiskies and links the square bottle with a Prohibition-era concealment legend. That packaging story is retained as a legend, while the modern blend carries no age statement.",
+    "process": "Malt and grain whiskies are blended. The producer’s nutritional declaration separately lists water and plain caramel; individual cereal percentages are not disclosed.",
+    "inputs": [
+      "Malt whisky",
+      "Grain whisky"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/1266/ballantines-finest",
+        "publisher": "Difford's Guide",
+        "summary": "The 2018 tasting finds a rich, lightly sweet blend with biscuit, buttery grain, chocolate, apple and peppery spice.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "four-roses-small-batch-bourbon",
+    "source": {
+      "url": "https://www.fourrosesbourbon.com/bourbon/small-batch",
+      "publisher": "Four Roses",
+      "kind": "manufacturer"
+    },
+    "history": "Four Roses Small Batch is a regular expression built from four of the distillery’s ten recipes: OBSK, OBSO, OESK and OESO. It must be distinguished from Small Batch Select and annual Limited Edition releases, whose strengths and recipe combinations differ. The producer currently describes six-to-seven-year maturation.",
+    "process": "Four bourbon recipes are combined and bottled at 90 proof. Corn, rye and malted barley are the production grains; no equal blend proportions are assumed.",
+    "inputs": [
+      "Corn",
+      "Rye",
+      "Malted barley"
+    ],
+    "abv": 45,
+    "volume_ml": 750,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://thewhiskeyramble.com/2024/04/18/just-the-sip-four-roses-small-batch-review/",
+        "publisher": "The Whiskey Ramble",
+        "summary": "The reviewer finds a light, layered and herbal bourbon with gentle spice, while wishing the flavours were more fully developed.",
+        "score": null,
+        "score_max": null,
+        "published_on": "2024-04-18"
+      }
+    ]
+  },
+  {
+    "product": "kahl-a-original-coffee-liqueur",
+    "source": {
+      "url": "https://www.kahlua.com/en/about/",
+      "publisher": "Kahlúa",
+      "kind": "manufacturer"
+    },
+    "history": "Kahlúa dates its Mexican coffee-liqueur story to 1936. Coffee and rum link the product to agricultural ingredients rather than a flavour description alone. Its role in Black Russians, White Russians and Espresso Martinis made it a bar staple. Strength has changed by market and period, so older reviews require context.",
+    "process": "Arabica coffee and rum are the principal named ingredients. Sugar and vanilla are described by Pernod Ricard’s trade account; the complete formula is not indexed.",
+    "inputs": [
+      "Arabica coffee",
+      "Rum"
+    ],
+    "abv": 16,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/248/kahlua-coffee-liqueur-16-alc-vol",
+        "publisher": "Difford's Guide",
+        "summary": "The 16% sample shows coffee, chocolate and vanilla, but the reviewer considers it thinner after successive reductions in strength.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "malibu-original",
+    "source": {
+      "url": "https://www.malibudrinks.com/en-us/faq/",
+      "publisher": "Malibu",
+      "kind": "manufacturer"
+    },
+    "history": "Malibu’s producer traces the product to Coco Rico in 1978 and the Malibu launch in 1980. Its beach-and-coconut identity is distinct from a current manufacturing address: the FAQ says production is now mostly in Canada, with some in the United States and Spain. Caribbean imagery should not be used as proof of bottling location.",
+    "process": "Coconut-flavoured liqueur made with white rum. The producer’s group declaration lists rum, water, sugar and flavouring containing coconut extract.",
+    "inputs": [
+      "Rum",
+      "Coconut extract",
+      "Sugar",
+      "Water"
+    ],
+    "abv": 21,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "input_source": {
+      "url": "https://www.pernod-ricard.com/en/brands/malibu",
+      "publisher": "Pernod Ricard",
+      "kind": "manufacturer"
+    },
+    "critics": [
+      {
+        "url": "https://www.tastings.com/Spirits-Review/Malibu-Original-Coconut-Rum-Barbados-05-01-2024.aspx",
+        "publisher": "Tastings — Beverage Testing Institute",
+        "summary": "The 2024 sample was rated for a rounded coconut-led profile and confectionery sweetness. Its sample provenance is historical and does not establish every current production site.",
+        "score": 90,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "altos-plata",
+    "source": {
+      "url": "https://olmecaaltos.com/es/plata/",
+      "publisher": "Altos Tequila",
+      "kind": "manufacturer"
+    },
+    "history": "Altos Plata expresses the brand’s highland Jalisco identity as a clear tequila designed with bartenders in mind. Plata is distinct from barrel-matured Reposado and Añejo. Its blue-agave declaration is a raw-material statement, not evidence for vanilla, lime or pepper as added ingredients.",
+    "process": "Produced from blue agave. The exact market strength is stored with a separately sourced bottling.",
+    "inputs": [
+      "Blue agave"
+    ],
+    "abv": null,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://agavematchmaker.com/agave_spirits/2402-olmeca-altos-plata",
+        "publisher": "Agave Matchmaker — panel reference",
+        "summary": "The page reports an 81-point panel rating and separately identifies a community rating. Those external ratings are not Alcooltest member votes.",
+        "score": 81,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "del-maguey-vida-cl-sico",
+    "source": {
+      "url": "https://delmaguey.com/vida-clasico/",
+      "publisher": "Del Maguey",
+      "kind": "manufacturer"
+    },
+    "history": "Vida Clásico is tied to San Luis del Rio in Oaxaca and palenquero Paciano Cruz Nolasco. The village and named maker matter more than generic smoky-mezcal imagery. It uses Espadín and is distinct from other Del Maguey expressions, including higher-strength village bottlings.",
+    "process": "Espadín agave is naturally fermented and twice distilled in wood-fired copper stills.",
+    "inputs": [
+      "Espadín agave"
+    ],
+    "abv": 42,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.tastings.com/Spirits-Review/Del-Maguey-Vida-Clasico-Blanco-Mezcal-Mexico-84-Proof-06-20-2026.aspx",
+        "publisher": "Tastings — Beverage Testing Institute",
+        "summary": "The 2026 panel describes a full-bodied, fruit-and-herb profile with agave and a long spicy finish.",
+        "score": 93,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "diplom-tico-reserva-exclusiva",
+    "source": {
+      "url": "https://www.rhumattitude.com/en/blog/interview-nelson-hernandez-maestro-ronero-diplomatico/",
+      "publisher": "Rhum Attitude — interview with Nelson Hernandez",
+      "kind": "secondary"
+    },
+    "history": "Diplomático’s Venezuelan blending tradition combines distillates made in different apparatus and aged separately. In a published interview, maestro ronero Nelson Hernandez describes the roles of heavy and lighter rum components. The product’s familiar twelve-year wording must not be read as proof that every component is exactly twelve years old.",
+    "process": "The house uses molasses and cane honey, with column and batch distillation followed by ageing and assembly. The interview describes Reserva Exclusiva as predominantly heavy rum with younger lighter components.",
+    "inputs": [
+      "Molasses",
+      "Cane honey"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://spiritsreview.com/reviews/diplomatico-reserva-exclusiva-destilerias-unidas-s-a-venezuela/",
+        "publisher": "Spirits Review",
+        "summary": "The review values an aromatic, rich molasses-and-dried-fruit profile. Its older age wording is not adopted as a verified minimum-age specification.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "mount-gay-eclipse",
+    "source": {
+      "url": "https://www.mountgayrum.com/rum/eclipse/",
+      "publisher": "Mount Gay",
+      "kind": "manufacturer"
+    },
+    "history": "Eclipse is the core reference for Mount Gay’s Barbadian pot-and-column blend. The producer uses it to explain the house style and the work of its master blender. Its role is a versatile rum for cocktails and mixed drinks rather than a single-cask or exact-age release.",
+    "process": "Traditional column and double-retort pot distillates are matured in charred ex-American whiskey casks. The house FAQ identifies molasses, water and yeast as production inputs.",
+    "inputs": [
+      "Molasses",
+      "Water",
+      "Yeast"
+    ],
+    "abv": 40,
+    "volume_ml": 750,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "input_source": {
+      "url": "https://www.mountgayrum.com/faq/",
+      "publisher": "Mount Gay",
+      "kind": "manufacturer"
+    },
+    "critics": [
+      {
+        "url": "https://www.wineenthusiast.com/buying-guide/mount-gay-eclipse/",
+        "publisher": "Wine Enthusiast — Kara Newman",
+        "summary": "The 2014 tasting finds a mild golden rum with brown-sugar, oak and spice impressions, ending crisp and bright.",
+        "score": 91,
+        "score_max": 100,
+        "published_on": "2014-08-01"
+      }
+    ]
+  },
+  {
+    "product": "appleton-estate-signature",
+    "source": {
+      "url": "https://www.appletonestate.com/rums/signature/",
+      "publisher": "Appleton Estate",
+      "kind": "manufacturer"
+    },
+    "history": "Signature is Appleton’s approachable aged blend from Jamaica’s Nassau Valley. The house links its current assembly with master blender Joy Spence and the combination of pot and column distillates. An average component age of four years is not the same as a four-year minimum age statement.",
+    "process": "Pot and column rums are blended with limestone-filtered water. The producer states no added flavours and explicitly lists no age statement.",
+    "inputs": [
+      "Rum",
+      "Water"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://memphisrum.club/blog/review-051-appleton-estate-signature/",
+        "publisher": "Memphis Rum Club — Geoff Davis",
+        "summary": "Davis finds a straightforward, balanced mixer with mild fruity funk and oak, but limited complexity and intensity.",
+        "score": 6,
+        "score_max": 10,
+        "published_on": "2022-12-07"
+      }
+    ]
+  },
+  {
+    "product": "don-papa-7-years-old",
+    "source": {
+      "url": "https://shop.klwines.com/products/details/1384147",
+      "publisher": "K&L Wine Merchants",
+      "kind": "secondary"
+    },
+    "history": "Don Papa’s seven-year expression is associated with Negros in the Philippines and its sugarcane landscape. This retailer’s product account places distillation from locally produced molasses and maturation in American ex-bourbon barrels. That sourced account is kept separate from broader brand imagery and from other Don Papa expressions.",
+    "process": "Column-distilled molasses rum; the cited retailer also describes a Rioja-barrel finishing stage for its 750 ml listing. Batch and recipe changes remain possible.",
+    "inputs": [
+      "Molasses"
+    ],
+    "abv": 40,
+    "volume_ml": 750,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://thefatrumpirate.com/don-papa-no-7-small-batch-rum",
+        "publisher": "The Fat Rum Pirate",
+        "summary": "The reviewer strongly dislikes the historical sample’s syrupy texture and dominant vanilla-and-cherry impressions. This is a critical tasting opinion, not a current-batch laboratory analysis.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "hennessy-v-s",
+    "source": {
+      "url": "https://www.hennessy.com/en-int/collection/hennessy-very-special",
+      "publisher": "Hennessy",
+      "kind": "manufacturer"
+    },
+    "history": "Hennessy V.S is the house’s Very Special cognac, combining grape eaux-de-vie with oak maturation. Its contemporary cultural identity includes artist collaborations and regularly changing bottle decoration. Those artworks are packaging occurrences unless the liquid itself is shown to be a distinct release.",
+    "process": "Grape eaux-de-vie are matured in oak and blended. Toast, almond and vanilla in the tasting notes are not ingredient declarations.",
+    "inputs": [
+      "Grape eau-de-vie"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.falstaff.com/en/spirits/hennessy",
+        "publisher": "Falstaff — 2025 tasting panel",
+        "summary": "The panel finds ripe fruit, oak and tobacco impressions with restrained sweetness and a harmonious, moderately long spiced finish.",
+        "score": 93,
+        "score_max": 100,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "r-my-martin-vsop",
+    "source": {
+      "url": "https://www.remymartin.com/en-uk/who-we-are/our-history/",
+      "publisher": "Rémy Martin",
+      "kind": "manufacturer"
+    },
+    "history": "Rémy Martin introduced its Fine Champagne VSOP in 1927 under André Renaud. The house’s history later records the black frosted bottle in 1972. Fine Champagne refers to a cognac blend from Grande and Petite Champagne crus, not sparkling wine added to the spirit.",
+    "process": "Grape eaux-de-vie from Grande and Petite Champagne are aged and blended. The VSOP minimum age concerns the youngest component; the complete blend is not disclosed.",
+    "inputs": [
+      "Grape eau-de-vie"
+    ],
+    "abv": 40,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://cognac.com/remy-martin-v-s-o-p-review/",
+        "publisher": "Cognac.com — Louis C",
+        "summary": "The tasting describes vanilla and clove aromas, dried fruit, cocoa and oak on the palate, with a moderately long savoury-spiced finish.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "chartreuse-green-chartreuse",
+    "source": {
+      "url": "https://www.chartreuse.fr/en/produit/green-chartreuse/",
+      "publisher": "Chartreuse Diffusion",
+      "kind": "manufacturer"
+    },
+    "history": "The producer dates Green Chartreuse to 1840 and registration of the Chartreuse mark to 1852, distinguishing the liqueur from the earlier Elixir. It is made by the Carthusian Fathers at Aiguenoire in Entre-Deux-Guiers. Its monastic history does not make historical therapeutic language proof of a modern clinical benefit.",
+    "process": "Alcohol, sugar, water and 130 plants, roots, barks, spices and flowers are declared. Grinding, distillation, maceration and oak-vat ageing are described; the individual botanical formula remains secret.",
+    "inputs": [
+      "Alcohol",
+      "Sugar",
+      "Water"
+    ],
+    "abv": 55,
+    "volume_ml": 700,
+    "declared_count": 130,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/874/chartreuse-verte-green-chartreuse",
+        "publisher": "Difford's Guide",
+        "summary": "The 2024 sample is exceptionally intense, with mint-like, anise-like and pine-like impressions and a hot spicy finish. These descriptors are not a decoded recipe.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "luxardo-amaretto-di-saschira",
+    "source": {
+      "url": "https://www.luxardo.it/liqueurs-and-distillates/amaretto-di-saschira/",
+      "publisher": "Luxardo",
+      "kind": "manufacturer"
+    },
+    "history": "Luxardo’s Amaretto di Saschira takes an almond-like flavour from stone-fruit pit oils, according to the producer. Its modern bottle belongs to the family’s liqueur range. The current official product is 24% ABV; historical higher-strength photographs and reviews are retained as historical references rather than silently assigned to this bottling.",
+    "process": "The producer identifies essential oils from cherry, peach and apricot pits. The remaining liqueur formula and proportions are not disclosed.",
+    "inputs": [
+      "Cherry pit oil",
+      "Peach pit oil",
+      "Apricot kernel oil"
+    ],
+    "abv": 24,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://www.diffordsguide.com/beer-wine-spirits/240/luxardo-amaretto",
+        "publisher": "Difford's Guide",
+        "summary": "The 2021 tasting finds marzipan, toasted-kernel impressions and a lingering bitter edge. Its almond-paste production claim conflicts with the current producer’s pit-oil account; ingredient attribution follows the producer.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      }
+    ]
+  },
+  {
+    "product": "heering-cherry-liqueur",
+    "source": {
+      "url": "https://www.heering.com/story/",
+      "publisher": "Heering",
+      "kind": "manufacturer"
+    },
+    "history": "Heering traces its origins to Peter F. Heering’s Copenhagen business in 1818 and the spread of cherry liqueur through trading routes. Its place in classic cocktails is part of that international history. The brand now uses refreshed Scandinavian-style packaging, while the archive’s older front-and-back pair remains explicitly historical.",
+    "process": "The producer names real cherries and botanicals but does not disclose a complete botanical set. A separate current product page establishes 24% bottlings.",
+    "inputs": [
+      "Cherry"
+    ],
+    "abv": 24,
+    "volume_ml": 700,
+    "declared_count": null,
+    "market": "Producer reference; check local label",
+    "notes": "Named production inputs only. Proportions, undisclosed components and finished-product concentrations remain unknown.",
+    "critics": [
+      {
+        "url": "https://distiller.com/spirits/cherry-heering",
+        "publisher": "Distiller — product reference",
+        "summary": "Distiller records a historical community aggregate of 3.77/5 from 28 reviews. This external aggregate is distinct from an expert score or local monkey votes; the page also reports cherry maceration and oak ageing.",
+        "score": 3.77,
+        "score_max": 5,
+        "published_on": null
+      }
+    ]
+  }
+]

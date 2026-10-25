@@ -1,4 +1,26 @@
-# Screenshot index — Volume 03
+# Screenshot journal — Volume 04
+
+Eleven actual captures of the Docker application, 2026-10-25. [Dimensions and SHA-256 manifest](screenshots/manifest-v4.json). No generated product photograph, human account data or invented 3D footage is presented as a screenshot. The admin identity is a disposable QA account, removed after verification.
+
+| Current view | What it shows |
+|---|---|
+| [Press Start](screenshots/gateway-v4.jpg) | Explicit sound-on or quiet entry to the atlas disc |
+| [The atlas](screenshots/home-v4.jpg) | Full-page paper/ink arrival and persistent transport |
+| [The bottle](screenshots/bottle-v4.jpg) | A portrait, short editorial introduction and journal navigation |
+| [Botanical plates](screenshots/botanicals-v4.jpg) | Artistic plates, undrawn markers, orbit and paging controls |
+| [In-scene field note](screenshots/ingredient-v4.jpg) | Ingredient selection opens a closable drawer in place |
+| [The story](screenshots/story-v4.jpg) | Expandable source-linked historical chapter |
+| [Real price captures](screenshots/prices-v4.jpg) | Format-matched Yamazaki archive observations and source links |
+| [Original sound](screenshots/sound-v4.jpg) | Playing status, nonzero output meter and audio controls |
+| [Mobile](screenshots/mobile-v4.jpg) | Actual 390px browser viewport; no horizontal overflow observed |
+| [Dossier workbench](screenshots/admin-v4.jpg) | Eight evidence areas and missing work, including zero fully complete records |
+| [Staff Studio](screenshots/studio-v4.jpg) | Completed public export and bounded archive job |
+
+The [motion loop](media/botanical-orbit.gif) uses 14 actual drag-to-orbit captures; [audio excerpt](media/monkey-47-composition.mp3) is encoded from the application's WAV export. The [animated vector cover](media/atlas-disc.svg) is labelled editorial art, not application footage. [Media provenance](media/README.md).
+
+Historical captures below retain the prior theme and counts. They are not fresh Volume 04 screenshots. Browser validation does not imply physical-phone, acoustic or independent accessibility certification.
+
+# Historical Volume 03 gallery
 
 Ten actual browser captures of the running decision-desk revision, 2026-10-25. No mockups, private member data or generated product photographs are used. [Current screenshot integrity manifest](screenshots/manifest-v3.json). The eighteen earlier captures below are explicitly historical Volume 02 evidence, with their original manifest retained.
 

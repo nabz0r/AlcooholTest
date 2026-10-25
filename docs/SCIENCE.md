@@ -13,3 +13,9 @@ Observations are excluded from public catalogue dumps. They remain private accou
 ## Critics and monkeys
 
 Independent reviews retain the critic's attribution and original score scale. Original short summaries avoid copying articles. Community ratings run from 0 through 5 monkeys, including a Loved it shortcut to 5. New notes await moderation. Neither system is scientific evidence. No community ratings are fabricated in seed data.
+
+## Volume 04 boundaries
+
+The expanded catalogue has 125 ingredient/production-input records and source-linked process notes. This does not mean 125 clinically studied botanicals, complete proprietary recipes or known retained doses. The research distribution remains nine curated studies, seven compound records and zero finished-product measurements. Where dose, route, matrix or preparation is not recorded, do not infer comparability to drinking the spirit.
+
+Private Markov responses expose outgoing row sample counts and unobserved states alongside empirical one-step proportions. Unobserved rows are null. Rows are descriptive self-reports, not pharmacokinetic states; no transition is caused or calibrated by the named botanicals. A future biological model requires measured exposure, an explicit population and endpoint, independent validation and uncertainty, rather than decorative equations.

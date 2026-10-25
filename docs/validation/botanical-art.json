@@ -1,0 +1,15 @@
+{
+  "path": "frontend/public/art/botanical-atlas-v1.png",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "mode": "RGBA",
+  "alpha_range": [
+    0,
+    255
+  ],
+  "sha256": "565844dba5081e0ffc020c783f4add18d133096ded7f69d4be6ab70b3e84303d",
+  "kind": "AI-generated artistic botanical illustrations",
+  "not_specimen_photography": true
+}

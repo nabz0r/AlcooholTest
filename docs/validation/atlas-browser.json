@@ -1,0 +1,44 @@
+{
+  "public_export": {
+    "tables": {
+      "sources": 230,
+      "places": 14,
+      "brands": 48,
+      "ingredients": 125,
+      "compounds": 7,
+      "ingredient_compounds": 5,
+      "products": 57,
+      "bottle_assets": 22,
+      "variants": 22,
+      "recipes": 57,
+      "recipe_ingredients": 265,
+      "studies": 9,
+      "measurements": 0,
+      "mechanisms": 4,
+      "critic_reviews": 56,
+      "price_observations": 40
+    },
+    "sha256": "11e65b203f46e63e1e3fcbbbe9849f57b6bf2f9c77d86dca9054501fc6c1c633",
+    "private_tables_present": false
+  },
+  "archive_job": {
+    "points": 8,
+    "summary": {
+      "type": "summary",
+      "parsed": 8,
+      "errors": []
+    },
+    "sha256": "303fadec002e5f51998e0e1fef3da682354b8dd06135f905dc327f23aa0b9347",
+    "cache": "Warm cache of actual earlier Wayback downloads"
+  },
+  "browser": {
+    "sound_playing_observed": true,
+    "sound_meter_nonzero": true,
+    "pause_tested": true,
+    "admin_missing_history_filter_empty": true,
+    "ui_json_export_completed": true,
+    "ui_archive_job_completed": true,
+    "reviewed_archive_acceptance_tested": true,
+    "temporary_admin_removed": true
+  }
+}

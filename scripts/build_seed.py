@@ -235,6 +235,11 @@ for perspective in json.loads((ROOT/'data/navigation/critic-perspectives.json').
 navigation=json.loads((ROOT/'data/navigation/ingredient-groups.json').read_text())
 for row in T['ingredients']:row['navigation_group']=next((key for key,slugs in navigation.items() if row['slug'] in slugs),'')
 
+from enrich_catalogue import apply_enrichment
+apply_enrichment(T,uid)
+from enrich_prices import apply_prices
+apply_prices(T,uid)
+
 doc={'schema_version':'1.0','generated_at':'2026-10-25T00:00:00Z','tables':T}
 (ROOT/'data/catalog/seed.json').write_text(json.dumps(doc,indent=2,ensure_ascii=False)+'\n')
 print({k:len(v) for k,v in T.items()})

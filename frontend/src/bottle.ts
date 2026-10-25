@@ -11,9 +11,9 @@ export async function mount3D(el:HTMLElement,p:Bottle,mode:SceneMode='bottle',se
  const {RoundedBoxGeometry}=await import('three/addons/geometries/RoundedBoxGeometry.js');
  let renderer:InstanceType<typeof THREE.WebGLRenderer>;
  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}catch{el.innerHTML='<p>WebGL is unavailable. Use the photograph and ingredient list.</p>';return()=>{};}
- renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x101510,1);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+ renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(mode==='exploded'?0xe7dbc1:0x101510,1);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
  el.replaceChildren(renderer.domElement);renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label',mode==='neuro'?'Illustrative receptor network. Drag to rotate; arrow keys rotate. Positions are artistic, not anatomical.':'Interactive bottle sculpture. Drag or use left/right arrow keys to rotate. Use plus/minus buttons or keys to zoom.');renderer.domElement.setAttribute('role','img');
- const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x101510,.028);const camera=new THREE.PerspectiveCamera(34,1,.1,80);camera.position.set(mode==='bottle'?3:0,mode==='neuro'?1:1.1,mode==='bottle'?6.7:9.3);
+ const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(mode==='exploded'?0xe7dbc1:0x101510,.028);const camera=new THREE.PerspectiveCamera(34,1,.1,80);camera.position.set(mode==='bottle'?3:0,mode==='neuro'?1:1.1,mode==='bottle'?6.7:9.3);
  const pmrem=new THREE.PMREMGenerator(renderer);const environment=new RoomEnvironment();const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;
  scene.add(new THREE.HemisphereLight(0xffeccb,0x243724,2));
  for(const [color,power,x,y,z] of [[0xffd0a0,55,-3,5,4],[0xc0e1cf,45,4,3,-2],[0xffffff,30,0,6,-4]]){const light=new THREE.PointLight(color,power,20);light.position.set(x,y,z);scene.add(light);}
@@ -49,41 +49,27 @@ export async function mount3D(el:HTMLElement,p:Bottle,mode:SceneMode='bottle',se
   else{const c=document.createElement('canvas');c.width=512;c.height=512;const x=c.getContext('2d')!;x.fillStyle='#e8dfc7';x.fillRect(0,0,512,512);x.strokeStyle='#796744';x.strokeRect(18,18,476,476);x.fillStyle='#25351f';x.font='38px Georgia';x.textAlign='center';x.fillText(p.brand,256,170,450);x.font='27px Georgia';x.fillText(p.name,256,270,450);x.font='15px Arial';x.fillText('ILLUSTRATIVE RECONSTRUCTION',256,410);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;textures.push(t);labelMat=material(0xffffff,{map:t});}
   const labelGeometry=p.shape==='round'?new THREE.CylinderGeometry(radius+.009,radius+.009,.93,64,1,true,-.9,1.8):new THREE.PlaneGeometry(squat?1.1:.92,.96);
   const label=addMesh(labelGeometry,labelMat,bottle,[0,bodyHeight*.55,p.shape==='round'?0:p.shape==='square'?.477:.51]);
-  if(mode==='exploded'){label.position.z+=.65;const sp=textSprite('LABEL / RECIPE', '#caa57c',.6);sp.position.set(0,bodyHeight*.55-.67,.8);bottle.add(sp);}
+  if(mode==='exploded'){label.position.z+=.65;const sp=textSprite('LABEL / RECIPE', '#786140',.6);sp.position.set(0,bodyHeight*.55-.67,.8);bottle.add(sp);}
   if(mode==='bottle'){
    const pedestal=addMesh(new THREE.CylinderGeometry(1.25,1.3,.12,96),material(0x263121,{metalness:.3,roughness:.3}),group,[0,-1.48,0]);pedestal.receiveShadow=true;
   }
   if(mode==='exploded'){
    bottle.scale.setScalar(.75);bottle.position.y=-1.1;
    const ingredients=[...new Map((p.recipes||[]).flatMap(r=>r.ingredients).map(i=>[i.name,i])).values()].slice(0,32);
+   // Illustrations are sampled from an attributed art atlas, never treated as specimen photographs.
+   const plates:Record<string,number>={'juniper':0,'coriander':1,'angelica root':2,'orris root':3,'lemon peel':4,'orange peel':5,'sweet orange peel':5,'lavender':6,'rose':7,'chamomile':8,'yuzu peel':9,'rosemary':10,'sage':11,'cardamom':12,'green cardamom':12,'cinnamon':13,'ginger':14,'sencha tea':15,'gyokuro tea':15};
+   let atlas:InstanceType<typeof THREE.Texture>|null=null;
+   try{atlas=await new THREE.TextureLoader().loadAsync('/art/botanical-atlas-v1.png');atlas.colorSpace=THREE.SRGBColorSpace;textures.push(atlas);}catch{/* The indexed ingredient remains available if an illustration cannot load. */}
    ingredients.forEach((i,index)=>{
     const angle=(index%pageSize)/Math.min(pageSize,ingredients.length)*Math.PI*2+Math.PI/8;const x=Math.cos(angle)*2.15,z=-.35+Math.sin(angle)*.35,y=Math.sin(angle)*1.65;
     const node=new THREE.Group();node.position.set(x,y,z);rotating.add(node);node.userData.ingredient=i.name;
-    const name=i.name.toLowerCase();
-    const botanicalMat=(color:number)=>material(color,{roughness:.68});
-    function leaf(px:number,py:number,angle:number,size=1){
-      const shape=new THREE.Shape();shape.moveTo(0,-.19);shape.bezierCurveTo(-.14,-.08,-.16,.12,0,.31);shape.bezierCurveTo(.16,.12,.14,-.08,0,-.19);
-      const mesh=addMesh(new THREE.ExtrudeGeometry(shape,{depth:.012,bevelEnabled:true,bevelSize:.008,bevelThickness:.005,bevelSegments:2,steps:1}),botanicalMat(0x71834e),node,[px,py,0]);mesh.rotation.z=angle;mesh.scale.setScalar(size);
-      const vein=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,-.17,.027),new THREE.Vector3(0,.28,.027)]),new THREE.LineBasicMaterial({color:0xc3bd7a,transparent:true,opacity:.7}));mesh.add(vein);
-    }
-    if(/lavender/.test(name)){
-      addMesh(new THREE.CylinderGeometry(.008,.012,.55,8),botanicalMat(0x69834b),node,[0,-.05,0]);
-      for(let j=0;j<16;j++){const angle=j*2.4;const f=addMesh(new THREE.SphereGeometry(.045,12,8),botanicalMat(j%2?0x8b6a9f:0xa48bb6),node,[Math.cos(angle)*.055,j*.023-.03,Math.sin(angle)*.045]);f.scale.set(1,1.3,.9);}leaf(-.035,-.16,.8,.5);
-    }else if(/flower|chamomile|jasmine|monarda|rose/.test(name)){
-      const petals=/rose/.test(name)?14:10,col=/rose/.test(name)?0xbb7d83:0xe3dec9;
-      for(let j=0;j<petals;j++){const angle=j/petals*Math.PI*2;const petal=addMesh(new THREE.SphereGeometry(.075,16,10),botanicalMat(col),node,[Math.cos(angle)*.13,Math.sin(angle)*.13,0]);petal.scale.set(.65,1.5,.25);petal.rotation.z=angle-Math.PI/2;}
-      addMesh(new THREE.SphereGeometry(.07,20,12),botanicalMat(0xc5a255),node,[0,0,.025]);
-      for(let j=0;j<20;j++){const angle=j*2.4;addMesh(new THREE.SphereGeometry(.009,6,5),botanicalMat(0xefe0a0),node,[Math.cos(angle)*Math.sqrt(j)*.012,Math.sin(angle)*Math.sqrt(j)*.012,.085]);}
-    }else if(/lemon(?! balm)|orange|yuzu|peel/.test(name)){
-      const peel=addMesh(new THREE.TorusGeometry(.16,.035,10,36,Math.PI*1.55),botanicalMat(/lemon|yuzu/.test(name)?0xcbb154:0xbd743b),node);peel.rotation.set(.4,-.3,.6);
-    }else if(/berry|juniper|sloe|coriander|pepper|nutmeg|cardamom|seed|allspice/.test(name)){
-      const berry=/berry|juniper|sloe/.test(name);const col=berry?(/lingon/.test(name)?0x9d4241:0x414b68):0x98714b;
-      for(let j=0;j<3;j++){const seed=addMesh(new THREE.SphereGeometry(.09,20,16),botanicalMat(col),node,[(j-1)*.13,Math.sin(j)*.055,0]);seed.scale.set(berry?1:.7,berry?1:1.3,1);for(let k=0;k<5;k++){const ridge=addMesh(new THREE.TorusGeometry(.089,.0025,4,24),botanicalMat(berry?0x6b7181:0xb3905d),seed);ridge.rotation.y=k*Math.PI/5;}}if(berry)leaf(.14,-.01,-.7,.5);
-    }else if(/bark|cassia|cinnamon|liquorice|root/.test(name)){
-      for(let j=0;j<3;j++){const root=addMesh(new THREE.CylinderGeometry(.025,.04,.34,12),botanicalMat(j%2?0x8d603d:0xb28c5a),node,[(j-1)*.06,0,0]);root.rotation.z=(j-1)*.16;}
-    }else{leaf(-.045,-.01,.5,.8);leaf(.09,.04,-.55,.65);addMesh(new THREE.CylinderGeometry(.006,.009,.48,8),botanicalMat(0x8f915d),node,[0,-.04,0]);}
+    const plate=plates[i.name.toLowerCase()];
+    if(plate!==undefined&&atlas){
+     const tex=atlas.clone();tex.repeat.set(.25,.25);tex.offset.set((plate%4)*.25,(3-Math.floor(plate/4))*.25);tex.needsUpdate=true;textures.push(tex);
+     const art=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,alphaTest:.035,depthWrite:false}));art.scale.set(1.1,1.1,1);art.userData.ingredient=i.name;node.add(art);pickables.push(art);
+    }else{const plateNote=textSprite('PLATE TO BE DRAWN','#746144',.43);plateNote.position.y=.12;node.add(plateNote);}
     node.traverse(o=>{if(o instanceof THREE.Mesh){o.userData.ingredient=i.name;pickables.push(o);}});
-    node.scale.setScalar(1.4);const sprite=textSprite(i.name,'#e0dccb',.72);sprite.position.y=-.34;node.add(sprite);pickables.push(sprite);sprite.userData.ingredient=i.name;
+    node.scale.setScalar(1.2);const sprite=textSprite(i.name,'#4a3d28',.72);sprite.position.y=-.54;node.add(sprite);pickables.push(sprite);sprite.userData.ingredient=i.name;
     const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x*.78,y*.8,z*.78),new THREE.Vector3(x,y,z)]),new THREE.LineBasicMaterial({color:0x879765,transparent:true,opacity:.27}));rotating.add(line);botanicalNodes.push({node,line,name:i.name});
     animated.push({obj:node,base:node.position.clone(),phase:index*.7});
    });
@@ -118,7 +104,10 @@ export async function mount3D(el:HTMLElement,p:Bottle,mode:SceneMode='bottle',se
  tools.querySelector<HTMLButtonElement>('[data-scene=full]')!.onclick=()=>{const stage=(el.closest('.detail-visual')||el) as HTMLElement;if(document.fullscreenElement)document.exitFullscreen();else stage?.requestFullscreen?.().catch(()=>{});};
  const zoom=(factor:number)=>{const offset=camera.position.clone().sub(controls.target);offset.setLength(Math.max(controls.minDistance,Math.min(controls.maxDistance,offset.length()*factor)));camera.position.copy(controls.target).add(offset);controls.update();};
  tools.querySelector<HTMLButtonElement>('[data-scene=zoom-in]')!.onclick=()=>zoom(.85);tools.querySelector<HTMLButtonElement>('[data-scene=zoom-out]')!.onclick=()=>zoom(1.18);tools.querySelector<HTMLButtonElement>('[data-scene=rotate]')!.onclick=e=>{controls.autoRotate=!controls.autoRotate;const b=e.currentTarget as HTMLButtonElement;b.textContent=controls.autoRotate?'Pause orbit':'Start orbit';b.setAttribute('aria-pressed',String(controls.autoRotate));};
- const showPage=()=>botanicalNodes.forEach((b,i)=>{b.node.visible=b.line.visible=Math.floor(i/pageSize)===page;});showPage();
+ const index=document.createElement('div');index.className='scene-plant-index';index.setAttribute('aria-label','Select an ingredient');
+ botanicalNodes.forEach(b=>{const button=document.createElement('button');button.textContent=b.name;button.type='button';button.onclick=()=>select?.(b.name);index.append(button);});
+ if(mode==='exploded')el.append(index);
+ const showPage=()=>{botanicalNodes.forEach((b,i)=>{const visible=Math.floor(i/pageSize)===page;b.node.visible=b.line.visible=visible;if(index.children[i]) (index.children[i] as HTMLElement).hidden=!visible;});};showPage();
  tools.querySelector<HTMLButtonElement>('[data-scene=next]')?.addEventListener('click',()=>{page=(page+1)%Math.max(1,Math.ceil(botanicalNodes.length/pageSize));showPage();});
  tools.querySelector<HTMLButtonElement>('[data-scene=previous]')?.addEventListener('click',()=>{page=(page-1+Math.ceil(botanicalNodes.length/pageSize))%Math.max(1,Math.ceil(botanicalNodes.length/pageSize));showPage();});
  tools.querySelector<HTMLInputElement>('input')?.addEventListener('input',e=>{spread=Number((e.target as HTMLInputElement).value)/100;});
@@ -126,5 +115,5 @@ export async function mount3D(el:HTMLElement,p:Bottle,mode:SceneMode='bottle',se
  const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();let down={x:0,y:0};const pointerDown=(e:PointerEvent)=>{down={x:e.clientX,y:e.clientY};};renderer.domElement.addEventListener('pointerdown',pointerDown);const click=(event:PointerEvent)=>{if(Math.hypot(event.clientX-down.x,event.clientY-down.y)>5)return;const r=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1);ray.setFromCamera(pointer,camera);const hit=ray.intersectObjects(pickables.filter(o=>{let n:typeof o|null=o;while(n){if(!n.visible)return false;n=n.parent;}return true;}))[0];if(hit){let node:typeof hit.object|null=hit.object;while(node&&node.visible)node=node.parent;if(!node)select?.(hit.object.userData.ingredient);}};renderer.domElement.addEventListener('pointerup',click);
  const keyboard=(event:KeyboardEvent)=>{if(event.key==='+'||event.key==='='||event.key==='-'){zoom(event.key==='-'?1.18:.85);event.preventDefault();}if(event.key==='ArrowLeft'||event.key==='ArrowRight'){rotating.rotation.y+=event.key==='ArrowLeft'?-.15:.15;controls.autoRotate=false;const orbit=tools.querySelector<HTMLButtonElement>('[data-scene=rotate]')!;orbit.textContent='Start orbit';orbit.setAttribute('aria-pressed','false');event.preventDefault();}};renderer.domElement.addEventListener('keydown',keyboard);
  let frame=0,disposed=false,start=performance.now();function tick(){if(disposed)return;const t=(performance.now()-start)/1000;animated.forEach(a=>{if(a.curve&&!reduced)a.obj.position.copy(a.curve.getPoint((t*.12+a.phase)%1));else if(a.base){a.obj.position.x=a.base.x*spread;a.obj.position.y=a.base.y*spread+(!reduced?Math.sin(t*.65+a.phase)*.055:0);}});controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(tick);}tick();
- return()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointerup',click);renderer.domElement.removeEventListener('keydown',keyboard);scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line||o instanceof THREE.Points){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}else if(o instanceof THREE.Sprite)o.material.dispose();});textures.forEach(t=>t.dispose());env.dispose();environment.dispose();pmrem.dispose();renderer.dispose();renderer.domElement.remove();tools.remove();hint.remove();};
+ return()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointerup',click);renderer.domElement.removeEventListener('keydown',keyboard);scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line||o instanceof THREE.Points){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}else if(o instanceof THREE.Sprite)o.material.dispose();});textures.forEach(t=>t.dispose());env.dispose();environment.dispose();pmrem.dispose();renderer.dispose();renderer.domElement.remove();tools.remove();hint.remove();index.remove();};
 }

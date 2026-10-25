@@ -16,6 +16,10 @@ jobs:
           docker compose exec -T api python manage.py makemigrations --check --dry-run
           docker compose exec -T api python manage.py check
           curl --fail --retry 10 --retry-delay 2 http://localhost:8088/api/v1/health
+      - name: Verify proxy recovery after API replacement
+        run: |
+          docker compose up -d --no-deps --force-recreate api
+          curl --fail --retry 15 --retry-all-errors --retry-delay 1 http://localhost:8088/api/v1/health
       - name: Inspect Python dependencies
         run: docker compose exec -T api pip list --format=json > dependencies.json
       - name: Save dependency inventory

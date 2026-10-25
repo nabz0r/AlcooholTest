@@ -1,28 +1,96 @@
-# Alcooltest
+# Alcooltest° — insert curiosity
+
+![Disc One — animated original atlas artwork](docs/media/atlas-disc.svg)
 
 [![CI](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml)
 
-**A world within. A clearer way to choose.** An open-source, self-hosted spirits atlas with an evidence-led discovery desk, a shareable comparison table, documented ingredients and an artistic bottle studio.
+**An open spirits atlas with the soul of a discovery CD-ROM.** Warm paper. Botanical plates. Original sound. A cabinet to wander through, a field journal to open, and sources to follow.
 
-![Editorial homepage](docs/screenshots/home-v3.jpg)
+**[Enter the tour ↓](#01--press-start)** · **[Listen to the atlas ♫](docs/media/monkey-47-composition.mp3)** · **[Open the data](data/catalog/)** · **[Run your own](#run-your-own-atlas)**
 
-## What you can actually do
+The cover above is original animated vector art. Everything photographed below is captured from the running Docker application. You can explore this README without launching a website; the live controls belong to the application.
 
-- **Find a direction.** Filter canonical products by spirit, brand origin, editorial ingredient groups, a documented bottling's strength, photograph availability and six-area record coverage. See counts, remove applied constraints and share the exact search.
-- **Understand each result.** Matched ingredient names explain why a record appears. Coverage describes what the record documents; it never rates the spirit. Unknown ingredients, strengths and prices stay unknown.
-- **Compare the differences.** Select up to four bottles; align bottlings, origin, disclosure and documentation in a sticky-header matrix. Hide equal values, inspect an ingredient matrix, clear the shortlist and share a URL that reconstructs it.
-- **Follow real connections.** Product alternatives name their shared indexed ingredients or explain a same-category fallback. A direct two-bottle comparison turns that connection into an inspectable decision.
-- **Read another perspective.** Six attributed critic accounts include short original summaries and a separately labeled historical tasting-panel score. Publisher perspectives are never averaged with local community votes.
-- **Explore the object.** Licensed real photos, packaging-view tabs, a zoomable label inspector and moderated photo proposals. An actual historical Heering front/rear pair is included; most reverse labels remain undocumented.
-- **Explore the art.** Lazy-loaded procedural 3D, botanical explosion, an abstract Neuro atlas and opt-in generative botanical audio with a mixer, speaker test and WAV export. These are interpretations, not scans or measurements.
-- **Keep your notebook.** Private shelves, moderated 0–5 monkey notes with optional tasting dimensions/tags/context, and private empirical state-transition records. There are no invented verified-purchase badges or product-specific pharmacological predictions.
-- **Run the archive.** Admin editing, conservative duplicate preview/merge, UI imports/exports, durable jobs and executed bounded Wikidata/PubMed discovery dumps with provenance.
+## 01 / Press Start
 
-The collection has **55 canonical products + 2 distinct editions**, 48 brands, 69 indexed ingredients, 22 licensed reference photographs, 9 curated studies and 6 critic accounts. Forty expansion identities and the historical Heering identity remain incomplete in bottling/recipe detail. The distribution is not every public bottle or every secret formula. Two dated Luxembourg observations begin the price notebook; finished-product compound measurements remain zero.
+![The atlas opening](docs/screenshots/gateway-v4.jpg)
 
-## Run locally
+Enter with sound or enter quietly. The atlas keeps its navigation and audio transport within reach. No surprise autoplay. No microphone. A quiet exit is always available.
 
-Install Docker Engine/Desktop with Compose v2 and Python 3:
+![The full-page atlas](docs/screenshots/home-v4.jpg)
+
+## 02 / Follow a bottle
+
+![The bottle field journal](docs/screenshots/bottle-v4.jpg)
+
+Meet the bottle first. Open its **Story**, **Botanical plates**, **Tasting room**, **Price archive**, **Research** or **Sources** when curiosity takes you there. Keyboard arrows move through the journal tabs. A product stays one product across sellers and bottle sizes.
+
+## 03 / Move through the plates
+
+![Real drag-to-orbit footage of the botanical studio](docs/media/botanical-orbit.gif)
+
+Drag to orbit. Unfold the scene. Choose a plant by its name. Its field note opens inside the studio; its evidence waits one click deeper.
+
+| The field note | The story |
+|---|---|
+| ![In-scene ingredient note](docs/screenshots/ingredient-v4.jpg) | ![Attributed bottle history](docs/screenshots/story-v4.jpg) |
+
+Botanical plates are artistic illustrations, not specimen photographs. Undrawn plates are explicitly marked. The bottle object is procedural artwork with an illustrative label projection, not a scan or an authentic reconstructed rear label.
+
+## 04 / Give the atlas a voice
+
+**[▶ Listen to a real 20-second Monkey 47 composition](docs/media/monkey-47-composition.mp3)**
+
+![Original atmosphere mixer](docs/screenshots/sound-v4.jpg)
+
+Floral tones, spice textures and citrus accents shape an original generative score. Product identity sets its musical signature. Start, pause, adjust the volume, open the mixer or export your own WAV. It is a creative interpretation of documented ingredient names—not the sound or biological effect of a drink.
+
+The README links user-initiated audio and embeds animated image/vector media. It does not execute JavaScript, TypeScript or Angular inside GitHub Markdown. [How the media were made](docs/media/README.md).
+
+## 05 / Keep a field journal
+
+Save a wishlist, mark a bottle owned or tasted, add a **0–5 monkey** note, and describe aroma, taste, finish, value and design. Community notes and label photographs are moderated. Critic scores stay on their original scales. Private observation notebooks describe your own recorded transitions; they do not predict intoxication or neurological effects.
+
+```mermaid
+flowchart LR
+ A[Press Start] --> B[Wander the cabinet]
+ B --> C[Meet a bottle]
+ C --> D[Unfold its botanicals]
+ C --> E[Read its story]
+ C --> F[Follow its price evidence]
+ D --> G[Open the sources]
+ E --> H[Keep your own notebook]
+ F --> G
+```
+
+<details>
+<summary><strong>See earlier discovery, comparison and voting captures</strong></summary>
+
+These are historical Volume 03/02 captures of existing functionality, before the paper-atlas art direction. They are not current-theme screenshots.
+
+| Discovery | Compare |
+|---|---|
+| ![Historical discovery](docs/screenshots/discovery-v3.jpg) | ![Historical aligned comparison](docs/screenshots/comparison-v3.jpg) |
+
+The [complete screenshot journal](docs/SCREENSHOTS.md) preserves dates, captions and integrity manifests.
+</details>
+
+## What the archive contains
+
+| Documented now | What it means |
+|---|---|
+| **55 canonical bottles + 2 distinct editions** | Gin, rum, whisky, amaretto and other spirits; formats and sellers do not multiply products |
+| **55 attributed histories** | Original editorial accounts with source links |
+| **125 indexed ingredients / production inputs** | Plant parts, fermentation materials and blend inputs; this is not 125 proven active botanicals |
+| **56 critic accounts** | Attributed summaries, separate from local monkey votes |
+| **40 dated price observations** | 38 parsed retailer captures across five products, plus two Luxembourg observations; no daily reconstruction |
+| **22 licensed reference photographs** | A genuine historical Heering front/rear pair is included; most rear labels remain missing |
+| **9 curated studies** | Study-specific evidence; zero finished-bottle compound measurements |
+
+**Twenty-year price coverage remains incomplete.** The executed archival dump currently spans 2007–2015; it is not a complete twenty-year series for every bottle. The UI exposes source captures, format, strength, seller, country and currency. Different markets, sizes, auction results and retailer offers must not be silently averaged. [Executed archive facts](data/prices/archive-research.json) · [Price methodology](docs/PRICES.md).
+
+The archive is open-ended. A missing photograph, secret formula, unmeasured concentration or undocumented year stays a visible research task, not invented content.
+
+## Run your own atlas
 
 ```sh
 git clone https://github.com/nabz0r/AlcooholTest.git
@@ -30,57 +98,60 @@ cd AlcooholTest
 ./scripts/bootstrap.sh
 ```
 
-Open **http://localhost:8088**. Public discovery works without an account. For ownership, choose Set up instance, retrieve the one-time token using `./scripts/setup-token.sh`, then create the first administrator in the UI. No shared default password exists. Only the loopback website port is published; PostgreSQL and Redis have no host port.
+Open **http://localhost:8088**. Public exploration needs no account. To own the instance, choose Set up instance, retrieve the one-time token with `./scripts/setup-token.sh`, and create the first administrator. There is no shared default password.
 
-Try a [flower-ingredient discovery](http://localhost:8088/discover/?category=Gin&groups=floral), a [Japan / documented strength direction](http://localhost:8088/discover/?category=Gin&groups=floral&country=Japan&max_abv=44), or a [Monkey 47 / Bombay comparison](http://localhost:8088/compare/?bottles=monkey-47-schwarzwald%2Cbombay-sapphire&differences=1) after starting your instance.
+<details>
+<summary><strong>For editors — maintain the living atlas</strong></summary>
 
-## The decision desk, in real screenshots
+The product admin provides a dossier workbench, missing-evidence filters, history/source editing, recipes, attributed criticism and licensed packaging contributions. Bottling pages include sourced price observations. Duplicate resolution previews changes and retains a canonical product.
 
-Actual browser captures of the running Docker application. [Current and historical screenshot index](docs/SCREENSHOTS.md) includes captions, dimensions and checksums.
+The Studio queues JSON/JSONL/SQL exports, validates catalogue imports and runs bounded discovery/research/archive jobs. Wayback price candidates require an editor to confirm identity before acceptance; collection is not automatic publication. Public exports exclude accounts, member reviews, shelves, submitted photos and private observations. SQL backups are private and must stay out of Git.
 
-| | |
-|---|---|
-| **Explainable discovery**<br>![Discovery](docs/screenshots/discovery-v3.jpg) | **A focused direction**<br>![Japan and strength filters](docs/screenshots/direction-v3.jpg) |
-| **What the record documents**<br>![Coverage](docs/screenshots/coverage-v3.jpg) | **Source-explained connections**<br>![Connections](docs/screenshots/connections-v3.jpg) |
-| **An aligned comparison**<br>![Comparison](docs/screenshots/comparison-v3.jpg) | **Only the differences**<br>![Differences](docs/screenshots/differences-v3.jpg) |
-| **Ingredient-level inspection**<br>![Ingredients](docs/screenshots/ingredients-v3.jpg) | **Attributed perspectives**<br>![Critics](docs/screenshots/critics-v3.jpg) |
+[Editorial operations](docs/OPERATIONS.md) · [Identity rules](docs/IDENTITY.md) · [Data contracts](docs/DATA.md) · [Price archive](docs/PRICES.md)
+</details>
 
-![A useful empty state](docs/screenshots/empty-v3.jpg)
+<details>
+<summary><strong>For builders — architecture and verification</strong></summary>
 
-The earlier 18-view gallery is retained as explicitly labeled Volume 02 evidence in the screenshot index, including sound, fullscreen studios, packaging, detailed voting and administration. It is not presented as fresh Volume 03 capture.
+TypeScript / Three.js / Web Audio; Django 5.2 LTS; PostgreSQL 17; Redis 8; unprivileged Nginx. Docker publishes only the loopback web port. Read-only application filesystems, sessions/CSRF, Argon2, rate limits and audited editing form a practical baseline, not a security certification.
 
-## Architecture and data
-
-Django 5.2 LTS / PostgreSQL 17 / Redis 8 / TypeScript / Three.js / unprivileged Nginx. Compose includes migration/static initialization, API, durable PostgreSQL-backed worker, database, cache and proxy. Read-only application filesystems, CSRF/session authentication, Argon2, rate limits and audited editing provide a practical baseline. Discovery uses bounded SQL queries, EXISTS-based coverage and revision-cached reads; imports are transactional UUID upserts and exports stream consistent snapshots.
-
-Clean server-rendered URLs, canonical metadata, Open Graph, JSON-LD, sitemap and robots support public discovery. Set PUBLIC_BASE_URL to the actual HTTPS origin before public hosting. Member pages are noindex. SSO and hybrid PQ TLS remain documented deployment plans; independent security/WCAG certification is not claimed.
-
-`data/catalog/` contains reproducible JSON, JSONL, schema and checksum manifests. `data/assets.json` preserves image rights and integrity. `data/navigation/` reproduces editorial group mappings and critic summaries. `data/discovery/` retains executed provider dumps. Public catalogue exports exclude accounts, member photos, reviews, shelves and private observations. Back up private SQL and media separately.
-
-```sh
-# Explicit reviewed reseed; ordinary restarts preserve editorial changes.
-docker compose exec api python manage.py seed
-# PostgreSQL integration suite.
-docker compose exec api python manage.py test catalog --noinput
-# Reproduce distributions from curated source inputs.
-python3 scripts/build_seed.py
-python3 scripts/build_data_exports.py
-# Fetch pinned licensed image bytes, rejecting changed hashes.
-python3 scripts/fetch_assets.py
+```mermaid
+flowchart TD
+ UI[Paper atlas / TypeScript] --> Edge[Nginx]
+ Edge --> API[Django API]
+ API --> DB[(PostgreSQL)]
+ API --> Cache[(Redis)]
+ Editor[Editorial studio] --> Jobs[Durable jobs]
+ Jobs --> Worker[Bounded provider collectors]
+ Worker --> Review[Evidence candidates]
+ Review --> Editor
 ```
 
-Source code is GPL-2.0. Original catalogue work is CC0 where indicated; images retain their own licenses and trademarks. Redis 8 has an AGPLv3 open-source licensing option. No proprietary runtime or paid API is required.
+```sh
+# Run PostgreSQL integration checks.
+docker compose exec api python manage.py test catalog --noinput
+# Rebuild the portable catalogue from reviewed inputs.
+python3 scripts/build_seed.py
+python3 scripts/build_data_exports.py
+# Explicit reviewed reseed; restarts otherwise preserve editorial changes.
+docker compose exec api python manage.py seed
+```
 
-## Documentation and working agreement
+Clean URLs, canonical metadata, JSON-LD, sitemap and robots are included. Configure the real HTTPS public origin before hosting. SSO and hybrid PQ transport are roadmaps, not deployed/certified features.
 
-- [Decision rules, UX rationale and limits](docs/DECISIONS.md)
-- [Experience](docs/EXPERIENCE.md), [Design](docs/DESIGN.md), [SEO and routes](docs/SEO.md)
-- [Architecture](docs/ARCHITECTURE.md), [API](docs/API.md), [Data contracts](docs/DATA.md)
-- [Identity and duplicates](docs/IDENTITY.md), [Discovery ingestion](docs/INGESTION.md)
-- [Science and state notebook](docs/SCIENCE.md), [Price observations](docs/PRICES.md)
-- [Operations and recovery](docs/OPERATIONS.md), [SSO/PQ roadmap](docs/SSO-PQC.md)
-- [Validation evidence](docs/VALIDATION.md), [Screenshots](docs/SCREENSHOTS.md), [Attribution](docs/ATTRIBUTIONS.md)
-- [Initial analysis](docs/ANALYSIS.md), [Security](SECURITY.md), [Contributing](CONTRIBUTING.md)
-- [Plan](PLAN.md), [Progress](PROGRESS.md), [Repository working agreement](AGENTS.md)
+Code: GPL-2.0. Original catalogue work: CC0 where indicated. Images and source material retain their own rights; generated art is labelled. Redis 8 offers an AGPLv3 open-source option. No paid API or proprietary runtime is required.
+</details>
 
-Every work session records scope, verification and publication separately. Screenshots must show the running product; missing data and incomplete capabilities must remain explicit.
+## The next disc
+
+**Android APK: roadmap only.** Gyroscope exploration, camera capture, permission/denial flows, calibration, privacy and physical-device acceptance gates are specified in [the Android delivery contract](docs/ANDROID-ROADMAP.md). No APK is represented as built or tested.
+
+Expand the verified archival coverage, replace missing botanical plates and rear-label photographs, and deepen ingredient-specific research with explicit dose, route and measurement limits. [Plan](PLAN.md) · [Progress](PROGRESS.md).
+
+## Open the documentation
+
+[Art direction](docs/ATLAS-DESIGN.md) · [Botanical art](docs/BOTANICAL-ART.md) · [Experience](docs/EXPERIENCE.md) · [Science](docs/SCIENCE.md) · [Prices](docs/PRICES.md) · [Android](docs/ANDROID-ROADMAP.md)
+
+[Architecture](docs/ARCHITECTURE.md) · [API](docs/API.md) · [Data](docs/DATA.md) · [Operations](docs/OPERATIONS.md) · [Ingestion](docs/INGESTION.md) · [SEO](docs/SEO.md)
+
+[Validation](docs/VALIDATION.md) · [Screenshot journal](docs/SCREENSHOTS.md) · [Attribution](docs/ATTRIBUTIONS.md) · [Security](SECURITY.md) · [Contributing](CONTRIBUTING.md) · [Working agreement](AGENTS.md)

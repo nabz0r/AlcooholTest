@@ -32,3 +32,18 @@ Volume 02 complete: all six revision workstreams were implemented, locally verif
 6. Update documentation/screenshots/tracking and publish verified main.
 
 Volume 03 implementation and local/browser verification complete. Public decision rules, ten new screenshots, source curation and validation reports are documented. Main publication is complete. GitHub Actions run 40223838810 passed all three jobs for application commit e7bcb40294a0a318e11245c1f0f18f4d84f7eac2.
+
+## Volume 04 — full catalogue editorial enrichment (in progress)
+
+Audit every one of the 55 canonical records. Research exact products using producer material and independent critics; preserve source snapshots/provenance and market differences. Enrich history, production inputs and bottlings, distinguish undisclosed formulas from missing work. Acquire genuine front/back photographs only where identity, view and reuse rights are established. Make completeness and missing evidence manageable from the owner UI, test editorial edits and public rendering, refresh distributions/docs and publish verified main. No invented reviews, recipes, rear artwork or licensing claims.
+
+### Volume 04 — atlas direction
+- Replace the dark dashboard presentation with warm paper, original ink map ornament, editorial type and quiet oxblood navigation.
+- Keep controls legible, science progressively disclosed and artistic cartography explicitly decorative.
+- Validate desktop/mobile, scene controls and source details before publication.
+
+### Final Volume 04 acceptance
+- Validate the actual disc gateway, opt-in sound output, pause, shared volume, route transitions, journal tabs and source/price display on desktop/mobile.
+- Validate the expanded source-linked dataset and admin workbench/price-candidate acceptance, public dumps and schema compatibility.
+- Deliver a GitHub-native visual README: animated vector artwork with static fallback, actual motion capture, audio excerpt, diagrams and current screenshots.
+- Record incomplete twenty-year archival coverage and missing rear-label photography. Android gyro/camera APK and a possible C/WASM engine remain explicit roadmap work, not shipped claims.

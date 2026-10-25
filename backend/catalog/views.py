@@ -226,7 +226,7 @@ def operations(request):
 @api
 def create_job(request):
     data=body(request); kind=data.get('kind')
-    if kind not in ['json','jsonl','sql','discover','research']: raise ValueError('Choose json, jsonl, sql, discover or research.')
+    if kind not in ['json','jsonl','sql','discover','research','prices']: raise ValueError('Choose json, jsonl, sql, discover, research or prices.')
     if m.Job.objects.filter(status__in=['queued','running']).count()>=5: return reply({'error':'Queue is full. Wait for current jobs.'},429)
     job=m.Job.objects.create(kind=kind,created_by=request.user); audit(request,'export.queued',job.id,{'kind':kind})
     return reply({'id':job.id,'status':job.status},202)
@@ -271,7 +271,7 @@ def observations(request,slug):
     counts={state:{other:0 for other in states} for state in states}
     for row in rows.values('from_state','to_state').annotate(n=Count('id')): counts[row['from_state']][row['to_state']]=row['n']
     matrix={state:{other:(n/sum(values.values()) if sum(values.values()) else None) for other,n in values.items()} for state,values in counts.items()}
-    return reply({'states':states,'counts':counts,'transition_matrix':matrix,'observations':rows.count(),'scope':'Your own self-reports only. Empirical one-step frequencies; no causal inference, pharmacokinetic calibration or prediction. Unobserved rows are null.'})
+    return reply({'states':states,'counts':counts,'transition_matrix':matrix,'row_observations':{state:sum(values.values()) for state,values in counts.items()},'unobserved_states':[state for state,values in counts.items() if not sum(values.values())],'observations':rows.count(),'scope':'Your own self-reports only. Empirical one-step frequencies; no causal inference, pharmacokinetic calibration or prediction. Unobserved rows are null.'})
 
 @require_GET
 @api
@@ -279,7 +279,7 @@ def observations(request,slug):
 def ingredient_detail(request,slug):
     ingredient=get_object_or_404(m.Ingredient,slug=slug)
     links=m.IngredientCompound.objects.filter(ingredient=ingredient).select_related('compound','source').prefetch_related('compound__studies__source','compound__mechanisms__source')
-    return reply({'name':ingredient.name,'scientific_name':ingredient.scientific_name,'family':ingredient.family,'notes':ingredient.notes,'compounds':[{'name':x.compound.name,'association':x.notes,'source':source_data(x.source),'studies':[{'title':s.title,'design':s.design,'population':s.population,'finding':s.finding,'limitation':s.limitation,'beverage_evidence':s.beverage_evidence,'source':source_data(s.source)} for s in x.compound.studies.all()],'mechanisms':[{'target':v.target,'action':v.action,'context':v.evidence_context,'limitation':v.limitation,'source':source_data(v.source)} for v in x.compound.mechanisms.all()]} for x in links],'exposure':'No finished-bottle concentration inferred from plant identity.'})
+    return reply({'name':ingredient.name,'scientific_name':ingredient.scientific_name,'family':ingredient.family,'notes':ingredient.notes,'plant_part':ingredient.plant_part,'sensory_role':ingredient.sensory_role,'preparation':ingredient.preparation,'technical_notes':ingredient.technical_notes,'profile_source':source_data(ingredient.profile_source) if ingredient.profile_source_id else None,'compounds':[{'name':x.compound.name,'association':x.notes,'source':source_data(x.source),'studies':[{'title':s.title,'design':s.design,'population':s.population,'finding':s.finding,'limitation':s.limitation,'beverage_evidence':s.beverage_evidence,'source':source_data(s.source)} for s in x.compound.studies.all()],'mechanisms':[{'target':v.target,'action':v.action,'context':v.evidence_context,'limitation':v.limitation,'source':source_data(v.source)} for v in x.compound.mechanisms.all()]} for x in links],'exposure':'No finished-bottle concentration inferred from plant identity.'})
 
 AROMA_TAGS=['floral','juniper','citrus','herbal','spicy','woody','smoky','fruity','vanilla','nutty','sweet','dry','bitter','smooth','warming']
 def review_fields(data,rating,note):

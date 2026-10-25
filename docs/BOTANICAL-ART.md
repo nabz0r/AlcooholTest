@@ -1,0 +1,5 @@
+# Botanical art direction
+
+Use case: stylized-concept. One square transparent 4×4 sprite atlas, equal square cells, separate centred botanical still lifes. Reading order: juniper, coriander, angelica, orris/iris, lemon peel, orange peel/blossom, lavender, rose, chamomile, yuzu, rosemary, sage, cardamom, cinnamon, ginger, tea. Exquisite contemporary botanical illustration, realistic sculptural volume, painterly macro details, delicate veins/fibres and soft museum lighting. Rich restrained natural colours. No text, frames, grid lines or bottles. Generated with the built-in image generation tool; original alpha retained. Requested size was 2048²; actual returned file dimensions are checked in the asset manifest.
+
+These are representative artistic motifs, not verified photographs of the exact plant species or plant part used by a distiller. The UI must label them as illustrations. Unillustrated inputs keep their correct names; no arbitrary plant is substituted as if taxonomically accurate.

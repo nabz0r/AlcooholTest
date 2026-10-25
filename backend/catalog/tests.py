@@ -28,8 +28,9 @@ class CatalogueTests(TestCase):
         self.assertTrue(set(p['id'] for p in data['items']).isdisjoint(p['id'] for p in nxt['items']))
         self.assertEqual(self.client.get('/api/v1/products?limit=500').status_code,200)
     def test_ingredient_search(self):
-        data=self.client.get('/api/v1/products?q=nutmeg').json();self.assertEqual(len(data['items']),1)
-        self.assertEqual(data['items'][0]['brand'],'Monkey 47')
+        data=self.client.get('/api/v1/products?q=nutmeg').json();self.assertGreaterEqual(len(data['items']),1)
+        self.assertIn('Monkey 47',[row['brand'] for row in data['items']])
+        self.assertNotIn('Bacardí',[row['brand'] for row in data['items']])
     def test_market_variants(self):
         data=self.client.get('/api/v1/products/roku-japanese-craft').json()
         self.assertEqual({v['abv'] for v in data['variants']},{'43.0','47.0'})
@@ -306,3 +307,42 @@ class CatalogueTests(TestCase):
         photo.approved=True;photo.save()
         d=self.client.get('/api/v1/discover?q=QA+Photo&photo=1').json();self.assertEqual(d['total'],1)
         self.assertEqual(d['items'][0]['image_credit'],'QA')
+
+
+class EnrichedAtlasTests(TestCase):
+    setUpTestData=classmethod(CatalogueTests.setUpTestData.__func__)
+    def test_dossier_workbench_permissions_and_missing_evidence(self):
+        from .editorial import dossier_rows
+        rows=dossier_rows();self.assertEqual(len(rows),55)
+        yamazaki=next(r for r in rows if r['product'].slug=='suntory-yamazaki-12-years-old')
+        self.assertNotIn('history',yamazaki['missing']);self.assertIn('back',yamazaki['missing'])
+        url='/admin/catalog/product/dossiers/'
+        self.assertEqual(self.client.get(url).status_code,302)
+        self.client.force_login(self.member);self.assertEqual(self.client.get(url).status_code,302)
+        self.client.force_login(self.admin);response=self.client.get(url)
+        self.assertEqual(response.status_code,200);self.assertContains(response,'Edit dossier')
+    def test_enriched_catalogue_sources_and_technical_profiles(self):
+        self.assertGreaterEqual(m.Ingredient.objects.count(),100)
+        for p in m.Product.objects.filter(status='published',edition_of__isnull=True,merged_into__isnull=True):
+            self.assertTrue(p.history.strip(),p.slug);self.assertIsNotNone(p.history_source_id,p.slug)
+            self.assertTrue(p.critic_reviews.exists(),p.slug)
+        ingredient=m.Ingredient.objects.get(slug='juniper')
+        self.assertTrue(ingredient.preparation);self.assertTrue(ingredient.technical_notes)
+    def test_archive_parser_refuses_related_product_price(self):
+        from .price_archive import parse_capture
+        target={'product':'test','retailer_id':2940,'tokens':['yamazaki','12']}
+        head='<h1>Yamazaki 12 Year Old</h1><div class="size">70cl / 43%</div>'
+        with self.assertRaises(ValueError):parse_capture((head+'<div>Related product £99.00</div>').encode(),target,'20080513005420','http://www.thewhiskyexchange.com/P-2940.aspx')
+        price='<span itemprop="price">£34.99</span><span class="exvat">£29.78 ex VAT</span>'
+        row=parse_capture((head+price).encode(),target,'20080513005420','http://www.thewhiskyexchange.com/P-2940.aspx')
+        self.assertEqual(row['amount'],'34.99');self.assertEqual(row['volume_ml'],700);self.assertEqual(row['observed_on'],'2008-05-13')
+    def test_archival_acceptance_is_reviewed_and_idempotent(self):
+        from .prices import accept_price_capture
+        import json
+        point=json.loads((settings.SEED_FILE.parent.parent/'prices/archive-research.json').read_text())['points'][0]
+        p=m.Product.objects.get(slug=point['product'])
+        candidate=m.DiscoveryCandidate.objects.create(provider='wayback',external_id='test-archive',label='Reviewed archive test',category=p.category,source_url=point['source_url'],payload=point,resolved_product=p)
+        price=accept_price_capture(candidate,self.admin)
+        self.assertEqual(str(price.amount),point['amount']);self.assertEqual(price.variant.product,p)
+        self.assertTrue(m.Audit.objects.filter(action='price.archive.accepted',target=str(price.id)).exists())
+        with self.assertRaises(ValueError):accept_price_capture(candidate,self.admin)

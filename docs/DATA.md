@@ -1,3 +1,11 @@
+# Current distribution — Volume 04
+
+55 canonical products plus two distinct editions; 230 sources, 125 ingredient/input records, 265 source-linked recipe assertions, 56 critic accounts, 22 licensed image references, nine studies and 40 price observations. The [per-record audit](../data/catalog/dossier-audit.json) distinguishes presence from completeness. All 55 canonical histories and critic perspectives have attributed content; most rear labels and many bottling details remain missing. No complete secret recipe or measured compound exposure is inferred.
+
+Ingredient technical fields are optional additions to catalogue 1.0: `plant_part`, `sensory_role`, `preparation`, `technical_notes`, nullable `profile_source_id`. The updated strict schema preserves old ingredient rows without these keys. Editorial profiles may explicitly state an unknown species, part, concentration or preparation. They are not clinical monographs. The source overlays live in `data/enrichment/dossiers.json`; reviewed archive price facts live in `data/prices/archive-research.json`. Reproduction uses `scripts/build_seed.py` and `scripts/build_data_exports.py`.
+
+The following contract/history sections are retained for the original schema and prior releases; their old dataset counts are historical, not the current distribution.
+
 # Data contract and evidence policy
 
 ## Files

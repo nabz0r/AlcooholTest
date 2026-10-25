@@ -1,0 +1,952 @@
+{
+  "scope": "Curated distribution audit; field presence does not prove a complete proprietary recipe or present-day packaging.",
+  "canonical_products": 55,
+  "totals": {
+    "history": 55,
+    "bottling": 16,
+    "production": 55,
+    "ingredients": 52,
+    "criticism": 55,
+    "front": 21,
+    "back": 1,
+    "prices": 5
+  },
+  "all_eight": 0,
+  "records": [
+    {
+      "slug": "monkey-47-schwarzwald",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": true
+      },
+      "price_points": 5,
+      "price_start": "2011-11-13",
+      "price_end": "2026-10-25",
+      "all_eight": false
+    },
+    {
+      "slug": "bombay-sapphire",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": true
+      },
+      "price_points": 9,
+      "price_start": "2007-12-17",
+      "price_end": "2026-10-25",
+      "all_eight": false
+    },
+    {
+      "slug": "hendricks-original",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "roku-japanese-craft",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "tanqueray-london-dry",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "the-botanist-islay",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "bacardi-carta-blanca",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": false,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "havana-club-7",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": false,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "jack-daniels-old-no7",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "jameson-original",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": true
+      },
+      "price_points": 9,
+      "price_start": "2007-11-13",
+      "price_end": "2015-03-20",
+      "all_eight": false
+    },
+    {
+      "slug": "disaronno-originale",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "absolut-original",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "campari-bitter",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": false,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "cointreau-original",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-toki-blended-japanese-whisky",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-hibiki-japanese-harmony",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-yamazaki-12-years-old",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": true
+      },
+      "price_points": 8,
+      "price_start": "2008-05-13",
+      "price_end": "2015-09-06",
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-hakushu-12-years-old",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-chita-single-grain-whisky",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-ao-blended-world-whisky",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-kakubin-blended-whisky",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "suntory-haku-vodka",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "beefeater-london-dry-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "plymouth-original-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "ki-no-bi-kyoto-dry-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "malfy-originale",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "the-glenlivet-12-year-old",
+      "checks": {
+        "history": true,
+        "bottling": true,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": true
+      },
+      "price_points": 9,
+      "price_start": "2007-11-13",
+      "price_end": "2015-05-04",
+      "all_eight": false
+    },
+    {
+      "slug": "aberlour-12-year-old",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "chivas-regal-12-year-old",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "ballantine-s-finest",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "four-roses-small-batch-bourbon",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "kahl-a-original-coffee-liqueur",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "malibu-original",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "altos-plata",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "del-maguey-vida-cl-sico",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "citadelle-original",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "sipsmith-london-dry-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "gin-mare-mediterranean-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "nord-s-atlantic-galician-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "isle-of-harris-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "isle-of-raasay-hebridean-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "kyr-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "st-george-terroir-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "ferdinand-s-saar-dry-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "christian-drouin-le-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "dingle-original-gin",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "diplom-tico-reserva-exclusiva",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "mount-gay-eclipse",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "appleton-estate-signature",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "don-papa-7-years-old",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "hennessy-v-s",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "r-my-martin-vsop",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "chartreuse-green-chartreuse",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": false,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "luxardo-amaretto-di-saschira",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": false,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    },
+    {
+      "slug": "heering-cherry-liqueur",
+      "checks": {
+        "history": true,
+        "bottling": false,
+        "production": true,
+        "ingredients": true,
+        "criticism": true,
+        "front": true,
+        "back": true,
+        "prices": false
+      },
+      "price_points": 0,
+      "price_start": null,
+      "price_end": null,
+      "all_eight": false
+    }
+  ]
+}

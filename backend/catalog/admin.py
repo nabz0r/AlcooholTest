@@ -9,6 +9,15 @@ class AuditedAdmin(admin.ModelAdmin):
     def save_model(self,request,obj,form,change):
         super().save_model(request,obj,form,change)
         m.Audit.objects.create(actor=request.user,action='admin.update' if change else 'admin.create',target=f'{obj._meta.label}:{obj.pk}',detail={'fields':list(form.changed_data)})
+    def save_formset(self,request,form,formset,change):
+        instances=formset.save(commit=False)
+        for obj in formset.deleted_objects:
+            m.Audit.objects.create(actor=request.user,action='admin.inline.delete',target=f'{obj._meta.label}:{obj.pk}')
+            obj.delete()
+        for obj in instances:
+            obj.save()
+            m.Audit.objects.create(actor=request.user,action='admin.inline.save',target=f'{obj._meta.label}:{obj.pk}',detail={'parent':str(form.instance.pk)})
+        formset.save_m2m()
     def delete_model(self,request,obj):
         m.Audit.objects.create(actor=request.user,action='admin.delete',target=f'{obj._meta.label}:{obj.pk}')
         super().delete_model(request,obj)
@@ -16,14 +25,31 @@ class AuditedAdmin(admin.ModelAdmin):
         for obj in queryset: m.Audit.objects.create(actor=request.user,action='admin.delete',target=f'{obj._meta.label}:{obj.pk}')
         super().delete_queryset(request,queryset)
 
-class VariantInline(admin.TabularInline): model=m.Variant; extra=0; autocomplete_fields=['source']
-class RecipeInline(admin.TabularInline): model=m.Recipe; extra=0; autocomplete_fields=['source']
+class VariantInline(admin.TabularInline): model=m.Variant; extra=0; show_change_link=True; autocomplete_fields=['source']
+class RecipeInline(admin.TabularInline): model=m.Recipe; extra=0; show_change_link=True; autocomplete_fields=['source']
 class RecipeIngredientInline(admin.TabularInline): model=m.RecipeIngredient; extra=0; autocomplete_fields=['ingredient','source']
+class AssetInline(admin.StackedInline):
+    model=m.BottleAsset;extra=0;show_change_link=True
+class CriticInline(admin.StackedInline):
+    model=m.CriticReview;extra=0;autocomplete_fields=['source'];show_change_link=True
+class PackagingInline(admin.StackedInline):
+    model=m.BottlePhoto;extra=0;exclude=['user'];show_change_link=True
+
 @admin.register(m.Product)
 class ProductAdmin(AuditedAdmin):
     def get_urls(self):
         from django.urls import path
-        return [path('<uuid:object_id>/merge/',self.admin_site.admin_view(self.merge_view),name='catalog_product_merge')]+super().get_urls()
+        return [path('dossiers/',self.admin_site.admin_view(self.dossier_view),name='catalog_product_dossiers'),path('<uuid:object_id>/merge/',self.admin_site.admin_view(self.merge_view),name='catalog_product_merge')]+super().get_urls()
+    def dossier_view(self,request):
+        from django.core.exceptions import PermissionDenied
+        from django.template.response import TemplateResponse
+        from .editorial import dossier_rows,CHECKS
+        if not self.has_view_permission(request):raise PermissionDenied
+        rows=dossier_rows();total=len(rows);complete=sum(r['complete'] for r in rows)
+        missing=request.GET.get('missing','')
+        if missing in dict(CHECKS):rows=[r for r in rows if missing in r['missing']]
+        elif missing=='any':rows=[r for r in rows if not r['complete']]
+        return TemplateResponse(request,'admin/catalog/product/dossiers.html',{**self.admin_site.each_context(request),'opts':self.model._meta,'title':'Catalogue dossier workbench','rows':rows,'checks':CHECKS,'selected':missing,'total':total,'complete':complete})
     def merge_view(self,request,object_id):
         from django import forms
         from django.shortcuts import get_object_or_404,redirect
@@ -45,7 +71,7 @@ class ProductAdmin(AuditedAdmin):
             except ValidationError as exc:form.add_error(None,exc)
         return TemplateResponse(request,'admin/catalog/product/merge.html',{**self.admin_site.each_context(request),'form':form,'original':original,'preview':report,'opts':self.model._meta,'title':'Resolve duplicate'})
 
-    list_display=['name','brand','status','disclosure','updated_at']; list_filter=['status','disclosure','category','brand']; search_fields=['name','slug','brand__name']; autocomplete_fields=['brand','place','edition_of','history_source']; inlines=[VariantInline,RecipeInline]
+    list_display=['name','brand','status','disclosure','updated_at']; list_filter=['status','disclosure','category','brand']; search_fields=['name','slug','brand__name']; autocomplete_fields=['brand','place','edition_of','history_source']; inlines=[VariantInline,RecipeInline,CriticInline,PackagingInline,AssetInline]
 @admin.register(m.Recipe)
 class RecipeAdmin(AuditedAdmin):
     list_display=['product','version','declared_count']; search_fields=['product__name','version']; autocomplete_fields=['product','source']; inlines=[RecipeIngredientInline]
@@ -54,7 +80,7 @@ class BrandAdmin(AuditedAdmin): search_fields=['name','slug']; list_display=['na
 @admin.register(m.Source)
 class SourceAdmin(AuditedAdmin): search_fields=['title','publisher','url']; list_display=['title','kind','accessed_on']; list_filter=['kind']
 @admin.register(m.Ingredient)
-class IngredientAdmin(AuditedAdmin): search_fields=['name','slug','scientific_name']; list_display=['name','scientific_name','family','navigation_group']; list_filter=['navigation_group','family']
+class IngredientAdmin(AuditedAdmin): search_fields=['name','slug','scientific_name']; list_display=['name','scientific_name','family','navigation_group']; list_filter=['navigation_group','family']; autocomplete_fields=['profile_source']
 @admin.register(m.Compound)
 class CompoundAdmin(AuditedAdmin): search_fields=['name','cas']; list_display=['name','cas']
 
@@ -103,7 +129,7 @@ class AuditAdmin(admin.ModelAdmin):
     list_display=['created_at','actor','action','target']; readonly_fields=[f.name for f in m.Audit._meta.fields]; search_fields=['action','target']
     def has_add_permission(self,r): return False
     def has_delete_permission(self,r,obj=None): return False
-for model in [m.Variant,m.RecipeIngredient,m.IngredientCompound,m.Study,m.Measurement,m.Collection]: admin.site.register(model,AuditedAdmin)
+for model in [m.RecipeIngredient,m.IngredientCompound,m.Study,m.Measurement,m.Collection]: admin.site.register(model,AuditedAdmin)
 
 @admin.register(m.Place)
 class PlaceAdmin(AuditedAdmin):
@@ -138,7 +164,15 @@ class CandidateAdmin(AuditedAdmin):
 class CursorAdmin(admin.ModelAdmin):
     list_display=['key','cursor','exhausted','updated_at'];readonly_fields=['updated_at']
 
-admin.site.register(m.PriceObservation,AuditedAdmin)
+class PriceInline(admin.TabularInline):
+    model=m.PriceObservation;extra=0;autocomplete_fields=['source'];show_change_link=True
+@admin.register(m.Variant)
+class VariantAdmin(AuditedAdmin):
+    list_display=['product','name','market','abv','volume_ml'];search_fields=['product__name','product__brand__name','name','barcode'];autocomplete_fields=['product','source'];inlines=[PriceInline]
+@admin.register(m.PriceObservation)
+class PriceAdmin(AuditedAdmin):
+    list_display=['variant','observed_on','amount','currency','country','retailer'];list_filter=['currency','country','retailer'];search_fields=['variant__product__name','variant__product__brand__name','retailer'];autocomplete_fields=['variant','source'];date_hierarchy='observed_on'
+
 
 @admin.action(description='Publish selected licensed bottle photographs')
 def approve_photos(modeladmin,request,queryset):
@@ -151,3 +185,12 @@ class BottlePhotoAdmin(AuditedAdmin):
         from django.utils.html import format_html
         return format_html('<img src="{}" style="max-width:420px;max-height:500px" alt="Submitted packaging photograph">',obj.photo.url) if obj.photo else 'No photograph'
     list_display=['product','view','credit','license','approved'];list_filter=['view','approved'];autocomplete_fields=['product'];actions=[approve_photos]
+
+
+@admin.action(description='Accept reviewed archival prices into the published price notebook')
+def accept_price_captures(modeladmin,request,queryset):
+    from .prices import accept_price_capture
+    for candidate in queryset.filter(provider='wayback',status='pending'):
+        try:accept_price_capture(candidate,request.user)
+        except (ValueError,KeyError) as exc:modeladmin.message_user(request,str(exc),level=messages.ERROR)
+CandidateAdmin.actions=[accept_candidates,accept_price_captures]

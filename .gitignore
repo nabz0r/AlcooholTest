@@ -11,3 +11,6 @@ staticfiles/
 media/
 exports/
 .DS_Store
+# Public README media is versioned; runtime uploads remain ignored.
+!docs/media/
+!docs/media/**

@@ -198,6 +198,47 @@
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
+              "plant_part": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "sensory_role": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "preparation": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "technical_notes": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "profile_source_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F-]{36}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "navigation_group": {
+                "type": "string",
+                "maxLength": 16,
+                "enum": [
+                  "",
+                  "floral",
+                  "citrus",
+                  "herbal",
+                  "spice",
+                  "fruit",
+                  "roots",
+                  "grain"
+                ]
+              },
               "slug": {
                 "type": "string",
                 "maxLength": 50,
@@ -218,19 +259,6 @@
               "notes": {
                 "type": "string",
                 "maxLength": 20000
-              },
-              "navigation_group": {
-                "type": "string",
-                "enum": [
-                  "",
-                  "floral",
-                  "citrus",
-                  "herbal",
-                  "spice",
-                  "fruit",
-                  "roots",
-                  "grain"
-                ]
               }
             }
           }
@@ -473,6 +501,15 @@
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
+              "view": {
+                "type": "string",
+                "maxLength": 12,
+                "enum": [
+                  "front",
+                  "back",
+                  "detail"
+                ]
+              },
               "product_id": {
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
@@ -506,14 +543,6 @@
               "edition_note": {
                 "type": "string",
                 "maxLength": 20000
-              },
-              "view": {
-                "type": "string",
-                "enum": [
-                  "front",
-                  "back",
-                  "detail"
-                ]
               }
             }
           }

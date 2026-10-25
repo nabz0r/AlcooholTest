@@ -73,3 +73,9 @@ Community ratings accept integers 0 through 5. All write calls retain CSRF/sessi
 `GET /discover` returns canonical published records with total/page/pages, ingredient-group facets, indexed ingredient count, explicit matched names, grouped names and six-area coverage. Parameters: q (max 120 chars), category, country, comma-separated groups, min_abv/max_abv (0–100, finite), coverage (0–6), photo=1, sort=documented|name, page (bounded 1–1000), limit (1–24). Group selections use OR; facets honor the other constraints. Strength bounds match one variant. Invalid group/strength/sort/coverage parameters return 400.
 
 Catalogue cards and product detail now include coverage with documented/total/areas/notice. Detail also returns alternatives: same-category canonical records with shared_ingredients and an explicit basis. The comparator uses these public records and their original source links; there is no hidden preference score. See DECISIONS.md for rules, limits and UI behavior.
+
+## Volume 04 additions
+
+Ingredient detail responses additionally expose `plant_part`, `sensory_role`, `preparation`, `technical_notes` and nullable `profile_source`. These are editable source-linked editorial fields, not measurements. Empty/unknown parts remain explicit. Existing catalogue 1.0 ingredient rows without these new optional fields still validate.
+
+Staff may queue `{ "kind": "prices" }` at the existing jobs endpoint. The worker emits a JSONL archival-research report and stages `wayback` candidates; it does not automatically publish prices. Acceptance is an audited admin action after canonical identity review. Private observation responses also include `row_observations` and `unobserved_states`; null transition rows remain null and no physiological forecast is returned.

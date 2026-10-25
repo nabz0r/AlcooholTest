@@ -2,35 +2,35 @@
   "schema_version": "1.0",
   "generated_at": "2026-10-25T00:00:00Z",
   "counts": {
-    "sources": 84,
+    "sources": 230,
     "places": 14,
     "brands": 48,
-    "ingredients": 69,
+    "ingredients": 125,
     "compounds": 7,
     "ingredient_compounds": 5,
     "products": 57,
     "bottle_assets": 22,
-    "variants": 17,
-    "recipes": 56,
-    "recipe_ingredients": 93,
+    "variants": 22,
+    "recipes": 57,
+    "recipe_ingredients": 265,
     "studies": 9,
     "measurements": 0,
     "mechanisms": 4,
-    "critic_reviews": 6,
-    "price_observations": 2
+    "critic_reviews": 56,
+    "price_observations": 40
   },
   "files": {
     "seed.json": {
-      "sha256": "16251e072fd8d3cf69b0c21076ef1d9300823fa8a97efe93e26fd97715677db0",
-      "bytes": 233122
+      "sha256": "668be9e65b5e03ef07a7989dfed1f669c003e142b096b179b45ba37f9598d949",
+      "bytes": 590061
     },
     "schema.json": {
-      "sha256": "1ed1bf991fb9bc47e268a82970dc18a0ef69f7f73e79cdd241d0048fb5b473e0",
-      "bytes": 27349
+      "sha256": "57fcd85fe080c1a48606970b4e6330c88cae2a5dfe9d8b3304aa450e979e4edd",
+      "bytes": 28190
     },
     "catalog.jsonl": {
-      "sha256": "895de2db2fcb11122a02ca0d39351cd644d56a1b322506a535de47c353163619",
-      "bytes": 209055
+      "sha256": "57434dc8192a619ee1d576a83c5d458e324603314042c44d6118f4a56125dddc",
+      "bytes": 541223
     }
   }
 }

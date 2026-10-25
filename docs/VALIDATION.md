@@ -1,3 +1,17 @@
+# Current validation — Volume 04
+
+Executed locally on 2026-10-25 against the Docker application. The final PostgreSQL suite contains **70 tests**. Frontend TypeScript/Vite and Docker builds pass. Migration/system checks, 62 public sitemap routes, source-linked Yamazaki/Monkey histories and actual archive points are covered by the current reports.
+
+The browser verified the Press Start gateway, explicit sound start with Playing/nonzero output, pause, mixer/export, full-page navigation, bottle journal tabs, source/price display, in-scene ingredient selection, botanical paging and camera controls. Desktop/mobile captures are indexed in SCREENSHOTS.md. A 390px viewport was inspected for horizontal overflow; this is not physical-device or independent WCAG certification.
+
+A disposable local QA administrator exercised the eight-area dossier workbench and its empty missing-history filter. Staff UI queued a completed public JSON export and a completed eight-candidate Wayback job using a warm cache of actual downloads. One reviewed candidate was accepted idempotently without duplicating the existing price. The account was logged out and removed; zero user accounts remain. Public export tables exclude member data. Reports: `validation/atlas-browser.json`, `validation/atlas-http.json`, `validation/atlas-media.json`, `validation/botanical-art.json`.
+
+The distribution has 55 attributed canonical histories, 125 ingredient/input records, 56 critic accounts and 40 dated prices. **All-eight dossier completion remains zero**, chiefly because genuine rear photographs and other evidence are missing. The archive currently spans 2007–2015 across five products plus two Luxembourg observations. Twenty-year/full-catalogue price coverage, 55 genuine front/back pairs, product-specific pharmacological predictions and a working Android APK are not delivered claims. APK requirements are roadmap-only. Measured audio PCM is non-silent and unclipped; subjective musical quality and physical speakers are not certified.
+
+## Historical evidence below
+
+The following reports describe earlier releases and retain their original counts/timings. They must not be used as the current Volume 04 inventory.
+
 # Validation — 2026-10-25
 
 Executed locally on Apple Silicon macOS with Docker Desktop. This report scopes evidence; it is not a third-party security, accessibility or performance certification.
@@ -57,3 +71,7 @@ Local code/build/migration checks and the 55-test PostgreSQL suite pass. Actual 
 The 66-test suite includes navigation-group filtering/explanations, canonical/draft privacy, same-variant strength bounds, invalid finite/range/sort inputs, six-area coverage, overlap alternatives, stable pagination, a maximum-12-query discovery budget, backward-compatible imports, approved member photo discovery and separation of publisher/community scores. Frontend build and Django migration/system checks pass. All 62 public sitemap URLs return 200. The retained 24-read local HTTP sample had zero errors, median 8.305 ms and p95 10.498 ms; cache states and the bounded sequential test scope are in docs/validation/decision-http.json. This is not production throughput.
 
 Browser verification confirms four flower matches, a one-record Japan/max-44 direction, restored filters after Back, reset from zero to 55 records, linked coverage chapters, a source-explained pair, 16→10 comparison rows with differences enabled, clipboard success, clear/reopen restoration, a 27-ingredient matrix and recovery from an intentional unavailable fixture. No browser error log entries were returned at final inspection. Ten new real screenshots have a separate integrity manifest. GitHub Actions [run 40223838810](https://github.com/nabz0r/AlcooholTest/actions/runs/40223838810) passed all three jobs for application commit `e7bcb40294a0a318e11245c1f0f18f4d84f7eac2`. The following documentation-only commit records evidence and screenshot metadata corrections. Previous CI links above identify their explicitly named historical revisions; they are not automatically evidence for new code.
+
+### Final restart regression
+
+A final browser refresh exposed a 502 after an API container replacement: Nginx had retained the old upstream IP. The fixed service name is now resolved via Docker DNS. `validation/proxy-recovery.json` records replacement through the unchanged proxy: one transient unavailable sample, then HTTP 200 at about 2.07 seconds and through the remaining samples. Nginx configuration validation passed. The restart check is now in CI. Eleven final captures replace intermediate screenshots, including the briefly overwritten failed-page capture; the screenshot manifest contains only verified final JPEGs.

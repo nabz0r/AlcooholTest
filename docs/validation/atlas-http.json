@@ -1,0 +1,20 @@
+{
+  "sitemap_pages": 62,
+  "errors": [],
+  "products": {
+    "suntory-yamazaki-12-years-old": {
+      "history": true,
+      "history_source": true,
+      "critic_accounts": 1,
+      "price_points": 8
+    },
+    "monkey-47-schwarzwald": {
+      "history": true,
+      "history_source": true,
+      "critic_accounts": 2,
+      "price_points": 5
+    }
+  },
+  "art_status": 200,
+  "scope": "Sequential local checks; not a load test or independent security certification."
+}

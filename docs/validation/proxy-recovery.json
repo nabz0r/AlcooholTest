@@ -1,0 +1,65 @@
+{
+  "before": 200,
+  "after": 200,
+  "proxy_container_unchanged": true,
+  "api_replace_exit": 0,
+  "observations": [
+    {
+      "seconds": 0.0,
+      "status": 200
+    },
+    {
+      "seconds": 1.02,
+      "status": "unavailable"
+    },
+    {
+      "seconds": 2.07,
+      "status": 200
+    },
+    {
+      "seconds": 3.12,
+      "status": 200
+    },
+    {
+      "seconds": 4.13,
+      "status": 200
+    },
+    {
+      "seconds": 5.14,
+      "status": 200
+    },
+    {
+      "seconds": 6.15,
+      "status": 200
+    },
+    {
+      "seconds": 7.16,
+      "status": 200
+    },
+    {
+      "seconds": 8.17,
+      "status": 200
+    },
+    {
+      "seconds": 9.18,
+      "status": 200
+    },
+    {
+      "seconds": 10.19,
+      "status": 200
+    },
+    {
+      "seconds": 11.2,
+      "status": 200
+    },
+    {
+      "seconds": 12.21,
+      "status": 200
+    },
+    {
+      "seconds": 13.22,
+      "status": 200
+    }
+  ],
+  "scope": "API replacement through the same proxy; transient restart failures are not claimed as zero downtime."
+}

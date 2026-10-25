@@ -1,0 +1,20 @@
+{
+  "audio": {
+    "path": "docs/media/monkey-47-composition.mp3",
+    "source": "Actual updated browser WAV export encoded with libmp3lame 128 kbit/s",
+    "duration_seconds": 20.0,
+    "source_channels": 2,
+    "source_sample_rate": 44100,
+    "source_pcm_peak": 0.15704345703125,
+    "source_pcm_rms": 0.026106687804781516,
+    "source_clipped_samples": 0,
+    "wav_sha256": "d0c144e7fc6686f605023a05789e850b28a4db0464a0722c28d9c059360c1548",
+    "mp3_sha256": "1e145c7efa535075e6d47b9fe2f7b7f996e42f51d8e26ed501037d3b31760d74"
+  },
+  "motion": {
+    "path": "docs/media/botanical-orbit.gif",
+    "captured_frames": 14,
+    "presentation": "Forward/reverse actual browser drag captures, resized to 1000px, 220ms/frame",
+    "sha256": "c6de4c655ccd95d6a1b2c7a798c4a924a1e3f53bf94609285a4e6a59cd3d7f79"
+  }
+}

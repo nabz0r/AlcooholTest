@@ -1,0 +1,115 @@
+{
+  "captured_on": "2026-10-25",
+  "screenshots": [
+    {
+      "file": "docs/screenshots/admin-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 94483,
+      "sha256": "42936f6830955ee17f64c15ba3778788f05b2832852e6d82fac46a91c86ad927",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/botanicals-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 82365,
+      "sha256": "a381caa4a09a0a49783b48a8adcfd3b141cdf440a792343e4bd22abf4a455a38",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/bottle-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 66086,
+      "sha256": "bc5079df1b3cfc4eb812acba7d97940b29aba1868f94746d22f89ac1330b3065",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/gateway-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 39465,
+      "sha256": "bf664059c16c441d06d91d78787d3a9b9b9d07ab34b28203dfbdd30143931ede",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/home-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 73901,
+      "sha256": "748de62a33b329c1eddd603b26428d83544b6244a788280d438834000070da27",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/ingredient-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 74258,
+      "sha256": "3a4f37be7131546b348e8eb2e115ac9c5131e76068ce12826962db12ef92f326",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/mobile-v4.jpg",
+      "dimensions": [
+        375,
+        812
+      ],
+      "bytes": 35802,
+      "sha256": "57b75d853c8ca466c697af0c7e3d6ca84329f7fcc6103f6e8157f8f08ff073f2",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/prices-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 65675,
+      "sha256": "519cf516a6308e717443e1baba60a6cdc842f4f37ea81b965ea98df4f488c926",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/sound-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 46157,
+      "sha256": "385608f406b263b12ae12ac53e33a95484ce75ad518244df7be49b1d85d61499",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/story-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 90416,
+      "sha256": "fafcdac6eb04c17a2de7da826b8e1f8f7ca5d5e7c0ab2dc0320ee4784ae2d7e8",
+      "kind": "Actual browser screenshot"
+    },
+    {
+      "file": "docs/screenshots/studio-v4.jpg",
+      "dimensions": [
+        1265,
+        712
+      ],
+      "bytes": 63668,
+      "sha256": "791afb252134b5ba35a8be42ac19bad321796b5c1c67f70d5463bdd734118d92",
+      "kind": "Actual browser screenshot"
+    }
+  ]
+}
