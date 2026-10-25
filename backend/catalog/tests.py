@@ -178,7 +178,10 @@ class CatalogueTests(TestCase):
         original=m.Product.objects.get(slug='monkey-47-schwarzwald')
         duplicate=m.Product.objects.create(slug='test-duplicate',brand=original.brand,name='Duplicate listing',description='Disposable test fixture',status='published')
         v=m.Variant.objects.create(product=duplicate,name='750 ml listing',market='Test market',abv=47,volume_ml=750,source=m.Source.objects.first())
-        merge(duplicate,original,self.admin);duplicate.refresh_from_db();v.refresh_from_db()
+        photo=m.BottlePhoto.objects.create(product=duplicate,view='back',photo='test-fixture.jpg',credit='Test',license='Test',source_url='https://example.com')
+        merge(duplicate,original,self.admin);duplicate.refresh_from_db();v.refresh_from_db();photo.refresh_from_db()
+        self.assertEqual(photo.product,original)
+        self.assertEqual(self.client.get('/spirits/test-duplicate/').status_code,301)
         self.assertEqual(duplicate.status,'archived');self.assertEqual(duplicate.merged_into,original);self.assertEqual(v.product,original)
         self.assertEqual(self.client.get('/api/v1/products/test-duplicate').status_code,302)
         self.assertTrue(m.Audit.objects.filter(action='product.merged').exists())
@@ -199,3 +202,50 @@ class CatalogueTests(TestCase):
         request=type('Request',(),{'user':self.admin})()
         accept_candidates(Stub(),request,m.DiscoveryCandidate.objects.filter(pk=c.pk))
         c.refresh_from_db();self.assertEqual(c.status,'accepted');self.assertEqual(m.Product.objects.count(),count)
+
+    def test_public_html_is_readable_and_canonical(self):
+        r=self.client.get('/spirits/monkey-47-schwarzwald/')
+        self.assertContains(r,'Schwarzwald Dry Gin');self.assertContains(r,'application/ld+json')
+        self.assertContains(r,'http://localhost:8088/spirits/monkey-47-schwarzwald/')
+        self.assertContains(r,'Origin, culture and legacy');self.assertContains(r,'Juniper')
+        self.assertEqual(self.client.get('/unknown-section/').status_code,404)
+    def test_private_pages_noindex_and_sitemap(self):
+        self.assertEqual(self.client.get('/shelf/')['X-Robots-Tag'],'noindex, nofollow')
+        r=self.client.get('/sitemap.xml');self.assertContains(r,'/spirits/monkey-47-schwarzwald/')
+        self.assertNotContains(r,'/shelf/');self.assertContains(self.client.get('/robots.txt'),'Disallow: /admin/')
+    def test_html_never_leaks_draft(self):
+        p=m.Product.objects.get(slug='monkey-47-schwarzwald');p.status='draft';p.save()
+        self.assertEqual(self.client.get('/spirits/'+p.slug+'/').status_code,404)
+        self.assertNotContains(self.client.get('/sitemap.xml'),'/spirits/'+p.slug+'/')
+    def test_detailed_review_moderation_and_averages(self):
+        self.client.force_login(self.member)
+        r=self.post('products/monkey-47-schwarzwald/reviews',{'rating':4,'text':'QA tasting note','aroma':5,'taste':4,'finish':3,'value':0,'design':5,'tags':['floral','citrus'],'context':'tonic','buy_again':'yes'})
+        self.assertEqual(r.status_code,200)
+        p=m.Product.objects.get(slug='monkey-47-schwarzwald');review=p.reviews.get(user=self.member)
+        self.assertFalse(review.approved);self.assertTrue(review.buy_again);self.assertEqual(review.value,0)
+        data=self.client.get('/api/v1/products/'+p.slug).json();self.assertIsNone(data['review_dimensions']['aroma'])
+        review.approved=True;review.save();data=self.client.get('/api/v1/products/'+p.slug).json()
+        self.assertEqual(data['review_dimensions']['aroma'],5);self.assertEqual(data['review_dimensions']['aroma_count'],1)
+        self.assertEqual(data['review_dimensions']['value'],0)
+    def test_detailed_review_rejects_unsupported_values(self):
+        self.client.force_login(self.member)
+        for extra in [{'taste':6},{'tags':['hallucinogenic']},{'context':'injected'},{'buy_again':'maybe'}]:
+            self.assertEqual(self.post('products/monkey-47-schwarzwald/reviews',{'rating':3,'text':'Test',**extra}).status_code,400)
+    def test_packaging_photos_require_rights_and_moderation(self):
+        self.client.force_login(self.member)
+        with tempfile.TemporaryDirectory() as media,override_settings(MEDIA_ROOT=media):
+            out=BytesIO();Image.new('RGB',(30,40)).save(out,format='PNG')
+            payload={'view':'back','credit':'Test photographer','license':'Own photo CC BY-SA 4.0','source_url':'https://example.com/photo','photo':SimpleUploadedFile('back.png',out.getvalue(),content_type='image/png')}
+            self.assertEqual(self.client.post('/api/v1/products/monkey-47-schwarzwald/photos',payload).status_code,400)
+            payload['photo']=SimpleUploadedFile('back.png',out.getvalue(),content_type='image/png');payload['rights_confirmed']='yes'
+            r=self.client.post('/api/v1/products/monkey-47-schwarzwald/photos',payload);self.assertEqual(r.status_code,201)
+            photo=m.BottlePhoto.objects.get(pk=r.json()['id']);self.assertFalse(photo.approved);self.assertTrue(photo.photo.name.endswith('.jpg'))
+            p=self.client.get('/api/v1/products/monkey-47-schwarzwald').json();self.assertNotIn(str(photo.id),[str(x['id']) for x in p['photos']])
+            photo.approved=True;photo.save();p=self.client.get('/api/v1/products/monkey-47-schwarzwald').json();self.assertIn(str(photo.id),[str(x['id']) for x in p['photos']])
+    def test_curated_packaging_views(self):
+        p=self.client.get('/api/v1/products/heering-cherry-liqueur').json()
+        self.assertEqual({x['view'] for x in p['photos']},{'front','back'})
+    def test_photo_rejects_non_raster(self):
+        with tempfile.TemporaryDirectory() as media,override_settings(MEDIA_ROOT=media):
+            photo=m.BottlePhoto(product=m.Product.objects.first(),view='back',credit='QA',license='QA',source_url='https://example.com',photo=SimpleUploadedFile('bad.svg',b'<svg onload="alert(1)"></svg>'))
+            with self.assertRaises(ValidationError):photo.full_clean()

@@ -46,7 +46,7 @@ def audit(request,action,target,detail=None): m.Audit.objects.create(actor=reque
 def source_data(s): return {'id':s.id,'title':s.title,'url':s.url,'publisher':s.publisher,'kind':s.kind,'accessed_on':s.accessed_on}
 
 def card(p):
-    asset=next(iter(p.assets.all()),None)
+    asset=next((a for a in p.assets.all() if a.view=='front'),None)
     return {'history':p.history,'history_source':source_data(p.history_source) if p.history_source_id else None,'merged_into':p.merged_into.slug if p.merged_into_id else None,'edition_of':p.edition_of.slug if p.edition_of_id else None,'editions':[{'slug':e.slug,'name':e.name} for e in p.editions.all() if e.status=='published'],'id':p.id,'slug':p.slug,'name':p.name,'brand':p.brand.name,'country':p.brand.country,'category':p.category,'description':p.description,'disclosure':p.disclosure,'color':p.color,'shape':p.shape,'photo':p.photo.url if p.photo else None,'photo_credit':p.photo_credit,'photo_license':p.photo_license,'image':p.photo.url if p.photo else (asset.local_path if asset else None),'image_credit':p.photo_credit if p.photo else (asset.author if asset else ''),'image_license':p.photo_license if p.photo else (asset.license if asset else ''),'image_source':asset.source_page if asset and not p.photo else None,'image_note':asset.edition_note if asset and not p.photo else '','locality':p.place.name if p.place else '', 'region':p.place.region if p.place else '', 'origin_source':source_data(p.place.source) if p.place else None,'variants':[{'id':v.id,'name':v.name,'market':v.market,'abv':v.abv,'volume_ml':v.volume_ml,'source':source_data(v.source)} for v in p.variants.all()]}
 
 @require_GET
@@ -128,6 +128,8 @@ def product(request,slug):
     for r in p.recipes.all():
         recipes.append({'id':r.id,'version':r.version,'declared_count':r.declared_count,'process':r.process,'notes':r.notes,'source':source_data(r.source),'ingredients':[{'id':x.ingredient.id,'slug':x.ingredient.slug,'name':x.ingredient.name,'scientific_name':x.ingredient.scientific_name,'certainty':x.certainty,'stage':x.stage,'amount':x.amount,'unit':x.unit,'notes':x.notes,'source':source_data(x.source)} for x in r.ingredients.all()]})
     result['recipes']=recipes
+    result['photos']=[{'id':x.id,'view':x.view,'url':x.local_path,'credit':x.author,'license':x.license,'source_url':x.source_page,'caption':x.edition_note} for x in p.assets.all()]+[{'id':x.id,'view':x.view,'url':x.photo.url,'credit':x.credit,'license':x.license,'source_url':x.source_url,'caption':x.caption} for x in p.community_photos.filter(approved=True)]
+    result['review_dimensions']=p.reviews.filter(approved=True).aggregate(**{key:Avg(key) for key in ['aroma','taste','finish','value','design']}) | p.reviews.filter(approved=True).aggregate(**{key+'_count':Count(key) for key in ['aroma','taste','finish','value','design']})
     ids=m.RecipeIngredient.objects.filter(recipe__product=p).values_list('ingredient_id',flat=True)
     compounds=m.Compound.objects.filter(ingredientcompound__ingredient_id__in=ids).distinct().prefetch_related('studies__source')
     result['prices']=[{'variant_id':v.variant_id,'date':v.observed_on,'amount':v.amount,'currency':v.currency,'country':v.country,'retailer':v.retailer,'variant':str(v.variant),'volume_ml':v.variant.volume_ml,'abv':v.variant.abv,'promotion':v.promotion,'tax_included':v.tax_included,'source':source_data(v.source)} for v in m.PriceObservation.objects.filter(variant__product=p).select_related('variant__product__brand','source').order_by('observed_on')]
@@ -138,7 +140,7 @@ def product(request,slug):
     result['measurements']=[{'compound':x.compound.name,'value':x.value,'unit':x.unit,'method':x.method,'batch':x.batch,'source':source_data(x.source)} for x in m.Measurement.objects.filter(variant__product=p).select_related('compound','source')]
     reviews=p.reviews.filter(approved=True).select_related('user')
     result['rating']=reviews.aggregate(average=Avg('rating'),count=Count('id'))
-    result['reviews']=[{'username':r.user.username,'rating':r.rating,'text':r.text} for r in reviews.order_by('-updated_at')[:30]]
+    result['reviews']=[{'username':r.user.username,'rating':r.rating,'text':r.text,'dimensions':{k:getattr(r,k) for k in ['aroma','taste','finish','value','design']},'context':r.context,'tags':r.tags,'buy_again':r.buy_again} for r in reviews.order_by('-updated_at')[:30]]
     return reply(result)
 
 @require_GET
@@ -179,7 +181,7 @@ def review(request,slug):
     p=get_object_or_404(m.Product,slug=slug,status='published'); data=body(request)
     rating=int(data['rating']); note=str(data['text']).strip()
     if not 0<=rating<=5 or not 1<=len(note)<=2000: raise ValueError('Use a rating from 0 to 5 and a note under 2,000 characters.')
-    m.Review.objects.update_or_create(user=request.user,product=p,defaults={'rating':rating,'text':note,'approved':False})
+    m.Review.objects.update_or_create(user=request.user,product=p,defaults=review_fields(data,rating,note))
     return reply({'status':'pending'})
 
 @auth()
@@ -196,7 +198,7 @@ def collection(request):
 @require_GET
 @auth(True)
 def operations(request):
-    return reply({'jobs':[{'id':j.id,'kind':j.kind,'status':j.status,'created_at':j.created_at,'size':j.size,'sha256':j.checksum,'error':j.error} for j in m.Job.objects.order_by('-created_at')[:50]],'discovery_candidates':m.DiscoveryCandidate.objects.count(),'discovery_images':m.DiscoveryCandidate.objects.exclude(image_path='').count(),'cursors':list(m.DiscoveryCursor.objects.values('key','cursor','exhausted')),'pending_submissions':m.Submission.objects.filter(status='pending').count(),'pending_reviews':m.Review.objects.filter(approved=False).count()})
+    return reply({'jobs':[{'id':j.id,'kind':j.kind,'status':j.status,'created_at':j.created_at,'size':j.size,'sha256':j.checksum,'error':j.error} for j in m.Job.objects.order_by('-created_at')[:50]],'discovery_candidates':m.DiscoveryCandidate.objects.count(),'discovery_images':m.DiscoveryCandidate.objects.exclude(image_path='').count(),'cursors':list(m.DiscoveryCursor.objects.values('key','cursor','exhausted')),'pending_submissions':m.Submission.objects.filter(status='pending').count(),'pending_reviews':m.Review.objects.filter(approved=False).count(),'pending_photos':m.BottlePhoto.objects.filter(approved=False).count()})
 
 @require_POST
 @auth(True)
@@ -257,3 +259,29 @@ def ingredient_detail(request,slug):
     ingredient=get_object_or_404(m.Ingredient,slug=slug)
     links=m.IngredientCompound.objects.filter(ingredient=ingredient).select_related('compound','source').prefetch_related('compound__studies__source','compound__mechanisms__source')
     return reply({'name':ingredient.name,'scientific_name':ingredient.scientific_name,'family':ingredient.family,'notes':ingredient.notes,'compounds':[{'name':x.compound.name,'association':x.notes,'source':source_data(x.source),'studies':[{'title':s.title,'design':s.design,'population':s.population,'finding':s.finding,'limitation':s.limitation,'beverage_evidence':s.beverage_evidence,'source':source_data(s.source)} for s in x.compound.studies.all()],'mechanisms':[{'target':v.target,'action':v.action,'context':v.evidence_context,'limitation':v.limitation,'source':source_data(v.source)} for v in x.compound.mechanisms.all()]} for x in links],'exposure':'No finished-bottle concentration inferred from plant identity.'})
+
+AROMA_TAGS=['floral','juniper','citrus','herbal','spicy','woody','smoky','fruity','vanilla','nutty','sweet','dry','bitter','smooth','warming']
+def review_fields(data,rating,note):
+    values={'rating':rating,'text':note,'approved':False}
+    for key in ['aroma','taste','finish','value','design']:
+        v=data.get(key)
+        values[key]=None if v in [None,''] else int(v)
+        if values[key] is not None and not 0<=values[key]<=5:raise ValueError('Dimension ratings must be between 0 and 5.')
+    context=data.get('context','')
+    if context not in ['', 'neat','ice','tonic','cocktail']:raise ValueError('Invalid tasting context.')
+    tags=data.get('tags',[])
+    if not isinstance(tags,list) or len(tags)>8 or any(t not in AROMA_TAGS for t in tags):raise ValueError('Choose up to eight supported aroma tags.')
+    buy=data.get('buy_again')
+    if buy not in [None,True,False,'','yes','no']:raise ValueError('Invalid purchase-again preference.')
+    values.update(context=context,tags=list(dict.fromkeys(tags)),buy_again=True if buy in [True,'yes'] else False if buy in [False,'no'] else None)
+    return values
+
+@require_POST
+@auth()
+@api
+def propose_photo(request,slug):
+    product=get_object_or_404(m.Product,slug=slug,status='published')
+    if request.POST.get('rights_confirmed')!='yes':raise ValueError('Confirm that you may share this photograph under the stated license.')
+    photo=m.BottlePhoto(product=product,user=request.user,view=request.POST.get('view',''),photo=request.FILES.get('photo'),credit=request.POST.get('credit',''),license=request.POST.get('license',''),source_url=request.POST.get('source_url',''),caption=request.POST.get('caption',''))
+    photo.full_clean();photo.save()
+    return reply({'status':'pending','id':photo.id},201)

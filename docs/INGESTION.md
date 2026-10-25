@@ -15,3 +15,5 @@ The first executed Wikidata and PubMed JSONL dumps are committed under `data/dis
 ## Scale
 
 Normalize identity before publication, page acquisition, retain checkpoints, stage raw records and use database constraints. Public catalogue exports stream rows. PostgreSQL trigram indexes support ingredient/name lookup; composite indexes cover market and price queries. Redis caches public reads for 60 seconds with revision invalidation after editorial commits and fail-open behavior. A million-record benchmark has not been run. Add dedicated queue orchestration, object storage, read replicas and measured index tuning only when observed workload justifies them.
+
+Volume 02 adds view-aware curated assets (front/back/detail) and member packaging proposals. Curated fetches preserve original bytes/checksums and per-image rights. The Heering front/rear pair is an executed Commons download, visually inspected as historical packaging; it does not establish the current recipe, country of manufacture or current-market ABV. Bulk discovery remains a candidate pipeline and does not silently claim complete reverse-label coverage.

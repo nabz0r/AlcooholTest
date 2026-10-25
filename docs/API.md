@@ -59,3 +59,11 @@ Django's default 404/CSRF error pages may be HTML. Consumers must check HTTP sta
 - Admin duplicate preview/confirmation is under `/admin/catalog/product/{uuid}/merge/`; candidates can be resolved to an existing product before acceptance. This is an authenticated HTML workflow, not an unprotected bulk-merge API.
 
 Community ratings accept integers 0 through 5. All write calls retain CSRF/session protection. Public dumps include curated price observations but exclude candidate staging, private states, users, collection and review data.
+
+## Volume 02 additions
+
+`GET /products/<slug>` includes `photos` (curated views + approved member images), each with view, URL, credit, license, source URL and caption. `review_dimensions` includes average and `<dimension>_count` for aroma/taste/finish/value/design; empty averages are null. Published reviews include optional dimensions, tags, context and buy_again.
+
+`POST /products/<slug>/reviews` retains rating/text and accepts optional integer 0–5 aroma/taste/finish/value/design, up to eight tags from the UI vocabulary, context (`neat`, `ice`, `tonic`, `cocktail` or empty), and buy_again (boolean, yes/no or empty). Every update returns the note to moderation. Overall zero is valid; omitted dimensions are null.
+
+`POST /products/<slug>/photos` is authenticated CSRF-protected multipart: photo, view (front/back/detail), credit, license, source_url, optional caption, and rights_confirmed=yes. It returns 201 with pending/id. Uploads are raster-only, at most 5 MiB/16 MP, re-encoded JPEG and editorially approved. The public catalogue export does not contain member photo rows or files. Operations includes pending_photos. See [Experience guide](EXPERIENCE.md) and [SEO routes](SEO.md).

@@ -47,3 +47,5 @@ if os.getenv('REDIS_URL'):
     CACHES={'default':{'BACKEND':'django.core.cache.backends.redis.RedisCache','LOCATION':os.environ['REDIS_URL'],'TIMEOUT':60,'KEY_PREFIX':'alcooltest'}}
 else:
     CACHES={'default':{'BACKEND':'django.core.cache.backends.locmem.LocMemCache','LOCATION':'alcooltest-tests'}}
+
+PUBLIC_BASE_URL=os.getenv('PUBLIC_BASE_URL','http://localhost:8088')

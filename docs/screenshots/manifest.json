@@ -1,0 +1,164 @@
+[
+  {
+    "file": "home.png",
+    "title": "Editorial homepage",
+    "caption": "Single featured bottle, house tabs and clear onward navigation.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "d9fdb2384feaf4177d74eabb730ae34662181ba260ad15c20355a7986b986970",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "editorial.png",
+    "title": "Origins and craft",
+    "caption": "Roku craft chapter with its source; no homepage product grid.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "851d047da74aca79d81eaec96975eacdcf79ec033e7c6296bbcff4fd7c188123",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "collection-overview.png",
+    "title": "Collection overview",
+    "caption": "Canonical count, collection heading and filters.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "7516f12ce7808f42b20b6a13e19b63eb6b0375b100f386b0612460e41d248898",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "collection-cards.png",
+    "title": "Browse the collection",
+    "caption": "Real photographs and explicitly labeled illustrations.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "e670f0810a0515761d3d0159059c396fb8edae74a38bff91f9a3a6e15d63d495",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "product.png",
+    "title": "Product identity",
+    "caption": "Monkey 47, market strength and distinct edition links.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "d58752aeaab14fd72b037c565e874899d8d4fd75bc5b124691c88c2039f34ecd",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "botanical-studio.png",
+    "title": "Botanical explosion",
+    "caption": "Actual fullscreen procedural scene, second botanical group and zoom controls.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "541d023705982e3132d371d7b7c9f58c422249b0ccd7be9627d13f6850263aa8",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "neuro-atlas.png",
+    "title": "Neuro atlas",
+    "caption": "Abstract mechanism network, explicitly not a prediction.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "60bfaf01693d223fa2da6ae81e111f082194b137496eae3d708a0a5d9057d5e1",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "sound-studio.png",
+    "title": "Sound studio",
+    "caption": "Playing composition, live output meter and mixing controls.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "8a36db583f51a4943a9da16e474bab375d5cd7867e3aad71554aa1725e4e449a",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "price-notebook.png",
+    "title": "Price notebook",
+    "caption": "One real dated Luxembourg observation; no fabricated historical series.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "a93f7df1219bede8b4274f8548c2e8fbdc5d128c43f7561ef78f61bd89d2dbd3",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "rear-label.png",
+    "title": "Real reverse packaging",
+    "caption": "Historical Heering 70 cl rear photograph, attributed and licensed.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "31cfe45dcb94d12af95e5bdb1c15a932b1cce7b6c584065ba8050f9cf64bc362",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "label-inspector.png",
+    "title": "Label inspection",
+    "caption": "Native zoom dialog with the actual reverse photograph.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "38ee9fb79ce2ccc61705f1384a017684badf550879f9cf4842df85f92499a8fd",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "tasting-notebook.png",
+    "title": "Detailed monkey review",
+    "caption": "Unsubmitted disposable QA form: optional dimensions, tags and context.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "68030910273eb71c2fb5d493f737b655224c4e25b9ce89702c2ae61c1be491fc",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "photo-contribution.png",
+    "title": "Photo contribution",
+    "caption": "Rights/provenance fields and moderation; no real member data.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "6c576fb3b6c42dd58e43337eb4a2f6d84caf317d1d3512de07fa2b091031d2dd",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "editorial-operations.png",
+    "title": "Editorial operations",
+    "caption": "Discovery, exports and editorial queue in the application.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "ffcb77fb703df5b3e8a246be8330d144f2093426f64969bb1f6605462ece3649",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "admin-overview.png",
+    "title": "Administration",
+    "caption": "Django editorial workbench with the disposable QA account.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "7a30913635669bbd651060a5bff309c8cdd1df930993ad1dd9921715d4073de5",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "duplicate-resolution.png",
+    "title": "Duplicate resolution",
+    "caption": "Preview form; no merge executed on a real product.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "9bbb76c08bfab093753ebce641ef982506d1bb9ccda6194edf1a534b8f0e0625",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "research.png",
+    "title": "Research library",
+    "caption": "Study design, populations, findings and explicit limits.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "ebe68a42b8598b17ce4ef62f0cadf3af046ebc9436dffc56d19fd9838037dd6b",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "comparison.png",
+    "title": "Side-by-side discovery",
+    "caption": "Monkey 47 and Roku with photographs, bottlings and ingredients.",
+    "width": 65536,
+    "height": 4292542531,
+    "sha256": "2e9bf1fe4e6fcb879cee6071694a5dbb3ed483aba53cbe1696305de61570121c",
+    "captured_on": "2026-10-25"
+  }
+]

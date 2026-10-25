@@ -1172,6 +1172,13 @@
         "name": "Luxardo",
         "country": "Italy",
         "website": "https://www.luxardo.it/"
+      },
+      {
+        "id": "bfbbac05-1cee-5b92-b988-8a4976404396",
+        "slug": "heering",
+        "name": "Heering",
+        "country": "Denmark",
+        "website": "https://www.heering.com/"
       }
     ],
     "ingredients": [
@@ -2880,11 +2887,31 @@
         "history_source_id": "efbcc6fb-8754-55a6-a756-f1dc9bee64df",
         "merged_into_id": null,
         "edition_of_id": null
+      },
+      {
+        "id": "cb84a8e3-4c7f-5eb0-8b56-ab12f2e297d8",
+        "slug": "heering-cherry-liqueur",
+        "brand_id": "bfbbac05-1cee-5b92-b988-8a4976404396",
+        "name": "Cherry Liqueur",
+        "category": "Liqueur",
+        "place_id": null,
+        "description": "Cherry liqueur documented here through attributed front and rear packaging photographs. Historical packaging reference; current-market strength and the complete formulation have not been verified.",
+        "disclosure": "unknown",
+        "status": "published",
+        "color": "#53251d",
+        "shape": "round",
+        "photo_credit": "",
+        "photo_license": "",
+        "history": "",
+        "history_source_id": null,
+        "merged_into_id": null,
+        "edition_of_id": null
       }
     ],
     "bottle_assets": [
       {
         "id": "7c6a0696-9c95-5cc9-b870-53a4346dd99c",
+        "view": "front",
         "product_id": "5cc354d3-761c-5a26-9d06-29e34cd412c3",
         "local_path": "/bottles/hendricks-original.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Hendrick%27s_Gin_1l.jpg",
@@ -2896,6 +2923,7 @@
       },
       {
         "id": "69014e7d-4c67-5b09-b73a-dd7a9f1ac571",
+        "view": "front",
         "product_id": "50ec526c-4738-59a2-83ea-350a60abb195",
         "local_path": "/bottles/the-botanist-islay.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:The_Botanist_Islay_Dry_Gin_01.jpg",
@@ -2907,6 +2935,7 @@
       },
       {
         "id": "c23089ab-0bbf-5866-a62b-660d5ec63de9",
+        "view": "front",
         "product_id": "abb9d6c7-72f0-565a-b7fd-09e114852f49",
         "local_path": "/bottles/monkey-47-schwarzwald.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Monkey_47_-_Schwarzwald_Dry_Gin_-_Packshot.jpg",
@@ -2918,6 +2947,7 @@
       },
       {
         "id": "3b4c5edf-b4d9-5657-a00b-211d2f6a7f62",
+        "view": "front",
         "product_id": "32292c06-1177-5552-a4a7-f389e469b719",
         "local_path": "/bottles/bombay-sapphire.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Bombay_sapphire_bottle.jpg",
@@ -2929,6 +2959,7 @@
       },
       {
         "id": "be1083e4-b9d1-5c9c-8160-2274e362bdca",
+        "view": "front",
         "product_id": "e6044c90-745f-58b8-ab32-a8df3493c4da",
         "local_path": "/bottles/roku-japanese-craft.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Roku_Japanese_Craft_Gin_01.jpg",
@@ -2940,6 +2971,7 @@
       },
       {
         "id": "d301ad26-1d2b-590d-8caf-e108aa6da9fa",
+        "view": "front",
         "product_id": "9fa4bed5-f31a-568b-8d55-94d38b884445",
         "local_path": "/bottles/tanqueray-london-dry.png",
         "source_page": "https://commons.wikimedia.org/wiki/File:Tanqueray_bottle_Gin.png",
@@ -2951,6 +2983,7 @@
       },
       {
         "id": "7a4a6d1a-44ae-5695-adc2-df565858009e",
+        "view": "front",
         "product_id": "68b6ed98-6d30-5621-8833-933bf9ca7114",
         "local_path": "/bottles/bacardi-carta-blanca.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Bacardi_Carta_Blanca_Rum_01.jpg",
@@ -2962,6 +2995,7 @@
       },
       {
         "id": "de8fa843-0870-5688-ba8f-21d421ca96e1",
+        "view": "front",
         "product_id": "a825fb78-008e-5182-b097-4b05c9302586",
         "local_path": "/bottles/havana-club-7.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Havana_Club_7_anos.jpeg",
@@ -2973,6 +3007,7 @@
       },
       {
         "id": "156a03c2-5d67-5f8c-9ec1-5036a94a97d0",
+        "view": "front",
         "product_id": "0e08ce9d-8b94-5a06-af9f-9d4af52a5aca",
         "local_path": "/bottles/jack-daniels-old-no7.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Jack_Daniels_bottle.jpg",
@@ -2984,6 +3019,7 @@
       },
       {
         "id": "29437658-e1f5-5d3e-8109-dc67a75a099d",
+        "view": "front",
         "product_id": "fe10fb49-777c-5254-b05d-6ebc5b7574e1",
         "local_path": "/bottles/jameson-original.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:James_Irish_Blended_Whiskey_01.jpg",
@@ -2995,6 +3031,7 @@
       },
       {
         "id": "9c4bac9d-4364-53d1-9397-075debabf2d2",
+        "view": "front",
         "product_id": "9e81753d-a7ba-515e-ae3c-9860c5a6833e",
         "local_path": "/bottles/disaronno-originale.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Disaronno_bottle,_375ml.jpg",
@@ -3006,6 +3043,7 @@
       },
       {
         "id": "375551cb-0e8d-54f9-832a-fe040b1df439",
+        "view": "front",
         "product_id": "371ecb00-3525-5dbb-985b-dfca2d55a0e1",
         "local_path": "/bottles/absolut-original.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Absolut_Vodka_01.jpg",
@@ -3017,6 +3055,7 @@
       },
       {
         "id": "521bb60a-c0a2-5946-984f-4a6bf2f59990",
+        "view": "front",
         "product_id": "5ed082e6-c71d-5317-902e-0d44948625d8",
         "local_path": "/bottles/campari-bitter.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Campari_Bitter_Aperitif_01.jpg",
@@ -3028,6 +3067,7 @@
       },
       {
         "id": "dc9f85d9-6e3f-53a9-b4d9-a03ce3e7240c",
+        "view": "front",
         "product_id": "110da45c-cf88-5105-b2af-8613df5ae6fd",
         "local_path": "/bottles/cointreau-original.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Cointreau_Orange_Liqueur_01.jpg",
@@ -3039,6 +3079,7 @@
       },
       {
         "id": "a35883dc-4b83-56dc-80a7-a5323fb5d0f0",
+        "view": "front",
         "product_id": "657335b5-8606-5ad5-bf03-11872b13020c",
         "local_path": "/bottles/suntory-yamazaki-12-years-old.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:The_Yamazaki_Single_Malt_Whisky_Aged_12_years.JPG",
@@ -3050,6 +3091,7 @@
       },
       {
         "id": "bd5535b5-4418-5aff-8190-499b8af59378",
+        "view": "front",
         "product_id": "48d9ec87-ad6a-5306-9120-c0379a668056",
         "local_path": "/bottles/suntory-haku-vodka.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Suntory_Haku_vodka_01.jpg",
@@ -3061,6 +3103,7 @@
       },
       {
         "id": "ec1d6e9d-f528-5b45-8011-e03057f249c9",
+        "view": "front",
         "product_id": "46cfd167-ba5e-5a75-8202-5a74a63abe9b",
         "local_path": "/bottles/citadelle-original.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Citadelle_Bottle_(1).jpg",
@@ -3072,6 +3115,7 @@
       },
       {
         "id": "2de0cbeb-51e0-528a-94b9-a0e67b85f079",
+        "view": "front",
         "product_id": "02fd98ac-e74f-5f0c-9480-bcf0dfae6f9d",
         "local_path": "/bottles/luxardo-amaretto-di-saschira.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Luxardo_Amaretto_bottle,_750ml.jpg",
@@ -3083,6 +3127,7 @@
       },
       {
         "id": "b47208d6-e797-5e5d-8bc4-ba60d777f74f",
+        "view": "front",
         "product_id": "f187d46b-1c72-5a90-a19a-8f04874c0dd5",
         "local_path": "/bottles/don-papa-7-years-old.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Flasche_don_papa.jpg",
@@ -3094,6 +3139,7 @@
       },
       {
         "id": "596e114e-5755-5cd2-92e3-f7b359be5166",
+        "view": "front",
         "product_id": "61ec7a28-d881-5db1-912c-ec39d305f5c7",
         "local_path": "/bottles/kyr-gin.jpg",
         "source_page": "https://commons.wikimedia.org/wiki/File:Napue_Gin.jpg",
@@ -3102,6 +3148,30 @@
         "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
         "sha256": "888064b53ea506ad6b23452a7b7b9542a1d8b9d19c0878c80f5eaba6631b9a84",
         "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+      },
+      {
+        "id": "25d3e668-dc18-5bdc-8ae8-1cfb3d95e952",
+        "view": "front",
+        "product_id": "cb84a8e3-4c7f-5eb0-8b56-ab12f2e297d8",
+        "local_path": "/bottles/heering-cherry-front.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle.jpg",
+        "author": "Alex P. Kok",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sha256": "789c3b1ac60faca1eadfe8fb4fe92a6116c0a886a022d11bfb86c8120a2eca88",
+        "edition_note": "Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition."
+      },
+      {
+        "id": "4909a109-9eff-5fb4-bba6-51eef081bcf9",
+        "view": "back",
+        "product_id": "cb84a8e3-4c7f-5eb0-8b56-ab12f2e297d8",
+        "local_path": "/bottles/heering-cherry-back.jpg",
+        "source_page": "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle_rear.jpg",
+        "author": "Alex P. Kok",
+        "license": "CC BY-SA 4.0",
+        "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+        "sha256": "f9de0e17dafcdcdcf3c312ca3877ddf78bf759a1425269af1be13c0ff747cafc",
+        "edition_note": "Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition."
       }
     ],
     "variants": [

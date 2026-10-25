@@ -36,6 +36,9 @@ python3 scripts/build_data_exports.py
 
 ## Current collection and identity
 
-The distribution contains 56 product records: 54 canonical roots and two Monkey 47 Distiller’s Cut editions grouped under their original. Forty expansion entries establish source-linked identity; many deliberately omit market-specific ABV, volume, ingredient membership and detailed locality pending curation. Do not interpret this as 56 complete formulas or 56 confirmed packaging photographs. Twenty curated reference photographs retain per-file licenses. Two dated Luxembourg price observations establish a starting notebook, not a past price trend. Scientific measurements remain zero.
+The distribution contains 57 product records: 55 canonical roots and two Monkey 47 Distiller’s Cut editions grouped under their original. Forty expansion entries establish source-linked identity; many deliberately omit market-specific ABV, volume, ingredient membership and detailed locality pending curation. Do not interpret this as 57 complete formulas or 57 confirmed packaging photographs. Twenty-two curated reference photographs retain per-file licenses. Two dated Luxembourg price observations establish a starting notebook, not a past price trend. Scientific measurements remain zero.
 
 History is original attributed editorial prose, sometimes a limited portfolio description rather than a complete researched biography. Provider discovery is a separate staged corpus. Brand classifications, photos and retailer names must be reconciled to canonical products before publication. See IDENTITY.md, INGESTION.md and SCIENCE.md.
+
+
+Packaging assets have an explicit front/back/detail view (default front for older 1.0 documents). The 1.0 schema accepts this additive field; old seed documents remain valid. Two Heering files document a historical 70 cl front/rear pair, not two products or an asserted current-market bottling. Member BottlePhoto uploads and detailed reviews are private operational tables, excluded from public interchange; approved photo metadata appears on the product API. Back up their SQL rows and media files together.

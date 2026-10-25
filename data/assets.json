@@ -116,7 +116,7 @@
     "file": "/bottles/jack-daniels-old-no7.jpg",
     "source_page": "https://commons.wikimedia.org/wiki/File:Jack_Daniels_bottle.jpg",
     "download_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Jack_Daniels_bottle.jpg/960px-Jack_Daniels_bottle.jpg",
-    "author": "Clément Bucco-Lechat",
+    "author": "Cl\u00e9ment Bucco-Lechat",
     "license": "CC BY-SA 3.0",
     "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
     "sha256": "323b44fcf3e18cb56cca194458e3c703f87690f7c2008afc07ae6c861f6ddc2a",
@@ -207,7 +207,7 @@
     "bytes": 790288,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
   },
   {
     "product_slug": "suntory-haku-vodka",
@@ -221,7 +221,7 @@
     "bytes": 128932,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
   },
   {
     "product_slug": "citadelle-original",
@@ -235,7 +235,7 @@
     "bytes": 152311,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
   },
   {
     "product_slug": "luxardo-amaretto-di-saschira",
@@ -249,7 +249,7 @@
     "bytes": 137674,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
   },
   {
     "product_slug": "don-papa-7-years-old",
@@ -263,7 +263,7 @@
     "bytes": 313236,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
   },
   {
     "product_slug": "kyr-gin",
@@ -277,6 +277,36 @@
     "bytes": 46897,
     "retrieved_on": "2026-10-25",
     "modifications": "Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain.",
-    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label."
+    "edition_note": "Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyr\u00f6 Napue is a legacy reference label."
+  },
+  {
+    "product_slug": "heering-cherry-liqueur",
+    "view": "front",
+    "file": "/bottles/heering-cherry-front.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle.jpg",
+    "author": "Alex P. Kok",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "789c3b1ac60faca1eadfe8fb4fe92a6116c0a886a022d11bfb86c8120a2eca88",
+    "bytes": 1763166,
+    "retrieved_on": "2026-10-25",
+    "modifications": "Original source bytes; displayed with CSS contain.",
+    "edition_note": "Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition."
+  },
+  {
+    "product_slug": "heering-cherry-liqueur",
+    "view": "back",
+    "file": "/bottles/heering-cherry-back.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle_rear.jpg",
+    "download_url": "https://upload.wikimedia.org/wikipedia/commons/4/47/Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle_rear.jpg",
+    "author": "Alex P. Kok",
+    "license": "CC BY-SA 4.0",
+    "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sha256": "f9de0e17dafcdcdcf3c312ca3877ddf78bf759a1425269af1be13c0ff747cafc",
+    "bytes": 1890196,
+    "retrieved_on": "2026-10-25",
+    "modifications": "Original source bytes; displayed with CSS contain.",
+    "edition_note": "Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition."
   }
 ]

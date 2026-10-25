@@ -1,8 +1,8 @@
 # Alcooltest
 
-**A world within.** An open-source, self-hosted spirits atlas: a black photographic gallery, botanical sculptures, original generative sound, traceable ingredients and an editorial notebook.
+**A world within.** An open-source, self-hosted spirits atlas: an editorial photographic arrival, botanical sculptures, original generative sound, traceable ingredients and an editorial notebook.
 
-![The gallery](docs/screenshots/gallery.png)
+![Editorial homepage](docs/screenshots/home.png)
 
 ## Run locally
 
@@ -20,14 +20,33 @@ After installation, catalogue editing, duplicate resolution, contributions, mode
 
 ## Explore
 
-- **54 canonical products + 2 distinct editions**, including Suntory, major houses and smaller distilleries. Root products appear once; formats, markets and sellers are not inflated into product identities.
-- Locally hosted licensed reference photographs with provenance; explicit illustrations where a reliable licensed image is absent. A reference photo may show a different size, market or historical label.
-- A quiet photographic arrival, filters, ingredient search, comparison of four products, private shelves, community proposals and moderated **0–5 monkey** ratings.
+- **55 canonical products + 2 distinct editions**, including Suntory, major houses and smaller distilleries. Root products appear once; formats, markets and sellers are not inflated into product identities.
+- **22** locally hosted licensed reference photographs with provenance; explicit illustrations where a reliable licensed image is absent. A reference photo may show a different size, market or historical label. Front/rear/details tabs, zoomable inspection and moderated member uploads preserve provenance. The Heering record includes an actual historical front/rear pair; most rear labels remain undocumented.
+- An editorial homepage with origins/craft/sound tabs, a separate collection, filters, ingredient search, comparison of four products, private shelves, community proposals and moderated **0–5 monkey** ratings with optional aroma, taste, finish, value, design, serving context and buy-again preference.
 - Product pages with source-linked origin, historical/cultural editorial text, market bottlings, recipe disclosures, critic perspectives and a dated price notebook. The expanded collection intentionally leaves unverified specifications and secret recipes unknown.
 - Interactive procedural **Studio 3D**, botanical explosion with eight plants per group and spread control, camera orbit/pan/zoom/reset/fullscreen, and an abstract **Neuro atlas** linked to research mechanisms. These are artistic reconstructions, not scans or measured brain activity.
-- Opt-in **original botanical soundscapes**: identity-seeded pentatonic music, floral sine timbres, spice textures and citrus bells. Off by default; no microphone, external audio, telemetry or automatic playback.
+- Opt-in **original botanical soundscapes**: identity-seeded pentatonic music, floral sine timbres, spice textures and citrus bells. A visible mixer exposes Play/Pause, master volume, three layers, speaker test, output meter and a 20-second WAV export. Off by default; no microphone, external audio, telemetry or automatic playback.
 - Source-linked research with study design, population, findings and limitations; private empirical state-transition notebooks with null for unobserved rows. No product-specific pharmacological claims or intoxication forecasts are fabricated.
 - Real executed Wikidata and PubMed JSONL discovery dumps. They are bounded, unverified provider snapshots, not “all public bottles”. Accept a candidate by linking it to an existing product, or verify a new draft before publishing.
+
+- Direct, server-rendered product URLs, canonical metadata, Open Graph, JSON-LD, sitemap and robots support. Private pages stay noindex.
+
+## A tour in screenshots
+
+Actual captures from the local Docker build. [All 18 views, captions and integrity manifest](docs/SCREENSHOTS.md). Admin/member screens use a disposable QA account; no demonstration review was published.
+
+![Source-linked editorial chapters](docs/screenshots/editorial.png)
+
+| | |
+|---|---|
+| **Collection overview**<br>![Collection overview](docs/screenshots/collection-overview.png) | **Browse the collection**<br>![Browse the collection](docs/screenshots/collection-cards.png) |
+| **Product identity**<br>![Product identity](docs/screenshots/product.png) | **Botanical explosion**<br>![Botanical explosion](docs/screenshots/botanical-studio.png) |
+| **Neuro atlas**<br>![Neuro atlas](docs/screenshots/neuro-atlas.png) | **Sound studio**<br>![Sound studio](docs/screenshots/sound-studio.png) |
+| **Price notebook**<br>![Price notebook](docs/screenshots/price-notebook.png) | **Real reverse packaging**<br>![Real reverse packaging](docs/screenshots/rear-label.png) |
+| **Label inspection**<br>![Label inspection](docs/screenshots/label-inspector.png) | **Detailed monkey review**<br>![Detailed monkey review](docs/screenshots/tasting-notebook.png) |
+| **Photo contribution**<br>![Photo contribution](docs/screenshots/photo-contribution.png) | **Editorial operations**<br>![Editorial operations](docs/screenshots/editorial-operations.png) |
+| **Administration**<br>![Administration](docs/screenshots/admin-overview.png) | **Duplicate resolution**<br>![Duplicate resolution](docs/screenshots/duplicate-resolution.png) |
+| **Research library**<br>![Research library](docs/screenshots/research.png) | **Side-by-side discovery**<br>![Side-by-side discovery](docs/screenshots/comparison.png) |
 
 ## Architecture
 
@@ -37,7 +56,7 @@ Source code is GPL-2.0. Original catalogue work is CC0 where indicated; photogra
 
 ## Data and operations
 
-`data/catalog/seed.json`, `catalog.jsonl`, `schema.json` and `manifest.json` are reproducible distribution artifacts. `data/assets.json` records photo rights and checksums. `data/discovery/` contains executed public-provider dumps. Public catalogue exports exclude accounts, private observations, reviews and collections. Private SQL backups contain account data and password hashes; secure them and back up media separately.
+`data/catalog/seed.json`, `catalog.jsonl`, `schema.json` and `manifest.json` are reproducible distribution artifacts. `data/assets.json` records photo rights and checksums. `data/discovery/` contains executed public-provider dumps. Public catalogue exports exclude accounts, private observations, reviews, collections and member-uploaded photographs. Private SQL backups contain account data and password hashes; secure them and back up media separately.
 
 ```sh
 # Explicit reseed updates seed UUIDs; ordinary restarts preserve editorial changes.
@@ -54,7 +73,8 @@ python3 scripts/fetch_assets.py
 ## Documentation
 
 - [Initial analysis](docs/ANALYSIS.md), [Architecture](docs/ARCHITECTURE.md), [API](docs/API.md)
-- [Design, navigation, 3D and sound](docs/DESIGN.md)
+- [Design direction](docs/DESIGN.md), [Complete experience guide](docs/EXPERIENCE.md), [SEO and routes](docs/SEO.md)
+- [Screenshot index](docs/SCREENSHOTS.md), [Work tracking](PROGRESS.md), [Delivery plan](PLAN.md)
 - [Product identity and duplicate resolution](docs/IDENTITY.md)
 - [Internet discovery and study harvesting](docs/INGESTION.md)
 - [Science and Markov notebook](docs/SCIENCE.md), [Price history](docs/PRICES.md)

@@ -95,6 +95,7 @@ class Product(Entity):
     def __str__(self): return f'{self.brand.name} · {self.name}'
 
 class BottleAsset(Entity):
+    view=models.CharField(max_length=12,choices=[('front','Front'),('back','Rear label'),('detail','Detail')],default='front')
     product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='assets')
     local_path=models.CharField(max_length=180,validators=[RegexValidator(r'^/bottles/[-a-z0-9]+\.(jpg|png|webp)$')])
     source_page=models.URLField(max_length=1000)
@@ -174,6 +175,14 @@ class Review(Entity):
     rating=models.PositiveSmallIntegerField(validators=[MinValueValidator(0),MaxValueValidator(5)])
     text=models.TextField(max_length=2000)
     approved=models.BooleanField(default=False,db_index=True)
+    aroma=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(0),MaxValueValidator(5)])
+    taste=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(0),MaxValueValidator(5)])
+    finish=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(0),MaxValueValidator(5)])
+    value=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(0),MaxValueValidator(5)])
+    design=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(0),MaxValueValidator(5)])
+    context=models.CharField(max_length=16,choices=[('neat','Neat'),('ice','On ice'),('tonic','With tonic'),('cocktail','In a cocktail')],blank=True)
+    tags=models.JSONField(default=list,blank=True)
+    buy_again=models.BooleanField(null=True,blank=True)
     class Meta: constraints=[models.UniqueConstraint(fields=['user','product'],name='unique_user_review')]
 
 class Collection(Entity):
@@ -273,3 +282,23 @@ class PriceObservation(Entity):
     class Meta:
         indexes=[models.Index(fields=['variant','currency','country','observed_on'])]
         constraints=[models.UniqueConstraint(fields=['variant','observed_on','retailer','currency','country'],name='unique_price_observation')]
+
+class BottlePhoto(Entity):
+    product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='community_photos')
+    user=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.SET_NULL,null=True,blank=True)
+    view=models.CharField(max_length=12,choices=[('front','Front'),('back','Rear label'),('detail','Detail')])
+    photo=models.ImageField(upload_to='label-photos/%Y/%m/')
+    credit=models.CharField(max_length=240)
+    license=models.CharField(max_length=160)
+    source_url=models.URLField(max_length=1000)
+    caption=models.CharField(max_length=300,blank=True)
+    approved=models.BooleanField(default=False,db_index=True)
+    def clean(self):
+        if self.photo and not self.photo._committed:
+            if self.photo.size>5*1024*1024:raise ValidationError('Photograph exceeds 5 MiB.')
+            try:
+                image=Image.open(self.photo)
+                if image.format not in ['JPEG','PNG','WEBP'] or image.width*image.height>16000000:raise ValueError()
+                image.load();image.thumbnail((2400,2400));out=BytesIO();image.convert('RGB').save(out,format='JPEG',quality=92)
+                self.photo=ContentFile(out.getvalue(),name=f'{uuid.uuid4()}.jpg')
+            except Exception:raise ValidationError('Use a valid JPEG, PNG or WebP under 16 megapixels.')

@@ -7,7 +7,7 @@ def preview(source,target):
     if source.pk==target.pk or source.brand_id!=target.brand_id or target.status!='published' or target.merged_into_id or target.edition_of_id:
         raise ValidationError('Choose a different published canonical product of the same brand.')
     if source.edition_of_id:raise ValidationError('This is an edition. Verify identity and detach the edition relationship before merging a true duplicate.')
-    return {name:getattr(source,name).count() for name in ['variants','recipes','assets','editions','discovery_occurrences']}
+    return {name:getattr(source,name).count() for name in ['variants','recipes','assets','editions','discovery_occurrences','community_photos']}
 
 @transaction.atomic
 def merge(source,target,actor):
@@ -22,7 +22,7 @@ def merge(source,target,actor):
             if model.objects.filter(product=target,**criteria).exists():
                 retained[model.__name__].append(str(obj.pk));continue
             obj.product=target;obj.save();moved[model.__name__].append(str(obj.pk))
-    for model,field in [(m.Observation,'product'),(m.CriticReview,'product'),(m.DiscoveryCandidate,'resolved_product'),(m.Product,'edition_of')]:
+    for model,field in [(m.BottlePhoto,'product'),(m.Observation,'product'),(m.CriticReview,'product'),(m.DiscoveryCandidate,'resolved_product'),(m.Product,'edition_of')]:
         rows=model.objects.filter(**{field:source});moved[model.__name__+':'+field]=list(map(str,rows.values_list('pk',flat=True)));rows.update(**{field:target})
     source.status='archived';source.merged_into=target;source.save()
     m.Audit.objects.create(actor=actor,action='product.merged',target=str(source.pk),detail={'canonical':str(target.pk),'counts':counts,'moved':moved,'conflicting_records_retained_on_archived_source':retained,'source_photo_retained':bool(source.photo)})

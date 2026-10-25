@@ -493,6 +493,14 @@
               "edition_note": {
                 "type": "string",
                 "maxLength": 20000
+              },
+              "view": {
+                "type": "string",
+                "enum": [
+                  "front",
+                  "back",
+                  "detail"
+                ]
               }
             }
           }

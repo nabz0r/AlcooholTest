@@ -1,0 +1,29 @@
+{
+  "checked_on": "2026-10-25",
+  "environment": "macOS in-app browser; local Docker stack",
+  "checks": {
+    "editorial_chapters": true,
+    "catalogue_product_back_restores_query": true,
+    "monkey_search_canonical_cards": 1,
+    "price_anchor_preserves_botanical_canvas": true,
+    "fullscreen_zoom_and_botanical_paging": true,
+    "real_rear_label_and_zoom": true,
+    "sound_play_pause_nonzero_meter_speaker_test": true,
+    "wav_export_button_exercised": true,
+    "detailed_review_controls": true,
+    "photo_contribution_form": true,
+    "admin_and_duplicate_preview_form": true,
+    "comparison": true,
+    "research": true,
+    "final_console_error_entries": 0,
+    "disposable_qa_account_removed": true,
+    "keyboard_orbit_label_synchronized": true
+  },
+  "not_measured": [
+    "physical phone",
+    "screen-reader audit",
+    "speaker acoustics",
+    "exported WAV byte validation"
+  ],
+  "screenshots": "../screenshots/manifest.json"
+}

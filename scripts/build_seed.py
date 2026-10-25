@@ -166,6 +166,9 @@ for brand,name,category,country,url in expanded:
 critic=source('citadelle-critic','Citadelle Gin review','https://theginisin.com/gin-reviews/citadelle-gin/','the GIN is IN','secondary')
 add('critic_reviews','citadelle-review',product_id=uid('products/citadelle-original'),critic='the GIN is IN',source_id=critic,summary='The reviewer describes a juniper foundation with citrus, floral aromas and a spice-led finish, and finds that its character stands out more clearly in some mixed drinks than others.',score='3.5',score_max=5,published_on=None)
 
+brands['heering']=add('brands','heering',slug='heering',name='Heering',country='Denmark',website='https://www.heering.com/')
+product('heering-cherry-liqueur','heering','Cherry Liqueur','#53251d','round','Cherry liqueur documented here through attributed front and rear packaging photographs. Historical packaging reference; current-market strength and the complete formulation have not been verified.',disclosure='unknown',category='Liqueur')
+
 for row in T['products']:
     brand=next(k for k,v in brands.items() if v==row['brand_id']);row['place_id']=places[place_by_brand[brand]] if brand in place_by_brand else None
 # Openly licensed, locally hosted real photographs. Rights are preserved per asset.
@@ -173,7 +176,7 @@ assets_path=ROOT/'data/assets.json'
 if assets_path.exists():
     for asset in json.loads(assets_path.read_text()):
         p=next((p for p in T['products'] if p['slug']==asset['product_slug']),None)
-        if p: add('bottle_assets',p['slug'],product_id=p['id'],local_path=asset['file'],source_page=asset['source_page'],author=asset['author'][:500],license=asset['license'],license_url=asset['license_url'],sha256=asset['sha256'],edition_note=asset['edition_note'])
+        if p: add('bottle_assets',p['slug']+('/'+asset['view'] if asset.get('view','front')!='front' else ''),view=asset.get('view','front'),product_id=p['id'],local_path=asset['file'],source_page=asset['source_page'],author=asset['author'][:500],license=asset['license'],license_url=asset['license_url'],sha256=asset['sha256'],edition_note=asset['edition_note'])
 # Additional primary research and explicit mechanism assertions.
 s['ethanol']=source('ethanol','Lovinger et al. 1989 — ethanol and NMDA current','https://pubmed.ncbi.nlm.nih.gov/2467382/','Science','research')
 s['linalool-mice']=source('linalool-mice','Harada et al. 2018 — linalool odour and anxiety','https://pubmed.ncbi.nlm.nih.gov/30405369/','Frontiers in Behavioral Neuroscience','research')

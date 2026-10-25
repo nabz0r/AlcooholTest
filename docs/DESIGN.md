@@ -1,23 +1,13 @@
-# The black gallery
+# A world within — design system
 
-The entry is an almost-black gallery: three real reference bottles emerge from a restrained light field, with a single invitation into the archive. The masthead retains direct access to search/catalogue, comparison, research, the private shelf and editorial operations. A visitor never has to use 3D or sound to read a record.
+Volume 02 separates a narrative arrival from the searchable collection. A single featured bottle occupies a restrained light field; three house tabs switch context, and editorial chapters explore origin, craft and an original sound interpretation. Below the hero are stories and onward paths rather than a duplicate catalogue grid. See [Experience guide](EXPERIENCE.md) for complete behavior and controls.
 
-## Visual system
+Ink #080909, warm ivory, muted brass and natural green form the palette. System Georgia supplies expressive titles, system sans-serif supplies controls; there are no external fonts or trackers. Reference photography remains locally hosted with asset rights and integrity manifests. The hero stages photographs through CSS; it does not imply photogrammetric 3D or current-market packaging.
 
-Ink #080909, warm ivory, muted brass and natural green. System Georgia supplies expressive titles; system sans-serif supplies controls. No external fonts or trackers. Real packshots retain their rights in `data/assets.json`. Display-only CSS silhouette crops stage the three entry bottles against black; the original downloaded files remain unchanged. Crops approximate the photographic contours; consult the unfiltered photograph on the product page.
+Design research considered [House of Suntory heritage](https://house.suntory.com/heritage), [Hendrick's distilling narrative](https://us.hendricksgin.com/distilling/), and [The Balvenie Stories by Here Design](https://worldbranddesign.com/entry/10327-here-design-unveils-the-balvenie-stories): the useful principles are place-led storytelling, material detail, deliberate chapter pacing and clear onward navigation. No external site code, trademarks or campaign art was copied into the design.
 
-Product cards show verified identity and origin; absent bottling specifications are labeled unverified. The initial gallery spotlights three products, not three seller occurrences. Catalogue pagination and filters remain conventional and keyboard accessible. An edition links back to its canonical family; bottle size and market remain variants.
+Three.js loads only when requested. Glass, liquid, caps, approximate labels, botanical sculptures and neuro mechanisms are procedural. Camera controls expose zoom, orbit, pan, reset and fullscreen without trapping page-wheel scrolling. Drag suppression avoids accidental botanical picks. Each scene disposes of GPU resources when replaced. HTML recipes and source-linked plant records provide alternatives to WebGL.
 
-## Studio
+The sound mixer makes transport, master volume, three layers, speaker testing and WAV export visible. It produces original Web Audio synthesis using identity and documented botanical names. It is off until an explicit Play action, respects background suspension and uses no microphone or external audio library.
 
-Three.js is lazy loaded. Glass, liquid, cap, paper label, illumination and botanical sculptures are procedural reconstructions, not photogrammetric scans. Photograph-derived label UVs are approximate. Botanical mode shows up to eight ingredients at once; Plants arrows page through the disclosed set. The spread slider changes the composition. Drag or arrow keys rotate, Shift + drag pans, wheel zooms, Reset restores framing, and Full screen enters a dedicated gallery. Ingredient buttons in the HTML table expose the same research without relying on pointer selection or WebGL.
-
-Neuro mode is an abstract sculpture with source-linked mechanisms. Its positions, paths, timings and pulses are artistic, not anatomical locations, measured concentrations or an intoxication simulation. Missing ingredients and measurements remain visibly unknown.
-
-## Sound as material
-
-Sound is off by default and requires an explicit click. The persistent Sound control always toggles it off. Each product slug deterministically seeds a pentatonic phrase; disclosed floral ingredients select airy sine tones, spices select a soft triangle timbre and citrus adds an upper bell tone. Empty ingredient lists use only the identity seed. These are original Web Audio compositions, not recordings, neurological claims or evidence of compounds in the drink. No audio files, microphone, account or external audio service is needed. Switching products recomposes the sound; backgrounding the page suspends playback. Source nodes are released after each note.
-
-## Accessibility and performance
-
-Semantic controls, visible focus, skip navigation, textual recipe alternatives, system fonts, locally hosted images, native selects and reduced-motion support are intentional. Reduced motion disables automatic rotation, decorative pulses and arrival animation. Sound remains opt-in. WebGL failure leaves the photo and text accessible. Three.js resources are disposed on route changes. This is an accessibility-minded implementation, not a claim of certified WCAG conformity; independent assistive-technology testing remains useful.
+Semantic headings, focus indicators, skip navigation, native dialogs/selects, keyboard tab-arrow navigation, reduced-motion handling and responsive grids guide implementation. Reduced motion disables decorative arrival, pulses and initial automatic rotation. Independent screen-reader, physical-device, color-contrast and WCAG certification remain separate work; do not claim them from implementation alone.

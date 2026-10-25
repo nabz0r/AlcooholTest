@@ -73,3 +73,9 @@ Use Studio for discovery, research metadata harvest, export/import and job downl
 Redis can be restarted without losing catalogue or jobs. Worker media access requires the shared media volume (included in compose.yaml). Back up both `media` and `exports` separately from the database; curated frontend photographs can be reproduced from the pinned asset manifest. Redis has no persistence by design. A failed provider/category appears in its dump summary; do not infer complete internet coverage from a successful job status.
 
 To reproduce schema generation locally, use the project's Python environment with `SECRET_KEY` set and `DB_ENGINE=sqlite`, then `python backend/manage.py build_schema`; this only writes the schema. Runtime deployments use PostgreSQL. Rebuild distribution checksums after changing the schema or seed.
+
+## Experience revision deployment
+
+Rebuild the frontend and API together with `docker compose up -d --build`; initialization applies migrations 0009/0010. Existing editorial data is preserved on restart. An explicit `python manage.py seed` updates known seed UUIDs and adds the Heering packaging pair; review local editorial changes before reseeding. `PUBLIC_BASE_URL` in .env must match the public HTTPS origin for canonical metadata and sitemap. No database/cache host ports are required.
+
+Admin → Bottle photos moderates member packaging: inspect the full image/preview, product, view, market/edition caption, photographer, source and permission before approving. Member claims alone do not establish licensing. Public JSON is not a media/member backup; pair private SQL backups with the media volume. Detailed ratings are moderated through Reviews. Duplicate merging also moves member photo links so their editorial history survives canonicalization.

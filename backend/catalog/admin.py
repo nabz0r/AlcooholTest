@@ -110,7 +110,7 @@ class PlaceAdmin(AuditedAdmin):
     search_fields=['name','region','country'];list_display=['name','region','country'];autocomplete_fields=['source']
 @admin.register(m.BottleAsset)
 class BottleAssetAdmin(AuditedAdmin):
-    list_display=['product','license','author'];search_fields=['product__name','author'];autocomplete_fields=['product']
+    list_display=['product','view','license','author'];search_fields=['product__name','author'];autocomplete_fields=['product']
 
 for model in [m.Mechanism,m.CriticReview,m.Observation]: admin.site.register(model,AuditedAdmin)
 
@@ -139,3 +139,15 @@ class CursorAdmin(admin.ModelAdmin):
     list_display=['key','cursor','exhausted','updated_at'];readonly_fields=['updated_at']
 
 admin.site.register(m.PriceObservation,AuditedAdmin)
+
+@admin.action(description='Publish selected licensed bottle photographs')
+def approve_photos(modeladmin,request,queryset):
+    for photo in queryset:
+        photo.approved=True;photo.save();m.Audit.objects.create(actor=request.user,action='photo.approved',target=str(photo.id))
+@admin.register(m.BottlePhoto)
+class BottlePhotoAdmin(AuditedAdmin):
+    readonly_fields=['preview']
+    def preview(self,obj):
+        from django.utils.html import format_html
+        return format_html('<img src="{}" style="max-width:420px;max-height:500px" alt="Submitted packaging photograph">',obj.photo.url) if obj.photo else 'No photograph'
+    list_display=['product','view','credit','license','approved'];list_filter=['view','approved'];autocomplete_fields=['product'];actions=[approve_photos]

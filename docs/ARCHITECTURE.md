@@ -30,3 +30,5 @@ The initial UI loads system fonts, local photos and a small application bundle. 
 ## Deployment boundaries
 
 Containers are unprivileged where practical, drop capabilities and use read-only application filesystems. Only required volumes are writable. Database/Redis remain on a private network; API and worker have outbound network access for integrations. The default database account owns its schema so migrations and backups work locally; separate migrator/runtime roles are an explicit production improvement. There is no public TLS termination, SSO or post-quantum TLS configuration by default. See SSO-PQC.md and SECURITY.md.
+
+Public document requests now pass through Django for server-rendered text, metadata and canonical redirects. Nginx still serves local bottle images and the Vite bundles. Stable app/CSS entries are revalidated, while content-hashed dependency chunks are immutable. Member packaging uploads share the existing media volume; BottlePhoto moderation and richer Review fields live in PostgreSQL. Redis revision invalidation includes approved-photo/review changes. Canonical merges move member photo relations and retain an audit trail.

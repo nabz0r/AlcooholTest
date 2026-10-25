@@ -1,0 +1,95 @@
+{
+  "checked_on": "2026-10-25",
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 6418,
+      "noindex": null
+    },
+    {
+      "path": "/stories/",
+      "status": 200,
+      "bytes": 6497,
+      "noindex": null
+    },
+    {
+      "path": "/catalogue/",
+      "status": 200,
+      "bytes": 6487,
+      "noindex": null
+    },
+    {
+      "path": "/research/",
+      "status": 200,
+      "bytes": 1867,
+      "noindex": null
+    },
+    {
+      "path": "/compare/",
+      "status": 200,
+      "bytes": 1844,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/shelf/",
+      "status": 200,
+      "bytes": 1850,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/contribute/",
+      "status": 200,
+      "bytes": 1881,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/account/",
+      "status": 200,
+      "bytes": 1832,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/setup/",
+      "status": 200,
+      "bytes": 1858,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/studio/",
+      "status": 200,
+      "bytes": 1861,
+      "noindex": "noindex, nofollow"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 6213,
+      "noindex": null
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 166,
+      "noindex": null
+    },
+    {
+      "path": "/assets/app.js",
+      "status": 200,
+      "bytes": 79365,
+      "noindex": null
+    },
+    {
+      "path": "/assets/style.css",
+      "status": 200,
+      "bytes": 49157,
+      "noindex": null
+    }
+  ],
+  "published_sitemap_urls_checked": 61,
+  "curated_heering_views": [
+    "front",
+    "back"
+  ],
+  "all_passed": true
+}

@@ -161,3 +161,19 @@ File: `/bottles/don-papa-7-years-old.jpg` · SHA-256: `b9cfae58ace48d3240efc4494
 Unmodified Wikimedia-generated thumbnail. Displayed with CSS contain. Reference packaging photograph; check the visible label. Size, market and historical packaging may differ from the current product. Kyrö Napue is a legacy reference label.
 
 File: `/bottles/kyr-gin.jpg` · SHA-256: `888064b53ea506ad6b23452a7b7b9542a1d8b9d19c0878c80f5eaba6631b9a84`
+
+## heering-cherry-liqueur — front
+
+[Alex P. Kok](https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle.jpg) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+
+Original source bytes; displayed with CSS contain. Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition.
+
+File: `/bottles/heering-cherry-front.jpg` · SHA-256: `789c3b1ac60faca1eadfe8fb4fe92a6116c0a886a022d11bfb86c8120a2eca88`
+
+## heering-cherry-liqueur — back
+
+[Alex P. Kok](https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle_rear.jpg) · [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0)
+
+Original source bytes; displayed with CSS contain. Historical Peter Heering Cherry Liqueur 70 cl packaging reference. This is not a claim about current-market packaging or composition.
+
+File: `/bottles/heering-cherry-back.jpg` · SHA-256: `f9de0e17dafcdcdcf3c312ca3877ddf78bf759a1425269af1be13c0ff747cafc`
