@@ -38,5 +38,15 @@
     "message": "Minimum strength exceeds maximum strength.",
     "pagination": "Both controls disabled; stale page count removed",
     "reset": "55 canonical roots restored"
+  },
+  "remote_ci": {
+    "application_commit": "e7bcb40294a0a318e11245c1f0f18f4d84f7eac2",
+    "run_id": 40223838810,
+    "conclusion": "success",
+    "jobs": [
+      "integration",
+      "frontend",
+      "dependency-audit"
+    ]
   }
 }

@@ -4,7 +4,7 @@
 
 **A world within. A clearer way to choose.** An open-source, self-hosted spirits atlas with an evidence-led discovery desk, a shareable comparison table, documented ingredients and an artistic bottle studio.
 
-![Editorial homepage](docs/screenshots/home-v3.png)
+![Editorial homepage](docs/screenshots/home-v3.jpg)
 
 ## What you can actually do
 
@@ -40,12 +40,12 @@ Actual browser captures of the running Docker application. [Current and historic
 
 | | |
 |---|---|
-| **Explainable discovery**<br>![Discovery](docs/screenshots/discovery-v3.png) | **A focused direction**<br>![Japan and strength filters](docs/screenshots/direction-v3.png) |
-| **What the record documents**<br>![Coverage](docs/screenshots/coverage-v3.png) | **Source-explained connections**<br>![Connections](docs/screenshots/connections-v3.png) |
-| **An aligned comparison**<br>![Comparison](docs/screenshots/comparison-v3.png) | **Only the differences**<br>![Differences](docs/screenshots/differences-v3.png) |
-| **Ingredient-level inspection**<br>![Ingredients](docs/screenshots/ingredients-v3.png) | **Attributed perspectives**<br>![Critics](docs/screenshots/critics-v3.png) |
+| **Explainable discovery**<br>![Discovery](docs/screenshots/discovery-v3.jpg) | **A focused direction**<br>![Japan and strength filters](docs/screenshots/direction-v3.jpg) |
+| **What the record documents**<br>![Coverage](docs/screenshots/coverage-v3.jpg) | **Source-explained connections**<br>![Connections](docs/screenshots/connections-v3.jpg) |
+| **An aligned comparison**<br>![Comparison](docs/screenshots/comparison-v3.jpg) | **Only the differences**<br>![Differences](docs/screenshots/differences-v3.jpg) |
+| **Ingredient-level inspection**<br>![Ingredients](docs/screenshots/ingredients-v3.jpg) | **Attributed perspectives**<br>![Critics](docs/screenshots/critics-v3.jpg) |
 
-![A useful empty state](docs/screenshots/empty-v3.png)
+![A useful empty state](docs/screenshots/empty-v3.jpg)
 
 The earlier 18-view gallery is retained as explicitly labeled Volume 02 evidence in the screenshot index, including sound, fullscreen studios, packaging, detailed voting and administration. It is not presented as fresh Volume 03 capture.
 
