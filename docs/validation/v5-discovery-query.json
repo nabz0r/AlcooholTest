@@ -1,0 +1,1131 @@
+{
+  "checked_at": "2026-10-25T22:12:48.232244+00:00",
+  "scope": "Facet-query plans after a fresh isolated PostgreSQL database, migrations and transactional seed import. No ANALYZE maintenance command was run. EXPLAIN ANALYZE timings describe local SQL execution, not whole HTTP requests or CI latency.",
+  "environment": {
+    "architecture": "aarch64",
+    "postgresql": "17.11 / Alpine musl",
+    "jit_setting": "on",
+    "jit_available": true,
+    "per_connection_profile_statement_timeout_ms": 5000,
+    "production_statement_timeout_unchanged": true
+  },
+  "reported_ci_failure": {
+    "run_id": 40238038269,
+    "commit": "0448375",
+    "test": "test_discovery_strength_applies_to_same_bottling",
+    "symptom": "15-second statement timeout in ingredient facets on x86 CI",
+    "local_reproduction_limit": "The timeout and a JIT compilation event were not reproduced in this fresh local sample. Query expansion and join fan-out are established; JIT as the CI amplifier remains unconfirmed by this local profile."
+  },
+  "change": {
+    "candidate_rows": "One canonical product per row. Ingredient text, same-bottling strength and selected group predicates use EXISTS.",
+    "coverage": "Zero is the nonnegative score default and adds no coverage predicate. Positive thresholds still evaluate the six documentation areas.",
+    "facets": "Facets precede selected ingredient-group filtering and count distinct products. Candidate IDs remain in SQL.",
+    "result_cards": "Coverage annotations and bounded photograph/detail prefetches are attached to the final page."
+  },
+  "cases": [
+    {
+      "parameters": {
+        "q": "roku",
+        "min_abv": "44",
+        "max_abv": "46",
+        "coverage": "0"
+      },
+      "before": {
+        "estimated_total_cost": 103.81,
+        "plan_nodes": 34,
+        "subplans": 5,
+        "sql_characters": 2141,
+        "execution_ms": 1.173,
+        "planning_ms": 0.853,
+        "jit_used": false
+      },
+      "after": {
+        "estimated_total_cost": 42.57,
+        "plan_nodes": 21,
+        "subplans": 1,
+        "sql_characters": 1195,
+        "execution_ms": 0.267,
+        "planning_ms": 0.629,
+        "jit_used": false
+      }
+    },
+    {
+      "parameters": {
+        "q": "juniper",
+        "min_abv": "44",
+        "max_abv": "46",
+        "coverage": "0"
+      },
+      "before": {
+        "estimated_total_cost": 103.81,
+        "plan_nodes": 34,
+        "subplans": 5,
+        "sql_characters": 2150,
+        "execution_ms": null,
+        "jit_used": false
+      },
+      "after": {
+        "estimated_total_cost": 42.57,
+        "plan_nodes": 21,
+        "subplans": 1,
+        "sql_characters": 1204,
+        "execution_ms": 0.522,
+        "planning_ms": 0.531,
+        "jit_used": false
+      }
+    },
+    {
+      "parameters": {
+        "q": "roku",
+        "min_abv": "46",
+        "coverage": "3"
+      },
+      "before": {
+        "estimated_total_cost": 104.86,
+        "plan_nodes": 34,
+        "subplans": 5,
+        "sql_characters": 2122,
+        "execution_ms": null,
+        "jit_used": false
+      },
+      "after": {
+        "estimated_total_cost": 133.75,
+        "plan_nodes": 34,
+        "subplans": 6,
+        "sql_characters": 2168,
+        "execution_ms": 1.059,
+        "planning_ms": 1.012,
+        "jit_used": false
+      }
+    }
+  ],
+  "validation": {
+    "fresh_postgresql_focused_tests": 10,
+    "passed": 10,
+    "duration_seconds": 6.245,
+    "new_regressions": [
+      "Ingredient-name search with lower and upper strength on the same bottling",
+      "Facet counts before group selection, one count per product despite repeated recipe inputs",
+      "Positive documentation threshold affects candidates and facets"
+    ],
+    "existing_checks": [
+      "Exact failed Roku 44\u201346 range",
+      "Canonical and draft visibility",
+      "Invalid filter rejection",
+      "Group explanations",
+      "Pagination and coverage order",
+      "Bounded query count",
+      "Approved member photograph filter"
+    ],
+    "initial_failure_and_resolution": "The first focused run exposed duplicate approved-front prefetches when annotation was repeated for a positive coverage or photograph filter. Pure coverage annotations were separated from final-card prefetches; all ten focused tests then passed.",
+    "root_reported_full_fresh_docker_suite": {
+      "tests": 129,
+      "passed": 129,
+      "duration_seconds": 63.111,
+      "scope": "Root-reported full fresh Docker PostgreSQL validation after the discovery fix."
+    }
+  },
+  "live_http": [
+    {
+      "path": "/api/v1/discover?q=roku&min_abv=44&max_abv=46&coverage=0",
+      "status": 200,
+      "total": 0,
+      "elapsed_ms": 53.162,
+      "headers": {
+        "X-Alcooltest-Cache": "MISS"
+      }
+    },
+    {
+      "path": "/api/v1/discover?q=roku&min_abv=46&coverage=3",
+      "status": 200,
+      "total": 1,
+      "elapsed_ms": 32.832,
+      "headers": {
+        "X-Alcooltest-Cache": "MISS"
+      }
+    },
+    {
+      "path": "/api/v1/discover?q=juniper&min_abv=44&max_abv=46&coverage=1",
+      "status": 200,
+      "total": 6,
+      "elapsed_ms": 50.302,
+      "headers": {
+        "X-Alcooltest-Cache": "MISS"
+      }
+    }
+  ],
+  "live_http_interpretation": "Three local uncached HTTP requests with expected result totals. These are individual latency observations, not a throughput benchmark or a guarantee of other environments.",
+  "status": "Uncorrelated set-query candidate: semantics pass ARM and actual x86 CLI. Native GitHub CI remains pending. Historical failed and diagnostic runs retain their stated scope.",
+  "subsequent_ci_failure": {
+    "run_id": 40238951704,
+    "test": "test_discovery_facets_precede_group_selection_and_count_products_once",
+    "symptom": "15-second PostgreSQL timeout in candidate count for ingredient search plus a selected group.",
+    "interpretation": "The first rewrite passed the recorded local tests and measurements but still failed on CI. A second uncorrelated SQL ID-set rewrite is under separate x86 validation; the historical numbers below must not be presented as proof that the CI issue is resolved."
+  },
+  "second_rewrite": {
+    "implementation": "Uncorrelated SQL ID sets: UNION ALL of independent product-name, brand-name and ingredient matches; IN for both strength bounds on one bottling and IN for selected ingredient groups. No client-side ID materialization.",
+    "focused_arm_postgresql": {
+      "passed": 10,
+      "duration_seconds": 6.231
+    },
+    "independent_catalogue_postgresql": {
+      "passed": 71,
+      "duration_seconds": 33.762
+    },
+    "x86_sql_probe": {
+      "platform": "isolated PostgreSQL 17 x86_64 container; ARM application client",
+      "queries": {
+        "old_correlated_count": {
+          "rows": [
+            [
+              1
+            ]
+          ],
+          "elapsed_ms": 9.035,
+          "plan": {
+            "Plan": {
+              "Node Type": "Aggregate",
+              "Strategy": "Plain",
+              "Partial Mode": "Simple",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 29.59,
+              "Total Cost": 29.6,
+              "Plan Rows": 1,
+              "Plan Width": 8,
+              "Plans": [
+                {
+                  "Node Type": "Hash Join",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Join Type": "Inner",
+                  "Startup Cost": 28.88,
+                  "Total Cost": 29.59,
+                  "Plan Rows": 1,
+                  "Plan Width": 0,
+                  "Inner Unique": true,
+                  "Hash Cond": "(catalog_product.brand_id = catalog_brand.id)",
+                  "Join Filter": "((upper((catalog_product.name)::text) ~~ '%QA FACET NEEDLE%'::text) OR (upper((catalog_brand.name)::text) ~~ '%QA FACET NEEDLE%'::text) OR (ANY (catalog_product.id = (hashed SubPlan 2).col1)))",
+                  "Plans": [
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 17.3,
+                      "Total Cost": 18.01,
+                      "Plan Rows": 1,
+                      "Plan Width": 370,
+                      "Inner Unique": true,
+                      "Plans": [
+                        {
+                          "Node Type": "Unique",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 17.15,
+                          "Total Cost": 17.16,
+                          "Plan Rows": 2,
+                          "Plan Width": 16,
+                          "Plans": [
+                            {
+                              "Node Type": "Sort",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Startup Cost": 17.15,
+                              "Total Cost": 17.16,
+                              "Plan Rows": 2,
+                              "Plan Width": 16,
+                              "Sort Key": [
+                                "u2.product_id"
+                              ],
+                              "Plans": [
+                                {
+                                  "Node Type": "Nested Loop",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Join Type": "Inner",
+                                  "Startup Cost": 0.43,
+                                  "Total Cost": 17.14,
+                                  "Plan Rows": 2,
+                                  "Plan Width": 16,
+                                  "Inner Unique": true,
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Nested Loop",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Join Type": "Inner",
+                                      "Startup Cost": 0.29,
+                                      "Total Cost": 16.33,
+                                      "Plan Rows": 2,
+                                      "Plan Width": 16,
+                                      "Inner Unique": false,
+                                      "Plans": [
+                                        {
+                                          "Node Type": "Index Scan",
+                                          "Parent Relationship": "Outer",
+                                          "Parallel Aware": false,
+                                          "Async Capable": false,
+                                          "Scan Direction": "Forward",
+                                          "Index Name": "catalog_ingredient_navigation_group_233c67fa_like",
+                                          "Relation Name": "catalog_ingredient",
+                                          "Alias": "u1",
+                                          "Startup Cost": 0.14,
+                                          "Total Cost": 8.16,
+                                          "Plan Rows": 1,
+                                          "Plan Width": 16,
+                                          "Index Cond": "((navigation_group)::text = 'citrus'::text)"
+                                        },
+                                        {
+                                          "Node Type": "Index Scan",
+                                          "Parent Relationship": "Inner",
+                                          "Parallel Aware": false,
+                                          "Async Capable": false,
+                                          "Scan Direction": "Forward",
+                                          "Index Name": "catalog_recipeingredient_ingredient_id_d5e98650",
+                                          "Relation Name": "catalog_recipeingredient",
+                                          "Alias": "u0",
+                                          "Startup Cost": 0.14,
+                                          "Total Cost": 8.16,
+                                          "Plan Rows": 1,
+                                          "Plan Width": 32,
+                                          "Index Cond": "(ingredient_id = u1.id)"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "Node Type": "Index Scan",
+                                      "Parent Relationship": "Inner",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Scan Direction": "Forward",
+                                      "Index Name": "catalog_recipe_pkey",
+                                      "Relation Name": "catalog_recipe",
+                                      "Alias": "u2",
+                                      "Startup Cost": 0.15,
+                                      "Total Cost": 0.41,
+                                      "Plan Rows": 1,
+                                      "Plan Width": 32,
+                                      "Index Cond": "(id = u0.recipe_id)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Memoize",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.15,
+                          "Total Cost": 0.41,
+                          "Plan Rows": 1,
+                          "Plan Width": 370,
+                          "Cache Key": "u2.product_id",
+                          "Cache Mode": "logical",
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "catalog_pro_status_bda3bc_idx",
+                              "Relation Name": "catalog_product",
+                              "Alias": "catalog_product",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 0.4,
+                              "Plan Rows": 1,
+                              "Plan Width": 370,
+                              "Index Cond": "(((status)::text = 'published'::text) AND (id = u2.product_id))",
+                              "Filter": "((edition_of_id IS NULL) AND (merged_into_id IS NULL))"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Hash",
+                      "Parent Relationship": "Inner",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Startup Cost": 10.7,
+                      "Total Cost": 10.7,
+                      "Plan Rows": 70,
+                      "Plan Width": 274,
+                      "Plans": [
+                        {
+                          "Node Type": "Seq Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Relation Name": "catalog_brand",
+                          "Alias": "catalog_brand",
+                          "Startup Cost": 0.0,
+                          "Total Cost": 10.7,
+                          "Plan Rows": 70,
+                          "Plan Width": 274
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "SubPlan",
+                      "Subplan Name": "SubPlan 2",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 0.29,
+                      "Total Cost": 25.33,
+                      "Plan Rows": 2,
+                      "Plan Width": 16,
+                      "Inner Unique": true,
+                      "Plans": [
+                        {
+                          "Node Type": "Nested Loop",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Join Type": "Inner",
+                          "Startup Cost": 0.14,
+                          "Total Cost": 24.52,
+                          "Plan Rows": 2,
+                          "Plan Width": 16,
+                          "Inner Unique": false,
+                          "Plans": [
+                            {
+                              "Node Type": "Seq Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Relation Name": "catalog_ingredient",
+                              "Alias": "u1_1",
+                              "Startup Cost": 0.0,
+                              "Total Cost": 16.35,
+                              "Plan Rows": 1,
+                              "Plan Width": 16,
+                              "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                            },
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Inner",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "catalog_recipeingredient_ingredient_id_d5e98650",
+                              "Relation Name": "catalog_recipeingredient",
+                              "Alias": "u0_1",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 8.16,
+                              "Plan Rows": 1,
+                              "Plan Width": 32,
+                              "Index Cond": "(ingredient_id = u1_1.id)"
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Index Scan",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Scan Direction": "Forward",
+                          "Index Name": "catalog_recipe_pkey",
+                          "Relation Name": "catalog_recipe",
+                          "Alias": "u2_1",
+                          "Startup Cost": 0.15,
+                          "Total Cost": 0.41,
+                          "Plan Rows": 1,
+                          "Plan Width": 32,
+                          "Index Cond": "(id = u0_1.recipe_id)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        "new_set_count": {
+          "elapsed_ms": 9.015,
+          "rows": [
+            [
+              1
+            ]
+          ],
+          "plan": {
+            "Plan": {
+              "Node Type": "Aggregate",
+              "Strategy": "Plain",
+              "Partial Mode": "Simple",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 72.07,
+              "Total Cost": 72.08,
+              "Plan Rows": 1,
+              "Plan Width": 8,
+              "Plans": [
+                {
+                  "Node Type": "Nested Loop",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Join Type": "Semi",
+                  "Startup Cost": 2.6,
+                  "Total Cost": 72.06,
+                  "Plan Rows": 1,
+                  "Plan Width": 0,
+                  "Inner Unique": false,
+                  "Join Filter": "(catalog_product.id = u2.product_id)",
+                  "Plans": [
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Semi",
+                      "Startup Cost": 0.14,
+                      "Total Cost": 63.38,
+                      "Plan Rows": 1,
+                      "Plan Width": 32,
+                      "Inner Unique": false,
+                      "Join Filter": "(catalog_product.id = u0_1.id)",
+                      "Plans": [
+                        {
+                          "Node Type": "Index Scan",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Scan Direction": "Forward",
+                          "Index Name": "catalog_product_status_0fdef323_like",
+                          "Relation Name": "catalog_product",
+                          "Alias": "catalog_product",
+                          "Startup Cost": 0.14,
+                          "Total Cost": 8.16,
+                          "Plan Rows": 1,
+                          "Plan Width": 16,
+                          "Index Cond": "((status)::text = 'published'::text)",
+                          "Filter": "((edition_of_id IS NULL) AND (merged_into_id IS NULL))"
+                        },
+                        {
+                          "Node Type": "Append",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.0,
+                          "Total Cost": 55.17,
+                          "Plan Rows": 4,
+                          "Plan Width": 16,
+                          "Subplans Removed": 0,
+                          "Plans": [
+                            {
+                              "Node Type": "Seq Scan",
+                              "Parent Relationship": "Member",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Relation Name": "catalog_product",
+                              "Alias": "u0_1",
+                              "Startup Cost": 0.0,
+                              "Total Cost": 10.6,
+                              "Plan Rows": 1,
+                              "Plan Width": 16,
+                              "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                            },
+                            {
+                              "Node Type": "Nested Loop",
+                              "Parent Relationship": "Member",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Join Type": "Inner",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 19.22,
+                              "Plan Rows": 1,
+                              "Plan Width": 16,
+                              "Inner Unique": false,
+                              "Plans": [
+                                {
+                                  "Node Type": "Seq Scan",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Relation Name": "catalog_brand",
+                                  "Alias": "u1_1",
+                                  "Startup Cost": 0.0,
+                                  "Total Cost": 11.05,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 16,
+                                  "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                                },
+                                {
+                                  "Node Type": "Index Scan",
+                                  "Parent Relationship": "Inner",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Scan Direction": "Forward",
+                                  "Index Name": "catalog_product_brand_id_bb0c7890",
+                                  "Relation Name": "catalog_product",
+                                  "Alias": "u0_2",
+                                  "Startup Cost": 0.14,
+                                  "Total Cost": 8.16,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 32,
+                                  "Index Cond": "(brand_id = u1_1.id)"
+                                }
+                              ]
+                            },
+                            {
+                              "Node Type": "Nested Loop",
+                              "Parent Relationship": "Member",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Join Type": "Inner",
+                              "Startup Cost": 0.29,
+                              "Total Cost": 25.33,
+                              "Plan Rows": 2,
+                              "Plan Width": 16,
+                              "Inner Unique": true,
+                              "Plans": [
+                                {
+                                  "Node Type": "Nested Loop",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Join Type": "Inner",
+                                  "Startup Cost": 0.14,
+                                  "Total Cost": 24.52,
+                                  "Plan Rows": 2,
+                                  "Plan Width": 16,
+                                  "Inner Unique": false,
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Seq Scan",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Relation Name": "catalog_ingredient",
+                                      "Alias": "u1_2",
+                                      "Startup Cost": 0.0,
+                                      "Total Cost": 16.35,
+                                      "Plan Rows": 1,
+                                      "Plan Width": 16,
+                                      "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                                    },
+                                    {
+                                      "Node Type": "Index Scan",
+                                      "Parent Relationship": "Inner",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Scan Direction": "Forward",
+                                      "Index Name": "catalog_recipeingredient_ingredient_id_d5e98650",
+                                      "Relation Name": "catalog_recipeingredient",
+                                      "Alias": "u0_3",
+                                      "Startup Cost": 0.14,
+                                      "Total Cost": 8.16,
+                                      "Plan Rows": 1,
+                                      "Plan Width": 32,
+                                      "Index Cond": "(ingredient_id = u1_2.id)"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Node Type": "Index Scan",
+                                  "Parent Relationship": "Inner",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Scan Direction": "Forward",
+                                  "Index Name": "catalog_recipe_pkey",
+                                  "Relation Name": "catalog_recipe",
+                                  "Alias": "u2_1",
+                                  "Startup Cost": 0.15,
+                                  "Total Cost": 0.41,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 32,
+                                  "Index Cond": "(id = u0_3.recipe_id)"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "Inner",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 2.46,
+                      "Total Cost": 8.67,
+                      "Plan Rows": 1,
+                      "Plan Width": 16,
+                      "Inner Unique": true,
+                      "Plans": [
+                        {
+                          "Node Type": "Nested Loop",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Join Type": "Inner",
+                          "Startup Cost": 2.31,
+                          "Total Cost": 8.15,
+                          "Plan Rows": 1,
+                          "Plan Width": 32,
+                          "Inner Unique": false,
+                          "Plans": [
+                            {
+                              "Node Type": "Bitmap Heap Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Relation Name": "catalog_recipe",
+                              "Alias": "u2",
+                              "Startup Cost": 2.16,
+                              "Total Cost": 7.5,
+                              "Plan Rows": 2,
+                              "Plan Width": 32,
+                              "Recheck Cond": "(product_id = u0_1.id)",
+                              "Plans": [
+                                {
+                                  "Node Type": "Bitmap Index Scan",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Index Name": "catalog_recipe_product_id_6d1dcf72",
+                                  "Startup Cost": 0.0,
+                                  "Total Cost": 2.16,
+                                  "Plan Rows": 2,
+                                  "Plan Width": 0,
+                                  "Index Cond": "(product_id = u0_1.id)"
+                                }
+                              ]
+                            },
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Inner",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "catalog_recipeingredient_recipe_id_3c3b9376",
+                              "Relation Name": "catalog_recipeingredient",
+                              "Alias": "u0",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 0.31,
+                              "Plan Rows": 1,
+                              "Plan Width": 32,
+                              "Index Cond": "(recipe_id = u2.id)"
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Memoize",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Startup Cost": 0.15,
+                          "Total Cost": 0.51,
+                          "Plan Rows": 1,
+                          "Plan Width": 16,
+                          "Cache Key": "u0.ingredient_id",
+                          "Cache Mode": "logical",
+                          "Plans": [
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "catalog_ingredient_pkey",
+                              "Relation Name": "catalog_ingredient",
+                              "Alias": "u1",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 0.5,
+                              "Plan Rows": 1,
+                              "Plan Width": 16,
+                              "Index Cond": "(id = u0.ingredient_id)",
+                              "Filter": "((navigation_group)::text = 'citrus'::text)"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "correlated_subplans": 0
+        },
+        "new_facets": {
+          "elapsed_ms": 7.762,
+          "rows": [
+            [
+              "citrus",
+              1
+            ],
+            [
+              "floral",
+              2
+            ]
+          ],
+          "plan": {
+            "Plan": {
+              "Node Type": "Aggregate",
+              "Strategy": "Sorted",
+              "Partial Mode": "Simple",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 74.08,
+              "Total Cost": 74.1,
+              "Plan Rows": 1,
+              "Plan Width": 58,
+              "Group Key": [
+                "catalog_ingredient.navigation_group"
+              ],
+              "Plans": [
+                {
+                  "Node Type": "Sort",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 74.08,
+                  "Total Cost": 74.09,
+                  "Plan Rows": 1,
+                  "Plan Width": 66,
+                  "Sort Key": [
+                    "catalog_ingredient.navigation_group",
+                    "catalog_recipe.product_id"
+                  ],
+                  "Plans": [
+                    {
+                      "Node Type": "Nested Loop",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Join Type": "Inner",
+                      "Startup Cost": 67.83,
+                      "Total Cost": 74.07,
+                      "Plan Rows": 1,
+                      "Plan Width": 66,
+                      "Inner Unique": true,
+                      "Plans": [
+                        {
+                          "Node Type": "Nested Loop",
+                          "Parent Relationship": "Outer",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Join Type": "Inner",
+                          "Startup Cost": 67.69,
+                          "Total Cost": 73.56,
+                          "Plan Rows": 1,
+                          "Plan Width": 32,
+                          "Inner Unique": false,
+                          "Plans": [
+                            {
+                              "Node Type": "Nested Loop",
+                              "Parent Relationship": "Outer",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Join Type": "Inner",
+                              "Startup Cost": 67.54,
+                              "Total Cost": 72.92,
+                              "Plan Rows": 2,
+                              "Plan Width": 32,
+                              "Inner Unique": false,
+                              "Plans": [
+                                {
+                                  "Node Type": "Aggregate",
+                                  "Strategy": "Hashed",
+                                  "Partial Mode": "Simple",
+                                  "Parent Relationship": "Outer",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Startup Cost": 63.38,
+                                  "Total Cost": 63.39,
+                                  "Plan Rows": 1,
+                                  "Plan Width": 32,
+                                  "Group Key": [
+                                    "v0.id"
+                                  ],
+                                  "Planned Partitions": 0,
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Nested Loop",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Join Type": "Semi",
+                                      "Startup Cost": 0.14,
+                                      "Total Cost": 63.38,
+                                      "Plan Rows": 1,
+                                      "Plan Width": 32,
+                                      "Inner Unique": false,
+                                      "Join Filter": "(v0.id = u0.id)",
+                                      "Plans": [
+                                        {
+                                          "Node Type": "Index Scan",
+                                          "Parent Relationship": "Outer",
+                                          "Parallel Aware": false,
+                                          "Async Capable": false,
+                                          "Scan Direction": "Forward",
+                                          "Index Name": "catalog_product_status_0fdef323_like",
+                                          "Relation Name": "catalog_product",
+                                          "Alias": "v0",
+                                          "Startup Cost": 0.14,
+                                          "Total Cost": 8.16,
+                                          "Plan Rows": 1,
+                                          "Plan Width": 16,
+                                          "Index Cond": "((status)::text = 'published'::text)",
+                                          "Filter": "((edition_of_id IS NULL) AND (merged_into_id IS NULL))"
+                                        },
+                                        {
+                                          "Node Type": "Append",
+                                          "Parent Relationship": "Inner",
+                                          "Parallel Aware": false,
+                                          "Async Capable": false,
+                                          "Startup Cost": 0.0,
+                                          "Total Cost": 55.17,
+                                          "Plan Rows": 4,
+                                          "Plan Width": 16,
+                                          "Subplans Removed": 0,
+                                          "Plans": [
+                                            {
+                                              "Node Type": "Seq Scan",
+                                              "Parent Relationship": "Member",
+                                              "Parallel Aware": false,
+                                              "Async Capable": false,
+                                              "Relation Name": "catalog_product",
+                                              "Alias": "u0",
+                                              "Startup Cost": 0.0,
+                                              "Total Cost": 10.6,
+                                              "Plan Rows": 1,
+                                              "Plan Width": 16,
+                                              "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                                            },
+                                            {
+                                              "Node Type": "Nested Loop",
+                                              "Parent Relationship": "Member",
+                                              "Parallel Aware": false,
+                                              "Async Capable": false,
+                                              "Join Type": "Inner",
+                                              "Startup Cost": 0.14,
+                                              "Total Cost": 19.22,
+                                              "Plan Rows": 1,
+                                              "Plan Width": 16,
+                                              "Inner Unique": false,
+                                              "Plans": [
+                                                {
+                                                  "Node Type": "Seq Scan",
+                                                  "Parent Relationship": "Outer",
+                                                  "Parallel Aware": false,
+                                                  "Async Capable": false,
+                                                  "Relation Name": "catalog_brand",
+                                                  "Alias": "u1",
+                                                  "Startup Cost": 0.0,
+                                                  "Total Cost": 11.05,
+                                                  "Plan Rows": 1,
+                                                  "Plan Width": 16,
+                                                  "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                                                },
+                                                {
+                                                  "Node Type": "Index Scan",
+                                                  "Parent Relationship": "Inner",
+                                                  "Parallel Aware": false,
+                                                  "Async Capable": false,
+                                                  "Scan Direction": "Forward",
+                                                  "Index Name": "catalog_product_brand_id_bb0c7890",
+                                                  "Relation Name": "catalog_product",
+                                                  "Alias": "u0_1",
+                                                  "Startup Cost": 0.14,
+                                                  "Total Cost": 8.16,
+                                                  "Plan Rows": 1,
+                                                  "Plan Width": 32,
+                                                  "Index Cond": "(brand_id = u1.id)"
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "Node Type": "Nested Loop",
+                                              "Parent Relationship": "Member",
+                                              "Parallel Aware": false,
+                                              "Async Capable": false,
+                                              "Join Type": "Inner",
+                                              "Startup Cost": 0.29,
+                                              "Total Cost": 25.33,
+                                              "Plan Rows": 2,
+                                              "Plan Width": 16,
+                                              "Inner Unique": true,
+                                              "Plans": [
+                                                {
+                                                  "Node Type": "Nested Loop",
+                                                  "Parent Relationship": "Outer",
+                                                  "Parallel Aware": false,
+                                                  "Async Capable": false,
+                                                  "Join Type": "Inner",
+                                                  "Startup Cost": 0.14,
+                                                  "Total Cost": 24.52,
+                                                  "Plan Rows": 2,
+                                                  "Plan Width": 16,
+                                                  "Inner Unique": false,
+                                                  "Plans": [
+                                                    {
+                                                      "Node Type": "Seq Scan",
+                                                      "Parent Relationship": "Outer",
+                                                      "Parallel Aware": false,
+                                                      "Async Capable": false,
+                                                      "Relation Name": "catalog_ingredient",
+                                                      "Alias": "u1_1",
+                                                      "Startup Cost": 0.0,
+                                                      "Total Cost": 16.35,
+                                                      "Plan Rows": 1,
+                                                      "Plan Width": 16,
+                                                      "Filter": "(upper((name)::text) ~~ '%QA FACET NEEDLE%'::text)"
+                                                    },
+                                                    {
+                                                      "Node Type": "Index Scan",
+                                                      "Parent Relationship": "Inner",
+                                                      "Parallel Aware": false,
+                                                      "Async Capable": false,
+                                                      "Scan Direction": "Forward",
+                                                      "Index Name": "catalog_recipeingredient_ingredient_id_d5e98650",
+                                                      "Relation Name": "catalog_recipeingredient",
+                                                      "Alias": "u0_2",
+                                                      "Startup Cost": 0.14,
+                                                      "Total Cost": 8.16,
+                                                      "Plan Rows": 1,
+                                                      "Plan Width": 32,
+                                                      "Index Cond": "(ingredient_id = u1_1.id)"
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "Node Type": "Index Scan",
+                                                  "Parent Relationship": "Inner",
+                                                  "Parallel Aware": false,
+                                                  "Async Capable": false,
+                                                  "Scan Direction": "Forward",
+                                                  "Index Name": "catalog_recipe_pkey",
+                                                  "Relation Name": "catalog_recipe",
+                                                  "Alias": "u2",
+                                                  "Startup Cost": 0.15,
+                                                  "Total Cost": 0.41,
+                                                  "Plan Rows": 1,
+                                                  "Plan Width": 32,
+                                                  "Index Cond": "(id = u0_2.recipe_id)"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Node Type": "Bitmap Heap Scan",
+                                  "Parent Relationship": "Inner",
+                                  "Parallel Aware": false,
+                                  "Async Capable": false,
+                                  "Relation Name": "catalog_recipe",
+                                  "Alias": "catalog_recipe",
+                                  "Startup Cost": 4.16,
+                                  "Total Cost": 9.5,
+                                  "Plan Rows": 2,
+                                  "Plan Width": 32,
+                                  "Recheck Cond": "(product_id = v0.id)",
+                                  "Plans": [
+                                    {
+                                      "Node Type": "Bitmap Index Scan",
+                                      "Parent Relationship": "Outer",
+                                      "Parallel Aware": false,
+                                      "Async Capable": false,
+                                      "Index Name": "catalog_recipe_product_id_6d1dcf72",
+                                      "Startup Cost": 0.0,
+                                      "Total Cost": 4.16,
+                                      "Plan Rows": 2,
+                                      "Plan Width": 0,
+                                      "Index Cond": "(product_id = v0.id)"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Node Type": "Index Scan",
+                              "Parent Relationship": "Inner",
+                              "Parallel Aware": false,
+                              "Async Capable": false,
+                              "Scan Direction": "Forward",
+                              "Index Name": "catalog_recipeingredient_recipe_id_3c3b9376",
+                              "Relation Name": "catalog_recipeingredient",
+                              "Alias": "catalog_recipeingredient",
+                              "Startup Cost": 0.14,
+                              "Total Cost": 0.31,
+                              "Plan Rows": 1,
+                              "Plan Width": 32,
+                              "Index Cond": "(recipe_id = catalog_recipe.id)"
+                            }
+                          ]
+                        },
+                        {
+                          "Node Type": "Index Scan",
+                          "Parent Relationship": "Inner",
+                          "Parallel Aware": false,
+                          "Async Capable": false,
+                          "Scan Direction": "Forward",
+                          "Index Name": "catalog_ingredient_pkey",
+                          "Relation Name": "catalog_ingredient",
+                          "Alias": "catalog_ingredient",
+                          "Startup Cost": 0.14,
+                          "Total Cost": 0.5,
+                          "Plan Rows": 1,
+                          "Plan Width": 66,
+                          "Index Cond": "(id = catalog_recipeingredient.ingredient_id)",
+                          "Filter": "((navigation_group)::text <> ''::text)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "correlated_subplans": 0
+        }
+      },
+      "postgres": "PostgreSQL 17.11 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit",
+      "statement_timeout": "15s",
+      "interpretation": "SQL timings only, one local x86-emulated database sample. Both old and new queries completed here; the remote CI timeout and a JIT cause were not reproduced. The set-query rewrite removes correlated search/group subplans without changing the 15-second deadline. Remote CI remains required."
+    },
+    "full_x86_suite": {
+      "tests": 129,
+      "passed": 124,
+      "errors": 5,
+      "duration_seconds": 186.106,
+      "failed_tests": [
+        "test_approved_member_front_photo_is_discoverable",
+        "test_discovery_facets_precede_group_selection_and_count_products_once",
+        "test_discovery_ingredient_strength_query_keeps_single_bottling_and_facets",
+        "test_discovery_positive_coverage_filters_candidate_facets",
+        "test_discovery_strength_applies_to_same_bottling"
+      ],
+      "interpretation": "Full isolated x86 suite reproduced five discovery facet timeouts, despite passing individual SQL probes. This candidate was not published; instrumented diagnosis follows."
+    },
+    "remote_ci": "pending",
+    "uninstrumented_x86_cli": {
+      "tests": 129,
+      "passed": 129,
+      "duration_seconds": 73.228,
+      "test_outcome": "OK",
+      "process_cleanup": "A diagnostic watcher retained a test-database session during teardown. A clean repeat without that watcher is required. This is not an application test failure.",
+      "interpretation": "The actual Django CLI executed all tests without a query wrapper. Earlier five emulated-x86 failures are retained above; no definitive JIT or other platform-specific cause is claimed."
+    }
+  }
+}

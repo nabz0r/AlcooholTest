@@ -38,12 +38,15 @@ def ingredients(p):
     return {x.ingredient.slug:{'name':x.ingredient.name,'group':x.ingredient.navigation_group,'certainty':x.certainty} for r in p.recipes.all() for x in r.ingredients.all()}
 
 def _candidate_products(params):
-    # Candidate IDs remain one row per product. Correlated existence predicates
-    # avoid multiplying ingredient and bottling rows before facets and counts.
+    # Independent ID sets keep the count/facet path free of correlated search
+    # subplans and ingredient/bottling fan-out. IN supplies set membership even
+    # when one branch yields the same product through several recipe inputs.
     qs=m.Product.objects.filter(status='published',edition_of__isnull=True,merged_into__isnull=True);q=params.get('q','').strip()[:120]
     if q:
-        matched_ingredient=m.RecipeIngredient.objects.filter(recipe__product=OuterRef('pk'),ingredient__name__icontains=q)
-        qs=qs.filter(Q(name__icontains=q)|Q(brand__name__icontains=q)|Exists(matched_ingredient))
+        matching_names=m.Product.objects.filter(name__icontains=q).order_by().values('pk')
+        matching_brands=m.Product.objects.filter(brand__name__icontains=q).order_by().values('pk')
+        matching_ingredients=m.RecipeIngredient.objects.filter(ingredient__name__icontains=q).order_by().values('recipe__product_id')
+        qs=qs.filter(pk__in=matching_names.union(matching_brands,matching_ingredients,all=True))
     if params.get('category'):qs=qs.filter(category=params['category'][:40])
     if params.get('country'):qs=qs.filter(brand__country=params['country'][:80])
     groups=list(dict.fromkeys(filter(None,params.get('groups','').split(','))))
@@ -55,7 +58,7 @@ def _candidate_products(params):
             if not math.isfinite(value) or not 0<=value<=100:raise ValueError('Strength must be between 0 and 100.')
             strength['abv__'+lookup]=value
     if strength.get('abv__gte',0)>strength.get('abv__lte',100):raise ValueError('Minimum strength exceeds maximum strength.')
-    if strength:qs=qs.filter(Exists(m.Variant.objects.filter(product=OuterRef('pk'),**strength)))
+    if strength:qs=qs.filter(pk__in=m.Variant.objects.filter(**strength).order_by().values('product_id'))
     minimum=int(params.get('coverage','0'))
     if not 0<=minimum<=6:raise ValueError('Documentation coverage must be between 0 and 6.')
     # Coverage is nonnegative. The default zero threshold must not expand its
@@ -69,11 +72,16 @@ def _candidate_products(params):
 def _ingredient_facets(qs):
     return m.RecipeIngredient.objects.filter(recipe__product__in=qs.order_by().values('pk')).exclude(ingredient__navigation_group='').values('ingredient__navigation_group').annotate(count=Count('recipe__product',distinct=True))
 
+def _filter_groups(qs,groups):
+    if not groups:return qs
+    matches=m.RecipeIngredient.objects.filter(ingredient__navigation_group__in=groups).order_by().values('recipe__product_id')
+    return qs.filter(pk__in=matches)
+
 def find(params):
     qs,groups=_candidate_products(params)
     facet_rows=_ingredient_facets(qs)
     counts={x['ingredient__navigation_group']:x['count'] for x in facet_rows}
-    if groups:qs=qs.filter(Exists(m.RecipeIngredient.objects.filter(recipe__product=OuterRef('pk'),ingredient__navigation_group__in=groups)))
+    qs=_filter_groups(qs,groups)
     order=params.get('sort','documented')
     if order not in ['documented','name']:raise ValueError('Choose documented or name ordering.')
     total=qs.count();page=max(1,min(int(params.get('page','1')),1000));limit=max(1,min(int(params.get('limit','12')),24))
