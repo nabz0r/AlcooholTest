@@ -218,6 +218,19 @@
               "notes": {
                 "type": "string",
                 "maxLength": 20000
+              },
+              "navigation_group": {
+                "type": "string",
+                "enum": [
+                  "",
+                  "floral",
+                  "citrus",
+                  "herbal",
+                  "spice",
+                  "fruit",
+                  "roots",
+                  "grain"
+                ]
               }
             }
           }

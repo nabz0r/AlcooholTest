@@ -2,13 +2,27 @@
 
 [![CI](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml)
 
-**A world within.** An open-source, self-hosted spirits atlas: an editorial photographic arrival, botanical sculptures, original generative sound, traceable ingredients and an editorial notebook.
+**A world within. A clearer way to choose.** An open-source, self-hosted spirits atlas with an evidence-led discovery desk, a shareable comparison table, documented ingredients and an artistic bottle studio.
 
-![Editorial homepage](docs/screenshots/home.png)
+![Editorial homepage](docs/screenshots/home-v3.png)
+
+## What you can actually do
+
+- **Find a direction.** Filter canonical products by spirit, brand origin, editorial ingredient groups, a documented bottling's strength, photograph availability and six-area record coverage. See counts, remove applied constraints and share the exact search.
+- **Understand each result.** Matched ingredient names explain why a record appears. Coverage describes what the record documents; it never rates the spirit. Unknown ingredients, strengths and prices stay unknown.
+- **Compare the differences.** Select up to four bottles; align bottlings, origin, disclosure and documentation in a sticky-header matrix. Hide equal values, inspect an ingredient matrix, clear the shortlist and share a URL that reconstructs it.
+- **Follow real connections.** Product alternatives name their shared indexed ingredients or explain a same-category fallback. A direct two-bottle comparison turns that connection into an inspectable decision.
+- **Read another perspective.** Six attributed critic accounts include short original summaries and a separately labeled historical tasting-panel score. Publisher perspectives are never averaged with local community votes.
+- **Explore the object.** Licensed real photos, packaging-view tabs, a zoomable label inspector and moderated photo proposals. An actual historical Heering front/rear pair is included; most reverse labels remain undocumented.
+- **Explore the art.** Lazy-loaded procedural 3D, botanical explosion, an abstract Neuro atlas and opt-in generative botanical audio with a mixer, speaker test and WAV export. These are interpretations, not scans or measurements.
+- **Keep your notebook.** Private shelves, moderated 0–5 monkey notes with optional tasting dimensions/tags/context, and private empirical state-transition records. There are no invented verified-purchase badges or product-specific pharmacological predictions.
+- **Run the archive.** Admin editing, conservative duplicate preview/merge, UI imports/exports, durable jobs and executed bounded Wikidata/PubMed discovery dumps with provenance.
+
+The collection has **55 canonical products + 2 distinct editions**, 48 brands, 69 indexed ingredients, 22 licensed reference photographs, 9 curated studies and 6 critic accounts. Forty expansion identities and the historical Heering identity remain incomplete in bottling/recipe detail. The distribution is not every public bottle or every secret formula. Two dated Luxembourg observations begin the price notebook; finished-product compound measurements remain zero.
 
 ## Run locally
 
-Install Docker Engine/Desktop with Compose v2 and Python 3, then:
+Install Docker Engine/Desktop with Compose v2 and Python 3:
 
 ```sh
 git clone https://github.com/nabz0r/AlcooholTest.git
@@ -16,71 +30,57 @@ cd AlcooholTest
 ./scripts/bootstrap.sh
 ```
 
-Open **http://localhost:8088**. Choose Set up instance, retrieve your one-time token with `./scripts/setup-token.sh` and create the first administrator. No default password is shared. Generated `.env` and local secrets are ignored by Git. Only the website binds to loopback; PostgreSQL and Redis have no published host port.
+Open **http://localhost:8088**. Public discovery works without an account. For ownership, choose Set up instance, retrieve the one-time token using `./scripts/setup-token.sh`, then create the first administrator in the UI. No shared default password exists. Only the loopback website port is published; PostgreSQL and Redis have no host port.
 
-After installation, catalogue editing, duplicate resolution, contributions, moderation, price entry, public-provider discovery, study harvesting, imports and snapshot generation are accessible from the UI. SQL/media recovery remains an operator procedure. Public hosting requires HTTPS and a deployment/security review.
+Try a [flower-ingredient discovery](http://localhost:8088/discover/?category=Gin&groups=floral), a [Japan / documented strength direction](http://localhost:8088/discover/?category=Gin&groups=floral&country=Japan&max_abv=44), or a [Monkey 47 / Bombay comparison](http://localhost:8088/compare/?bottles=monkey-47-schwarzwald%2Cbombay-sapphire&differences=1) after starting your instance.
 
-## Explore
+## The decision desk, in real screenshots
 
-- **55 canonical products + 2 distinct editions**, including Suntory, major houses and smaller distilleries. Root products appear once; formats, markets and sellers are not inflated into product identities.
-- **22** locally hosted licensed reference photographs with provenance; explicit illustrations where a reliable licensed image is absent. A reference photo may show a different size, market or historical label. Front/rear/details tabs, zoomable inspection and moderated member uploads preserve provenance. The Heering record includes an actual historical front/rear pair; most rear labels remain undocumented.
-- An editorial homepage with origins/craft/sound tabs, a separate collection, filters, ingredient search, comparison of four products, private shelves, community proposals and moderated **0–5 monkey** ratings with optional aroma, taste, finish, value, design, serving context and buy-again preference.
-- Product pages with source-linked origin, historical/cultural editorial text, market bottlings, recipe disclosures, critic perspectives and a dated price notebook. The expanded collection intentionally leaves unverified specifications and secret recipes unknown.
-- Interactive procedural **Studio 3D**, botanical explosion with eight plants per group and spread control, camera orbit/pan/zoom/reset/fullscreen, and an abstract **Neuro atlas** linked to research mechanisms. These are artistic reconstructions, not scans or measured brain activity.
-- Opt-in **original botanical soundscapes**: identity-seeded pentatonic music, floral sine timbres, spice textures and citrus bells. A visible mixer exposes Play/Pause, master volume, three layers, speaker test, output meter and a 20-second WAV export. Off by default; no microphone, external audio, telemetry or automatic playback.
-- Source-linked research with study design, population, findings and limitations; private empirical state-transition notebooks with null for unobserved rows. No product-specific pharmacological claims or intoxication forecasts are fabricated.
-- Real executed Wikidata and PubMed JSONL discovery dumps. They are bounded, unverified provider snapshots, not “all public bottles”. Accept a candidate by linking it to an existing product, or verify a new draft before publishing.
-
-- Direct, server-rendered product URLs, canonical metadata, Open Graph, JSON-LD, sitemap and robots support. Private pages stay noindex.
-
-## A tour in screenshots
-
-Actual captures from the local Docker build. [All 18 views, captions and integrity manifest](docs/SCREENSHOTS.md). Admin/member screens use a disposable QA account; no demonstration review was published.
-
-![Source-linked editorial chapters](docs/screenshots/editorial.png)
+Actual browser captures of the running Docker application. [Current and historical screenshot index](docs/SCREENSHOTS.md) includes captions, dimensions and checksums.
 
 | | |
 |---|---|
-| **Collection overview**<br>![Collection overview](docs/screenshots/collection-overview.png) | **Browse the collection**<br>![Browse the collection](docs/screenshots/collection-cards.png) |
-| **Product identity**<br>![Product identity](docs/screenshots/product.png) | **Botanical explosion**<br>![Botanical explosion](docs/screenshots/botanical-studio.png) |
-| **Neuro atlas**<br>![Neuro atlas](docs/screenshots/neuro-atlas.png) | **Sound studio**<br>![Sound studio](docs/screenshots/sound-studio.png) |
-| **Price notebook**<br>![Price notebook](docs/screenshots/price-notebook.png) | **Real reverse packaging**<br>![Real reverse packaging](docs/screenshots/rear-label.png) |
-| **Label inspection**<br>![Label inspection](docs/screenshots/label-inspector.png) | **Detailed monkey review**<br>![Detailed monkey review](docs/screenshots/tasting-notebook.png) |
-| **Photo contribution**<br>![Photo contribution](docs/screenshots/photo-contribution.png) | **Editorial operations**<br>![Editorial operations](docs/screenshots/editorial-operations.png) |
-| **Administration**<br>![Administration](docs/screenshots/admin-overview.png) | **Duplicate resolution**<br>![Duplicate resolution](docs/screenshots/duplicate-resolution.png) |
-| **Research library**<br>![Research library](docs/screenshots/research.png) | **Side-by-side discovery**<br>![Side-by-side discovery](docs/screenshots/comparison.png) |
+| **Explainable discovery**<br>![Discovery](docs/screenshots/discovery-v3.png) | **A focused direction**<br>![Japan and strength filters](docs/screenshots/direction-v3.png) |
+| **What the record documents**<br>![Coverage](docs/screenshots/coverage-v3.png) | **Source-explained connections**<br>![Connections](docs/screenshots/connections-v3.png) |
+| **An aligned comparison**<br>![Comparison](docs/screenshots/comparison-v3.png) | **Only the differences**<br>![Differences](docs/screenshots/differences-v3.png) |
+| **Ingredient-level inspection**<br>![Ingredients](docs/screenshots/ingredients-v3.png) | **Attributed perspectives**<br>![Critics](docs/screenshots/critics-v3.png) |
 
-## Architecture
+![A useful empty state](docs/screenshots/empty-v3.png)
 
-Django 5.2 LTS / PostgreSQL 17 / Redis 8 / TypeScript / Three.js / Nginx. Compose includes migration/static initialization, API, durable PostgreSQL-backed background worker, database, cache and static proxy. Read-only application filesystems, unprivileged application users, CSRF/session authentication, Argon2, rate limits and an audit trail supply a practical baseline. Public reads are revision-cached; imports are transactional UUID upserts; exports stream a consistent snapshot.
+The earlier 18-view gallery is retained as explicitly labeled Volume 02 evidence in the screenshot index, including sound, fullscreen studios, packaging, detailed voting and administration. It is not presented as fresh Volume 03 capture.
 
-Source code is GPL-2.0. Original catalogue work is CC0 where indicated; photographs retain their own licenses and trademarks. Redis 8 offers an AGPLv3 open-source licensing option; review all dependency licenses for your deployment. No proprietary runtime or paid API is required. “Perfect”, certified WCAG compliance and post-quantum protection are not claimed; SSO and hybrid PQ TLS are documented deployment roadmaps.
+## Architecture and data
 
-## Data and operations
+Django 5.2 LTS / PostgreSQL 17 / Redis 8 / TypeScript / Three.js / unprivileged Nginx. Compose includes migration/static initialization, API, durable PostgreSQL-backed worker, database, cache and proxy. Read-only application filesystems, CSRF/session authentication, Argon2, rate limits and audited editing provide a practical baseline. Discovery uses bounded SQL queries, EXISTS-based coverage and revision-cached reads; imports are transactional UUID upserts and exports stream consistent snapshots.
 
-`data/catalog/seed.json`, `catalog.jsonl`, `schema.json` and `manifest.json` are reproducible distribution artifacts. `data/assets.json` records photo rights and checksums. `data/discovery/` contains executed public-provider dumps. Public catalogue exports exclude accounts, private observations, reviews, collections and member-uploaded photographs. Private SQL backups contain account data and password hashes; secure them and back up media separately.
+Clean server-rendered URLs, canonical metadata, Open Graph, JSON-LD, sitemap and robots support public discovery. Set PUBLIC_BASE_URL to the actual HTTPS origin before public hosting. Member pages are noindex. SSO and hybrid PQ TLS remain documented deployment plans; independent security/WCAG certification is not claimed.
+
+`data/catalog/` contains reproducible JSON, JSONL, schema and checksum manifests. `data/assets.json` preserves image rights and integrity. `data/navigation/` reproduces editorial group mappings and critic summaries. `data/discovery/` retains executed provider dumps. Public catalogue exports exclude accounts, member photos, reviews, shelves and private observations. Back up private SQL and media separately.
 
 ```sh
-# Explicit reseed updates seed UUIDs; ordinary restarts preserve editorial changes.
+# Explicit reviewed reseed; ordinary restarts preserve editorial changes.
 docker compose exec api python manage.py seed
-# Run the test suite against PostgreSQL.
+# PostgreSQL integration suite.
 docker compose exec api python manage.py test catalog --noinput
-# Rebuild the curated distributions after source edits.
+# Reproduce distributions from curated source inputs.
 python3 scripts/build_seed.py
 python3 scripts/build_data_exports.py
-# Re-fetch pinned photo bytes, rejecting changed hashes.
+# Fetch pinned licensed image bytes, rejecting changed hashes.
 python3 scripts/fetch_assets.py
 ```
 
-## Documentation
+Source code is GPL-2.0. Original catalogue work is CC0 where indicated; images retain their own licenses and trademarks. Redis 8 has an AGPLv3 open-source licensing option. No proprietary runtime or paid API is required.
 
-- [Initial analysis](docs/ANALYSIS.md), [Architecture](docs/ARCHITECTURE.md), [API](docs/API.md)
-- [Design direction](docs/DESIGN.md), [Complete experience guide](docs/EXPERIENCE.md), [SEO and routes](docs/SEO.md)
-- [Screenshot index](docs/SCREENSHOTS.md), [Work tracking](PROGRESS.md), [Delivery plan](PLAN.md)
-- [Product identity and duplicate resolution](docs/IDENTITY.md)
-- [Internet discovery and study harvesting](docs/INGESTION.md)
-- [Science and Markov notebook](docs/SCIENCE.md), [Price history](docs/PRICES.md)
-- [SSO and post-quantum roadmap](docs/SSO-PQC.md)
-- [Data contracts](docs/DATA.md), [Operations and recovery](docs/OPERATIONS.md)
-- [Validation and limits](docs/VALIDATION.md), [Photo attribution](docs/ATTRIBUTIONS.md)
-- [Security](SECURITY.md), [Contributing](CONTRIBUTING.md)
+## Documentation and working agreement
+
+- [Decision rules, UX rationale and limits](docs/DECISIONS.md)
+- [Experience](docs/EXPERIENCE.md), [Design](docs/DESIGN.md), [SEO and routes](docs/SEO.md)
+- [Architecture](docs/ARCHITECTURE.md), [API](docs/API.md), [Data contracts](docs/DATA.md)
+- [Identity and duplicates](docs/IDENTITY.md), [Discovery ingestion](docs/INGESTION.md)
+- [Science and state notebook](docs/SCIENCE.md), [Price observations](docs/PRICES.md)
+- [Operations and recovery](docs/OPERATIONS.md), [SSO/PQ roadmap](docs/SSO-PQC.md)
+- [Validation evidence](docs/VALIDATION.md), [Screenshots](docs/SCREENSHOTS.md), [Attribution](docs/ATTRIBUTIONS.md)
+- [Initial analysis](docs/ANALYSIS.md), [Security](SECURITY.md), [Contributing](CONTRIBUTING.md)
+- [Plan](PLAN.md), [Progress](PROGRESS.md), [Repository working agreement](AGENTS.md)
+
+Every work session records scope, verification and publication separately. Screenshots must show the running product; missing data and incomplete capabilities must remain explicit.

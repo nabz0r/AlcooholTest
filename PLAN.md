@@ -21,3 +21,14 @@ Coverage is explicitly bounded. Secret formulas, measured botanical exposure, sc
 Completion evidence for this revision is tracked in PROGRESS.md and docs/VALIDATION.md.
 
 Volume 02 complete: all six revision workstreams were implemented, locally verified and published. GitHub Actions run 40218453860 passed all three jobs for application commit 4f99191f1ffc3260249e4fa652dce209cdbac711. The final documentation/provenance update records that evidence; see docs/VALIDATION.md and the 18-view screenshot index.
+
+## Volume 03 — in progress
+
+1. Audit decision-making gaps and document bounded product value.
+2. Add editable ingredient navigation groups and evidence-aware discovery filters/ranking.
+3. Add product coverage summaries and source-explained alternatives.
+4. Replace comparison card stacks with a shareable differences matrix.
+5. Refine navigation, responsive controls and useful states; verify actual workflows.
+6. Update documentation/screenshots/tracking and publish verified main.
+
+Volume 03 implementation and local/browser verification complete. Public decision rules, ten new screenshots, source curation and validation reports are documented. Remote main publication/CI is the remaining delivery gate.

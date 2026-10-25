@@ -1,3 +1,4 @@
+from .discovery import with_coverage,coverage as coverage_data,find,ingredients as indexed_ingredients,related
 import json, secrets
 from functools import wraps
 from uuid import UUID
@@ -47,7 +48,25 @@ def source_data(s): return {'id':s.id,'title':s.title,'url':s.url,'publisher':s.
 
 def card(p):
     asset=next((a for a in p.assets.all() if a.view=='front'),None)
-    return {'history':p.history,'history_source':source_data(p.history_source) if p.history_source_id else None,'merged_into':p.merged_into.slug if p.merged_into_id else None,'edition_of':p.edition_of.slug if p.edition_of_id else None,'editions':[{'slug':e.slug,'name':e.name} for e in p.editions.all() if e.status=='published'],'id':p.id,'slug':p.slug,'name':p.name,'brand':p.brand.name,'country':p.brand.country,'category':p.category,'description':p.description,'disclosure':p.disclosure,'color':p.color,'shape':p.shape,'photo':p.photo.url if p.photo else None,'photo_credit':p.photo_credit,'photo_license':p.photo_license,'image':p.photo.url if p.photo else (asset.local_path if asset else None),'image_credit':p.photo_credit if p.photo else (asset.author if asset else ''),'image_license':p.photo_license if p.photo else (asset.license if asset else ''),'image_source':asset.source_page if asset and not p.photo else None,'image_note':asset.edition_note if asset and not p.photo else '','locality':p.place.name if p.place else '', 'region':p.place.region if p.place else '', 'origin_source':source_data(p.place.source) if p.place else None,'variants':[{'id':v.id,'name':v.name,'market':v.market,'abv':v.abv,'volume_ml':v.volume_ml,'source':source_data(v.source)} for v in p.variants.all()]}
+    member=next(iter(getattr(p,'approved_fronts',[])),None)
+    image=p.photo.url if p.photo else asset.local_path if asset else member.photo.url if member else None
+    credit=p.photo_credit if p.photo else asset.author if asset else member.credit if member else ''
+    license=p.photo_license if p.photo else asset.license if asset else member.license if member else ''
+    image_source=asset.source_page if asset and not p.photo else member.source_url if member and not p.photo else None
+    note=asset.edition_note if asset and not p.photo else member.caption if member and not p.photo else ''
+    return {
+      'coverage':coverage_data(p) if hasattr(p,'documented_areas') else None,
+      'history':p.history,'history_source':source_data(p.history_source) if p.history_source_id else None,
+      'merged_into':p.merged_into.slug if p.merged_into_id else None,'edition_of':p.edition_of.slug if p.edition_of_id else None,
+      'editions':[{'slug':e.slug,'name':e.name} for e in p.editions.all() if e.status=='published'],
+      'id':p.id,'slug':p.slug,'name':p.name,'brand':p.brand.name,'country':p.brand.country,'category':p.category,
+      'description':p.description,'disclosure':p.disclosure,'color':p.color,'shape':p.shape,
+      'photo':p.photo.url if p.photo else None,'photo_credit':p.photo_credit,'photo_license':p.photo_license,
+      'image':image,'image_credit':credit,'image_license':license,'image_source':image_source,'image_note':note,
+      'locality':p.place.name if p.place else '','region':p.place.region if p.place else '',
+      'origin_source':source_data(p.place.source) if p.place else None,
+      'variants':[{'id':v.id,'name':v.name,'market':v.market,'abv':v.abv,'volume_ml':v.volume_ml,'source':source_data(v.source)} for v in p.variants.all()]
+    }
 
 @require_GET
 @api
@@ -102,6 +121,7 @@ def sign_out(request): logout(request); return reply({'ok':True})
 def products(request):
     q=request.GET.get('q','').strip()[:120]
     qs=m.Product.objects.filter(status='published').select_related('brand','place__source','history_source','edition_of','merged_into').prefetch_related('variants__source','assets','editions').select_related('edition_of')
+    qs=with_coverage(qs)
     if request.GET.get('editions')!='all': qs=qs.filter(edition_of__isnull=True)
     if q: qs=qs.filter(Q(name__icontains=q)|Q(brand__name__icontains=q)|Q(recipes__ingredients__ingredient__name__icontains=q)).distinct()
     if request.GET.get('category'): qs=qs.filter(category=request.GET['category'][:40])
@@ -117,7 +137,7 @@ def products(request):
 @api
 @public_cache(60)
 def product(request,slug):
-    p=get_object_or_404(m.Product.objects.select_related('brand','place__source','history_source','edition_of','merged_into').prefetch_related('editions','assets','variants__source','recipes__source','recipes__ingredients__ingredient','recipes__ingredients__source'),slug=slug)
+    p=get_object_or_404(with_coverage(m.Product.objects.select_related('brand','place__source','history_source','edition_of','merged_into').prefetch_related('editions','assets','variants__source','recipes__source','recipes__ingredients__ingredient','recipes__ingredients__source')),slug=slug)
     if p.merged_into_id:
         from django.http import HttpResponseRedirect
         return HttpResponseRedirect('/api/v1/products/'+p.merged_into.slug)
@@ -128,6 +148,7 @@ def product(request,slug):
     for r in p.recipes.all():
         recipes.append({'id':r.id,'version':r.version,'declared_count':r.declared_count,'process':r.process,'notes':r.notes,'source':source_data(r.source),'ingredients':[{'id':x.ingredient.id,'slug':x.ingredient.slug,'name':x.ingredient.name,'scientific_name':x.ingredient.scientific_name,'certainty':x.certainty,'stage':x.stage,'amount':x.amount,'unit':x.unit,'notes':x.notes,'source':source_data(x.source)} for x in r.ingredients.all()]})
     result['recipes']=recipes
+    result['alternatives']=[{**card(x),'shared_ingredients':shared,'basis':'Shared indexed ingredients' if shared else 'Same category; no ingredient overlap established'} for x,shared in related(p)]
     result['photos']=[{'id':x.id,'view':x.view,'url':x.local_path,'credit':x.author,'license':x.license,'source_url':x.source_page,'caption':x.edition_note} for x in p.assets.all()]+[{'id':x.id,'view':x.view,'url':x.photo.url,'credit':x.credit,'license':x.license,'source_url':x.source_url,'caption':x.caption} for x in p.community_photos.filter(approved=True)]
     result['review_dimensions']=p.reviews.filter(approved=True).aggregate(**{key:Avg(key) for key in ['aroma','taste','finish','value','design']}) | p.reviews.filter(approved=True).aggregate(**{key+'_count':Count(key) for key in ['aroma','taste','finish','value','design']})
     ids=m.RecipeIngredient.objects.filter(recipe__product=p).values_list('ingredient_id',flat=True)
@@ -285,3 +306,17 @@ def propose_photo(request,slug):
     photo=m.BottlePhoto(product=product,user=request.user,view=request.POST.get('view',''),photo=request.FILES.get('photo'),credit=request.POST.get('credit',''),license=request.POST.get('license',''),source_url=request.POST.get('source_url',''),caption=request.POST.get('caption',''))
     photo.full_clean();photo.save()
     return reply({'status':'pending','id':photo.id},201)
+
+
+@require_GET
+@api
+@public_cache(60)
+def discover(request):
+    data=find(request.GET);groups=set(filter(None,request.GET.get('groups','').split(',')))
+    items=[]
+    for p in data.pop('objects'):
+        indexed=indexed_ingredients(p);grouped={}
+        for item in indexed.values():
+            if item['group']:grouped.setdefault(item['group'],[]).append(item['name'])
+        items.append({**card(p),'ingredient_groups':grouped,'matches':sorted(x['name'] for x in indexed.values() if x['group'] in groups),'indexed_ingredients':len(indexed)})
+    return reply({**data,'items':items})

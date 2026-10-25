@@ -1,0 +1,57 @@
+[
+  {
+    "key": "monkey-ginisin",
+    "product": "monkey-47-schwarzwald",
+    "critic": "the GIN is IN",
+    "title": "Monkey 47 — independent tasting perspective",
+    "url": "https://theginisin.com/gin-reviews/monkey-47/",
+    "summary": "The reviewer values its layered herbal, floral and fruit character and substantial texture, while finding juniper less prominent than classic-gin drinkers may expect. The assessment is more enthusiastic about exploring its complexity than using it indiscriminately in assertive mixed drinks. This is an attributed tasting opinion, not a chemical or medical finding.",
+    "score": null,
+    "score_max": null,
+    "published_on": null
+  },
+  {
+    "key": "roku-ginisin",
+    "product": "roku-japanese-craft",
+    "critic": "the GIN is IN",
+    "title": "Roku — independent tasting perspective",
+    "url": "https://theginisin.com/gin-reviews/roku-gin/",
+    "summary": "The reviewer describes tea-led dryness and bitterness, with delicate floral aromas, and considers the result less versatile across cocktails than its appearance might suggest. The review is more favorable toward neat service or a Martini than a general-purpose gin-and-tonic role. This reflects that reviewer's experience, not a consensus or a complete ingredient inventory.",
+    "score": null,
+    "score_max": null,
+    "published_on": null
+  },
+  {
+    "key": "bombay-ginisin",
+    "product": "bombay-sapphire",
+    "critic": "the GIN is IN",
+    "title": "Bombay Sapphire — independent tasting perspective",
+    "url": "https://theginisin.com/gin-reviews/bombay-sapphire/",
+    "summary": "The reviewer presents Sapphire as a restrained, citrus-oriented style with softer juniper than more assertive classics. Its compatibility with vermouth earns particular praise, while stronger cocktail ingredients can obscure its character. The account distinguishes easy mixing from intensity and does not treat popularity as evidence of superiority.",
+    "score": null,
+    "score_max": null,
+    "published_on": null
+  },
+  {
+    "key": "hendricks-ginisin",
+    "product": "hendricks-original",
+    "critic": "the GIN is IN",
+    "title": "Hendrick's — independent tasting perspective",
+    "url": "https://theginisin.com/gin-reviews/hendricks/",
+    "summary": "The reviewer sees rose and cucumber as accents over a recognizable juniper-and-citrus structure rather than a total departure from gin. Its adaptability in mixed drinks is praised, alongside a dry, lingering finish. This is one independent tasting perspective; the photographed or reviewed strength may differ from a listed market bottling.",
+    "score": null,
+    "score_max": null,
+    "published_on": null
+  },
+  {
+    "key": "monkey-seattle",
+    "product": "monkey-47-schwarzwald",
+    "critic": "Seattle Spirits Society — 2016 tasting panel",
+    "title": "Monkey 47 — Seattle Spirits Society tasting panel",
+    "url": "https://seattlespiritssociety.com/tasting-notes/monkey-47",
+    "summary": "A tasting held on 28 April 2016 reports an aggregate of 3.74/5 from 17 ratings. The panel's individual opinions differ, providing a useful counterpoint to a single reviewer's verdict. This historical panel score is retained on its original scale and is separate from Alcooltest's community monkey ratings.",
+    "score": "3.74",
+    "score_max": 5,
+    "published_on": null
+  }
+]

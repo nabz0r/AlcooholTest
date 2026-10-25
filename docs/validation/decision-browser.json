@@ -1,0 +1,42 @@
+{
+  "checked_on": "2026-10-25",
+  "environment": "macOS in-app browser; local Docker stack",
+  "checks": {
+    "flower_direction_matches": 4,
+    "japan_max44_matches": 1,
+    "back_restores_direction_and_max_abv": true,
+    "empty_rum_flower_direction": 0,
+    "empty_reset_restores_total": 55,
+    "coverage_tile_opens_bottlings_anchor": true,
+    "monkey_critic_accounts": 2,
+    "related_shared_ingredient_counts": [
+      8,
+      6,
+      4
+    ],
+    "two_record_comparison": true,
+    "matrix_all_rows": 16,
+    "matrix_differences_rows": 10,
+    "share_comparison_feedback": "Link copied",
+    "clear_shortlist_empty": true,
+    "shared_url_restores_two_columns_and_differences": true,
+    "ingredient_matrix_union": 27,
+    "unavailable_shared_fixture_leaves_accessible_columns": 1,
+    "final_console_error_entries": 0,
+    "public_account_required": false
+  },
+  "intentional_unavailable_fixture": "qa-unavailable-fixture was expected to return 404; it was not a published product",
+  "screenshots": "../screenshots/manifest-v3.json",
+  "limitations": [
+    "No physical-phone testing",
+    "No independent screen-reader or security audit",
+    "Small catalogue and local HTTP sample only"
+  ],
+  "invalid_strength_range": {
+    "min_abv": 50,
+    "max_abv": 44,
+    "message": "Minimum strength exceeds maximum strength.",
+    "pagination": "Both controls disabled; stale page count removed",
+    "reset": "55 canonical roots restored"
+  }
+}

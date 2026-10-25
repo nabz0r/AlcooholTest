@@ -249,3 +249,60 @@ class CatalogueTests(TestCase):
         with tempfile.TemporaryDirectory() as media,override_settings(MEDIA_ROOT=media):
             photo=m.BottlePhoto(product=m.Product.objects.first(),view='back',credit='QA',license='QA',source_url='https://example.com',photo=SimpleUploadedFile('bad.svg',b'<svg onload="alert(1)"></svg>'))
             with self.assertRaises(ValidationError):photo.full_clean()
+
+    def test_discovery_groups_count_and_explanation(self):
+        d=self.client.get('/api/v1/discover?category=Gin&groups=floral&limit=24').json()
+        self.assertIn('roku-japanese-craft',[x['slug'] for x in d['items']])
+        for p in d['items']:
+            self.assertTrue(p['matches']);self.assertIn('floral',p['ingredient_groups'])
+            self.assertEqual(p['category'],'Gin');self.assertEqual(p['coverage']['total'],6)
+        self.assertTrue(next(x for x in d['groups'] if x['key']=='floral')['count']>0)
+    def test_discovery_is_canonical_and_excludes_drafts(self):
+        p=m.Product.objects.get(slug='monkey-47-schwarzwald');p.status='draft';p.save()
+        d=self.client.get('/api/v1/discover?limit=24').json()
+        self.assertNotIn(p.slug,[x['slug'] for x in d['items']])
+        self.assertFalse(any('cut-202' in x['slug'] for x in d['items']))
+    def test_discovery_invalid_filters(self):
+        for query in ['groups=hallucinogenic','min_abv=nan','min_abv=70&max_abv=40','coverage=7','sort=cheap']:
+            self.assertEqual(self.client.get('/api/v1/discover?'+query).status_code,400)
+    def test_discovery_strength_applies_to_same_bottling(self):
+        d=self.client.get('/api/v1/discover?q=roku&min_abv=44&max_abv=46').json()
+        self.assertEqual(d['total'],0)
+        self.assertEqual(self.client.get('/api/v1/discover?q=roku&min_abv=46').json()['total'],1)
+    def test_coverage_does_not_count_empty_history(self):
+        p=m.Product.objects.get(slug='monkey-47-schwarzwald');p.history='';p.save()
+        d=self.client.get('/api/v1/products/'+p.slug).json()
+        self.assertFalse(next(x for x in d['coverage']['areas'] if x['key']=='history')['documented'])
+    def test_alternatives_explain_overlap_and_privacy(self):
+        d=self.client.get('/api/v1/products/monkey-47-schwarzwald').json()
+        self.assertEqual(len(d['alternatives']),3)
+        for p in d['alternatives']:
+            self.assertNotEqual(p['slug'],'monkey-47-schwarzwald');self.assertEqual(p['category'],'Gin')
+            self.assertTrue(p['shared_ingredients']);self.assertEqual(p['basis'],'Shared indexed ingredients')
+    def test_discovery_pagination_and_order(self):
+        first=self.client.get('/api/v1/discover?limit=6').json();second=self.client.get('/api/v1/discover?limit=6&page=2').json()
+        self.assertTrue({x['id'] for x in first['items']}.isdisjoint(x['id'] for x in second['items']))
+        values=[x['coverage']['documented'] for x in first['items']];self.assertEqual(values,sorted(values,reverse=True))
+    def test_discovery_query_count_is_bounded(self):
+        from django.test.utils import CaptureQueriesContext
+        from django.db import connection
+        with CaptureQueriesContext(connection) as queries:self.client.get('/api/v1/discover?limit=24')
+        self.assertLessEqual(len(queries),12)
+
+    def test_navigation_group_is_optional_for_old_imports(self):
+        older=copy.deepcopy(self.doc)
+        for row in older['tables']['ingredients']:row.pop('navigation_group',None)
+        validate_document(older);import_document(older)
+        self.assertEqual(m.Ingredient.objects.get(slug='lavender').navigation_group,'floral')
+    def test_publisher_scores_do_not_become_community_votes(self):
+        d=self.client.get('/api/v1/products/monkey-47-schwarzwald').json()
+        self.assertEqual(len(d['critic_reviews']),2);self.assertEqual(d['rating']['count'],0)
+        self.assertIsNone(d['rating']['average'])
+        panel=m.CriticReview.objects.get(critic__startswith='Seattle');self.assertEqual(str(panel.score),'3.74');self.assertIsNone(panel.published_on)
+    def test_approved_member_front_photo_is_discoverable(self):
+        p=m.Product.objects.create(brand=m.Brand.objects.first(),slug='qa-member-photo',name='QA Photo',status='published')
+        photo=m.BottlePhoto.objects.create(product=p,view='front',photo='test-fixture.jpg',credit='QA',license='QA',source_url='https://example.com')
+        self.assertEqual(self.client.get('/api/v1/discover?q=QA+Photo&photo=1').json()['total'],0)
+        photo.approved=True;photo.save()
+        d=self.client.get('/api/v1/discover?q=QA+Photo&photo=1').json();self.assertEqual(d['total'],1)
+        self.assertEqual(d['items'][0]['image_credit'],'QA')

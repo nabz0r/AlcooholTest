@@ -228,6 +228,13 @@ for key,variant_key,amount,retailer,url in [
     src=source('price-'+key,retailer+' dated reference',url,retailer,'secondary')
     add('price_observations',key,variant_id=uid('variants/'+variant_key),observed_on='2026-10-25',amount=amount,currency='EUR',country='Luxembourg',retailer=retailer,source_id=src,tax_included=True,promotion=False,notes='Price displayed in the source consulted on this date. Not a checkout guarantee or historical reconstruction; shipping excluded.')
 
+for perspective in json.loads((ROOT/'data/navigation/critic-perspectives.json').read_text()):
+    ref=source(perspective['key'],perspective['title'],perspective['url'],perspective['critic'],'secondary')
+    add('critic_reviews',perspective['key'],product_id=uid('products/'+perspective['product']),critic=perspective['critic'],source_id=ref,summary=perspective['summary'],score=perspective['score'],score_max=perspective['score_max'],published_on=perspective['published_on'])
+
+navigation=json.loads((ROOT/'data/navigation/ingredient-groups.json').read_text())
+for row in T['ingredients']:row['navigation_group']=next((key for key,slugs in navigation.items() if row['slug'] in slugs),'')
+
 doc={'schema_version':'1.0','generated_at':'2026-10-25T00:00:00Z','tables':T}
 (ROOT/'data/catalog/seed.json').write_text(json.dumps(doc,indent=2,ensure_ascii=False)+'\n')
 print({k:len(v) for k,v in T.items()})

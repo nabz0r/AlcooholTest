@@ -54,7 +54,7 @@ class BrandAdmin(AuditedAdmin): search_fields=['name','slug']; list_display=['na
 @admin.register(m.Source)
 class SourceAdmin(AuditedAdmin): search_fields=['title','publisher','url']; list_display=['title','kind','accessed_on']; list_filter=['kind']
 @admin.register(m.Ingredient)
-class IngredientAdmin(AuditedAdmin): search_fields=['name','slug','scientific_name']; list_display=['name','scientific_name','family']; list_filter=['family']
+class IngredientAdmin(AuditedAdmin): search_fields=['name','slug','scientific_name']; list_display=['name','scientific_name','family','navigation_group']; list_filter=['navigation_group','family']
 @admin.register(m.Compound)
 class CompoundAdmin(AuditedAdmin): search_fields=['name','cas']; list_display=['name','cas']
 

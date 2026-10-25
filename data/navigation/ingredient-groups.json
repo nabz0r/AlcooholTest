@@ -1,0 +1,9 @@
+{
+  "floral": ["lavender", "chamomile", "acacia-flower", "honeysuckle", "jasmine", "scarlet-monarda", "elderflower", "rose", "sakura-flower", "gorse", "meadowsweet", "red-clover", "white-clover", "heather"],
+  "citrus": ["bitter-orange", "lemon-peel", "orange-peel", "yuzu-peel", "sweet-orange-peel", "bitter-orange-peel"],
+  "herbal": ["lemon-balm", "sage", "bramble-leaf", "sakura-leaf", "sencha-tea", "gyokuro-tea", "apple-mint", "creeping-thistle", "downy-birch", "elder", "hawthorn", "bog-myrtle", "sweet-cicely", "ladys-bedstraw", "spearmint", "water-mint", "tansy", "mugwort", "wood-sage", "wild-thyme"],
+  "spice": ["juniper", "coriander", "nutmeg", "cubeb", "cassia-bark", "grains-of-paradise", "ambrette-seed", "allspice", "cardamom", "clove", "caraway", "sansho-pepper"],
+  "fruit": ["lingonberry", "sloe", "bitter-almond", "cucumber", "apricot-kernel-oil"],
+  "roots": ["angelica", "orris-root", "liquorice", "yarrow-root"],
+  "grain": ["corn", "rye", "malted-barley", "unmalted-barley", "winter-wheat"]
+}

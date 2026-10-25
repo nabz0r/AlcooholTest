@@ -67,3 +67,9 @@ Community ratings accept integers 0 through 5. All write calls retain CSRF/sessi
 `POST /products/<slug>/reviews` retains rating/text and accepts optional integer 0–5 aroma/taste/finish/value/design, up to eight tags from the UI vocabulary, context (`neat`, `ice`, `tonic`, `cocktail` or empty), and buy_again (boolean, yes/no or empty). Every update returns the note to moderation. Overall zero is valid; omitted dimensions are null.
 
 `POST /products/<slug>/photos` is authenticated CSRF-protected multipart: photo, view (front/back/detail), credit, license, source_url, optional caption, and rights_confirmed=yes. It returns 201 with pending/id. Uploads are raster-only, at most 5 MiB/16 MP, re-encoded JPEG and editorially approved. The public catalogue export does not contain member photo rows or files. Operations includes pending_photos. See [Experience guide](EXPERIENCE.md) and [SEO routes](SEO.md).
+
+## Volume 03 decision tools
+
+`GET /discover` returns canonical published records with total/page/pages, ingredient-group facets, indexed ingredient count, explicit matched names, grouped names and six-area coverage. Parameters: q (max 120 chars), category, country, comma-separated groups, min_abv/max_abv (0–100, finite), coverage (0–6), photo=1, sort=documented|name, page (bounded 1–1000), limit (1–24). Group selections use OR; facets honor the other constraints. Strength bounds match one variant. Invalid group/strength/sort/coverage parameters return 400.
+
+Catalogue cards and product detail now include coverage with documented/total/areas/notice. Detail also returns alternatives: same-category canonical records with shared_ingredients and an explicit basis. The comparator uses these public records and their original source links; there is no hidden preference score. See DECISIONS.md for rules, limits and UI behavior.

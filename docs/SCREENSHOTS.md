@@ -1,4 +1,23 @@
-# Screenshot index — Volume 02
+# Screenshot index — Volume 03
+
+Ten actual browser captures of the running decision-desk revision, 2026-10-25. No mockups, private member data or generated product photographs are used. [Current screenshot integrity manifest](screenshots/manifest-v3.json). The eighteen earlier captures below are explicitly historical Volume 02 evidence, with their original manifest retained.
+
+| Current view | What it shows |
+|---|---|
+| [Editorial arrival](screenshots/home-v3.png) | The Volume 03 homepage leads to useful discovery while preserving the artistic introduction. |
+| [Explainable discovery](screenshots/discovery-v3.png) | Four canonical flower-ingredient records; matched ingredient names explain the direction. |
+| [A focused direction](screenshots/direction-v3.png) | Japan plus a documented ABV at most 44 returns Roku; other recorded market variants remain inspectable. |
+| [What the record documents](screenshots/coverage-v3.png) | Six documentation areas, with links to supporting chapters; this is not a product-quality score. |
+| [Documented connections](screenshots/connections-v3.png) | Three same-category records name their actual indexed overlap and open a two-bottle comparison. |
+| [Aligned decision matrix](screenshots/comparison-v3.png) | Like attributes align across Monkey 47 and Bombay Sapphire; sources remain on the product records. |
+| [Differences only](screenshots/differences-v3.png) | Equal indexed values are hidden without treating unknown as absent. |
+| [Ingredient inspection](screenshots/ingredients-v3.png) | An expandable ingredient matrix distinguishes indexed from not documented. |
+| [Independent perspectives](screenshots/critics-v3.png) | Original attributed summaries and an explicitly separate historical panel score. |
+| [A useful empty state](screenshots/empty-v3.png) | A zero-result direction explains the data constraint and offers a reset path. |
+
+Desktop captures do not imply physical-device/WCAG certification. Retain original photo attribution and licenses with reuse.
+
+# Historical Volume 02 gallery
 
 18 real captures of the running local Docker application, 2026-10-25. These are browser screenshots, not generated mockups. Member/admin views use a disposable QA account, removed after validation. Form selections are demonstrations, not published community reviews. Image rights remain those of the attributed original photographs; the interface is repository source work.
 

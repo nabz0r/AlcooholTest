@@ -713,6 +713,51 @@
         "kind": "secondary",
         "accessed_on": "2026-10-25",
         "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
+      },
+      {
+        "id": "461c9114-995a-5961-b82b-5592bfd87de4",
+        "title": "Monkey 47 — independent tasting perspective",
+        "url": "https://theginisin.com/gin-reviews/monkey-47/",
+        "publisher": "the GIN is IN",
+        "kind": "secondary",
+        "accessed_on": "2026-10-25",
+        "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
+      },
+      {
+        "id": "aa36b115-2a17-5d76-9370-6139330c9491",
+        "title": "Roku — independent tasting perspective",
+        "url": "https://theginisin.com/gin-reviews/roku-gin/",
+        "publisher": "the GIN is IN",
+        "kind": "secondary",
+        "accessed_on": "2026-10-25",
+        "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
+      },
+      {
+        "id": "731c321c-b8fa-538f-a988-9e4f091dab62",
+        "title": "Bombay Sapphire — independent tasting perspective",
+        "url": "https://theginisin.com/gin-reviews/bombay-sapphire/",
+        "publisher": "the GIN is IN",
+        "kind": "secondary",
+        "accessed_on": "2026-10-25",
+        "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
+      },
+      {
+        "id": "9ca6b679-3044-5d66-88dd-d155cd47db4f",
+        "title": "Hendrick's — independent tasting perspective",
+        "url": "https://theginisin.com/gin-reviews/hendricks/",
+        "publisher": "the GIN is IN",
+        "kind": "secondary",
+        "accessed_on": "2026-10-25",
+        "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
+      },
+      {
+        "id": "d63b00bd-1b0a-5346-811c-86ea5d06a91f",
+        "title": "Monkey 47 — Seattle Spirits Society tasting panel",
+        "url": "https://seattlespiritssociety.com/tasting-notes/monkey-47",
+        "publisher": "Seattle Spirits Society — 2016 tasting panel",
+        "kind": "secondary",
+        "accessed_on": "2026-10-25",
+        "license_note": "Reference metadata and original summaries only. Linked documents retain their original rights."
       }
     ],
     "places": [
@@ -1188,7 +1233,8 @@
         "name": "Juniper",
         "scientific_name": "Juniperus communis",
         "family": "berry",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "2386f35f-1aa2-57ac-9705-14ad6a493c2b",
@@ -1196,7 +1242,8 @@
         "name": "Coriander",
         "scientific_name": "Coriandrum sativum",
         "family": "seed",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "a80668b5-e3df-5005-a967-05532c0615e6",
@@ -1204,7 +1251,8 @@
         "name": "Nutmeg",
         "scientific_name": "Myristica fragrans",
         "family": "spice",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "05167c0f-c45b-5022-a353-cc7a7adc073d",
@@ -1212,7 +1260,8 @@
         "name": "Lavender",
         "scientific_name": "Lavandula angustifolia",
         "family": "flower",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "beec341a-2e50-5db4-b618-1cc716701d3d",
@@ -1220,7 +1269,8 @@
         "name": "Lemon balm",
         "scientific_name": "Melissa officinalis",
         "family": "herb",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "6949c4ef-138a-505c-858f-638052178c1b",
@@ -1228,7 +1278,8 @@
         "name": "Sage",
         "scientific_name": "",
         "family": "herb",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "7e56149e-014a-569f-8d68-ad6dc8997cc6",
@@ -1236,7 +1287,8 @@
         "name": "Chamomile",
         "scientific_name": "",
         "family": "flower",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "e96860bc-c4e5-57e6-b9f4-ae632596712c",
@@ -1244,7 +1296,8 @@
         "name": "Lingonberry",
         "scientific_name": "Vaccinium vitis-idaea",
         "family": "berry",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "fruit"
       },
       {
         "id": "dd69cd21-8483-55b4-b29a-10d446330f8d",
@@ -1252,7 +1305,8 @@
         "name": "Capers",
         "scientific_name": "Capparis spinosa",
         "family": "bud",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": ""
       },
       {
         "id": "cc8e1c39-4b28-5430-be4a-250f26899745",
@@ -1260,7 +1314,8 @@
         "name": "Sea salt",
         "scientific_name": "",
         "family": "mineral",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": ""
       },
       {
         "id": "b2a4221f-9461-5312-bb1f-96c9f3ce2a04",
@@ -1268,7 +1323,8 @@
         "name": "Sloe",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "fruit"
       },
       {
         "id": "e1e29df0-6020-5010-990f-428803e95af1",
@@ -1276,7 +1332,8 @@
         "name": "Bramble leaf",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "e48ff4c6-b045-5fa6-803a-bb33df5502f3",
@@ -1284,7 +1341,8 @@
         "name": "Angelica",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "roots"
       },
       {
         "id": "f5bb5ff8-8b74-543a-8971-e385180ec4e5",
@@ -1292,7 +1350,8 @@
         "name": "Acacia flower",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "1a63907f-683d-51a2-8c25-ebd4c34372e2",
@@ -1300,7 +1359,8 @@
         "name": "Honeysuckle",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "a3fff6bf-ce18-55d1-be10-41e19087e850",
@@ -1308,7 +1368,8 @@
         "name": "Orris root",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "roots"
       },
       {
         "id": "37ae9a00-2e0a-5894-b0d2-e0af93f1c1b9",
@@ -1316,7 +1377,8 @@
         "name": "Jasmine",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "493036d9-b585-5cee-9b46-afc80871e65e",
@@ -1324,7 +1386,8 @@
         "name": "Scarlet monarda",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "48085dc9-b83e-5c68-b224-b6d57946ce3b",
@@ -1332,7 +1395,8 @@
         "name": "Bitter orange",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       },
       {
         "id": "7d076375-fe00-55da-9c21-df1d2ae847a9",
@@ -1340,7 +1404,8 @@
         "name": "Cubeb",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "a218ba2c-1794-5d60-b10f-562c513586a4",
@@ -1348,7 +1413,8 @@
         "name": "Cassia bark",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "1dd56f97-930c-5799-a0d3-3906646a3767",
@@ -1356,7 +1422,8 @@
         "name": "Grains of paradise",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "325e15e9-763a-5656-8ddb-5534f64a2b2d",
@@ -1364,7 +1431,8 @@
         "name": "Ambrette seed",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "a86d1753-8d89-583b-9cc5-3dec41fa21b4",
@@ -1372,7 +1440,8 @@
         "name": "Allspice",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "3453c779-13e6-59d2-ba14-c003ad7ae08e",
@@ -1380,7 +1449,8 @@
         "name": "Cardamom",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "c2e9e27a-4fb1-5b2e-80f3-db4ff5d5585f",
@@ -1388,7 +1458,8 @@
         "name": "Clove",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "1d5e4b48-1c67-5f11-ad5f-72e38bb62b32",
@@ -1396,7 +1467,8 @@
         "name": "Liquorice",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "roots"
       },
       {
         "id": "729015f7-4ef1-5c95-a972-f67fb0ca517e",
@@ -1404,7 +1476,8 @@
         "name": "Lemon peel",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       },
       {
         "id": "a5c1ca90-6241-5e3e-b66c-00ce2e9d00be",
@@ -1412,7 +1485,8 @@
         "name": "Bitter almond",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "fruit"
       },
       {
         "id": "348d89b9-0872-5824-975b-b9a50be354dd",
@@ -1420,7 +1494,8 @@
         "name": "Elderflower",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "d4767359-0744-54fb-9550-63e586c0cb28",
@@ -1428,7 +1503,8 @@
         "name": "Orange peel",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       },
       {
         "id": "af67d552-389e-571e-9ee8-ffd3e63fe9c9",
@@ -1436,7 +1512,8 @@
         "name": "Caraway",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "3e744c5b-f5c7-54bf-be4c-67d73f0fc179",
@@ -1444,7 +1521,8 @@
         "name": "Yarrow root",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "roots"
       },
       {
         "id": "a4503c34-2758-57f0-ae9f-9fc3ad24237e",
@@ -1452,7 +1530,8 @@
         "name": "Rose",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "b4e973d2-8e48-5143-9851-5d4b871a0984",
@@ -1460,7 +1539,8 @@
         "name": "Cucumber",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "fruit"
       },
       {
         "id": "e3bf2fc8-205a-5225-8205-032f187e2e63",
@@ -1468,7 +1548,8 @@
         "name": "Sakura flower",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "d1f15231-8a19-5d6a-abf0-556ac86ec58c",
@@ -1476,7 +1557,8 @@
         "name": "Sakura leaf",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "9203f17b-353c-5be9-9d89-50d40d0d3103",
@@ -1484,7 +1566,8 @@
         "name": "Sencha tea",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "2c3c1fd3-c6ec-5475-b8f7-8a3b484957f6",
@@ -1492,7 +1575,8 @@
         "name": "Gyokuro tea",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "6742117e-7ad0-5429-8245-fd16a6c7ec28",
@@ -1500,7 +1584,8 @@
         "name": "Sansho pepper",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "spice"
       },
       {
         "id": "a7535821-f544-5694-890a-3466b36cd78e",
@@ -1508,7 +1593,8 @@
         "name": "Yuzu peel",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       },
       {
         "id": "7bb89cdb-e8b7-5e95-a090-19bf80659a4f",
@@ -1516,7 +1602,8 @@
         "name": "Apple mint",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "fa2aff08-651f-597d-a40e-34036a47ff37",
@@ -1524,7 +1611,8 @@
         "name": "Creeping thistle",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "bc3e9201-ee23-50c3-bfa2-f4680ef2c8db",
@@ -1532,7 +1620,8 @@
         "name": "Downy birch",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "8ebe376a-7276-5bc3-a19b-e263b3fa1d19",
@@ -1540,7 +1629,8 @@
         "name": "Elder",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "2643b133-b338-5c3c-b959-cb53acbb7d74",
@@ -1548,7 +1638,8 @@
         "name": "Gorse",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "319ed132-e9c0-51e8-8c0c-8040764c1daa",
@@ -1556,7 +1647,8 @@
         "name": "Hawthorn",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "4fde1855-4fd6-57b5-8d14-95196b61087a",
@@ -1564,7 +1656,8 @@
         "name": "Bog myrtle",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "0c8d2b7b-d80e-57d0-8fb1-299cde6a4c10",
@@ -1572,7 +1665,8 @@
         "name": "Sweet cicely",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "e0286fe8-a542-511f-b9ca-49af03ca7887",
@@ -1580,7 +1674,8 @@
         "name": "Lady’s bedstraw",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "033b3d1c-63db-5e93-95a0-145f46232c1c",
@@ -1588,7 +1683,8 @@
         "name": "Spearmint",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "4f1e9502-de71-5aa1-abee-0fda52f5433a",
@@ -1596,7 +1692,8 @@
         "name": "Water mint",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "dc5f311a-4098-5fed-9565-65014b8fcb33",
@@ -1604,7 +1701,8 @@
         "name": "Meadowsweet",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "0d6065ff-d267-5175-875c-737fafc58564",
@@ -1612,7 +1710,8 @@
         "name": "Red clover",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "0b77335a-9ea7-5cc2-a239-e55e376e34e1",
@@ -1620,7 +1719,8 @@
         "name": "Tansy",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "ef07f1c6-f600-5f48-bb68-b1bb332f7cc3",
@@ -1628,7 +1728,8 @@
         "name": "Mugwort",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "2928cd2c-58cc-5dc0-9027-0ead17ee9dc2",
@@ -1636,7 +1737,8 @@
         "name": "White clover",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "e4412c73-e020-502c-b818-757856b9b074",
@@ -1644,7 +1746,8 @@
         "name": "Heather",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "floral"
       },
       {
         "id": "4bbd58fa-b144-59a2-aa10-9d2a363135e7",
@@ -1652,7 +1755,8 @@
         "name": "Wood sage",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "132a7535-e402-52d4-992f-2ae1ed8f5f74",
@@ -1660,7 +1764,8 @@
         "name": "Wild thyme",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "herbal"
       },
       {
         "id": "74bd9c44-9f55-5358-a71a-c2913674408d",
@@ -1668,7 +1773,8 @@
         "name": "Corn",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "grain"
       },
       {
         "id": "cc009e8e-05f4-509e-904d-9034da334a07",
@@ -1676,7 +1782,8 @@
         "name": "Rye",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "grain"
       },
       {
         "id": "5f5c3cb1-3379-5b16-9f43-360d7f84f4c5",
@@ -1684,7 +1791,8 @@
         "name": "Malted barley",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "grain"
       },
       {
         "id": "72d0e51e-7bce-537d-ae00-1809374867cc",
@@ -1692,7 +1800,8 @@
         "name": "Water",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": ""
       },
       {
         "id": "91574260-03c2-5f15-a329-244cb704fc66",
@@ -1700,7 +1809,8 @@
         "name": "Unmalted barley",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "grain"
       },
       {
         "id": "83d256f2-299b-5862-ab35-50338905dd36",
@@ -1708,7 +1818,8 @@
         "name": "Apricot kernel oil",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "fruit"
       },
       {
         "id": "af963ec5-96b4-58ef-8144-25673d8c1a8d",
@@ -1716,7 +1827,8 @@
         "name": "Winter wheat",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "grain"
       },
       {
         "id": "1b8a0fe8-222e-587c-836d-8605b404e06f",
@@ -1724,7 +1836,8 @@
         "name": "Sweet orange peel",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       },
       {
         "id": "6f7ff441-9eea-55d8-9bcc-44067ee4e531",
@@ -1732,7 +1845,8 @@
         "name": "Bitter orange peel",
         "scientific_name": "",
         "family": "botanical",
-        "notes": "Species or plant part left unspecified where the cited producer does not identify it."
+        "notes": "Species or plant part left unspecified where the cited producer does not identify it.",
+        "navigation_group": "citrus"
       }
     ],
     "compounds": [
@@ -5025,6 +5139,56 @@
         "source_id": "3de5e0c6-d2d3-5111-8b14-6b6d13a640b4",
         "summary": "The reviewer describes a juniper foundation with citrus, floral aromas and a spice-led finish, and finds that its character stands out more clearly in some mixed drinks than others.",
         "score": "3.5",
+        "score_max": 5,
+        "published_on": null
+      },
+      {
+        "id": "06891af0-e7ce-535b-9114-fb5b946306d2",
+        "product_id": "abb9d6c7-72f0-565a-b7fd-09e114852f49",
+        "critic": "the GIN is IN",
+        "source_id": "461c9114-995a-5961-b82b-5592bfd87de4",
+        "summary": "The reviewer values its layered herbal, floral and fruit character and substantial texture, while finding juniper less prominent than classic-gin drinkers may expect. The assessment is more enthusiastic about exploring its complexity than using it indiscriminately in assertive mixed drinks. This is an attributed tasting opinion, not a chemical or medical finding.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      },
+      {
+        "id": "661800ff-9ef1-520b-9df5-9d5b3c1b09bd",
+        "product_id": "e6044c90-745f-58b8-ab32-a8df3493c4da",
+        "critic": "the GIN is IN",
+        "source_id": "aa36b115-2a17-5d76-9370-6139330c9491",
+        "summary": "The reviewer describes tea-led dryness and bitterness, with delicate floral aromas, and considers the result less versatile across cocktails than its appearance might suggest. The review is more favorable toward neat service or a Martini than a general-purpose gin-and-tonic role. This reflects that reviewer's experience, not a consensus or a complete ingredient inventory.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      },
+      {
+        "id": "1e094fa7-7cb5-54cc-8372-7c75e6f15ad4",
+        "product_id": "32292c06-1177-5552-a4a7-f389e469b719",
+        "critic": "the GIN is IN",
+        "source_id": "731c321c-b8fa-538f-a988-9e4f091dab62",
+        "summary": "The reviewer presents Sapphire as a restrained, citrus-oriented style with softer juniper than more assertive classics. Its compatibility with vermouth earns particular praise, while stronger cocktail ingredients can obscure its character. The account distinguishes easy mixing from intensity and does not treat popularity as evidence of superiority.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      },
+      {
+        "id": "bec8c2b4-b6d1-541e-9c02-3a4fda9cbe3a",
+        "product_id": "5cc354d3-761c-5a26-9d06-29e34cd412c3",
+        "critic": "the GIN is IN",
+        "source_id": "9ca6b679-3044-5d66-88dd-d155cd47db4f",
+        "summary": "The reviewer sees rose and cucumber as accents over a recognizable juniper-and-citrus structure rather than a total departure from gin. Its adaptability in mixed drinks is praised, alongside a dry, lingering finish. This is one independent tasting perspective; the photographed or reviewed strength may differ from a listed market bottling.",
+        "score": null,
+        "score_max": null,
+        "published_on": null
+      },
+      {
+        "id": "4fd6b22a-e4f6-50b2-aac5-e0da1277da1c",
+        "product_id": "abb9d6c7-72f0-565a-b7fd-09e114852f49",
+        "critic": "Seattle Spirits Society — 2016 tasting panel",
+        "source_id": "d63b00bd-1b0a-5346-811c-86ea5d06a91f",
+        "summary": "A tasting held on 28 April 2016 reports an aggregate of 3.74/5 from 17 ratings. The panel's individual opinions differ, providing a useful counterpoint to a single reviewer's verdict. This historical panel score is retained on its original scale and is separate from Alcooltest's community monkey ratings.",
+        "score": "3.74",
         "score_max": 5,
         "published_on": null
       }

@@ -37,7 +37,10 @@ class Brand(Entity):
     website=models.URLField()
     def __str__(self): return self.name
 
+NAVIGATION_GROUPS=[('floral','Flowers'),('citrus','Citrus'),('herbal','Leaves & herbs'),('spice','Spices & seeds'),('fruit','Fruit & kernels'),('roots','Roots'),('grain','Grains')]
+
 class Ingredient(Entity):
+    navigation_group=models.CharField(max_length=16,choices=[('','Unclassified')]+NAVIGATION_GROUPS,blank=True,default='',db_index=True)
     slug=models.SlugField(unique=True)
     name=models.CharField(max_length=120)
     scientific_name=models.CharField(max_length=160,blank=True)

@@ -22,6 +22,6 @@ class Command(BaseCommand):
                 if f.choices: rule['enum']=[v for v,_ in f.choices]
                 if f.null: rule={'anyOf':[rule,{'type':'null'}]}
                 props[f.attname]=rule
-            tables[key]={'type':'array','maxItems':100000,'items':{'type':'object','additionalProperties':False,'required':list(props),'properties':props}}
+            tables[key]={'type':'array','maxItems':100000,'items':{'type':'object','additionalProperties':False,'required':[name for name in props if (key,name) not in [('ingredients','navigation_group'),('bottle_assets','view')]],'properties':props}}
         schema={'$schema':'https://json-schema.org/draft/2020-12/schema','$id':'https://github.com/nabz0r/AlcooholTest/blob/main/data/catalog/schema.json','title':'Alcooltest catalogue 1.0','type':'object','additionalProperties':False,'required':['schema_version','generated_at','tables'],'properties':{'schema_version':{'const':'1.0'},'generated_at':{'type':'string'},'tables':{'type':'object','additionalProperties':False,'required':list(tables),'properties':tables}}}
         settings.SCHEMA_FILE.write_text(json.dumps(schema,indent=2)+'\n')
