@@ -41,3 +41,7 @@ Synthetic rows were rolled back and never published. This is not evidence for a 
 ## Explicit delivery limits
 
 The studio is procedural art, not a scanned bottle collection. Neural positions and pulses are abstract. Sound is original generative interpretation. Prices begin with two dated observations; no invented past trend is provided. SSO and hybrid post-quantum TLS are documented plans; no public TLS/PQ transport is configured. The entire internet, all secret recipes, all bottle histories and a security/compliance certification are not delivered or claimed.
+
+## Remote CI and publication
+
+Published implementation commit `06971f7ea423794efa02fb64d47839a8be284717` to main through the authenticated GitHub connection. All uploaded Git blobs and the complete tree matched the local Git object hashes. [GitHub Actions run 40214087165](https://github.com/nabz0r/AlcooholTest/actions/runs/40214087165) completed successfully: Docker/PostgreSQL integration, frontend build/audit and Python dependency audit. This additionally validates the workflow on its Ubuntu GitHub runner; local visual/WebGL testing remains the macOS in-app browser evidence above. The subsequent documentation-only delivery commit does not change tested application code.
