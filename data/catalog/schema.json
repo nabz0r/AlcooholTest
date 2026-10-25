@@ -1,0 +1,998 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/nabz0r/AlcooholTest/blob/main/data/catalog/schema.json",
+  "title": "Alcooltest catalogue 1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "generated_at",
+    "tables"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "generated_at": {
+      "type": "string"
+    },
+    "tables": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sources",
+        "places",
+        "brands",
+        "ingredients",
+        "compounds",
+        "ingredient_compounds",
+        "products",
+        "bottle_assets",
+        "variants",
+        "recipes",
+        "recipe_ingredients",
+        "studies",
+        "measurements",
+        "mechanisms",
+        "critic_reviews",
+        "price_observations"
+      ],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "url",
+              "publisher",
+              "kind",
+              "accessed_on",
+              "license_note"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 240
+              },
+              "url": {
+                "type": "string",
+                "maxLength": 1000,
+                "pattern": "^https?://"
+              },
+              "publisher": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "kind": {
+                "type": "string",
+                "maxLength": 20,
+                "enum": [
+                  "manufacturer",
+                  "research",
+                  "regulator",
+                  "secondary"
+                ]
+              },
+              "accessed_on": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "license_note": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "places": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "name",
+              "region",
+              "country",
+              "source_id",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 50,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "region": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "country": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "brands": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "name",
+              "country",
+              "website"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 50,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "country": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "website": {
+                "type": "string",
+                "maxLength": 200,
+                "pattern": "^https?://"
+              }
+            }
+          }
+        },
+        "ingredients": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "name",
+              "scientific_name",
+              "family",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 50,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "scientific_name": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "family": {
+                "type": "string",
+                "maxLength": 60
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "compounds": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "name",
+              "cas",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 50,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "cas": {
+                "type": "string",
+                "maxLength": 30
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "ingredient_compounds": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "ingredient_id",
+              "compound_id",
+              "source_id",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "ingredient_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "compound_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "products": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "merged_into_id",
+              "history",
+              "history_source_id",
+              "edition_of_id",
+              "brand_id",
+              "place_id",
+              "name",
+              "category",
+              "description",
+              "disclosure",
+              "status",
+              "color",
+              "shape",
+              "photo_credit",
+              "photo_license"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 50,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "merged_into_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F-]{36}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "history": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "history_source_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F-]{36}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "edition_of_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F-]{36}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "brand_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "place_id": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F-]{36}$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "category": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "description": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "disclosure": {
+                "type": "string",
+                "maxLength": 20,
+                "enum": [
+                  "partial",
+                  "complete",
+                  "unknown"
+                ]
+              },
+              "status": {
+                "type": "string",
+                "maxLength": 20,
+                "enum": [
+                  "draft",
+                  "published",
+                  "archived"
+                ]
+              },
+              "color": {
+                "type": "string",
+                "maxLength": 7
+              },
+              "shape": {
+                "type": "string",
+                "maxLength": 12,
+                "enum": [
+                  "round",
+                  "square",
+                  "hex"
+                ]
+              },
+              "photo_credit": {
+                "type": "string",
+                "maxLength": 240
+              },
+              "photo_license": {
+                "type": "string",
+                "maxLength": 160
+              }
+            }
+          }
+        },
+        "bottle_assets": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "product_id",
+              "local_path",
+              "source_page",
+              "author",
+              "license",
+              "license_url",
+              "sha256",
+              "edition_note"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "local_path": {
+                "type": "string",
+                "maxLength": 180
+              },
+              "source_page": {
+                "type": "string",
+                "maxLength": 1000,
+                "pattern": "^https?://"
+              },
+              "author": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "license": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "license_url": {
+                "type": "string",
+                "maxLength": 1000,
+                "pattern": "^https?://"
+              },
+              "sha256": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "edition_note": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "variants": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "product_id",
+              "name",
+              "market",
+              "abv",
+              "volume_ml",
+              "source_id",
+              "barcode"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "name": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "market": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "abv": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "pattern": "^\\d+(\\.\\d+)?$"
+              },
+              "volume_ml": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "barcode": {
+                "type": "string",
+                "maxLength": 14
+              }
+            }
+          }
+        },
+        "recipes": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "product_id",
+              "version",
+              "declared_count",
+              "process",
+              "source_id",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "version": {
+                "type": "string",
+                "maxLength": 40
+              },
+              "declared_count": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "process": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "recipe_ingredients": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "recipe_id",
+              "ingredient_id",
+              "source_id",
+              "certainty",
+              "stage",
+              "amount",
+              "unit",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "recipe_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "ingredient_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "certainty": {
+                "type": "string",
+                "maxLength": 20,
+                "enum": [
+                  "confirmed",
+                  "reported",
+                  "hypothesis"
+                ]
+              },
+              "stage": {
+                "type": "string",
+                "maxLength": 60
+              },
+              "amount": {
+                "anyOf": [
+                  {
+                    "type": [
+                      "string",
+                      "number"
+                    ],
+                    "pattern": "^\\d+(\\.\\d+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "unit": {
+                "type": "string",
+                "maxLength": 20
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "studies": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "title",
+              "compound_id",
+              "source_id",
+              "design",
+              "population",
+              "finding",
+              "limitation",
+              "beverage_evidence"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 240
+              },
+              "compound_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "design": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "population": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "finding": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "limitation": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "beverage_evidence": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "measurements": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "variant_id",
+              "compound_id",
+              "value",
+              "unit",
+              "method",
+              "batch",
+              "source_id",
+              "sampled_on"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "variant_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "compound_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "pattern": "^\\d+(\\.\\d+)?$"
+              },
+              "unit": {
+                "type": "string",
+                "maxLength": 30
+              },
+              "method": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "batch": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "sampled_on": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "mechanisms": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "compound_id",
+              "target",
+              "action",
+              "evidence_context",
+              "source_id",
+              "limitation"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "compound_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "target": {
+                "type": "string",
+                "maxLength": 120
+              },
+              "action": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "evidence_context": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "limitation": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        },
+        "critic_reviews": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "product_id",
+              "critic",
+              "source_id",
+              "summary",
+              "score",
+              "score_max",
+              "published_on"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "critic": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "summary": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "score": {
+                "anyOf": [
+                  {
+                    "type": [
+                      "string",
+                      "number"
+                    ],
+                    "pattern": "^\\d+(\\.\\d+)?$"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "score_max": {
+                "anyOf": [
+                  {
+                    "type": "integer",
+                    "minimum": 0
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "published_on": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "price_observations": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "variant_id",
+              "observed_on",
+              "amount",
+              "currency",
+              "country",
+              "retailer",
+              "source_id",
+              "tax_included",
+              "promotion",
+              "notes"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "variant_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "observed_on": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "amount": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "pattern": "^\\d+(\\.\\d+)?$"
+              },
+              "currency": {
+                "type": "string",
+                "maxLength": 3
+              },
+              "country": {
+                "type": "string",
+                "maxLength": 80
+              },
+              "retailer": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "tax_included": {
+                "type": "boolean"
+              },
+              "promotion": {
+                "type": "boolean"
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,178 @@
+[
+  {
+    "url": "https://appletonestate.com/",
+    "status": 200,
+    "bytes": 266380,
+    "final_url": "https://www.appletonestate.com/"
+  },
+  {
+    "url": "https://citadellegin.com/",
+    "status": 200,
+    "bytes": 176714,
+    "final_url": "https://citadellegin.com/"
+  },
+  {
+    "url": "https://delmaguey.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://dingledistillery.ie/",
+    "status": 200,
+    "bytes": 134178,
+    "final_url": "https://dingledistillery.ie/"
+  },
+  {
+    "url": "https://harrisdistillery.com/",
+    "status": 200,
+    "bytes": 511309,
+    "final_url": "https://www.harrisdistillery.com/"
+  },
+  {
+    "url": "https://house.suntory.com/",
+    "status": 200,
+    "bytes": 619142,
+    "final_url": "https://house.suntory.com/"
+  },
+  {
+    "url": "https://house.suntory.com/products",
+    "status": 200,
+    "bytes": 695039,
+    "final_url": "https://house.suntory.com/products"
+  },
+  {
+    "url": "https://kyrodistillery.com/",
+    "status": 200,
+    "bytes": 336470,
+    "final_url": "https://kyrodistillery.com/"
+  },
+  {
+    "url": "https://nordesgin.com/",
+    "status": 200,
+    "bytes": 104041,
+    "final_url": "https://nordesgin.com/"
+  },
+  {
+    "url": "https://olmecaaltos.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://raasaydistillery.com/",
+    "status": 200,
+    "bytes": 184186,
+    "final_url": "https://raasaydistillery.com/"
+  },
+  {
+    "url": "https://rondiplomatico.com/",
+    "status": 200,
+    "bytes": 86213,
+    "final_url": "https://www.rondiplomatico.com/"
+  },
+  {
+    "url": "https://sipsmith.com/",
+    "status": 200,
+    "bytes": 134894,
+    "final_url": "https://sipsmith.com/"
+  },
+  {
+    "url": "https://stgeorgespirits.com/",
+    "status": 200,
+    "bytes": 56918,
+    "final_url": "https://stgeorgespirits.com/"
+  },
+  {
+    "url": "https://www.aberlour.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.ballantines.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.beefeatergin.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.calvados-drouin.com/",
+    "error": "HTTP Error 500: Internal Server Error"
+  },
+  {
+    "url": "https://www.chartreuse.fr/",
+    "status": 200,
+    "bytes": 109429,
+    "final_url": "https://www.chartreuse.fr/"
+  },
+  {
+    "url": "https://www.chivas.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.donpaparum.com/",
+    "status": 200,
+    "bytes": 2000000,
+    "final_url": "https://www.donpaparum.com/"
+  },
+  {
+    "url": "https://www.ferdinandsgin.de/",
+    "status": 200,
+    "bytes": 57793,
+    "final_url": "https://www.ferdinandsgin.de/"
+  },
+  {
+    "url": "https://www.fourrosesbourbon.com/",
+    "status": 200,
+    "bytes": 374197,
+    "final_url": "https://www.fourrosesbourbon.com/"
+  },
+  {
+    "url": "https://www.ginmare.com/",
+    "status": 200,
+    "bytes": 158813,
+    "final_url": "https://www.ginmare.com/"
+  },
+  {
+    "url": "https://www.hennessy.com/",
+    "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+    "url": "https://www.kahlua.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.kyotodistillery.jp/en/",
+    "error": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+  },
+  {
+    "url": "https://www.luxardo.it/",
+    "status": 200,
+    "bytes": 149547,
+    "final_url": "https://www.luxardo.it/"
+  },
+  {
+    "url": "https://www.malfygin.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.malibudrinks.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.mountgayrum.com/",
+    "status": 200,
+    "bytes": 320074,
+    "final_url": "https://www.mountgayrum.com/"
+  },
+  {
+    "url": "https://www.plymouthgin.com/",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.remymartin.com/",
+    "status": 200,
+    "bytes": 192001,
+    "final_url": "https://www.remymartin.com/"
+  },
+  {
+    "url": "https://www.theglenlivet.com/",
+    "error": "HTTP Error 403: Forbidden"
+  }
+]

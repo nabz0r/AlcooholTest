@@ -1,0 +1,10 @@
+.git
+.env
+.secrets
+.venv
+**/node_modules
+**/__pycache__
+frontend/dist
+work
+exports
+*.sqlite3

@@ -1,0 +1,6 @@
+{
+  "scanner": "pip-audit",
+  "pinned_dependencies": 19,
+  "known_vulnerabilities": 0,
+  "remediation": "Pillow updated from 12.3.0 to 13.0.0 before delivery."
+}

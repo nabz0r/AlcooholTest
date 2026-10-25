@@ -1,0 +1,17 @@
+{
+  "requests": 20,
+  "concurrency": 2,
+  "successes": 20,
+  "errors": 0,
+  "dataset": {
+    "products": 54,
+    "brands": 47,
+    "ingredients": 69,
+    "sources": 78
+  },
+  "latency_ms": {
+    "median": 3.07,
+    "p95": 48.02
+  },
+  "scope": "Mixed catalogue and ingredient-search GETs on the live dataset; not proof of performance at larger cardinalities."
+}

@@ -1,0 +1,6 @@
+{
+  "backup_format": "PostgreSQL custom",
+  "restore_success": true,
+  "restored_products": 56,
+  "temporary_database_removed": true
+}

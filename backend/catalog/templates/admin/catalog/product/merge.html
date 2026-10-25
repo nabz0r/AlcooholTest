@@ -1,0 +1,9 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+<h2>Source occurrence: {{ original }}</h2>
+<p>Sizes, sellers and markets belong to the existing product. A genuinely distinct recipe or release belongs in its edition family.</p>
+<p>The duplicate is archived, never deleted. Non-conflicting relationships move to the canonical product. Conflicting recipes, bottlings, reviews and shelf records remain on the archived record for manual reconciliation. Photographs and history on the duplicate remain available there. Every moved record ID is recorded in the audit log.</p>
+<form method="post">{% csrf_token %}{{ form.as_p }}
+{% if preview %}<h2>Review affected records</h2><ul>{% for key,count in preview.items %}<li>{{ key }}: {{ count }}</li>{% endfor %}</ul><button type="submit" name="confirm" value="yes">Confirm merge and archive duplicate</button>{% else %}<button type="submit">Preview merge</button>{% endif %}</form>
+<p><a href="../change/">Cancel and return to product</a></p>
+{% endblock %}

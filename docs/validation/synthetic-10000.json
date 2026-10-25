@@ -1,0 +1,20 @@
+{
+  "synthetic_products": 10000,
+  "total_products": 10056,
+  "variants_per_synthetic_product": 1,
+  "ingredients_per_synthetic_recipe": 1,
+  "requests_per_path": 30,
+  "concurrency": 1,
+  "database": "postgresql",
+  "timings": {
+    "catalogue": {
+      "median_ms": 11.54,
+      "p95_ms": 12.95
+    },
+    "ingredient_search": {
+      "median_ms": 47.1,
+      "p95_ms": 51.59
+    }
+  },
+  "scope": "In-process Django HTTP test client, production query code, synthetic single-ingredient rows, one rollback-only transaction. No network, TLS or concurrent-write claim."
+}

@@ -1,0 +1,112 @@
+{
+  "wikidata-2026-10-25.jsonl": {
+    "type": "summary",
+    "provider": "Wikidata",
+    "license": "CC0-1.0 structured metadata; image licenses recorded individually",
+    "candidates": 105,
+    "images": 0,
+    "categories": {
+      "Gin": {
+        "fetched": 13,
+        "cursor": "Q8964094",
+        "exhausted": true
+      },
+      "Rum": {
+        "fetched": 25,
+        "cursor": "Q762996",
+        "exhausted": false
+      },
+      "Whisky": {
+        "fetched": 25,
+        "cursor": "Q4553387",
+        "exhausted": false
+      },
+      "Vodka": {
+        "fetched": 25,
+        "cursor": "Q7550050",
+        "exhausted": false
+      },
+      "Liqueur": {
+        "fetched": 17,
+        "cursor": "Q7401060",
+        "exhausted": true
+      },
+      "Amaretto": {
+        "exhausted": true,
+        "fetched": 0
+      }
+    },
+    "errors": [],
+    "complete_internet_coverage": false
+  },
+  "pubmed-2026-10-25.jsonl": {
+    "type": "summary",
+    "provider": "NCBI PubMed",
+    "records": 100,
+    "queries": {
+      "linalool": {
+        "query": "linalool AND (anxiety OR neurological)",
+        "total_matches": "93",
+        "fetched": 20
+      },
+      "myristicin": {
+        "query": "myristicin AND (toxicology OR intoxication)",
+        "total_matches": "30",
+        "fetched": 20
+      },
+      "thujone": {
+        "query": "thujone AND (alcohol OR GABA)",
+        "total_matches": "101",
+        "fetched": 20
+      },
+      "ethanol": {
+        "query": "ethanol AND NMDA",
+        "total_matches": "1348",
+        "fetched": 20
+      },
+      "chamomile": {
+        "query": "chamomile AND randomized AND anxiety",
+        "total_matches": "33",
+        "fetched": 20
+      }
+    },
+    "scope": "Bibliographic metadata only; no full-paper copying and no automatic clinical-effect extraction."
+  },
+  "wikidata-next-2026-10-25.jsonl": {
+    "type": "summary",
+    "provider": "Wikidata",
+    "license": "CC0-1.0 structured metadata; image licenses recorded individually",
+    "candidates": 27,
+    "images": 4,
+    "categories": {
+      "Gin": {
+        "exhausted": true,
+        "fetched": 0
+      },
+      "Rum": {
+        "exhausted": true,
+        "fetched": 0
+      },
+      "Whisky": {
+        "fetched": 25,
+        "cursor": "Q7083990",
+        "exhausted": false
+      },
+      "Vodka": {
+        "fetched": 2,
+        "cursor": "Q9347621",
+        "exhausted": true
+      },
+      "Liqueur": {
+        "exhausted": true,
+        "fetched": 0
+      },
+      "Amaretto": {
+        "exhausted": true,
+        "fetched": 0
+      }
+    },
+    "errors": [],
+    "complete_internet_coverage": false
+  }
+}

@@ -1,0 +1,94 @@
+name: alcooltest
+services:
+  redis:
+    image: redis:8-alpine
+    command: [redis-server, --save, "", --appendonly, "no", --maxmemory, 128mb, --maxmemory-policy, allkeys-lru]
+    networks: [data]
+    read_only: true
+    tmpfs: [/data]
+    cap_drop: [ALL]
+    user: "999:999"
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    mem_limit: 192m
+    healthcheck:
+      test: [CMD, redis-cli, ping]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: alcooltest
+      POSTGRES_USER: alcooltest
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Run scripts/bootstrap.sh first}
+    volumes: ["database:/var/lib/postgresql/data"]
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U alcooltest"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    networks: [data]
+    restart: unless-stopped
+    security_opt: [no-new-privileges:true]
+    mem_limit: 1g
+  init:
+    build: {context: ., dockerfile: backend/Dockerfile}
+    image: alcooltest-api:local
+    env_file: .env
+    command: [sh, -c, "python manage.py migrate --noinput && python manage.py collectstatic --noinput && python manage.py init_catalog"]
+    depends_on: {db: {condition: service_healthy}, redis: {condition: service_healthy}}
+    volumes: ["static:/app/staticfiles"]
+    networks: [data]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+  api:
+    image: alcooltest-api:local
+    env_file: .env
+    depends_on: {init: {condition: service_completed_successfully}, redis: {condition: service_healthy}}
+    volumes: ["static:/app/staticfiles:ro", "media:/app/media", "exports:/app/exports"]
+    read_only: true
+    tmpfs: [/tmp]
+    networks: [data,edge]
+    restart: unless-stopped
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 768m
+    healthcheck:
+      test: [CMD, curl, --fail, http://127.0.0.1:8000/api/v1/health]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  worker:
+    image: alcooltest-api:local
+    env_file: .env
+    command: [python, manage.py, worker]
+    depends_on: {init: {condition: service_completed_successfully}, redis: {condition: service_healthy}}
+    volumes: ["exports:/app/exports", "media:/app/media"]
+    read_only: true
+    tmpfs: [/tmp]
+    networks: [data,edge]
+    restart: unless-stopped
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+  web:
+    build: {context: ., dockerfile: frontend/Dockerfile}
+    ports: ["127.0.0.1:${HTTP_PORT:-8088}:8080"]
+    depends_on: {api: {condition: service_healthy}}
+    volumes: ["static:/app/staticfiles:ro", "media:/app/media:ro"]
+    read_only: true
+    tmpfs: [/tmp, /var/cache/nginx, /var/run]
+    networks: [edge]
+    restart: unless-stopped
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 128m
+volumes:
+  database:
+  static:
+  media:
+  exports:
+networks:
+  data: {internal: true}
+  edge:

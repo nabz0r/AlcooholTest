@@ -1,0 +1,13 @@
+.env
+.secrets/
+.venv/
+__pycache__/
+*.pyc
+*.sqlite3
+node_modules/
+frontend/dist/
+work/
+staticfiles/
+media/
+exports/
+.DS_Store

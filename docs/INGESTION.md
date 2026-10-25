@@ -1,0 +1,17 @@
+# Public discovery, studies and image harvesting
+
+Studio → Discover bottles & images queues the next page; Harvest research metadata queues PubMed queries. The worker calls fixed providers only. An authenticated editor can download each JSONL dump and SHA-256 manifest from Recent jobs. Source records are staged as candidates and never automatically published as verified products or ingredient lists.
+
+Wikidata discovery follows instance/subclass classifications for gin, rum, whisky, vodka, liqueur and amaretto, up to 25 entries per category per run. Lexical QID keyset checkpoints live in Discovery cursors. Re-running continues rather than pretending to download the entire internet. Provider IDs are unique and upserted. Some entries are brands, categories, equipment or distilleries: the queue is deliberately unverified. Review identity and use Resolved product before acceptance. A failed category is recorded in the summary; other categories can succeed. Retrying an exhausted category requires an editor to reset its cursor. There is no unattended recurring schedule.
+
+For images, metadata and rights are retrieved from Commons before any download. Only CC BY/CC BY-SA/CC0/public-domain raster candidates are accepted, bounded by response size, pixel count and fixed Wikimedia hosts. Candidate images are capped at three per category/run. Converted thumbnails are stored in the Docker media volume with per-image authorship, license URL, modification note and SHA-256. A candidate can show the wrong edition or a non-bottle subject; verify it before using it. Curated packshots ship in `frontend/public/bottles` with `data/assets.json` and can be re-fetched using `python3 scripts/fetch_assets.py`. Missing rights or ambiguous identity means no publication.
+
+PubMed discovery requests up to 20 bibliographic records for each of five documented queries (linalool, myristicin, thujone, ethanol/NMDA and chamomile). Requests are paced below three/second, bounded and retried. The raw dump stores citations, identifiers and links, not copied full papers or automatically generated efficacy claims. Editors must read primary studies before adding curated findings.
+
+## Actual first run, 2026-10-25
+
+The first executed Wikidata and PubMed JSONL dumps are committed under `data/discovery`. The initial Wikidata image attempts encountered a read-only worker media-path configuration error; metadata succeeded and the volume configuration was corrected. Do not count those failed image attempts as downloaded photos. The curated 20 Commons packshots were independently downloaded and verified. Later run evidence is recorded in VALIDATION.md. No API key or paid provider is needed. Provider outages, throttling and category incompleteness remain normal limitations.
+
+## Scale
+
+Normalize identity before publication, page acquisition, retain checkpoints, stage raw records and use database constraints. Public catalogue exports stream rows. PostgreSQL trigram indexes support ingredient/name lookup; composite indexes cover market and price queries. Redis caches public reads for 60 seconds with revision invalidation after editorial commits and fail-open behavior. A million-record benchmark has not been run. Add dedicated queue orchestration, object storage, read replicas and measured index tuning only when observed workload justifies them.

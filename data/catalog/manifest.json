@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-25T00:00:00Z",
+  "counts": {
+    "sources": 79,
+    "places": 14,
+    "brands": 47,
+    "ingredients": 69,
+    "compounds": 7,
+    "ingredient_compounds": 5,
+    "products": 56,
+    "bottle_assets": 20,
+    "variants": 17,
+    "recipes": 56,
+    "recipe_ingredients": 93,
+    "studies": 9,
+    "measurements": 0,
+    "mechanisms": 4,
+    "critic_reviews": 1,
+    "price_observations": 2
+  },
+  "files": {
+    "seed.json": {
+      "sha256": "8f5649d9036f5a53c641696681218a3090257e49de0a6de200fc70ab0e96e0b7",
+      "bytes": 221999
+    },
+    "schema.json": {
+      "sha256": "c8fa715179d40450afca2a2c8bc4a9cbe0a6e997fc4b34387eda5b1e07bc7770",
+      "bytes": 26806
+    },
+    "catalog.jsonl": {
+      "sha256": "485be33dc5234a25d62201c83573ac3875cead6b67187d3542f7f7b519200603",
+      "bytes": 199295
+    }
+  }
+}

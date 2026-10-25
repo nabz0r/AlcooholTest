@@ -1,0 +1,128 @@
+export type Bottle={name:string;brand:string;color:string;shape:string;slug?:string;category?:string;image?:string;recipes?:any[];compounds?:any[];ethanol_mechanisms?:any[]};
+export function bottleSVG(p:Bottle,large=false):string{
+ const name=p.name.replace(/[<>&"']/g,'').slice(0,24),brand=p.brand.replace(/[<>&"']/g,'');
+ return `<svg viewBox="0 0 180 260" class="bottle-svg ${large?'large':''}" role="img" aria-label="Illustrative ${brand} bottle"><defs><linearGradient id="g-${name.replace(/\W/g,'')}" x1="0" x2="1"><stop stop-color="${p.color}"/><stop offset=".4" stop-color="${p.color}" stop-opacity=".5"/><stop offset="1" stop-color="#22251b"/></linearGradient></defs><ellipse cx="90" cy="238" rx="47" ry="7" fill="#000" opacity=".15"/><path d="M51 103Q51 75 75 67L77 32H103L105 67Q129 75 129 103V216Q129 232 113 232H67Q51 232 51 216Z" fill="url(#g-${name.replace(/\W/g,'')})"/><rect x="74" y="20" width="32" height="23" rx="3" fill="#252a25"/><path d="M62 111V211" stroke="#fff" stroke-opacity=".14" stroke-width="5"/><rect x="58" y="121" width="64" height="73" rx="2" fill="#eee8d7"/><rect x="62" y="125" width="56" height="65" fill="none" stroke="#a99a70" stroke-width=".6"/><text x="90" y="145" text-anchor="middle" fill="#334239" font-size="7">${brand}</text><text x="90" y="165" text-anchor="middle" fill="#334239" font-size="5.5">${name}</text><text x="90" y="184" text-anchor="middle" fill="#647164" font-size="4.5">ILLUSTRATIVE EDITION</text></svg>`;
+}
+export type SceneMode='bottle'|'exploded'|'neuro';
+export async function mount3D(el:HTMLElement,p:Bottle,mode:SceneMode='bottle',select?:(name:string)=>void):Promise<()=>void>{
+ const THREE=await import('three');
+ const {OrbitControls}=await import('three/addons/controls/OrbitControls.js');
+ const {RoomEnvironment}=await import('three/addons/environments/RoomEnvironment.js');
+ const {RoundedBoxGeometry}=await import('three/addons/geometries/RoundedBoxGeometry.js');
+ let renderer:InstanceType<typeof THREE.WebGLRenderer>;
+ try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance'});}catch{el.innerHTML='<p>WebGL is unavailable. Use the photograph and ingredient list.</p>';return()=>{};}
+ renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.setClearColor(0x101510,1);renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
+ el.replaceChildren(renderer.domElement);renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label',mode==='neuro'?'Illustrative receptor network. Drag to rotate; arrow keys rotate. Positions are artistic, not anatomical.':'Interactive bottle sculpture. Drag or use left/right arrow keys to rotate. Scroll to zoom.');renderer.domElement.setAttribute('role','img');
+ const scene=new THREE.Scene();scene.fog=new THREE.FogExp2(0x101510,.028);const camera=new THREE.PerspectiveCamera(34,1,.1,80);camera.position.set(mode==='bottle'?3:0,mode==='neuro'?1:1.1,mode==='bottle'?6.7:9.3);
+ const pmrem=new THREE.PMREMGenerator(renderer);const environment=new RoomEnvironment();const env=pmrem.fromScene(environment,.04);scene.environment=env.texture;
+ scene.add(new THREE.HemisphereLight(0xffeccb,0x243724,2));
+ for(const [color,power,x,y,z] of [[0xffd0a0,55,-3,5,4],[0xc0e1cf,45,4,3,-2],[0xffffff,30,0,6,-4]]){const light=new THREE.PointLight(color,power,20);light.position.set(x,y,z);scene.add(light);}
+ const group=new THREE.Group();scene.add(group);const rotating=new THREE.Group();group.add(rotating);
+ const pickables:any[]=[];const animated:any[]=[];const textures:any[]=[];const botanicalNodes:any[]=[];let spread=1,page=0;const pageSize=8;
+ function material(color:any,extra:any={}){return new THREE.MeshStandardMaterial({color,roughness:.55,...extra});}
+ function addMesh(geometry:any,mat:any,parent:any=rotating,pos:number[]=[0,0,0]){const mesh=new THREE.Mesh(geometry,mat);mesh.position.set(pos[0],pos[1],pos[2]);mesh.castShadow=true;mesh.receiveShadow=true;parent.add(mesh);return mesh;}
+ function textSprite(text:string,color='#e7d3ac',scale=1){const c=document.createElement('canvas');c.width=512;c.height=128;const x=c.getContext('2d')!;x.clearRect(0,0,512,128);x.fillStyle=color;x.textAlign='center';x.font='500 31px Arial';x.fillText(text,256,73,490);const tex=new THREE.CanvasTexture(c);tex.colorSpace=THREE.SRGBColorSpace;textures.push(tex);const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,depthTest:false}));sp.scale.set(1.65*scale,.41*scale,1);return sp;}
+ const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(mode!=='neuro'){
+  const bottle=new THREE.Group();rotating.add(bottle);bottle.position.y=-1.45;
+  const isDark=p.slug?.includes('monkey')||p.slug?.includes('hendricks');const squat=p.slug?.includes('disaronno');const glassColor=isDark?0x432612:p.shape==='hex'?0xd6e1cf:p.slug?.includes('bombay')?0x4d9daf:p.slug?.includes('tanqueray')||p.slug?.includes('jameson')?0x387c35:0xd6dfcb;
+  const glass=new THREE.MeshPhysicalMaterial({color:glassColor,roughness:.1,transmission:isDark?.15:.88,thickness:.14,ior:1.48,clearcoat:1,envMapIntensity:1.3,transparent:true,opacity:isDark?1:.92});
+  const radius=squat?.77:.58;const neckHeight=p.slug?.includes('bacardi')||p.slug?.includes('havana')||p.slug?.includes('jameson')?.85:.53;
+  const bodyHeight=squat?1.55:1.95;const bottleTop=bodyHeight+neckHeight+.2;
+  const points=[[0,.03],[radius*.8,.03],[radius*.95,.07],[radius,.16],[radius,.3],[radius,bodyHeight-.17],[radius*.94,bodyHeight-.04],[.28,bodyHeight+.15],[.23,bodyHeight+.25],[.225,bottleTop],[0,bottleTop]].map(([x,y])=>new THREE.Vector2(x,y));
+  if(p.shape==='square'){
+   addMesh(new RoundedBoxGeometry(radius*1.9,bodyHeight,.94,4,.09),glass,bottle,[0,bodyHeight/2,0]);
+   const shoulder=addMesh(new THREE.CylinderGeometry(.24,.62,.33,4),glass,bottle,[0,bodyHeight+.1,0]);shoulder.rotation.y=Math.PI/4;
+   addMesh(new THREE.CylinderGeometry(.225,.24,neckHeight,48),glass,bottle,[0,bodyHeight+.18+neckHeight/2,0]);
+  }else addMesh(new THREE.LatheGeometry(points,p.shape==='hex'?6:96),glass,bottle);
+  // Separate liquid volume and thick glass base; artistically reconstructed from a reference silhouette.
+  const amber=['Rum','Whisky','Amaretto','Liqueur'].includes(p.category||'');const liquid=new THREE.MeshPhysicalMaterial({color:p.category==='Aperitif'?0xd83813:amber?0xae4d10:0xe4e7cb,roughness:.05,transmission:.88,thickness:.8,ior:1.36,transparent:true,opacity:.82});
+  if(p.shape==='square')addMesh(new RoundedBoxGeometry(radius*1.7,bodyHeight*.78,.78,4,.07),liquid,bottle,[0,bodyHeight*.45,0]);
+  else addMesh(new THREE.CylinderGeometry(radius*.9,radius*.9,bodyHeight*.8,p.shape==='hex'?6:64),liquid,bottle,[0,bodyHeight*.46,0]);
+  addMesh(new THREE.TorusGeometry(radius*.91,.04,10,80),glass,bottle,[0,.11,0]).rotation.x=Math.PI/2;
+  const capGroup=new THREE.Group();bottle.add(capGroup);capGroup.position.y=bottleTop+.06+(mode==='exploded'?.65:0);
+  const cap=addMesh(new THREE.CylinderGeometry(.255,.255,.28,64),material(isDark?0x231d16:0xa3997a,{metalness:.35,roughness:.45}),capGroup);
+  for(let i=0;i<9;i++)addMesh(new THREE.TorusGeometry(.254,.006,4,64),material(0x665c45,{metalness:.6}),capGroup,[0,-.11+i*.025,0]).rotation.x=Math.PI/2;
+  if(mode==='exploded')animated.push({obj:capGroup,base:capGroup.position.clone(),phase:0});
+  let labelMat:any;
+  if(p.image){const t=await new THREE.TextureLoader().loadAsync(p.image);t.colorSpace=THREE.SRGBColorSpace;const crop=p.slug?.includes('monkey')?[.35,.34,.325,.22]:p.slug?.includes('bombay')?[.28,.56,.27,.1]:p.slug?.includes('roku')?[.35,.24,.34,.42]:[.49,.3,.25,.2];t.repeat.set(crop[0],crop[1]);t.offset.set(crop[2],crop[3]);textures.push(t);labelMat=material(0xffffff,{map:t,roughness:.9});}
+  else{const c=document.createElement('canvas');c.width=512;c.height=512;const x=c.getContext('2d')!;x.fillStyle='#e8dfc7';x.fillRect(0,0,512,512);x.strokeStyle='#796744';x.strokeRect(18,18,476,476);x.fillStyle='#25351f';x.font='38px Georgia';x.textAlign='center';x.fillText(p.brand,256,170,450);x.font='27px Georgia';x.fillText(p.name,256,270,450);x.font='15px Arial';x.fillText('ILLUSTRATIVE RECONSTRUCTION',256,410);const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;textures.push(t);labelMat=material(0xffffff,{map:t});}
+  const labelGeometry=p.shape==='round'?new THREE.CylinderGeometry(radius+.009,radius+.009,.93,64,1,true,-.9,1.8):new THREE.PlaneGeometry(squat?1.1:.92,.96);
+  const label=addMesh(labelGeometry,labelMat,bottle,[0,bodyHeight*.55,p.shape==='round'?0:p.shape==='square'?.477:.51]);
+  if(mode==='exploded'){label.position.z+=.65;const sp=textSprite('LABEL / RECIPE', '#caa57c',.6);sp.position.set(0,bodyHeight*.55-.67,.8);bottle.add(sp);}
+  if(mode==='bottle'){
+   const pedestal=addMesh(new THREE.CylinderGeometry(1.25,1.3,.12,96),material(0x263121,{metalness:.3,roughness:.3}),group,[0,-1.48,0]);pedestal.receiveShadow=true;
+  }
+  if(mode==='exploded'){
+   bottle.scale.setScalar(.75);bottle.position.y=-1.1;
+   const ingredients=[...new Map((p.recipes||[]).flatMap(r=>r.ingredients).map(i=>[i.name,i])).values()].slice(0,32);
+   ingredients.forEach((i,index)=>{
+    const angle=(index%pageSize)/Math.min(pageSize,ingredients.length)*Math.PI*2+Math.PI/8;const x=Math.cos(angle)*2.15,z=-.35+Math.sin(angle)*.35,y=Math.sin(angle)*1.65;
+    const node=new THREE.Group();node.position.set(x,y,z);rotating.add(node);node.userData.ingredient=i.name;
+    const name=i.name.toLowerCase();
+    const botanicalMat=(color:number)=>material(color,{roughness:.68});
+    function leaf(px:number,py:number,angle:number,size=1){
+      const shape=new THREE.Shape();shape.moveTo(0,-.19);shape.bezierCurveTo(-.14,-.08,-.16,.12,0,.31);shape.bezierCurveTo(.16,.12,.14,-.08,0,-.19);
+      const mesh=addMesh(new THREE.ExtrudeGeometry(shape,{depth:.012,bevelEnabled:true,bevelSize:.008,bevelThickness:.005,bevelSegments:2,steps:1}),botanicalMat(0x71834e),node,[px,py,0]);mesh.rotation.z=angle;mesh.scale.setScalar(size);
+      const vein=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(0,-.17,.027),new THREE.Vector3(0,.28,.027)]),new THREE.LineBasicMaterial({color:0xc3bd7a,transparent:true,opacity:.7}));mesh.add(vein);
+    }
+    if(/lavender/.test(name)){
+      addMesh(new THREE.CylinderGeometry(.008,.012,.55,8),botanicalMat(0x69834b),node,[0,-.05,0]);
+      for(let j=0;j<16;j++){const angle=j*2.4;const f=addMesh(new THREE.SphereGeometry(.045,12,8),botanicalMat(j%2?0x8b6a9f:0xa48bb6),node,[Math.cos(angle)*.055,j*.023-.03,Math.sin(angle)*.045]);f.scale.set(1,1.3,.9);}leaf(-.035,-.16,.8,.5);
+    }else if(/flower|chamomile|jasmine|monarda|rose/.test(name)){
+      const petals=/rose/.test(name)?14:10,col=/rose/.test(name)?0xbb7d83:0xe3dec9;
+      for(let j=0;j<petals;j++){const angle=j/petals*Math.PI*2;const petal=addMesh(new THREE.SphereGeometry(.075,16,10),botanicalMat(col),node,[Math.cos(angle)*.13,Math.sin(angle)*.13,0]);petal.scale.set(.65,1.5,.25);petal.rotation.z=angle-Math.PI/2;}
+      addMesh(new THREE.SphereGeometry(.07,20,12),botanicalMat(0xc5a255),node,[0,0,.025]);
+      for(let j=0;j<20;j++){const angle=j*2.4;addMesh(new THREE.SphereGeometry(.009,6,5),botanicalMat(0xefe0a0),node,[Math.cos(angle)*Math.sqrt(j)*.012,Math.sin(angle)*Math.sqrt(j)*.012,.085]);}
+    }else if(/lemon(?! balm)|orange|yuzu|peel/.test(name)){
+      const peel=addMesh(new THREE.TorusGeometry(.16,.035,10,36,Math.PI*1.55),botanicalMat(/lemon|yuzu/.test(name)?0xcbb154:0xbd743b),node);peel.rotation.set(.4,-.3,.6);
+    }else if(/berry|juniper|sloe|coriander|pepper|nutmeg|cardamom|seed|allspice/.test(name)){
+      const berry=/berry|juniper|sloe/.test(name);const col=berry?(/lingon/.test(name)?0x9d4241:0x414b68):0x98714b;
+      for(let j=0;j<3;j++){const seed=addMesh(new THREE.SphereGeometry(.09,20,16),botanicalMat(col),node,[(j-1)*.13,Math.sin(j)*.055,0]);seed.scale.set(berry?1:.7,berry?1:1.3,1);for(let k=0;k<5;k++){const ridge=addMesh(new THREE.TorusGeometry(.089,.0025,4,24),botanicalMat(berry?0x6b7181:0xb3905d),seed);ridge.rotation.y=k*Math.PI/5;}}if(berry)leaf(.14,-.01,-.7,.5);
+    }else if(/bark|cassia|cinnamon|liquorice|root/.test(name)){
+      for(let j=0;j<3;j++){const root=addMesh(new THREE.CylinderGeometry(.025,.04,.34,12),botanicalMat(j%2?0x8d603d:0xb28c5a),node,[(j-1)*.06,0,0]);root.rotation.z=(j-1)*.16;}
+    }else{leaf(-.045,-.01,.5,.8);leaf(.09,.04,-.55,.65);addMesh(new THREE.CylinderGeometry(.006,.009,.48,8),botanicalMat(0x8f915d),node,[0,-.04,0]);}
+    node.traverse(o=>{if(o instanceof THREE.Mesh){o.userData.ingredient=i.name;pickables.push(o);}});
+    node.scale.setScalar(1.4);const sprite=textSprite(i.name,'#e0dccb',.72);sprite.position.y=-.34;node.add(sprite);pickables.push(sprite);sprite.userData.ingredient=i.name;
+    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(x*.78,y*.8,z*.78),new THREE.Vector3(x,y,z)]),new THREE.LineBasicMaterial({color:0x879765,transparent:true,opacity:.27}));rotating.add(line);botanicalNodes.push({node,line,name:i.name});
+    animated.push({obj:node,base:node.position.clone(),phase:index*.7});
+   });
+   if(!ingredients.length){const label=textSprite('Recipe not disclosed. No plants invented.','#c1ad8b',1.2);label.position.y=1.8;group.add(label);}
+  }
+ }else{
+  // Abstract neural sculpture. Spatial positions and pulses are artistic, not an anatomical atlas.
+  const brain=new THREE.Group();rotating.add(brain);
+  for(let side of [-1,1]){
+   const geometry=new THREE.SphereGeometry(1,48,32);const pos=geometry.attributes.position;
+   for(let i=0;i<pos.count;i++){const x=pos.getX(i),y=pos.getY(i),z=pos.getZ(i);const fold=1+.055*Math.sin(y*22+z*11)*Math.sin(x*18);pos.setXYZ(i,x*fold*.78,y*fold,z*fold*.82);}geometry.computeVertexNormals();
+   const hemi=new THREE.Mesh(geometry,new THREE.MeshPhysicalMaterial({color:0xd1ae87,roughness:.4,transmission:.2,transparent:true,opacity:.28,wireframe:true}));hemi.position.x=side*.57;hemi.rotation.z=side*-.1;brain.add(hemi);
+  }
+  const links:any[]=[{name:'Ethanol',target:'NMDA receptor',known:true},...(p.compounds||[]).flatMap(c=>(c.mechanisms||[]).map((m:any)=>({name:c.name,target:m.target,known:false})))];
+  const limited=links.slice(0,8);
+  limited.forEach((n,index)=>{
+   const a=index/limited.length*Math.PI*2;const start=new THREE.Vector3(Math.cos(a)*2.8,Math.sin(a)*1.8,.5),end=new THREE.Vector3(Math.cos(a)*.7,Math.sin(a)*.7,.2);
+   const dot=addMesh(new THREE.IcosahedronGeometry(.13,3),material(n.known?0xf5b478:0x8ead7d,{emissive:n.known?0x7d3c12:0x274a22,emissiveIntensity:1.3}),rotating,[start.x,start.y,start.z]);pickables.push(dot);dot.userData.ingredient=n.name;
+   const curve=new THREE.QuadraticBezierCurve3(start,new THREE.Vector3(start.x*.6,start.y*.4,1.4),end);const tube=new THREE.Mesh(new THREE.TubeGeometry(curve,40,.009,5,false),new THREE.MeshBasicMaterial({color:n.known?0xeab17b:0x83a36c,transparent:true,opacity:n.known?.8:.35}));rotating.add(tube);
+   const title=textSprite(n.name,n.known?'#f6c48f':'#b4c89e',.75);title.position.copy(start).add(new THREE.Vector3(0,.32,0));rotating.add(title);
+   const target=textSprite(n.target,'#a99579',.48);target.position.copy(end).add(new THREE.Vector3(0,-.22,0));rotating.add(target);
+   const pulse=addMesh(new THREE.SphereGeometry(.035,10,8),new THREE.MeshBasicMaterial({color:0xffdfb4}),rotating);animated.push({obj:pulse,curve,phase:index*.2});
+  });
+  const caption=textSprite('MECHANISMS, NOT A PREDICTION','#9baf88',1);caption.position.y=-2.05;group.add(caption);
+ }
+ const dustPositions=new Float32Array(240*3);for(let i=0;i<240;i++){dustPositions[i*3]=Math.sin(i*12.9898)*8;dustPositions[i*3+1]=Math.cos(i*8.233)*4;dustPositions[i*3+2]=Math.sin(i*4.193)*7-2;}const dustGeo=new THREE.BufferGeometry();dustGeo.setAttribute('position',new THREE.BufferAttribute(dustPositions,3));scene.add(new THREE.Points(dustGeo,new THREE.PointsMaterial({color:0xc7b488,size:.015,transparent:true,opacity:.4})));
+ const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.enablePan=true;controls.minDistance=3.5;controls.maxDistance=13;controls.autoRotate=!reduced&&mode==='bottle';controls.autoRotateSpeed=.3;controls.target.set(0,0,0);controls.update();
+ const tools=document.createElement('div');tools.className='scene-tools';
+ tools.innerHTML=`<button data-scene="reset" aria-label="Reset camera">Reset view</button><button data-scene="full" aria-label="Toggle immersive full screen">⛶ Full screen</button>${mode==='exploded'?'<button data-scene="previous" aria-label="Previous botanical group">← Plants</button><button data-scene="next" aria-label="Next botanical group">Plants →</button><label>Unfold<input type="range" min="40" max="125" value="100" aria-label="Botanical spread"></label>':''}`;
+ el.append(tools);const hint=document.createElement('span');hint.className='scene-instructions';hint.textContent='DRAG TO ORBIT · SHIFT + DRAG TO MOVE · WHEEL TO EXPLORE';el.append(hint);
+ tools.querySelector<HTMLButtonElement>('[data-scene=reset]')!.onclick=()=>{controls.reset();rotating.rotation.set(0,0,0);};
+ tools.querySelector<HTMLButtonElement>('[data-scene=full]')!.onclick=()=>{const stage=el.closest('.detail-visual') as HTMLElement;if(document.fullscreenElement)document.exitFullscreen();else stage?.requestFullscreen?.().catch(()=>{});};
+ const showPage=()=>botanicalNodes.forEach((b,i)=>{b.node.visible=b.line.visible=Math.floor(i/pageSize)===page;});showPage();
+ tools.querySelector<HTMLButtonElement>('[data-scene=next]')?.addEventListener('click',()=>{page=(page+1)%Math.max(1,Math.ceil(botanicalNodes.length/pageSize));showPage();});
+ tools.querySelector<HTMLButtonElement>('[data-scene=previous]')?.addEventListener('click',()=>{page=(page-1+Math.ceil(botanicalNodes.length/pageSize))%Math.max(1,Math.ceil(botanicalNodes.length/pageSize));showPage();});
+ tools.querySelector<HTMLInputElement>('input')?.addEventListener('input',e=>{spread=Number((e.target as HTMLInputElement).value)/100;});
+ const resize=()=>{const w=el.clientWidth,h=el.clientHeight||465;renderer.setSize(w,h);camera.aspect=w/h;camera.updateProjectionMatrix();};const observer=new ResizeObserver(resize);observer.observe(el);resize();
+ const ray=new THREE.Raycaster(),pointer=new THREE.Vector2();const click=(event:PointerEvent)=>{const r=renderer.domElement.getBoundingClientRect();pointer.set((event.clientX-r.left)/r.width*2-1,-(event.clientY-r.top)/r.height*2+1);ray.setFromCamera(pointer,camera);const hit=ray.intersectObjects(pickables)[0];if(hit&&hit.object.parent?.visible)select?.(hit.object.userData.ingredient);};renderer.domElement.addEventListener('pointerup',click);
+ const keyboard=(event:KeyboardEvent)=>{if(event.key==='ArrowLeft'||event.key==='ArrowRight'){rotating.rotation.y+=event.key==='ArrowLeft'?-.15:.15;controls.autoRotate=false;event.preventDefault();}};renderer.domElement.addEventListener('keydown',keyboard);
+ let frame=0,disposed=false,start=performance.now();function tick(){if(disposed)return;const t=(performance.now()-start)/1000;animated.forEach(a=>{if(a.curve&&!reduced)a.obj.position.copy(a.curve.getPoint((t*.12+a.phase)%1));else if(a.base){a.obj.position.x=a.base.x*spread;a.obj.position.y=a.base.y*spread+(!reduced?Math.sin(t*.65+a.phase)*.055:0);}});controls.update();renderer.render(scene,camera);frame=requestAnimationFrame(tick);}tick();
+ return()=>{disposed=true;cancelAnimationFrame(frame);observer.disconnect();controls.dispose();renderer.domElement.removeEventListener('pointerup',click);renderer.domElement.removeEventListener('keydown',keyboard);scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.Line||o instanceof THREE.Points){o.geometry.dispose();const mats=Array.isArray(o.material)?o.material:[o.material];mats.forEach(m=>m.dispose());}else if(o instanceof THREE.Sprite)o.material.dispose();});textures.forEach(t=>t.dispose());env.dispose();environment.dispose();pmrem.dispose();renderer.dispose();renderer.domElement.remove();tools.remove();hint.remove();};
+}
