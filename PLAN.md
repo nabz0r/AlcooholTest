@@ -56,5 +56,5 @@ User requests genuine sourced front/rear photographs and at least twenty years o
 ### Volume 05 delivery boundary
 
 - Implemented: authenticated editorial targets and photo references, reviewed price ingestion with exact date precision and price basis, monthly market indexes, public/source-admin Memento, portable fact snapshots and licensed-media bundles.
-- Verified locally: actual collection and browser exports, image/capsule integrity, catalogue coverage, PostgreSQL permissions/provenance checks and production frontend build. Final remote main/CI evidence is recorded after publication.
+- Verified: actual collection and browser exports, image/capsule integrity, catalogue coverage, PostgreSQL permissions/provenance checks, production frontend build and all three native GitHub CI jobs. Application `d53efea523f896cb3cb70cd86853d1c1f3f595f5` passed run 40240763205; see docs/VALIDATION.md and docs/validation/v5-ci.json.
 - Still incomplete: locally reusable rear images for 33 products, locally reusable front images for 11, continuous annual retail coverage for every older product, and the two unresolved earliest retail gaps. Twenty-three products have post-2006 expression launches or brand bounds. All 55 have genuine front/rear source references, but these distinctions must stay visible.

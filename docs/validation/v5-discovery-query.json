@@ -155,7 +155,7 @@
     }
   ],
   "live_http_interpretation": "Three local uncached HTTP requests with expected result totals. These are individual latency observations, not a throughput benchmark or a guarantee of other environments.",
-  "status": "Uncorrelated set-query candidate: semantics pass ARM and actual x86 CLI. Native GitHub CI remains pending. Historical failed and diagnostic runs retain their stated scope.",
+  "status": "Native GitHub CI passed all three jobs for the uncorrelated set-query application. Historical local/emulated failures remain preserved; a unique low-level cause was not established.",
   "subsequent_ci_failure": {
     "run_id": 40238951704,
     "test": "test_discovery_facets_precede_group_selection_and_count_products_once",
@@ -1118,7 +1118,20 @@
       ],
       "interpretation": "Full isolated x86 suite reproduced five discovery facet timeouts, despite passing individual SQL probes. This candidate was not published; instrumented diagnosis follows."
     },
-    "remote_ci": "pending",
+    "remote_ci": {
+      "run_id": 40240763205,
+      "url": "https://github.com/nabz0r/AlcooholTest/actions/runs/40240763205",
+      "conclusion": "success",
+      "postgresql_tests": 129,
+      "postgresql_duration_seconds": 86.88,
+      "offline_tool_tests": 11,
+      "jobs": [
+        "integration",
+        "frontend",
+        "dependency-audit"
+      ],
+      "application_commit": "d53efea523f896cb3cb70cd86853d1c1f3f595f5"
+    },
     "uninstrumented_x86_cli": {
       "tests": 129,
       "passed": 129,
@@ -1126,6 +1139,49 @@
       "test_outcome": "OK",
       "process_cleanup": "A diagnostic watcher retained a test-database session during teardown. A clean repeat without that watcher is required. This is not an application test failure.",
       "interpretation": "The actual Django CLI executed all tests without a query wrapper. Earlier five emulated-x86 failures are retained above; no definitive JIT or other platform-specific cause is claimed."
-    }
+    },
+    "clean_x86_cli": {
+      "tests": 129,
+      "passed": 129,
+      "errors": 0,
+      "duration_seconds": 67.508,
+      "exit_code": 0,
+      "test_database_destroyed": true,
+      "instrumentation": "None. Actual manage.py test catalog --noinput, no watcher, query wrapper or custom runner.",
+      "postgresql": "17.11 x86_64 Alpine; ARM Python client",
+      "statement_timeout_seconds": 15,
+      "jit_configuration_changed": false
+    },
+    "live_http_after_set_rewrite": [
+      {
+        "path": "/api/v1/discover?q=roku&min_abv=44&max_abv=46&coverage=0",
+        "status": 200,
+        "total": 0,
+        "elapsed_ms": 38.242,
+        "headers": {
+          "X-Alcooltest-Cache": "MISS"
+        }
+      },
+      {
+        "path": "/api/v1/discover?q=roku&min_abv=46&coverage=3",
+        "status": 200,
+        "total": 1,
+        "elapsed_ms": 31.013,
+        "headers": {
+          "X-Alcooltest-Cache": "MISS"
+        }
+      },
+      {
+        "path": "/api/v1/discover?q=juniper&min_abv=44&max_abv=46&coverage=1",
+        "status": 200,
+        "total": 6,
+        "elapsed_ms": 34.699,
+        "headers": {
+          "X-Alcooltest-Cache": "MISS"
+        }
+      }
+    ],
+    "live_http_scope": "Three individual uncached localhost HTTP requests, not a throughput benchmark.",
+    "application_commit": "d53efea523f896cb3cb70cd86853d1c1f3f595f5"
   }
 }

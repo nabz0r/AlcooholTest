@@ -1,6 +1,6 @@
 # Current validation — Volume 05
 
-Executed on 2026-10-25 against Docker. **126 PostgreSQL integration tests passed in 67.229 seconds** in a fresh application image. This includes both final source-privacy regressions; the focused 15-test Memento suite also passes. **11 offline tool tests** pass in the exact Compose CI invocation. TypeScript/Vite and both Docker image builds pass. The production frontend dependency audit reports zero vulnerabilities; schema and migration checks report no drift.
+Executed on 2026-10-25 against Docker. **129 PostgreSQL integration tests passed in 67.508 seconds** in a clean isolated PostgreSQL 17.11 x86_64 run using the actual Django CLI. The previous 126-test ARM image check passed in 67.229 seconds; three discovery regressions were added afterward. This includes both final source-privacy regressions; the focused 15-test Memento suite also passes. **11 offline tool tests** pass in the exact Compose CI invocation. TypeScript/Vite and both Docker image builds pass. The production frontend dependency audit reports zero vulnerabilities; schema and migration checks report no drift.
 
 The [HTTP and artifact report](validation/v5-http-and-memento.json) records 63 sitemap routes, 55 canonical product APIs, 85 served-image hashes and 321 monthly survey observations. ZIP verification checks every capsule and licensed image independently. Each immutable snapshot retains its own capture time, count and hash. The repository metadata archive is generated from the seed; the admin bundle also includes current public editorial research records and licensed image bytes. Old capsule identifiers do not automatically remain publicly accessible after publication withdrawal or a policy change.
 
@@ -8,7 +8,7 @@ The [HTTP and artifact report](validation/v5-http-and-memento.json) records 63 s
 
 The distribution contains 613 observations: 537 archived retail offers, 57 current offers, 12 launch recommendations, six published historical prices and one wholesale quote. There are **29 overall twenty-year evidence spans and five comparable single-retail-series spans**. The 321 Kakubin monthly survey values are separate. Twenty-one expressions have documented post-2006 launches; two more have sourced post-2006 brand bounds. Older retail gaps remain for Kakubin, Four Roses Small Batch and Diplomático; Kakubin has its separate 26-year survey series. Hosted photography covers 44 fronts and 22 rears. Verified original-publisher references complete both sides for all 55 products.
 
-This release does not claim continuous twenty-year prices for all 55 products, permission to mirror every article, scanned 3D bottles, finished-drink botanical measurements, an APK or independent security certification. Remote publication and CI evidence is appended only after verification.
+This release does not claim continuous twenty-year prices for all 55 products, permission to mirror every article, scanned 3D bottles, finished-drink botanical measurements, an APK or independent security certification. The current native GitHub CI and publication evidence is recorded below and in `validation/v5-ci.json`.
 
 # Volume 04 validation (historical)
 
@@ -93,11 +93,23 @@ A final browser refresh exposed a 502 after an API container replacement: Nginx 
 Application: `ee161a5e969465a53609fce290007198a8c5f1d2`; verified remote tree: `2933567c241de9aeeea42077829da35964235b8b`. [CI run 40230665284 passed](https://github.com/nabz0r/AlcooholTest/actions/runs/40230665284). Published README images loaded and its Mermaid diagram rendered in the actual GitHub page. A documentation-only follow-up records these results; it does not change the tested application.
 
 
-### Final Volume 05 local evidence
+### Pre-discovery Volume 05 local evidence
 
-The final image passes **126 PostgreSQL tests in 67.229 seconds**. The source-privacy suite independently passes 15 focused PostgreSQL tests. Eleven offline importer/photograph/index tests and the production frontend dependency audit pass. The repeated admin archive job produced 20 Yamazaki price candidates with two explicit parse/identity rejections. All candidates remain subject to editorial acceptance; the released price count stays 613. The disposable QA account was logged out and removed; zero member accounts remain.
+Before the three added discovery regressions, the image passed **126 PostgreSQL tests in 67.229 seconds**. The source-privacy suite independently passes 15 focused PostgreSQL tests. Eleven offline importer/photograph/index tests and the production frontend dependency audit pass. The repeated admin archive job produced 20 Yamazaki price candidates with two explicit parse/identity rejections. All candidates remain subject to editorial acceptance; the released price count stays 613. The disposable QA account was logged out and removed; zero member accounts remain.
 
 The final downloaded licensed-image Memento is **48,979,054 bytes**, SHA-256 `e74c4094853cf123c90bfd90d1c44076a6aed230b8e8d6c42d0e4eef69b789c3`. It contains 1,161 capsules, 85 verified images and exactly 760 foreign-key-referenced Sources. The committed metadata archive contains 1,160 capsules and has SHA-256 `7ef97114fe5ad26b88d815daa53e07722ccc9119140ceeb78d9e071e51f000b0`. Independent validation confirms zero orphan Source capsules, valid capsule/media hashes and no private fields or raw research pages. See the current [artifact report](validation/v5-http-and-memento.json).
 
 
-The first Volume 05 GitHub run, [40238038269](https://github.com/nabz0r/AlcooholTest/actions/runs/40238038269), found a discovery facet-query timeout under its 15-second database statement limit. Its frontend and Python dependency checks passed, while the integration job failed. The query correction and successful follow-up run are recorded below when verified. The timeout limit is retained.
+The first Volume 05 GitHub run, [40238038269](https://github.com/nabz0r/AlcooholTest/actions/runs/40238038269), found a discovery facet-query timeout under its 15-second database statement limit. Its frontend and Python dependency checks passed, while the integration job failed. The final query correction and successful follow-up run are recorded below. The timeout limit is retained.
+
+### Discovery query portability recheck
+
+GitHub runs [40238038269](https://github.com/nabz0r/AlcooholTest/actions/runs/40238038269) and [40238951704](https://github.com/nabz0r/AlcooholTest/actions/runs/40238951704) each exposed a different discovery-query timeout. The final candidate uses independent SQL product-ID sets for ingredient/name/brand search, group membership and both strength bounds on one bottling. Default zero coverage adds no score predicate. Coverage/detail prefetches attach to the final result page.
+
+The [query report](validation/v5-discovery-query.json) retains failed and diagnostic runs. A first complete x86-emulated run still produced five timeouts, which subsequent diagnostic and uninstrumented runs did not reproduce; no definitive JIT cause is claimed. The clean actual CLI repeat passed all 129 tests in 67.508 seconds, exit zero, with no instrumentation or leftover test database. Neither JIT configuration nor the 15-second statement deadline was changed. Three local uncached HTTP checks returned expected totals in 31.013–38.242 ms; this is a small latency sample, not a throughput guarantee. Native GitHub CI for this application passed, as recorded below.
+
+### Volume 05 publication verified
+
+Application commit `d53efea523f896cb3cb70cd86853d1c1f3f595f5`, tree `81824bcd8a33ef957bea817a955ea286a3f2ebd6`, was published to main and its complete tree matched local Git. [GitHub Actions run 40240763205](https://github.com/nabz0r/AlcooholTest/actions/runs/40240763205) passed all three jobs. The native runner passed **129 PostgreSQL tests in 86.880 seconds** and **11 offline tool tests in 0.020 seconds**. Schema/migration checks, API health, proxy recovery after replacement, frontend build/audit and Python dependency audit also passed. The [machine-readable CI record](validation/v5-ci.json) identifies each job and step.
+
+The published GitHub README was reopened and all four new Volume 05 illustrations loaded at 1265 × 712 pixels. The public Memento was reopened after deployment and displayed 1,161 capsules and 85 licensed image records. The clean local stack is healthy; the temporary diagnostic network/containers/secrets were removed and the native ARM PostgreSQL tag restored. A following documentation-only commit records this result without changing tested application code. The research and reuse-right limitations stated above remain in force.

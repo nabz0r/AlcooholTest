@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0",
+  "application_commit": "d53efea523f896cb3cb70cd86853d1c1f3f595f5",
+  "application_tree": "81824bcd8a33ef957bea817a955ea286a3f2ebd6",
+  "run_id": 40240763205,
+  "url": "https://github.com/nabz0r/AlcooholTest/actions/runs/40240763205",
+  "conclusion": "success",
+  "postgresql_tests": {
+    "passed": 129,
+    "duration_seconds": 86.88
+  },
+  "offline_tool_tests": {
+    "passed": 11,
+    "duration_seconds": 0.02
+  },
+  "jobs": [
+    {
+      "id": 121311837727,
+      "name": "integration",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Generate local test secrets and start the full stack",
+          "conclusion": "success"
+        },
+        {
+          "name": "PostgreSQL integration tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Offline photographic and market-index integrity tests",
+          "conclusion": "success"
+        },
+        {
+          "name": "Schema and migration checks",
+          "conclusion": "success"
+        },
+        {
+          "name": "Verify proxy recovery after API replacement",
+          "conclusion": "success"
+        },
+        {
+          "name": "Inspect Python dependencies",
+          "conclusion": "success"
+        },
+        {
+          "name": "Save dependency inventory",
+          "conclusion": "success"
+        },
+        {
+          "name": "Service logs on failure",
+          "conclusion": "skipped"
+        },
+        {
+          "name": "Stop ephemeral stack",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 121311837892,
+      "name": "dependency-audit",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run python -m pip install pip-audit",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run pip-audit -r backend/requirements.txt --disable-pip --no-deps",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-python@v5",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    },
+    {
+      "id": 121311837993,
+      "name": "frontend",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run npm ci && npm run build && npm audit --omit=dev --audit-level=high",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/setup-node@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "scope": "Native Ubuntu GitHub runner. A subsequent documentation-only commit records this evidence without changing tested application code. Local browser, artifact and x86-emulation results have their own reports; this is not independent certification."
+}
