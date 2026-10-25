@@ -1,5 +1,7 @@
 # Alcooltest
 
+[![CI](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/nabz0r/AlcooholTest/actions/workflows/ci.yml)
+
 **A world within.** An open-source, self-hosted spirits atlas: an editorial photographic arrival, botanical sculptures, original generative sound, traceable ingredients and an editorial notebook.
 
 ![Editorial homepage](docs/screenshots/home.png)

@@ -19,3 +19,5 @@ Coverage is explicitly bounded. Secret formulas, measured botanical exposure, sc
 - Verify PostgreSQL/browser behavior, capture a broad real UI gallery, update documentation and publish to main.
 
 Completion evidence for this revision is tracked in PROGRESS.md and docs/VALIDATION.md.
+
+Volume 02 complete: all six revision workstreams were implemented, locally verified and published. GitHub Actions run 40218453860 passed all three jobs for application commit 4f99191f1ffc3260249e4fa652dce209cdbac711. The final documentation/provenance update records that evidence; see docs/VALIDATION.md and the 18-view screenshot index.
