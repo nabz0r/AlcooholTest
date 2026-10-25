@@ -300,6 +300,40 @@ class CatalogueTests(TestCase):
         d=self.client.get('/api/v1/discover?q=roku&min_abv=44&max_abv=46').json()
         self.assertEqual(d['total'],0)
         self.assertEqual(self.client.get('/api/v1/discover?q=roku&min_abv=46').json()['total'],1)
+    def discovery_facet_fixture(self):
+        source=m.Source.objects.first();brand=m.Brand.objects.first()
+        needle=m.Ingredient.objects.create(slug='qa-facet-needle',name='QA Facet Needle',navigation_group='floral')
+        citrus=m.Ingredient.objects.create(slug='qa-facet-citrus',name='QA Facet Citrus',navigation_group='citrus')
+        first=m.Product.objects.create(slug='qa-facet-first',brand=brand,name='Facet fixture first',description='Discovery fixture.',status='published')
+        second=m.Product.objects.create(slug='qa-facet-second',brand=brand,name='Facet fixture second',description='Discovery fixture.',status='published',history='Attributed fixture history.',history_source=source)
+        for product,strengths in [(first,[43,47]),(second,[45])]:
+            for strength in strengths:m.Variant.objects.create(product=product,name=f'Fixture {strength}%',market='QA',abv=strength,volume_ml=700,source=source)
+        for product,version,items in [(first,'first',[needle,citrus]),(first,'second',[needle]),(second,'first',[needle])]:
+            recipe=m.Recipe.objects.create(product=product,version=version,source=source,process='Named fixture inputs.')
+            for ingredient in items:m.RecipeIngredient.objects.create(recipe=recipe,ingredient=ingredient,source=source)
+    def test_discovery_ingredient_strength_query_keeps_single_bottling_and_facets(self):
+        self.discovery_facet_fixture()
+        data=self.client.get('/api/v1/discover?q=QA+Facet+Needle&min_abv=44&max_abv=46').json()
+        self.assertEqual([row['slug'] for row in data['items']],['qa-facet-second'])
+        counts={row['key']:row['count'] for row in data['groups']}
+        self.assertEqual(counts['floral'],1);self.assertEqual(counts['citrus'],0)
+        data=self.client.get('/api/v1/discover?q=QA+Facet+Needle&min_abv=46').json()
+        self.assertEqual(data['total'],1);self.assertEqual(data['items'][0]['slug'],'qa-facet-first')
+    def test_discovery_facets_precede_group_selection_and_count_products_once(self):
+        self.discovery_facet_fixture()
+        data=self.client.get('/api/v1/discover?q=QA+Facet+Needle&groups=citrus').json()
+        self.assertEqual(data['total'],1);self.assertEqual(data['items'][0]['slug'],'qa-facet-first')
+        counts={row['key']:row['count'] for row in data['groups']}
+        self.assertEqual(counts['floral'],2);self.assertEqual(counts['citrus'],1)
+    def test_discovery_positive_coverage_filters_candidate_facets(self):
+        self.discovery_facet_fixture()
+        default=self.client.get('/api/v1/discover?q=QA+Facet+Needle&coverage=0').json()
+        self.assertEqual(default['total'],2)
+        data=self.client.get('/api/v1/discover?q=QA+Facet+Needle&coverage=3').json()
+        self.assertEqual([row['slug'] for row in data['items']],['qa-facet-second'])
+        counts={row['key']:row['count'] for row in data['groups']}
+        self.assertEqual(counts['floral'],1);self.assertEqual(counts['citrus'],0)
+        self.assertEqual(data['items'][0]['coverage']['documented'],3)
     def test_coverage_does_not_count_empty_history(self):
         p=m.Product.objects.get(slug='monkey-47-schwarzwald');p.history='';p.save()
         d=self.client.get('/api/v1/products/'+p.slug).json()

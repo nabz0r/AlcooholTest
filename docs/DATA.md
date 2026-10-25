@@ -1,4 +1,4 @@
-# Current distribution — Volume 04
+# Current distribution — Volume 05
 
 55 canonical products plus two distinct editions; 804 source records, 125 ingredient/input records, 265 source-linked recipe assertions, 56 critic accounts, 85 licensed local photographs and 51 verified external photo references, nine studies and 613 price observations. All 55 canonical products have source-linked histories, attributed criticism, price evidence and front/rear references. Hosted photos cover 44 fronts and 22 rears; external-only references retain their original hosting. Twenty-nine products have an overall evidence span of at least 20 years, but only five have a single comparable retail series spanning 20 years. The 321 Kakubin monthly survey values are separate. Field presence does not establish a complete proprietary recipe, continuous prices or a measured exposure.
 

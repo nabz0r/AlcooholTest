@@ -86,3 +86,5 @@ The main application suite passed 124 PostgreSQL tests in a fresh image before t
 Final local release check: the rebuilt application image passes all 126 PostgreSQL tests in 67.229 seconds, including the exact-source and stale-policy privacy regressions. No migration or schema drift is present.
 
 Final artifact check: the policy-corrected admin bundle contains 1,161 capsules and 85 licensed images, with exact Source-ID reachability verified. The repository snapshot contains 1,160 capsules. The QA account has been removed. Publication is the remaining release step.
+
+The first remote CI run, 40238038269, passed the frontend and Python dependency checks but exposed a 15-second statement timeout in the discovery facet query for `q=roku&min_abv=44&max_abv=46`. The enlarged price dataset made an unnecessary zero-coverage filter expensive on the GitHub runner. Query optimization and a repeated CI run are required; this first run is not a successful release check. The application ref and tree already match local Git.
