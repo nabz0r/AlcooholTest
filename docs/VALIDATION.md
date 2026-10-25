@@ -75,3 +75,7 @@ Browser verification confirms four flower matches, a one-record Japan/max-44 dir
 ### Final restart regression
 
 A final browser refresh exposed a 502 after an API container replacement: Nginx had retained the old upstream IP. The fixed service name is now resolved via Docker DNS. `validation/proxy-recovery.json` records replacement through the unchanged proxy: one transient unavailable sample, then HTTP 200 at about 2.07 seconds and through the remaining samples. Nginx configuration validation passed. The restart check is now in CI. Eleven final captures replace intermediate screenshots, including the briefly overwritten failed-page capture; the screenshot manifest contains only verified final JPEGs.
+
+## Volume 04 publication evidence
+
+Application: `ee161a5e969465a53609fce290007198a8c5f1d2`; verified remote tree: `2933567c241de9aeeea42077829da35964235b8b`. [CI run 40230665284 passed](https://github.com/nabz0r/AlcooholTest/actions/runs/40230665284). Published README images loaded and its Mermaid diagram rendered in the actual GitHub page. A documentation-only follow-up records these results; it does not change the tested application.
