@@ -5,3 +5,5 @@ class Command(BaseCommand):
     help='Seed only on an empty catalogue; never overwrite editorial changes on restart.'
     def handle(self,*args,**opts):
         if not Product.objects.exists(): call_command('seed')
+        from catalog.models import PriceArchiveTarget
+        if not PriceArchiveTarget.objects.exists():call_command('sync_research')

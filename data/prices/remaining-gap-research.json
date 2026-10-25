@@ -1,0 +1,145 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-10-25",
+  "scope": "Final bounded research of three remaining potentially old expression-price gaps. Accepted facts preserve exact product/format, publication precision and wholesale versus retail basis. Missing dated observations remain missing.",
+  "point_count": 1,
+  "points": [
+    {
+      "product": "citadelle-original",
+      "retailer_id": 2254,
+      "external_source_key": "iowa-wholesale:citadelle-original:2003-05:28406",
+      "title": "Citadelle Gin — Iowa Liquor Quarterly, May 2003, printed page 27",
+      "observed_on": null,
+      "observed_period": "2003-05",
+      "date_precision": "month",
+      "publication_period": "2003-05",
+      "timestamp": null,
+      "amount": "19.99",
+      "currency": "USD",
+      "country": "United States",
+      "retailer": "Iowa Alcoholic Beverages Division wholesale",
+      "volume_ml": 750,
+      "abv": "44",
+      "printed_us_proof": 88,
+      "source_product_code": "28406",
+      "printed_upc_code": "6955210030",
+      "case_pack": 6,
+      "case_cost": "119.94",
+      "price_label": "Btl. Cost",
+      "case_price_label": "Cs. Cost",
+      "tax_included": null,
+      "promotion": null,
+      "basis": "wholesale_list",
+      "source_url": "https://web.archive.org/web/20240630130935/https://publications.iowa.gov/2789/1/ilqmay2003.pdf#page=29",
+      "original_url": "https://publications.iowa.gov/2789/1/ilqmay2003.pdf",
+      "archive_capture_timestamp": "20240630130935",
+      "source_publisher": "Iowa Alcoholic Beverages Division; DavisDenny publishing contractor",
+      "source_kind": "regulator",
+      "content_sha256": "33d220c953dc5b2be0cadf2ffb83647e6b2f483974114efcdf6a638f7a3b6a12",
+      "hash_scope": "Complete original 44-page PDF bytes; 5,268,159 bytes, retrieved from its exact 2024 archive capture using checked Content-Range segments.",
+      "retrieved_at": "2026-10-25T21:28:50.726560+00:00",
+      "date_scope": "May 2003 issue period visibly printed on the publication cover. No day is printed or assigned. The 2024 archive capture date, 2012 PDF last-modified header and 2026 retrieval date are not the historical price date.",
+      "notes": "Actual Citadelle Gin item 28406, 0.750 litre, 88 U.S. proof. ABV 44% is calculated as U.S. proof divided by two. The table explicitly identifies an ILQ Wholesale Price List and separates bottle cost 19.99 from six-bottle case cost 119.94. This is a wholesale quote, not a consumer retail price, purchase or launch recommendation. Tax inclusion and offer validity within the issue period are unstated. Keep this evidence separate from current retail series and do not infer investment returns or uninterrupted annual coverage.",
+      "proof_conversion_source": "https://www.ttb.gov/regulated-commodities/beverage-alcohol/distilled-spirits/distilled-spirits-faqs",
+      "validation": {
+        "complete_pdf_read": true,
+        "pages": 44,
+        "source_pdf_page": 29,
+        "printed_page": 27,
+        "visually_verified": true,
+        "issue_cover_visually_verified": true,
+        "range_offsets_and_total_length_verified": true,
+        "raw_file_sha256": "33d220c953dc5b2be0cadf2ffb83647e6b2f483974114efcdf6a638f7a3b6a12"
+      },
+      "retrieval_notes": "Origin returned HTTP 403. A first archive response was only 1 MiB and failed PDF parsing; rejected. Complete PDF was then fetched from exact capture 20240630130935 in six verified 206 byte ranges, with consistent total length and finalEOF. The complete file parses 44 pages and the relevant page and cover were rendered and read."
+    }
+  ],
+  "gaps": [
+    {
+      "product": "citadelle-original",
+      "status": "pre_2007_wholesale_evidence_verified",
+      "older_retail_gap_resolved": false,
+      "summary": "May 2003 original regulator price table establishes actual historical wholesale price evidence. A twenty-year comparable consumer-retail series is not established by joining this to a 2026 retail offer.",
+      "checked_sources": [
+        {
+          "source_url": "https://www.wineenthusiast.com/buying-guide/citadelle-gin/",
+          "result": "Current original-gin review is dated 2019-08-01, not 2005 or 2006. Its $25/750 ml 44% price must not be backdated."
+        },
+        {
+          "source_url": "https://publications.iowa.gov/2790/01/ilqaug2003.pdf",
+          "result": "Indexed August 2003 Citadelle quote matches 19.99/750 ml/88 proof. Origin 403 and no complete raw visual review in this pass; not accepted as an additional point."
+        },
+        {
+          "source_url": "https://publications.iowa.gov/2791/1/ilqnov2003.pdf",
+          "result": "Indexed November 2003 quote found; origin 403 and not separately visually verified, so not accepted as a point."
+        }
+      ]
+    },
+    {
+      "product": "diplom-tico-reserva-exclusiva",
+      "status": "pre_2007_exact_price_not_verified",
+      "older_retail_gap_resolved": false,
+      "summary": "No complete pre 2007 price+size+strength observation verified in this bounded pass. No owner source found that justifies declaring the expression post 2006. Preserve its unresolved early-price gap.",
+      "checked_sources": [
+        {
+          "source_url": "https://www.wineenthusiast.com/buying-guide/diplomatico-reserva-exclusiva/",
+          "result": "Dated 2007-05-01 review gives$30 and 40% but omits bottle size in the reviewed record; not a pre 2007 observation."
+        },
+        {
+          "source_url": "https://rumauctioneer.com/learn/explore-rum/bottles/diplomatico-reserva-exclusiva",
+          "result": "Modern auction reference describes 2004-present packaging; its current price is not a 2004 sale or quote."
+        },
+        {
+          "source_url": "https://www.straightbourbon.com/community/topic/1510-what-rum-do-you-drink-neat/page/2/",
+          "result": "December 2004 member mentions owning ReservaExclusiva, with no price or bottle format. Product availability discussion is not a price observation."
+        },
+        {
+          "source_url": "https://dutyfreeamericas.com/diplomatico-reserva-exclusiva-rum-750ml-80p.html",
+          "result": "Search result contains 2005 in an age-verification gate. That birth-date threshold is not a publication/price date; rejected as historical evidence."
+        }
+      ]
+    },
+    {
+      "product": "four-roses-small-batch-bourbon",
+      "status": "2006_exact_price_not_verified",
+      "older_retail_gap_resolved": false,
+      "summary": "Owner confirms September 2006 original SmallBatch launch. No complete 2006 price+volume+strength observation or official 2006 MSRP verified; do not substitute SingleBarrel, later SmallBatchSelect, limited editions or modern auction prices.",
+      "checked_sources": [
+        {
+          "source_url": "https://www.fourrosesbourbon.com/blog/the-story-of-small-batch",
+          "result": "Producer confirms September 2006 introduction, without 2006 price."
+        },
+        {
+          "source_url": "https://www.straightbourbon.com/community/topic/5646-four-roses-small-batch/",
+          "result": "August 2006 forum reproduces a producer MellowMoments newsletter announcing September introduction. No price; member mentions 90 proof. Not accepted as a price point."
+        },
+        {
+          "source_url": "https://www.straightbourbon.com/community/topic/7950-four-roses-small-batch-and-single-barrel/",
+          "result": "November 2007 member reports$21/750 ml at LiquorBarn. It is outside 2006 and a user report, not a verified retailer observation; not imported."
+        },
+        {
+          "source_url": "https://blog.wineandcheeseplace.com/2009_04_12_archive.html?m=0",
+          "result": "April 2009 retailer-owned blog quotes$25.99 for SmallBatch. Reviewed text lacks bottle size/strength and is not 2006; remains a lead."
+        }
+      ]
+    }
+  ],
+  "rejected_inferences": [
+    "Product or distillery foundation dates are not historical price observations.",
+    "Bottle production or vintage years are not the date of a later auction quote.",
+    "A birth-date threshold in an age-verification banner is not a price date.",
+    "Unknown bottle size is not filled from a contemporary listing or another country.",
+    "A wholesale list is not relabeled as consumer retail.",
+    "No first-of-month day is assigned to the May2003 issue."
+  ],
+  "local_evidence": {
+    "publication_full_pdf_sha256": "33d220c953dc5b2be0cadf2ffb83647e6b2f483974114efcdf6a638f7a3b6a12",
+    "publication_full_pdf_bytes": 5268159,
+    "pdf_pages": 44,
+    "rendered_pages_visually_checked": [
+      1,
+      29
+    ],
+    "raw_sources_and_renders_committed": false
+  }
+}

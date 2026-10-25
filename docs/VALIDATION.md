@@ -1,4 +1,16 @@
-# Current validation — Volume 04
+# Current validation — Volume 05
+
+Executed on 2026-10-25 against Docker. **126 PostgreSQL integration tests passed in 67.229 seconds** in a fresh application image. This includes both final source-privacy regressions; the focused 15-test Memento suite also passes. **11 offline tool tests** pass in the exact Compose CI invocation. TypeScript/Vite and both Docker image builds pass. The production frontend dependency audit reports zero vulnerabilities; schema and migration checks report no drift.
+
+The [HTTP and artifact report](validation/v5-http-and-memento.json) records 63 sitemap routes, 55 canonical product APIs, 85 served-image hashes and 321 monthly survey observations. ZIP verification checks every capsule and licensed image independently. Each immutable snapshot retains its own capture time, count and hash. The repository metadata archive is generated from the seed; the admin bundle also includes current public editorial research records and licensed image bytes. Old capsule identifiers do not automatically remain publicly accessible after publication withdrawal or a policy change.
+
+[Browser checks](validation/v5-browser.json) cover source search and capsule detail, Monkey 47 front/rear pairing and zoom, explicit Yamazaki external rear links, the Kakubin chart inside its price chapter, authenticated Memento regeneration/download and archival job queuing. [Seven new desktop captures](screenshots/manifest-v5.json) document those paths. A requested 390 px override still measured 1280 px; no new physical-device or narrow-viewport validation is claimed. Volume 04 mobile and sound evidence retains its original scope.
+
+The distribution contains 613 observations: 537 archived retail offers, 57 current offers, 12 launch recommendations, six published historical prices and one wholesale quote. There are **29 overall twenty-year evidence spans and five comparable single-retail-series spans**. The 321 Kakubin monthly survey values are separate. Twenty-one expressions have documented post-2006 launches; two more have sourced post-2006 brand bounds. Older retail gaps remain for Kakubin, Four Roses Small Batch and Diplomático; Kakubin has its separate 26-year survey series. Hosted photography covers 44 fronts and 22 rears. Verified original-publisher references complete both sides for all 55 products.
+
+This release does not claim continuous twenty-year prices for all 55 products, permission to mirror every article, scanned 3D bottles, finished-drink botanical measurements, an APK or independent security certification. Remote publication and CI evidence is appended only after verification.
+
+# Volume 04 validation (historical)
 
 Executed locally on 2026-10-25 against the Docker application. The final PostgreSQL suite contains **70 tests**. Frontend TypeScript/Vite and Docker builds pass. Migration/system checks, 62 public sitemap routes, source-linked Yamazaki/Monkey histories and actual archive points are covered by the current reports.
 
@@ -79,3 +91,10 @@ A final browser refresh exposed a 502 after an API container replacement: Nginx 
 ## Volume 04 publication evidence
 
 Application: `ee161a5e969465a53609fce290007198a8c5f1d2`; verified remote tree: `2933567c241de9aeeea42077829da35964235b8b`. [CI run 40230665284 passed](https://github.com/nabz0r/AlcooholTest/actions/runs/40230665284). Published README images loaded and its Mermaid diagram rendered in the actual GitHub page. A documentation-only follow-up records these results; it does not change the tested application.
+
+
+### Final Volume 05 local evidence
+
+The final image passes **126 PostgreSQL tests in 67.229 seconds**. The source-privacy suite independently passes 15 focused PostgreSQL tests. Eleven offline importer/photograph/index tests and the production frontend dependency audit pass. The repeated admin archive job produced 20 Yamazaki price candidates with two explicit parse/identity rejections. All candidates remain subject to editorial acceptance; the released price count stays 613. The disposable QA account was logged out and removed; zero member accounts remain.
+
+The final downloaded licensed-image Memento is **48,979,054 bytes**, SHA-256 `e74c4094853cf123c90bfd90d1c44076a6aed230b8e8d6c42d0e4eef69b789c3`. It contains 1,161 capsules, 85 verified images and exactly 760 foreign-key-referenced Sources. The committed metadata archive contains 1,160 capsules and has SHA-256 `7ef97114fe5ad26b88d815daa53e07722ccc9119140ceeb78d9e071e51f000b0`. Independent validation confirms zero orphan Source capsules, valid capsule/media hashes and no private fields or raw research pages. See the current [artifact report](validation/v5-http-and-memento.json).

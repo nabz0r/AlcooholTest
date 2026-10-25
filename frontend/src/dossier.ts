@@ -30,7 +30,7 @@ export function polishDossier(main:HTMLElement,p:any){
 
 /** Turn the archive into a navigable field journal, rather than ten stacked dashboards. */
 export function mountBottleJournal(main:HTMLElement,p:any){
- const definitions=[['story','The story',['heritage']],['inside','Botanical plates',['photo-gallery','bottlings']],['notes','Tasting room',['critic-perspectives','community']],['prices','Price archive',['price-history']],['research','Research',['markov-panel']],['sources','Sources',['record-confidence']]] as const;
+ const definitions=[['story','The story',['heritage']],['inside','Botanical plates',['photo-gallery','bottlings']],['notes','Tasting room',['critic-perspectives','community']],['prices','Price archive',['price-history']],['research','Research',['markov-panel']],['sources','Memento',['record-confidence','source-memento']]] as const;
  const book=document.createElement('section');book.className='atlas-journal';book.id='field-journal';
  const nav=document.createElement('div');nav.className='journal-tabs';nav.setAttribute('role','tablist');nav.setAttribute('aria-label','Bottle field journal');book.append(nav);
  const hero=main.querySelector('.detail-hero');hero?.after(book);

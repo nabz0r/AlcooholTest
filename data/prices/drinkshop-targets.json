@@ -1,0 +1,224 @@
+[
+  {
+    "product": "bombay-sapphire",
+    "retailer_id": 2249,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 244,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=244",
+    "legacy_titles": [
+      "BOMBAY SAPPHIRE",
+      "BOMBAY SAPPHIRE GIN"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060104133418/http://www.thedrinkshop.com:80/products/productlist.php?catid=38"
+  },
+  {
+    "product": "beefeater-london-dry-gin",
+    "retailer_id": 2243,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 241,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=241",
+    "legacy_titles": [
+      "BEEFEATER"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060104133418/http://www.thedrinkshop.com:80/products/productlist.php?catid=38"
+  },
+  {
+    "product": "plymouth-original-gin",
+    "retailer_id": 18973,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 544,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=544",
+    "legacy_titles": [
+      "PLYMOUTH - Dry",
+      "PLYMOUTH - Dry Gin"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060104133418/http://www.thedrinkshop.com:80/products/productlist.php?catid=38"
+  },
+  {
+    "product": "cointreau-original",
+    "retailer_id": 3217,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 322,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=322",
+    "legacy_titles": [
+      "COINTREAU"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060707185744/http://www.thedrinkshop.com/products/productlist.php?catid=16&page=3"
+  },
+  {
+    "product": "chartreuse-green-chartreuse",
+    "retailer_id": 3208,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 297,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=297",
+    "legacy_titles": [
+      "CHARTREUSE - Green",
+      "CHARTREUSE Green"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060707185744/http://www.thedrinkshop.com/products/productlist.php?catid=16&page=3"
+  },
+  {
+    "product": "heering-cherry-liqueur",
+    "retailer_id": 3213,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 826,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=826",
+    "legacy_titles": [
+      "HEERING - Cherry Liqueur",
+      "HEERING CHERRY LIQUEUR"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060707185744/http://www.thedrinkshop.com/products/productlist.php?catid=16&page=3"
+  },
+  {
+    "product": "bacardi-carta-blanca",
+    "retailer_id": 4418,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 268,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=268",
+    "legacy_titles": [
+      "BACARDI - Carta Blanca",
+      "BACARDI RUM"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060114123919/http://www.thedrinkshop.com:80/products/productlist.php?catid=39"
+  },
+  {
+    "product": "hennessy-v-s",
+    "retailer_id": 1732,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 541,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=541",
+    "legacy_titles": [
+      "HENNESSY - VS"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20061112022626/http://www.thedrinkshop.com/products/productlist.php?catid=13"
+  },
+  {
+    "product": "r-my-martin-vsop",
+    "retailer_id": 1778,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 255,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=255",
+    "legacy_titles": [
+      "REMY MARTIN - VSOP",
+      "REMY MARTIN - VSOP - 10% Discount"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20061112022626/http://www.thedrinkshop.com/products/productlist.php?catid=13"
+  },
+  {
+    "product": "campari-bitter",
+    "retailer_id": 5031,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 230,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=230",
+    "legacy_titles": [
+      "CAMPARI",
+      "CAMPARI BITTER"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060202214725/http://www.thedrinkshop.com:80/products/productlist.php?catid=215",
+    "review_notes": "The 2004 retailer page states ABV 15.0, while 2005\u20132006 state 25.0. The 2004 record must remain a review candidate until an independent source resolves whether that listing is a transcription error or a market-specific format; do not overwrite it with 25.0.",
+    "review_rules": {
+      "drinkshop": {
+        "blocked_abv": [
+          "15"
+        ],
+        "reason": "Historical source states 15% while contemporary captures state 25%; independent resolution required."
+      }
+    }
+  },
+  {
+    "product": "disaronno-originale",
+    "retailer_id": 3141,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 323,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=323",
+    "legacy_titles": [
+      "Di SARONNO - Amaretto",
+      "DISARONNO - Amaretto"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Product identifier and title discovered in an actual 2006 retailer category capture. Every accepted price must independently match the primary detail-page title, explicit ABV and single-bottle size row; discovery alone is not a price observation.",
+    "discovered_in": "https://web.archive.org/web/20060707185744/http://www.thedrinkshop.com/products/productlist.php?catid=16&page=3",
+    "review_notes": "The 2006 retailer listing states ABV 29.0%, conflicting with independently documented 28% DiSaronno in the contemporaneous official Vinbudin catalogue. Hold this listing for review; do not silently correct the source value or publish the uncertain bottling as verified.",
+    "review_rules": {
+      "drinkshop": {
+        "blocked_abv": [
+          "29"
+        ],
+        "reason": "Historical source states 29% while contemporary official catalogue states 28%; independent resolution required."
+      }
+    }
+  },
+  {
+    "product": "tanqueray-london-dry",
+    "retailer_id": 2279,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 649,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=649",
+    "legacy_titles": [
+      "TANQUERAY - 43.1% Export Strength"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Reviewed retailer category identifies the classic 43.1% export-strength Tanqueray listing. Capture must state exact primary ABV and volume; never substituted for the present 41.3% bottling.",
+    "discovered_in": "https://web.archive.org/web/20060104133418/http://www.thedrinkshop.com:80/products/productlist.php?catid=38"
+  },
+  {
+    "product": "ballantine-s-finest",
+    "retailer_id": 419,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 2686,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=2686",
+    "legacy_titles": [
+      "BALLANTINES - Finest"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Exact Finest expression discovered in an original pre-2007 retailer category page; every accepted point requires primary title, explicit ABV and single-bottle price row.",
+    "discovered_in": "https://web.archive.org/web/20061112021327/http://www.thedrinkshop.com/products/productlist.php?catid=46"
+  },
+  {
+    "product": "mount-gay-eclipse",
+    "retailer_id": 4519,
+    "source_kind": "drinkshop",
+    "source_retailer_id": 259,
+    "legacy_url": "http://www.thedrinkshop.com/products/nlpdetail.php?prodid=259",
+    "legacy_titles": [
+      "MOUNT GAY - Eclipse"
+    ],
+    "volume_ml": 700,
+    "verified_on": "2026-10-25",
+    "verification": "Reviewed actual archived primary product detail page explicitly identifies Eclipse, Barbados, 40% ABV and a 70cl single-bottle price distinct from its six-bottle case. Product identifier was validated from the actual primary title; no neighboring-identifier inference was accepted.",
+    "discovered_in": "https://web.archive.org/web/20060323125331/http://www.thedrinkshop.com:80/products/nlpdetail.php?prodid=259"
+  }
+]

@@ -1,0 +1,1259 @@
+[
+  {
+    "product": "monkey-47-schwarzwald",
+    "first_release_year": 2010,
+    "release_source_url": "https://www.pernod-ricard.com/en/brands/monkey-47",
+    "notes": "The owner explicitly dates the gin launch to 2010. A twenty-year price series would predate this expression.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 14553,
+        "source_url": "https://www.thewhiskyexchange.com/P-14553.aspx"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "bombay-sapphire",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2249,
+        "source_url": "https://www.thewhiskyexchange.com/P-2249.aspx"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "hendricks-original",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2261,
+        "source_url": "https://www.thewhiskyexchange.com/p/2261/hendricks-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "roku-japanese-craft",
+    "first_release_year": 2017,
+    "release_source_url": "https://house.suntory.com/heritage",
+    "notes": "The producer timeline dates Roku to 2017. Its FAQ currently gives a conflicting 2016 date; this row follows the dated heritage timeline. Neither permits twenty years of prices.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 41546,
+        "source_url": "https://www.thewhiskyexchange.com/p/41546/roku-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "tanqueray-london-dry",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 72138,
+        "source_url": "https://www.thewhiskyexchange.com/p/72138/tanqueray-london-dry-gin-413"
+      },
+      {
+        "retailer_id": 2279,
+        "source_url": "https://www.thewhiskyexchange.com/p/2279/tanqueray-london-dry-gin-431"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "the-botanist-islay",
+    "first_release_year": 2011,
+    "release_source_url": "https://www.thebotanist.com/pages/the-botanist-story",
+    "notes": "The producer distinguishes the 2010 first distillation from the gin launch in 2011. Neither the older Bruichladdich building nor its whisky history supplies older gin prices.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 13847,
+        "source_url": "https://www.thewhiskyexchange.com/p/13847/the-botanist-islay-dry-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "bacardi-carta-blanca",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 4418,
+        "source_url": "https://www.thewhiskyexchange.com/p/4418/bacardi-carta-blanca-rum"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "havana-club-7",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 79589,
+        "source_url": "https://www.thewhiskyexchange.com/p/79589/havana-club-7-year-old-anejo-rum"
+      },
+      {
+        "retailer_id": 4488,
+        "source_url": "https://www.thewhiskyexchange.com/p/4488/havana-club-7-year-old-anejo-rum-2023-limited-ediiton-gold-label"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "jack-daniels-old-no7",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 1110,
+        "source_url": "https://www.thewhiskyexchange.com/p/1110/jack-daniels-old-no-7-tennessee-whiskey"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "jameson-original",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2863,
+        "source_url": "https://www.thewhiskyexchange.com/P-2863.aspx"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "disaronno-originale",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3141,
+        "source_url": "https://www.thewhiskyexchange.com/p/3141/amaretto-disaronno-originale-liqueur"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "absolut-original",
+    "first_release_year": 1979,
+    "release_source_url": "https://www.absolut.com/en-us/products/absolut-vodka/",
+    "notes": "The producer dates the modern original Absolut Vodka identity to 1979. Older Swedish vodka history is a separate historical subject.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 5060,
+        "source_url": "https://www.thewhiskyexchange.com/p/5060/absolut-vodka"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "campari-bitter",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 5031,
+        "source_url": "https://www.thewhiskyexchange.com/p/5031/campari"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "cointreau-original",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3217,
+        "source_url": "https://www.thewhiskyexchange.com/p/3217/cointreau-liqueur"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-toki-blended-japanese-whisky",
+    "first_release_year": 2016,
+    "release_source_url": "https://house.suntory.com/heritage",
+    "notes": "The producer timeline dates Toki to 2016. A twenty-year price series would predate this expression.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 36362,
+        "source_url": "https://www.thewhiskyexchange.com/p/36362/suntory-toki"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-hibiki-japanese-harmony",
+    "first_release_year": 2015,
+    "release_source_url": "https://www.suntory.com/about/financial/pdf/201503.pdf",
+    "notes": "The 2015 first-quarter producer report identifies the introduction of Japanese Harmony in Japan, with international launches planned later in 2015. This is distinct from the Hibiki brand introduction in 1989.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 29388,
+        "source_url": "https://www.thewhiskyexchange.com/p/29388/hibiki-harmony"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-yamazaki-12-years-old",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2940,
+        "source_url": "https://www.thewhiskyexchange.com/P-2940.aspx"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-hakushu-12-years-old",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2922,
+        "source_url": "https://www.thewhiskyexchange.com/p/2922/hakushu-12-year-old"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-chita-single-grain-whisky",
+    "first_release_year": 2015,
+    "release_source_url": "https://house.suntory.com/chita-whisky",
+    "notes": "The expression page dates Chita Single Grain to September 2015. The global heritage timeline lists its introduction alongside Toki in 2016; this row uses the earlier expression-specific date and does not confuse the 1972 distillery foundation with a bottle launch.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 37317,
+        "source_url": "https://www.thewhiskyexchange.com/p/37317/the-chita-whisky"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-ao-blended-world-whisky",
+    "first_release_year": 2019,
+    "release_source_url": "https://house.suntory.com/heritage",
+    "notes": "The producer timeline dates Ao to 2019. No verified The Whisky Exchange product ID was found. Other retailer leads require a separate supported collector and editorial review.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "alternative_retailer_lead_requires_adapter",
+    "retailer_targets": [],
+    "additional_sources": [
+      "https://www.totalwine.com/spirits/japanese-whisky/suntory-world-whisky-ao/p/2126220969",
+      "https://www.thewhiskycompany.com.au/product/suntory-ao-world-whisky-700ml/"
+    ]
+  },
+  {
+    "product": "suntory-kakubin-blended-whisky",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 33964,
+        "source_url": "https://www.thewhiskyexchange.com/p/33964/suntory-kakubin-yellow-label"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "suntory-haku-vodka",
+    "first_release_year": 2018,
+    "release_source_url": "https://house.suntory.com/heritage",
+    "notes": "The producer timeline dates Haku to 2018. Japanese domestic rollout followed in 2019; market-specific prices must retain market context.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 48680,
+        "source_url": "https://www.thewhiskyexchange.com/p/48680/haku-vodka"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "beefeater-london-dry-gin",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2243,
+        "source_url": "https://www.thewhiskyexchange.com/p/2243/beefeater-london-dry-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "plymouth-original-gin",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 18973,
+        "source_url": "https://www.thewhiskyexchange.com/p/18973/plymouth-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "ki-no-bi-kyoto-dry-gin",
+    "first_release_year": 2016,
+    "release_source_url": "https://kyotodistillery.jp/en/about/story.php/1000",
+    "notes": "The founders account dates KI NO BI Kyoto Dry Gin to October 2016. The 2014 company foundation is not the expression launch.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 37540,
+        "source_url": "https://www.thewhiskyexchange.com/p/37540/ki-no-bi-kyoto-dry-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "malfy-originale",
+    "first_release_year": null,
+    "release_source_url": "https://www.pernod-ricard.com/sites/default/files/news/downloads/2021-09/PERNOD%20RICARD%20RAPPORT%20ANNUEL%202020-21.pdf",
+    "notes": "The owner\u2019s 2020/21 annual report dates Malfy brand entry to the super-premium flavoured-gin market to 2016. It does not date Originale separately. This establishes a post-2006 brand bound, not a verified expression launch day. Do not promote this brand year to an independently verified Originale first-release year. A contemporary distributor-announcement report explicitly dates Originale to 2016, while some retail copy says 2017; preserve both scopes rather than borrowing ancient Italian gin or distillery history.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 44805,
+        "source_url": "https://www.thewhiskyexchange.com/p/44805/malfy-originale-gin"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://www.thedrinksreport.com/news/2017/17362-biggar-leith-to-distribute-malfy-originale.html",
+        "publisher": "The Drinks Report",
+        "source_kind": "contemporary_distributor_announcement_report",
+        "published_on": "2017-10-27",
+        "claim_scope": "Names Originale, states launch 2016, quotes producer Carlo Vergnano, and reports future US national distribution from January 1 at $29.99/750 ml. Secondary publication of an importer announcement; not an independently obtained owner release."
+      },
+      {
+        "source_url": "https://theabsolutcompany.com/story/escape-to-the-world-of-malfy-gin-and-experience-a-taste-of-la-dolce-vita/",
+        "publisher": "The Absolut Company / Pernod Ricard",
+        "source_kind": "brand_owner_interview",
+        "claim_scope": "Indexed owner interview also dates the brand\u2019s market arrival to 2016. Direct HTML retrieval returned HTTP 403 during this review; the independently downloaded owner annual report is the primary evidence used."
+      }
+    ],
+    "release_not_before_year": 2016,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 18805284,
+      "sha256": "205783a8bf9386df89a2ca6c78da066b594ecf5515e1907b64c5d4ad9fe55f1d",
+      "hash_scope": "Downloaded raw PDF; full copyrighted document retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "the-glenlivet-12-year-old",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2393,
+        "source_url": "https://www.thewhiskyexchange.com/P-2393.aspx"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "aberlour-12-year-old",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 66503,
+        "source_url": "https://www.thewhiskyexchange.com/p/66503/aberlour-12-year-old-double-cask"
+      },
+      {
+        "retailer_id": 143,
+        "source_url": "https://www.thewhiskyexchange.com/p/143/aberlour-12-year-old-double-cask-bot2000s"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "chivas-regal-12-year-old",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 455,
+        "source_url": "https://www.thewhiskyexchange.com/p/455/chivas-regal-12-year-old"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "ballantine-s-finest",
+    "first_release_year": 1910,
+    "release_source_url": "https://www.ballantines.com/en/whisky-guide/blenders/",
+    "notes": "The producer dates the first Finest blend to 1910. This establishes expression age, not historical price coverage or an unchanged modern bottling.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 419,
+        "source_url": "https://www.thewhiskyexchange.com/p/419/ballantines-finest"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "four-roses-small-batch-bourbon",
+    "first_release_year": 2006,
+    "release_source_url": "https://www.fourrosesbourbon.com/blog/the-story-of-small-batch",
+    "notes": "Producer explicitly dates standard Small Batch introduction to the Kentucky Bourbon Festival in September 2006, distinct from Single Barrel 2004, Small Batch Select 2019 and annual limited editions. September 2006 makes this standard expression at least 20 years old by 2026-10-25. Launch day and 2006 official MSRP were not found. A 2007 owner article is mentioned retrospectively but its own full primary release/price has not been recovered. Do not substitute 2026 limited-edition MSRP or a modern auction price for a 2006 retail observation.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 6562,
+        "source_url": "https://www.thewhiskyexchange.com/p/6562/four-roses-small-batch-bourbon"
+      }
+    ],
+    "additional_sources": [],
+    "release_not_before_year": 2006,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 276013,
+      "sha256": "6be5bd21b746ec329f760e2159425aa8d3dce51cb0711d64e85ac90d804f9fe8",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "kahl-a-original-coffee-liqueur",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3242,
+        "source_url": "https://www.thewhiskyexchange.com/p/3242/kahlua-coffee-liqueur-16"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "malibu-original",
+    "first_release_year": 1980,
+    "release_source_url": "https://www.malibudrinks.com/en-us/faq/",
+    "notes": "The producer distinguishes the 1978 Coco Rico predecessor from the 1980 Malibu launch. Market strength and manufacturing location have changed.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3254,
+        "source_url": "https://www.thewhiskyexchange.com/p/3254/malibu-liqueur"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "altos-plata",
+    "first_release_year": 2009,
+    "release_source_url": "https://wecommerce.pernod-ricard.com/products/product?id=PRPECOM001262",
+    "notes": "Owner\u2019s Plata product record dates Altos creation to 2009. The contemporaneous November 2009 launch report explicitly names Plata and Reposado as the introduced styles. Brand history 1967 for ordinary Olmeca is not used for Altos. Year precision only: the November 9 London event was a market/press launch, while August 2009 travel-retail introduction was also reported. No global first-on-sale day or country-universal launch date is inferred.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 11297,
+        "source_url": "https://www.thewhiskyexchange.com/p/11297/olmeca-altos-plata-tequila"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://www.pernod-ricard.com/en/brands/altos",
+        "publisher": "Pernod Ricard",
+        "source_kind": "brand_owner",
+        "claim_scope": "Owner dates Altos creation to 2009 and identifies Plata in its portfolio."
+      },
+      {
+        "source_url": "https://www.thedrinksbusiness.com/2009/11/olmeca-tequila-unveils-altos/",
+        "publisher": "The Drinks Business",
+        "source_kind": "contemporary_launch_report_with_producer_testimony",
+        "published_on": "2009-11-10",
+        "claim_scope": "Reports November 9 London launch, quotes master distiller Jesus Hernandez and co-creator Henry Besant, and explicitly states Plata and Reposado styles. Publication footer also prints 11.11.2009; retain year, not a purported global first-sale date."
+      }
+    ],
+    "release_not_before_year": 2009,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 135462,
+      "sha256": "ebc94f076f60a863cd7b55f1a077116bd05288d883c636d638a90c36f4c8b5f5",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "del-maguey-vida-cl-sico",
+    "first_release_year": 2010,
+    "release_source_url": "https://delmaguey.com/wp-content/uploads/2024/01/VIDA_Clasico_NewBA_Sell_sheet_Del_Maguey.pdf",
+    "notes": "The producer Vida Clasico sell sheet dates the expression to 2010. Vida Puebla and Vida de Muertos are not historical substitutes.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 64310,
+        "source_url": "https://www.thewhiskyexchange.com/p/64310/del-maguey-vida-clasico-mezcal"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "citadelle-original",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 2254,
+        "source_url": "https://www.thewhiskyexchange.com/p/2254/citadelle-french-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "sipsmith-london-dry-gin",
+    "first_release_year": 2009,
+    "release_source_url": "https://sipsmith.com/our-story/",
+    "notes": "The producer dates the finished London Dry recipe and brand birth to 2009. Producer pages differ on the exact day/month; only the consistent year is recorded.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 11584,
+        "source_url": "https://www.thewhiskyexchange.com/p/11584/sipsmith-london-dry-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "gin-mare-mediterranean-gin",
+    "first_release_year": 2010,
+    "release_source_url": "https://investors.brown-forman.com/investors/news-releases/press-release/2022/Brown-Forman-Completes-Purchase-of-Gin-Mare-Brands/default.aspx",
+    "notes": "The acquiring owner dates the original Gin Mare identity to 2010; Capri is a different later expression.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 12329,
+        "source_url": "https://www.thewhiskyexchange.com/p/12329/mare-mediterranean-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "nord-s-atlantic-galician-gin",
+    "first_release_year": 2012,
+    "release_source_url": "https://nordesgin.com/en/blog-nordes/nordes-gin-galicia-in-a-bottle/",
+    "notes": "The producer account dates the finished Nordes gin to 2012 after recipe trials.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 24268,
+        "source_url": "https://www.thewhiskyexchange.com/p/24268/nordes-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "isle-of-harris-gin",
+    "first_release_year": 2015,
+    "release_source_url": "https://www.harrisdistillery.com/blogs/journal/6-years-a-quiet-celebration",
+    "notes": "The distillery account identifies gin Batch No. 1 in September 2015. The current website publication timestamp appears migrated; the stated historical batch date is the evidence.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 46091,
+        "source_url": "https://www.thewhiskyexchange.com/p/46091/isle-of-harris-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "isle-of-raasay-hebridean-gin",
+    "first_release_year": 2019,
+    "release_source_url": "https://raasaydistillery.com/raasay-distillery-blog/celebrating-our-ginniversary/",
+    "notes": "The distillery dates its gin launch to 27 July 2019. Bottle-design occurrences must remain separately described.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 59413,
+        "source_url": "https://www.thewhiskyexchange.com/p/59413/isle-of-raasay-hebridean-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "kyr-gin",
+    "first_release_year": 2014,
+    "release_source_url": "https://kyrodistillery.de/collections/all-gins",
+    "notes": "Producer says its first Finnish 100%-rye gin was sent into the world in 2014 and identifies the original Kyr\u00f6 Gin alongside later Dark/Pink expressions. This is gin-product history, separate from the company founding. Year precision only. Kyr\u00f6 Napue/Kyr\u00f6 Gin naming is supported by the producer; the UK 46.3% and continental 42.6% bottlings are different market/strength variants, not silently interchangeable price observations.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 30223,
+        "source_url": "https://www.thewhiskyexchange.com/p/30223/kyro-gin-463"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://kyrodistillery.co.uk/products/kyro-gin",
+        "publisher": "Kyr\u00f6 Distillery Company",
+        "source_kind": "manufacturer",
+        "claim_scope": "Producer identifies Kyr\u00f6 Napue Gin 42.6%, its IWSC 2015 award, and explains that the UK product is sold as Kyr\u00f6 Gin 46.3%."
+      },
+      {
+        "source_url": "https://www.kyrodistillery.co.uk/pages/story",
+        "publisher": "Kyr\u00f6 Distillery Company",
+        "source_kind": "manufacturer",
+        "claim_scope": "First own still heated 2014; gin made while first whisky matured. Award and sell-out concern 2015, not first release."
+      }
+    ],
+    "release_not_before_year": 2014,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 342172,
+      "sha256": "48ca0275881846242f7e8f97e72affa962c0a8407ad2bb2408d3528474f5e7bc",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "st-george-terroir-gin",
+    "first_release_year": 2011,
+    "release_source_url": "https://stgeorgespirits.com/spirits/terroir-gin",
+    "notes": "The expression page dates Terroir Gin to 2011.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 17111,
+        "source_url": "https://www.thewhiskyexchange.com/p/17111/st-george-terroir-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "ferdinand-s-saar-dry-gin",
+    "first_release_year": 2013,
+    "release_source_url": "https://www.ferdinandsgin.com/",
+    "notes": "The producer dates the Riesling-infused Saar Dry Gin story to 2013. The wine estates older history is not a gin launch date.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 44393,
+        "source_url": "https://www.thewhiskyexchange.com/p/44393/ferdinands-saar-dry-gin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "christian-drouin-le-gin",
+    "first_release_year": 2015,
+    "release_source_url": "https://www.calvados-drouin.com/fr/actualites/9/business-et-marche",
+    "notes": "The producer reproduces Guillaume Drouin explaining that Le Gin launched in 2015. Older Calvados history does not supply older gin prices.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 45365,
+        "source_url": "https://www.thewhiskyexchange.com/p/45365/le-gin-de-christian-drouin"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "dingle-original-gin",
+    "first_release_year": 2012,
+    "release_source_url": "https://dingledistillery.ie/our-distillery/",
+    "notes": "Producer dates on-site distilling and bottling to 2012. The gin-specific timing is corroborated by managing director Elliot Hughes in a first-person interview: gin/vodka began around November 2012, before whiskey in December. A contemporary November 2012 report scheduled Original Gin for Christmas. 2012 is supported for original gin production/introduction; no exact first retail-sale day is asserted. This is not a claim that all later Dingle expressions launched with the distillery. A recent producer redesign post uses an approximate 13-year retrospective and is not used to derive an exact launch day.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 37523,
+        "source_url": "https://www.thewhiskyexchange.com/p/37523/dingle-gin"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://www.binnys.com/blog/post/dingle-distillery-barrel-to-bottle-talks-irish-whiskey/",
+        "publisher": "Binny\u2019s Beverage Depot / Elliot Hughes interview",
+        "source_kind": "first_person_manufacturer_interview",
+        "claim_scope": "Hughes explicitly says gin and vodka were first distilled in the winter of 2012, around November, with whiskey following in December. This is direct producer testimony hosted by a retailer, not a distillery-foundation inference."
+      },
+      {
+        "source_url": "https://www.drinksindustryireland.ie/dingle-distillery-starts-craft-whiskey-distilling/",
+        "publisher": "Drinks Industry Ireland",
+        "source_kind": "contemporary_launch_report",
+        "published_on": "2012-11-27",
+        "claim_scope": "Reports Original Gin already in production and scheduled for Christmas retail at\u20ac25, but supplies no bottle size/tax basis; not imported as a comparable price point."
+      },
+      {
+        "source_url": "https://www.linkedin.com/posts/the-dingle-distillery_we-are-extremely-excited-to-share-a-new-chapter-activity-7465675822562009088-yaZu",
+        "publisher": "Dingle Distillery",
+        "source_kind": "manufacturer_social_post",
+        "claim_scope": "Producer describes original-bottle redesign since opening 2012 and explicitly says the liquid has not changed. Approximate 13-year wording is not converted to a precise year/date."
+      }
+    ],
+    "release_not_before_year": 2012,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 103550,
+      "sha256": "754443f61251895ff1358409eb4acf0ed638cfd9b550640a138e8ffd9d2992a2",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "diplom-tico-reserva-exclusiva",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 4475,
+        "source_url": "https://www.thewhiskyexchange.com/p/4475/diplomatico-reserva-exclusiva-rum"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "mount-gay-eclipse",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 4519,
+        "source_url": "https://www.thewhiskyexchange.com/p/4519/mount-gay-eclipse-rum"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "appleton-estate-signature",
+    "first_release_year": 1987,
+    "release_source_url": "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+    "notes": "Owner educational booklet explicitly dates Appleton Estate Signature\u2019s original release under the V/X name to 1987. This supports predecessor-lineage eligibility; Signature naming itself began in 2015. The alias is evidenced by the owner, not inferred from seller descriptions. Preserve historic package/market/strength/size per observation. A 1987 lineage does not make a 1990 s 43%75 cl import comparable to a current 40%70 cl bottle. The owner confirms no liquid change at the 2015 rename only; this does not establish indefinite formula identity across all years.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 55387,
+        "source_url": "https://www.thewhiskyexchange.com/p/55387/appleton-estate-signature"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+        "publisher": "Gruppo Campari",
+        "source_kind": "brand_owner_financial_report",
+        "published_on": "2015-09-30",
+        "page": 9,
+        "claim_scope": "Report states April 2015 naming/packaging launch: V/X renamed Signature Blend; US, Canada, Australia first; other markets follow."
+      },
+      {
+        "source_url": "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf",
+        "publisher": "Gruppo Campari",
+        "source_kind": "brand_owner_investor_presentation",
+        "published_on": "2016-03-01",
+        "page": 33,
+        "claim_scope": "2015 premium-range naming/packaging change explicitly left the award-winning liquid unchanged."
+      }
+    ],
+    "release_not_before_year": 1987,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 9554305,
+      "sha256": "3f5deebbc529af9c0d346918e53d6b67fc5307e73ad34a462312c730950f5d8c",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "don-papa-7-years-old",
+    "first_release_year": null,
+    "release_source_url": "https://www.diageo.com/en/news-and-media/press-releases/2023/diageo-to-acquire-don-papa-rum",
+    "notes": "Owner acquisition announcement explicitly dates Don Papa Rum brand launch to 2012. It does not independently date the seven-year expression launch.2012 is retained as the branded product earliest-possible bound. No 20-year Don Papa 7 branded price history can predate the 2012 brand. The seven-year maturation age is not a commercial launch year. Do not conflate the current original seven-year expression with later MassKara, Baroko, ten-year or cask-finish products.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 18228,
+        "source_url": "https://www.thewhiskyexchange.com/p/18228/don-papa-7-year-old-small-batch-rum"
+      }
+    ],
+    "additional_sources": [
+      {
+        "source_url": "https://zamoracompany.com/usa/prensa-y-medios/comunicacion/zamora-company-usa-adds-super-premium-don-papa-rum-to-fast-growing-portfolio/",
+        "publisher": "Zamora Company USA",
+        "source_kind": "official_importer_press_release",
+        "claim_scope": "Official importer names Don Papa 7-year-old and 10-year-old leading the portfolio and separately dates the brand establishment to 2012. It does not specify a first 7-year-old launch date."
+      },
+      {
+        "source_url": "https://www.donpaparum.com/blogs/press",
+        "publisher": "Don Papa Rum",
+        "source_kind": "manufacturer_press_index",
+        "claim_scope": "Brand-owned press index repeats the 2012 brand origin and records 2013 Don Papa awards; no expression-specific first-sale day is supplied."
+      }
+    ],
+    "release_not_before_year": 2012,
+    "source_retrieval": {
+      "checked_on": "2026-10-25",
+      "http_status": 200,
+      "bytes": 321199,
+      "sha256": "920d48592fada5eb8e11727549f1a061ff1c4171c599d42df88bd57c8aba6c16",
+      "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+    }
+  },
+  {
+    "product": "hennessy-v-s",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 1732,
+        "source_url": "https://www.thewhiskyexchange.com/p/1732/hennessy-vs-cognac"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "r-my-martin-vsop",
+    "first_release_year": 1927,
+    "release_source_url": "https://www.remymartin.com/en-us/vsop-cognacs/",
+    "notes": "The producer dates its VSOP Fine Champagne creation to 1927. The current bottle and market offer are separate evidence questions.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 1778,
+        "source_url": "https://www.thewhiskyexchange.com/p/1778/remy-martin-vsop-cognac"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "chartreuse-green-chartreuse",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "The existing dossier cites a producer chronology for Green Chartreuse. The exact expression chronology was not re-verified in this price-source session; no date has been inferred from the older Elixir history.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3208,
+        "source_url": "https://www.thewhiskyexchange.com/p/3208/chartreuse-green-liqueur"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "luxardo-amaretto-di-saschira",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 24783,
+        "source_url": "https://www.thewhiskyexchange.com/p/24783/luxardo-amaretto-di-saschira-liqueur"
+      }
+    ],
+    "additional_sources": []
+  },
+  {
+    "product": "heering-cherry-liqueur",
+    "first_release_year": null,
+    "release_source_url": "",
+    "notes": "Expression-specific first-release year was not verified in this session. Older brand or distillery foundation dates must not be used as a bottle launch. Source targets enable research but do not establish a complete price series.",
+    "reviewed_on": "2026-10-25",
+    "price_research_window": {
+      "from_year": 2006,
+      "to_year": 2026,
+      "continuous_coverage_claimed": false
+    },
+    "target_status": "reviewed_retailer_target",
+    "retailer_targets": [
+      {
+        "retailer_id": 3213,
+        "source_url": "https://www.thewhiskyexchange.com/p/3213/heering-cherry-liqueur"
+      }
+    ],
+    "additional_sources": []
+  }
+]

@@ -1,0 +1,2952 @@
+{
+  "schema_version": "1.0",
+  "checked_at": "2026-10-25T21:46:02.276432+00:00",
+  "origin": "http://localhost:8088",
+  "scope": "Actual unauthenticated localhost HTTP and independent ZIP-byte verification. No account, session, cookie or credential was used or recorded. Original external pages and photographs were not fetched by this validation. A known source hash establishes saved-byte integrity, not independent source truth.",
+  "sitemap": {
+    "path": "/sitemap.xml",
+    "status": 200,
+    "bytes": 6318,
+    "sha256": "85ffc967be5ed69f4cf51c753c7537a63580e8b57f08b454b69f9ba042f14f57",
+    "listed_routes": 63,
+    "all_routes_http_200": true,
+    "routes": [
+      {
+        "path": "/",
+        "status": 200,
+        "bytes": 6418,
+        "sha256": "a29df5d9233236bdb97beb6c6b911c4911be02e7a0ea337615f6e733fcd68246"
+      },
+      {
+        "path": "/discover/",
+        "status": 200,
+        "bytes": 6480,
+        "sha256": "071036dca9d7945dde13b7e44eb7a9c8aec4e9e3185336890188e05f58bbb73f"
+      },
+      {
+        "path": "/catalogue/",
+        "status": 200,
+        "bytes": 6487,
+        "sha256": "da1f0f792793f6d4b57a8331874908601d6624b1aa47bcc9394e8b54d7f60b4f"
+      },
+      {
+        "path": "/stories/",
+        "status": 200,
+        "bytes": 6497,
+        "sha256": "df20363ce83db8edf5b767bfac27b298927ea839e99b655885a0131c8ab58c89"
+      },
+      {
+        "path": "/research/",
+        "status": 200,
+        "bytes": 1867,
+        "sha256": "13074ed91b98bd7cefc1b7352da7ac720810bd6b14c0e8b4399a3abdc9a7b6e3"
+      },
+      {
+        "path": "/memento/",
+        "status": 200,
+        "bytes": 1836,
+        "sha256": "fa45550e6ac4a10e0819a0296f079cf969e15208af53591258269da930e8f70b"
+      },
+      {
+        "path": "/spirits/monkey-47-cut-2025/",
+        "status": 200,
+        "bytes": 6994,
+        "sha256": "ee440b1f7e89fd290dee916d529f199635d0f181878d80e73d73ff68d8dda43d"
+      },
+      {
+        "path": "/spirits/monkey-47-schwarzwald/",
+        "status": 200,
+        "bytes": 8960,
+        "sha256": "dab5025ca7526b4b8f0fa3bbc253495f68ba0d9c2135b04e9395fb468f70ab02"
+      },
+      {
+        "path": "/spirits/bombay-sapphire/",
+        "status": 200,
+        "bytes": 8524,
+        "sha256": "13be822022e8bdfd83e55a1ab1ef375c1cd6044686e8fc7cc87745ac893b2e86"
+      },
+      {
+        "path": "/spirits/hendricks-original/",
+        "status": 200,
+        "bytes": 8203,
+        "sha256": "b8f3163f18c2544d77bd4cdb92a17ae64dc5ae298ffd60658fe81180202d9fbc"
+      },
+      {
+        "path": "/spirits/roku-japanese-craft/",
+        "status": 200,
+        "bytes": 7872,
+        "sha256": "9abd6c9212ce402a7de037131d5b08076b06606fa0e6d47d52626ebd81c4d381"
+      },
+      {
+        "path": "/spirits/tanqueray-london-dry/",
+        "status": 200,
+        "bytes": 7686,
+        "sha256": "b791addc4fbb3f2864d5a49da1f07edb2d10a03c772c3a9c8ff1f6d226fa49bc"
+      },
+      {
+        "path": "/spirits/the-botanist-islay/",
+        "status": 200,
+        "bytes": 8553,
+        "sha256": "1f0fb7e789a04529069857d66c7867c567b6cad7110942bb14985c130848af8a"
+      },
+      {
+        "path": "/spirits/bacardi-carta-blanca/",
+        "status": 200,
+        "bytes": 7478,
+        "sha256": "5851c2c39636426995eb08a5a88ee26f7e39cab92122ed9584e2afaee4f8ab1d"
+      },
+      {
+        "path": "/spirits/havana-club-7/",
+        "status": 200,
+        "bytes": 7684,
+        "sha256": "b864a164d3846db98cec58bff69e7187acc9450f2e6d43c6b2dc157002c5f0ca"
+      },
+      {
+        "path": "/spirits/jack-daniels-old-no7/",
+        "status": 200,
+        "bytes": 8120,
+        "sha256": "af44b57d7fcad3078add09b95ad97d59f700cb2792677390f0e8d9a33516363b"
+      },
+      {
+        "path": "/spirits/monkey-47-cut-2024/",
+        "status": 200,
+        "bytes": 6984,
+        "sha256": "6fb7bf7cda7e7e02a19e5b62ce2a1d43051eafd27271c2c8cfd9a9af7525580c"
+      },
+      {
+        "path": "/spirits/jameson-original/",
+        "status": 200,
+        "bytes": 7586,
+        "sha256": "0c262820600eeda62a48bac62df44512d573c2a9a0f9572d3b6f3a10dcfb0907"
+      },
+      {
+        "path": "/spirits/disaronno-originale/",
+        "status": 200,
+        "bytes": 7856,
+        "sha256": "25d415256744ace2a786b5ff3a656f4e245d482f31b02941b5d27a2a29772794"
+      },
+      {
+        "path": "/spirits/absolut-original/",
+        "status": 200,
+        "bytes": 7497,
+        "sha256": "12d04d84b09833e4190064f9bdac6be8bcf20168636cac7e9e734cb1e76453e1"
+      },
+      {
+        "path": "/spirits/campari-bitter/",
+        "status": 200,
+        "bytes": 7632,
+        "sha256": "cd9c4185c429a6f7918d737f1a3ec479c2575bd45f436260eb9c2d7b07c9f597"
+      },
+      {
+        "path": "/spirits/cointreau-original/",
+        "status": 200,
+        "bytes": 7760,
+        "sha256": "a97c6686e61db47921434fff32fcb923573b984913c3f4259e29cc3ea3eb117f"
+      },
+      {
+        "path": "/spirits/suntory-toki-blended-japanese-whisky/",
+        "status": 200,
+        "bytes": 8038,
+        "sha256": "f08c731e54b06545ed5a1a103e4abff98c85fa597a675803072364dce392b9b3"
+      },
+      {
+        "path": "/spirits/suntory-hibiki-japanese-harmony/",
+        "status": 200,
+        "bytes": 7672,
+        "sha256": "db8950068cc5de89ee408b367096ccb8bf0d9bd3a4e605382fda68eaddbe3003"
+      },
+      {
+        "path": "/spirits/suntory-yamazaki-12-years-old/",
+        "status": 200,
+        "bytes": 7714,
+        "sha256": "4b398679589a9845809214b7987e5fe13830ae545d6db3816482d95c6f1f735d"
+      },
+      {
+        "path": "/spirits/suntory-hakushu-12-years-old/",
+        "status": 200,
+        "bytes": 7494,
+        "sha256": "5a1e2587de0a70b4f6baf201606215516852439fb292daa00ab77d205388fd04"
+      },
+      {
+        "path": "/spirits/suntory-chita-single-grain-whisky/",
+        "status": 200,
+        "bytes": 7550,
+        "sha256": "2e8affa46bf520ee7dd4af3869486027829dbe69283fd80ef8f902e14e0fb1fa"
+      },
+      {
+        "path": "/spirits/suntory-ao-blended-world-whisky/",
+        "status": 200,
+        "bytes": 7587,
+        "sha256": "f7bd52ded56c1f21051af182cf7d284f5c0e4bb386651e86a8f551213e55cf72"
+      },
+      {
+        "path": "/spirits/suntory-kakubin-blended-whisky/",
+        "status": 200,
+        "bytes": 7609,
+        "sha256": "312c3521473b7845838172933a21a9744209693bd91ec2c26f4f74ecaa6b29f5"
+      },
+      {
+        "path": "/spirits/suntory-haku-vodka/",
+        "status": 200,
+        "bytes": 7536,
+        "sha256": "344058c36db47ecd47dacaf1fe716d62b252004e6627cc5b327b0e2fff6235dc"
+      },
+      {
+        "path": "/spirits/beefeater-london-dry-gin/",
+        "status": 200,
+        "bytes": 7778,
+        "sha256": "cd5deca52364d90387cea2f7d2e25f622776f312c033423d09d87a5d1062ffba"
+      },
+      {
+        "path": "/spirits/plymouth-original-gin/",
+        "status": 200,
+        "bytes": 7575,
+        "sha256": "a6d3db252b6177b869f5814c98b7389070aa5fc0ed57b9b1789453ced493400e"
+      },
+      {
+        "path": "/spirits/ki-no-bi-kyoto-dry-gin/",
+        "status": 200,
+        "bytes": 7642,
+        "sha256": "dcd3f71e53fb04a817189b236f7db1bcd782789f8674c84590c8ee43570b4e46"
+      },
+      {
+        "path": "/spirits/malfy-originale/",
+        "status": 200,
+        "bytes": 7882,
+        "sha256": "0613f787a9754994e6943d009a4355792c81e4cadbfd73c6b5d7375bf5ff14af"
+      },
+      {
+        "path": "/spirits/the-glenlivet-12-year-old/",
+        "status": 200,
+        "bytes": 7614,
+        "sha256": "d2cb2681d93ea7a1563cae9be494fc8eca87fd47ef078d7385dff2aa38dd0b2b"
+      },
+      {
+        "path": "/spirits/aberlour-12-year-old/",
+        "status": 200,
+        "bytes": 7707,
+        "sha256": "3343e4910b9d969b8a13870b86409bd27accd0c573faa3e90f0104ae8e29c80c"
+      },
+      {
+        "path": "/spirits/chivas-regal-12-year-old/",
+        "status": 200,
+        "bytes": 7538,
+        "sha256": "ce463027804a3ba709027464405bf5eda64fdf7ddd9a57b2dc1dc5c27425a575"
+      },
+      {
+        "path": "/spirits/ballantine-s-finest/",
+        "status": 200,
+        "bytes": 7741,
+        "sha256": "ee448cb5b0d19652bdb666670c49c18cc67effbb8ebf7d26d1d09385e980be10"
+      },
+      {
+        "path": "/spirits/four-roses-small-batch-bourbon/",
+        "status": 200,
+        "bytes": 7752,
+        "sha256": "27297e7498682cd58eeb4223b24bc0ef7bce13486abe6bf466158370e0178250"
+      },
+      {
+        "path": "/spirits/kahl-a-original-coffee-liqueur/",
+        "status": 200,
+        "bytes": 7780,
+        "sha256": "3ad67ff6536aab429677b12fa5ae8b82b67a9c7c74dad5403a6b9b384a1fbe42"
+      },
+      {
+        "path": "/spirits/malibu-original/",
+        "status": 200,
+        "bytes": 7640,
+        "sha256": "76385abe8cc38068a87b8da45bce39a7c12dde3153a06c84a30c85a5119125c8"
+      },
+      {
+        "path": "/spirits/altos-plata/",
+        "status": 200,
+        "bytes": 7143,
+        "sha256": "946cef30a79c97ee1bc5f16efec09398eda9aa02b3193479c6302799d83bc0b3"
+      },
+      {
+        "path": "/spirits/del-maguey-vida-cl-sico/",
+        "status": 200,
+        "bytes": 7175,
+        "sha256": "3aa4be2d9efe1e1705b5c65cc469e3d2c514ae76846eb8777bead241de99c95a"
+      },
+      {
+        "path": "/spirits/citadelle-original/",
+        "status": 200,
+        "bytes": 7919,
+        "sha256": "cde67085a2f900c9e7733356200e13401d7873531f84c0ee8a753e6a34c48bf8"
+      },
+      {
+        "path": "/spirits/sipsmith-london-dry-gin/",
+        "status": 200,
+        "bytes": 7832,
+        "sha256": "e01dd9b6c90eff26ce95c6bbc1d1ade28b640ae4c4e0e0bd0ac660455a4ff5a2"
+      },
+      {
+        "path": "/spirits/gin-mare-mediterranean-gin/",
+        "status": 200,
+        "bytes": 7503,
+        "sha256": "c8c81137bdbe82b2634584a8bcaf637cdc2b880e04f02dceb96f9c98559ddc33"
+      },
+      {
+        "path": "/spirits/nord-s-atlantic-galician-gin/",
+        "status": 200,
+        "bytes": 7928,
+        "sha256": "6ee67cabe45a2fab6d99ebd7dfaa51fabd6ee9d9e34126a1e7c3fa61b106d41c"
+      },
+      {
+        "path": "/spirits/isle-of-harris-gin/",
+        "status": 200,
+        "bytes": 7444,
+        "sha256": "8edd375866911a80d6b4bcafdb6673e1565465725d8950a2c31f6ace4dae2085"
+      },
+      {
+        "path": "/spirits/isle-of-raasay-hebridean-gin/",
+        "status": 200,
+        "bytes": 8047,
+        "sha256": "6699966edc9b9fc77657f97bc0a71e9b78d3588feee695fc3b03d29da7f4055f"
+      },
+      {
+        "path": "/spirits/kyr-gin/",
+        "status": 200,
+        "bytes": 7427,
+        "sha256": "527226c305c02a3f8292e7e4a794e94ab38df33823b67614f7345d411f9e2364"
+      },
+      {
+        "path": "/spirits/st-george-terroir-gin/",
+        "status": 200,
+        "bytes": 7946,
+        "sha256": "a306bdd7016352ddcd0dec5b648e37b1a936f02239c40aaa03092deb1f0c5337"
+      },
+      {
+        "path": "/spirits/ferdinand-s-saar-dry-gin/",
+        "status": 200,
+        "bytes": 7873,
+        "sha256": "de4557d60f1d7deac731696b3ef1365eb02bfd7102b32a438e1bc63cc8ffcbaa"
+      },
+      {
+        "path": "/spirits/christian-drouin-le-gin/",
+        "status": 200,
+        "bytes": 7482,
+        "sha256": "ac6d2d9ae76e15a2342e69efe4d7847126c5775f4cfe7d093a0e5527d45cf2b8"
+      },
+      {
+        "path": "/spirits/dingle-original-gin/",
+        "status": 200,
+        "bytes": 7700,
+        "sha256": "28995bd8c82e368299cdacae8750f68e1a02b5befe36043da50a3f5d63875dca"
+      },
+      {
+        "path": "/spirits/diplom-tico-reserva-exclusiva/",
+        "status": 200,
+        "bytes": 8117,
+        "sha256": "05b68227b45828172c35c5e185ba0b1abb19f35fa8c7744d9475646c420d1985"
+      },
+      {
+        "path": "/spirits/mount-gay-eclipse/",
+        "status": 200,
+        "bytes": 7688,
+        "sha256": "0014e069fa99e3310ce2e11bbb566191d10b51f41047cb14379e2f52d5b55a84"
+      },
+      {
+        "path": "/spirits/appleton-estate-signature/",
+        "status": 200,
+        "bytes": 7580,
+        "sha256": "ff610d3c14904e33f7e4f1aa825d394fb1bd0e8332d756b312f1893932133766"
+      },
+      {
+        "path": "/spirits/don-papa-7-years-old/",
+        "status": 200,
+        "bytes": 7664,
+        "sha256": "141a24c86e41d8ac03f2f0c618ba632e337771dcc88c257d57d1711cb91598e8"
+      },
+      {
+        "path": "/spirits/hennessy-v-s/",
+        "status": 200,
+        "bytes": 7433,
+        "sha256": "c165380e472df3e1ccf8842e588e0ef51093fde2bb284013c35da5b62f5c230f"
+      },
+      {
+        "path": "/spirits/r-my-martin-vsop/",
+        "status": 200,
+        "bytes": 7604,
+        "sha256": "5e036d33fe8f8b27906b4aa6c0bd51454e69a5aa6ce1c7eca152556161d3267b"
+      },
+      {
+        "path": "/spirits/chartreuse-green-chartreuse/",
+        "status": 200,
+        "bytes": 7982,
+        "sha256": "d5895d78ced24046d0aec19151c16447b5a43dbd1b287872aa05815dce1a326c"
+      },
+      {
+        "path": "/spirits/luxardo-amaretto-di-saschira/",
+        "status": 200,
+        "bytes": 7726,
+        "sha256": "77270b02a7df4547014578664da86cb86c792239b068765c70ac3c9a39edc1d8"
+      },
+      {
+        "path": "/spirits/heering-cherry-liqueur/",
+        "status": 200,
+        "bytes": 7612,
+        "sha256": "663e8bbc50af28552aed5866e825ff9454142b6b3e07451d838377dd9b0804f9"
+      }
+    ]
+  },
+  "local_images": {
+    "expected": 85,
+    "http_200": 85,
+    "all_byte_sizes_match": true,
+    "all_sha256_match": true,
+    "records": [
+      {
+        "path": "/bottles/hendricks-original.jpg",
+        "status": 200,
+        "bytes": 309599,
+        "sha256": "f998e8c54347871e01c6a7e4b827e66e28689a1f7d0e3d065af71343a88b1678",
+        "expected_bytes": 309599,
+        "expected_sha256": "f998e8c54347871e01c6a7e4b827e66e28689a1f7d0e3d065af71343a88b1678",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/the-botanist-islay.jpg",
+        "status": 200,
+        "bytes": 176812,
+        "sha256": "95348f473fc0220ab874c01f6e3be588aa216104abddd8ab9544398cac9c5fe4",
+        "expected_bytes": 176812,
+        "expected_sha256": "95348f473fc0220ab874c01f6e3be588aa216104abddd8ab9544398cac9c5fe4",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/monkey-47-schwarzwald.jpg",
+        "status": 200,
+        "bytes": 116663,
+        "sha256": "6481a280122272d279316d0d44dd473f7b4330ab0682a497bb34c8ca32b955f0",
+        "expected_bytes": 116663,
+        "expected_sha256": "6481a280122272d279316d0d44dd473f7b4330ab0682a497bb34c8ca32b955f0",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bombay-sapphire.jpg",
+        "status": 200,
+        "bytes": 58885,
+        "sha256": "e57396e2d80f4370e0dd2b814391903a1485eb176fff7cc4a95e08b0d41841c3",
+        "expected_bytes": 58885,
+        "expected_sha256": "e57396e2d80f4370e0dd2b814391903a1485eb176fff7cc4a95e08b0d41841c3",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/roku-japanese-craft.jpg",
+        "status": 200,
+        "bytes": 219316,
+        "sha256": "4922e893b96709af2a422f8202fba42831a2e1b60151820cba8447c889e2e11b",
+        "expected_bytes": 219316,
+        "expected_sha256": "4922e893b96709af2a422f8202fba42831a2e1b60151820cba8447c889e2e11b",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/tanqueray-london-dry.png",
+        "status": 200,
+        "bytes": 619065,
+        "sha256": "69f78ee60b4d7069be15e186ab2c4e2af3f12179a8b59d460cc15241ae13ed08",
+        "expected_bytes": 619065,
+        "expected_sha256": "69f78ee60b4d7069be15e186ab2c4e2af3f12179a8b59d460cc15241ae13ed08",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bacardi-carta-blanca.jpg",
+        "status": 200,
+        "bytes": 189540,
+        "sha256": "653839aeadd723489c485159d87b3411c1dc317febc20d7c81ba0b28659c0ece",
+        "expected_bytes": 189540,
+        "expected_sha256": "653839aeadd723489c485159d87b3411c1dc317febc20d7c81ba0b28659c0ece",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/havana-club-7.jpg",
+        "status": 200,
+        "bytes": 102962,
+        "sha256": "3fe4c5a2caa4cad44856c3fe733ed12f7f2f18bc74c7d6c872c3b689bc594378",
+        "expected_bytes": 102962,
+        "expected_sha256": "3fe4c5a2caa4cad44856c3fe733ed12f7f2f18bc74c7d6c872c3b689bc594378",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jack-daniels-old-no7.jpg",
+        "status": 200,
+        "bytes": 173509,
+        "sha256": "323b44fcf3e18cb56cca194458e3c703f87690f7c2008afc07ae6c861f6ddc2a",
+        "expected_bytes": 173509,
+        "expected_sha256": "323b44fcf3e18cb56cca194458e3c703f87690f7c2008afc07ae6c861f6ddc2a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jameson-original.jpg",
+        "status": 200,
+        "bytes": 195503,
+        "sha256": "a75125d9cc6cc6513b8c3e879d71798d533f6ca5478ab2c8e4d4316ff4ae90dc",
+        "expected_bytes": 195503,
+        "expected_sha256": "a75125d9cc6cc6513b8c3e879d71798d533f6ca5478ab2c8e4d4316ff4ae90dc",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/disaronno-originale.jpg",
+        "status": 200,
+        "bytes": 178254,
+        "sha256": "b482be1be262fdd177fa40068e2d17fe296b1b92b3a32efbdeeee7f24c6f411a",
+        "expected_bytes": 178254,
+        "expected_sha256": "b482be1be262fdd177fa40068e2d17fe296b1b92b3a32efbdeeee7f24c6f411a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/absolut-original.jpg",
+        "status": 200,
+        "bytes": 237914,
+        "sha256": "b9b3d7769b3ed5a220047d63f60e848398d8d0918598eaefc2a22843c37d8062",
+        "expected_bytes": 237914,
+        "expected_sha256": "b9b3d7769b3ed5a220047d63f60e848398d8d0918598eaefc2a22843c37d8062",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/campari-bitter.jpg",
+        "status": 200,
+        "bytes": 188684,
+        "sha256": "9a7c93ebc4471abe509003d4e17b887eae5bb06a77752b5b0238c7103f19bc58",
+        "expected_bytes": 188684,
+        "expected_sha256": "9a7c93ebc4471abe509003d4e17b887eae5bb06a77752b5b0238c7103f19bc58",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/cointreau-original.jpg",
+        "status": 200,
+        "bytes": 280859,
+        "sha256": "05a79a841e1c4db047bb9c8d551598bd57da6a047b855960cd761aaa77ecf7dd",
+        "expected_bytes": 280859,
+        "expected_sha256": "05a79a841e1c4db047bb9c8d551598bd57da6a047b855960cd761aaa77ecf7dd",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/suntory-yamazaki-12-years-old.jpg",
+        "status": 200,
+        "bytes": 790288,
+        "sha256": "71aecec8fdbceede099bad305520e6c5c141e34e75f11a7c79b9ca76f3e0e9ba",
+        "expected_bytes": 790288,
+        "expected_sha256": "71aecec8fdbceede099bad305520e6c5c141e34e75f11a7c79b9ca76f3e0e9ba",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/suntory-haku-vodka.jpg",
+        "status": 200,
+        "bytes": 128932,
+        "sha256": "099b46497c5f824636fe55347c80c65c047da93f043506bfb2064330813d9f1a",
+        "expected_bytes": 128932,
+        "expected_sha256": "099b46497c5f824636fe55347c80c65c047da93f043506bfb2064330813d9f1a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/citadelle-original.jpg",
+        "status": 200,
+        "bytes": 152311,
+        "sha256": "94bfd5fa8bf6f5caadb41cbd28ac1eeb7cf26d0979c85b9711a64c6742b543c2",
+        "expected_bytes": 152311,
+        "expected_sha256": "94bfd5fa8bf6f5caadb41cbd28ac1eeb7cf26d0979c85b9711a64c6742b543c2",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/luxardo-amaretto-di-saschira.jpg",
+        "status": 200,
+        "bytes": 137674,
+        "sha256": "ed724d3f092837f320c2a5c8e61adb0f167582d04038c538b16a32f36aa1d16d",
+        "expected_bytes": 137674,
+        "expected_sha256": "ed724d3f092837f320c2a5c8e61adb0f167582d04038c538b16a32f36aa1d16d",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/don-papa-7-years-old.jpg",
+        "status": 200,
+        "bytes": 313236,
+        "sha256": "b9cfae58ace48d3240efc449438e2adc759dbf6b8c57af6f816886fae377ca3d",
+        "expected_bytes": 313236,
+        "expected_sha256": "b9cfae58ace48d3240efc449438e2adc759dbf6b8c57af6f816886fae377ca3d",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/kyr-gin.jpg",
+        "status": 200,
+        "bytes": 46897,
+        "sha256": "888064b53ea506ad6b23452a7b7b9542a1d8b9d19c0878c80f5eaba6631b9a84",
+        "expected_bytes": 46897,
+        "expected_sha256": "888064b53ea506ad6b23452a7b7b9542a1d8b9d19c0878c80f5eaba6631b9a84",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/heering-cherry-front.jpg",
+        "status": 200,
+        "bytes": 1763166,
+        "sha256": "789c3b1ac60faca1eadfe8fb4fe92a6116c0a886a022d11bfb86c8120a2eca88",
+        "expected_bytes": 1763166,
+        "expected_sha256": "789c3b1ac60faca1eadfe8fb4fe92a6116c0a886a022d11bfb86c8120a2eca88",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/heering-cherry-back.jpg",
+        "status": 200,
+        "bytes": 1890196,
+        "sha256": "f9de0e17dafcdcdcf3c312ca3877ddf78bf759a1425269af1be13c0ff747cafc",
+        "expected_bytes": 1890196,
+        "expected_sha256": "f9de0e17dafcdcdcf3c312ca3877ddf78bf759a1425269af1be13c0ff747cafc",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/monkey-47-schwarzwald-off-42213277-front.jpg",
+        "status": 200,
+        "bytes": 231782,
+        "sha256": "0184f30496f221e8fa427a6c3eadd43bc86eac24f8586394664780ba41f214e8",
+        "expected_bytes": 231782,
+        "expected_sha256": "0184f30496f221e8fa427a6c3eadd43bc86eac24f8586394664780ba41f214e8",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/monkey-47-schwarzwald-off-42213277-back.jpg",
+        "status": 200,
+        "bytes": 198345,
+        "sha256": "72cf058b2bbf07cac3d5d42e4b8e22f8b9ed1f79e6e82ef7c01c5ae9e4d7bbf9",
+        "expected_bytes": 198345,
+        "expected_sha256": "72cf058b2bbf07cac3d5d42e4b8e22f8b9ed1f79e6e82ef7c01c5ae9e4d7bbf9",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/tanqueray-london-dry-off-5000291020805-front.jpg",
+        "status": 200,
+        "bytes": 1137465,
+        "sha256": "5f36f40faa7d4cebe8975829c887988d72f114bfce24488833c66ccd2b158540",
+        "expected_bytes": 1137465,
+        "expected_sha256": "5f36f40faa7d4cebe8975829c887988d72f114bfce24488833c66ccd2b158540",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/tanqueray-london-dry-off-5000291020805-back.jpg",
+        "status": 200,
+        "bytes": 3099148,
+        "sha256": "5bdafba52796a24b89c67901e09589eb749a8a78102fdfadb7e5bc9a6daf045f",
+        "expected_bytes": 3099148,
+        "expected_sha256": "5bdafba52796a24b89c67901e09589eb749a8a78102fdfadb7e5bc9a6daf045f",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jameson-original-off-5011007003005-front.jpg",
+        "status": 200,
+        "bytes": 208072,
+        "sha256": "bfca89ab987a4f401d480afa2b74d45c20c25ec7ff51da2c38c3d1f1f2eaa176",
+        "expected_bytes": 208072,
+        "expected_sha256": "bfca89ab987a4f401d480afa2b74d45c20c25ec7ff51da2c38c3d1f1f2eaa176",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jameson-original-off-5011007003005-back.jpg",
+        "status": 200,
+        "bytes": 169551,
+        "sha256": "df0cd8f0ef6849128e6d5568188dd416c63e435f02571004c49456e6d254ec92",
+        "expected_bytes": 169551,
+        "expected_sha256": "df0cd8f0ef6849128e6d5568188dd416c63e435f02571004c49456e6d254ec92",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/roku-japanese-craft-off-4901777305359-front.jpg",
+        "status": 200,
+        "bytes": 1773795,
+        "sha256": "a271c59fcda9238a0866e7945691e8a46a5d45b7dc7516ae5755f468b2a952db",
+        "expected_bytes": 1773795,
+        "expected_sha256": "a271c59fcda9238a0866e7945691e8a46a5d45b7dc7516ae5755f468b2a952db",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/roku-japanese-craft-off-4901777305359-back.jpg",
+        "status": 200,
+        "bytes": 1778937,
+        "sha256": "1fde681b4434ee8c9a1f6793eef54c40ac8798cd8404aece68e747caf0319adc",
+        "expected_bytes": 1778937,
+        "expected_sha256": "1fde681b4434ee8c9a1f6793eef54c40ac8798cd8404aece68e747caf0319adc",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/hendricks-original-off-5010327755014-front.jpg",
+        "status": 200,
+        "bytes": 2317653,
+        "sha256": "278ca950bbf0a3bab79fa318553dd608f1ad15421124e99f1aa3b18f17a463cd",
+        "expected_bytes": 2317653,
+        "expected_sha256": "278ca950bbf0a3bab79fa318553dd608f1ad15421124e99f1aa3b18f17a463cd",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/hendricks-original-off-5010327755014-back.jpg",
+        "status": 200,
+        "bytes": 2354254,
+        "sha256": "5c4f91ac2f7cd43ab73f9ab7f84948cd2cfffd93f1dd7a3b01371ed02bcd40bd",
+        "expected_bytes": 2354254,
+        "expected_sha256": "5c4f91ac2f7cd43ab73f9ab7f84948cd2cfffd93f1dd7a3b01371ed02bcd40bd",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/beefeater-london-dry-gin-off-5000329002193-front.jpg",
+        "status": 200,
+        "bytes": 209818,
+        "sha256": "78dd687c026f5375ea984dece288d7bc81b7cbb77fbc12100c917c8c513a6207",
+        "expected_bytes": 209818,
+        "expected_sha256": "78dd687c026f5375ea984dece288d7bc81b7cbb77fbc12100c917c8c513a6207",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/beefeater-london-dry-gin-off-5000329002193-back.jpg",
+        "status": 200,
+        "bytes": 192794,
+        "sha256": "2f3c44117449066d61bcca8c3d529caa04da3011bffc98b1eb2335f0726e957c",
+        "expected_bytes": 192794,
+        "expected_sha256": "2f3c44117449066d61bcca8c3d529caa04da3011bffc98b1eb2335f0726e957c",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/cointreau-original-off-3035542004206-front.jpg",
+        "status": 200,
+        "bytes": 176073,
+        "sha256": "cc42780d75948298a48f8596c90052e2b8df401bfce171012150f391cd29558a",
+        "expected_bytes": 176073,
+        "expected_sha256": "cc42780d75948298a48f8596c90052e2b8df401bfce171012150f391cd29558a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/cointreau-original-off-3035542004206-back.jpg",
+        "status": 200,
+        "bytes": 162436,
+        "sha256": "d9bbc59ef1b97b1710600bccf73ea0c91181f6e9115452266020f37a42599257",
+        "expected_bytes": 162436,
+        "expected_sha256": "d9bbc59ef1b97b1710600bccf73ea0c91181f6e9115452266020f37a42599257",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/malibu-original-off-8410024700015-front.jpg",
+        "status": 200,
+        "bytes": 243407,
+        "sha256": "46ba658e7b5adb26b5dee4187fddeafd1d16e3c479b2d7b69ea49490b73c20e6",
+        "expected_bytes": 243407,
+        "expected_sha256": "46ba658e7b5adb26b5dee4187fddeafd1d16e3c479b2d7b69ea49490b73c20e6",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/malibu-original-off-8410024700015-back.jpg",
+        "status": 200,
+        "bytes": 251575,
+        "sha256": "83e34489565fb22f380b7780a0de458ce3a170f6954da096805f1053151f442e",
+        "expected_bytes": 251575,
+        "expected_sha256": "83e34489565fb22f380b7780a0de458ce3a170f6954da096805f1053151f442e",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/nord-s-atlantic-galician-gin-off-8435449500002-front.jpg",
+        "status": 200,
+        "bytes": 223413,
+        "sha256": "8011da0c76e2b2e3dd92cd9ce8c99baec0b74ce539bb98cd641ca40809ccb719",
+        "expected_bytes": 223413,
+        "expected_sha256": "8011da0c76e2b2e3dd92cd9ce8c99baec0b74ce539bb98cd641ca40809ccb719",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/nord-s-atlantic-galician-gin-off-8435449500002-back.jpg",
+        "status": 200,
+        "bytes": 100626,
+        "sha256": "9614b57f8a8b9fe6465ffce897e8336ce61cd4ab0a597ce5612d1ba3b7bcd40b",
+        "expected_bytes": 100626,
+        "expected_sha256": "9614b57f8a8b9fe6465ffce897e8336ce61cd4ab0a597ce5612d1ba3b7bcd40b",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/chivas-regal-12-year-old-off-0080432402931-front.jpg",
+        "status": 200,
+        "bytes": 1865650,
+        "sha256": "c75668091d439cf55286a232b50f86aa1e29274bac8da4adfc99b2c4f1b29135",
+        "expected_bytes": 1865650,
+        "expected_sha256": "c75668091d439cf55286a232b50f86aa1e29274bac8da4adfc99b2c4f1b29135",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/chivas-regal-12-year-old-off-0080432402931-back.jpg",
+        "status": 200,
+        "bytes": 2234858,
+        "sha256": "3e9e38b3513b8b1576610ae03ca40d8967da0b94dbb2992c7a08e904a56346b7",
+        "expected_bytes": 2234858,
+        "expected_sha256": "3e9e38b3513b8b1576610ae03ca40d8967da0b94dbb2992c7a08e904a56346b7",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/disaronno-originale-off-3048110016372-front.jpg",
+        "status": 200,
+        "bytes": 1765264,
+        "sha256": "24e269de47f968095d9f892194debfbd9a1a95c46dface5b79f28b6b03c59010",
+        "expected_bytes": 1765264,
+        "expected_sha256": "24e269de47f968095d9f892194debfbd9a1a95c46dface5b79f28b6b03c59010",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/disaronno-originale-off-3048110016372-back.jpg",
+        "status": 200,
+        "bytes": 3006497,
+        "sha256": "2ede4a0c8f1bbb4ba70ac25bd7f47f0b98f094a773799b111b6839beb4ad636a",
+        "expected_bytes": 3006497,
+        "expected_sha256": "2ede4a0c8f1bbb4ba70ac25bd7f47f0b98f094a773799b111b6839beb4ad636a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/suntory-toki-off-front.jpg",
+        "status": 200,
+        "bytes": 1561020,
+        "sha256": "042f64e8ee72c8a5043c359c599e0a2e9f1c3ec94975801d4aac5eaba80baf08",
+        "expected_bytes": 1561020,
+        "expected_sha256": "042f64e8ee72c8a5043c359c599e0a2e9f1c3ec94975801d4aac5eaba80baf08",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/gin-mare-off-front.jpg",
+        "status": 200,
+        "bytes": 167549,
+        "sha256": "421f1b2dba6261a2c43580b8eef3073ff3103abc019b07bbe1e9cf650398c482",
+        "expected_bytes": 167549,
+        "expected_sha256": "421f1b2dba6261a2c43580b8eef3073ff3103abc019b07bbe1e9cf650398c482",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/gin-mare-off-detail.jpg",
+        "status": 200,
+        "bytes": 168981,
+        "sha256": "3319b0514f2614af3ca086900f021e17f7e9fb39bc0cca65f366ea6c03d12f2f",
+        "expected_bytes": 168981,
+        "expected_sha256": "3319b0514f2614af3ca086900f021e17f7e9fb39bc0cca65f366ea6c03d12f2f",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/suntory-hibiki-japanese-harmony-commons-front.jpg",
+        "status": 200,
+        "bytes": 173238,
+        "sha256": "d6327c48fd69df52dc02c309ef1761519c3a06a956f25b68893e4eb312c6baa7",
+        "expected_bytes": 173238,
+        "expected_sha256": "d6327c48fd69df52dc02c309ef1761519c3a06a956f25b68893e4eb312c6baa7",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/suntory-kakubin-blended-whisky-commons-front.jpg",
+        "status": 200,
+        "bytes": 954793,
+        "sha256": "9e4cf9ff6d9ba94773a360a73a36e43960f774454a1662a168707d85851ab098",
+        "expected_bytes": 954793,
+        "expected_sha256": "9e4cf9ff6d9ba94773a360a73a36e43960f774454a1662a168707d85851ab098",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/plymouth-original-gin-historical-commons-back.jpg",
+        "status": 200,
+        "bytes": 557714,
+        "sha256": "6c436cd3ce4ee70dd4da148ab55079a2d53db17592ca385b25778343c6f6031a",
+        "expected_bytes": 557714,
+        "expected_sha256": "6c436cd3ce4ee70dd4da148ab55079a2d53db17592ca385b25778343c6f6031a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/plymouth-original-gin-historical-commons-front.jpg",
+        "status": 200,
+        "bytes": 521948,
+        "sha256": "e89803617895043a6ae1489a539a026b43e6c2f8513c36ffa0ad5fc5fbdd95d9",
+        "expected_bytes": 521948,
+        "expected_sha256": "e89803617895043a6ae1489a539a026b43e6c2f8513c36ffa0ad5fc5fbdd95d9",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/the-glenlivet-12-year-old-commons-front.jpg",
+        "status": 200,
+        "bytes": 240717,
+        "sha256": "7417ad3fa908310ab94ab5c31d4edd0417c7b948f25daf807400c106c31aee53",
+        "expected_bytes": 240717,
+        "expected_sha256": "7417ad3fa908310ab94ab5c31d4edd0417c7b948f25daf807400c106c31aee53",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/chivas-regal-12-year-old-commons-front.jpg",
+        "status": 200,
+        "bytes": 240037,
+        "sha256": "462baef3bc7e7712f640e36a72ac4026a7a16cb2fa5e114b7e280cb95977c973",
+        "expected_bytes": 240037,
+        "expected_sha256": "462baef3bc7e7712f640e36a72ac4026a7a16cb2fa5e114b7e280cb95977c973",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/ballantine-s-finest-commons-front.jpg",
+        "status": 200,
+        "bytes": 204746,
+        "sha256": "dbd27117e8baeb492d619e8870ef678e7d4ec6248ef0cdc49d534dee91068a1d",
+        "expected_bytes": 204746,
+        "expected_sha256": "dbd27117e8baeb492d619e8870ef678e7d4ec6248ef0cdc49d534dee91068a1d",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/four-roses-small-batch-bourbon-commons-front.jpg",
+        "status": 200,
+        "bytes": 349050,
+        "sha256": "c0e841cd78d94e872f089e06364070a368e1733d6817c3084edd914defca647e",
+        "expected_bytes": 349050,
+        "expected_sha256": "c0e841cd78d94e872f089e06364070a368e1733d6817c3084edd914defca647e",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/kahl-a-original-coffee-liqueur-commons-front.jpg",
+        "status": 200,
+        "bytes": 341042,
+        "sha256": "2a3478bf09ab1531b0f82ac34e8fd2352bfe4dda6338b4d506e9d03bd963ce10",
+        "expected_bytes": 341042,
+        "expected_sha256": "2a3478bf09ab1531b0f82ac34e8fd2352bfe4dda6338b4d506e9d03bd963ce10",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/mount-gay-eclipse-commons-front.jpg",
+        "status": 200,
+        "bytes": 256975,
+        "sha256": "2d1705a4000570efb3f52f449493da851ff3fa4334a498ba56b98960aa2baa4a",
+        "expected_bytes": 256975,
+        "expected_sha256": "2d1705a4000570efb3f52f449493da851ff3fa4334a498ba56b98960aa2baa4a",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/r-my-martin-vsop-commons-front.jpg",
+        "status": 200,
+        "bytes": 355381,
+        "sha256": "58972ab4a48021f4c1df56f577d4a756366db944c9a07ed4fee790af5621e4fb",
+        "expected_bytes": 355381,
+        "expected_sha256": "58972ab4a48021f4c1df56f577d4a756366db944c9a07ed4fee790af5621e4fb",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/chartreuse-green-chartreuse-commons-front.jpg",
+        "status": 200,
+        "bytes": 36341,
+        "sha256": "f510f376396bf8e2329f456d63f2d0723295797f0155a98bba77325768f8b314",
+        "expected_bytes": 36341,
+        "expected_sha256": "f510f376396bf8e2329f456d63f2d0723295797f0155a98bba77325768f8b314",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/disaronno-originale-canada-1140-commons-front.jpg",
+        "status": 200,
+        "bytes": 350257,
+        "sha256": "cfbf1d90b294feeb65beeaec3143e604ae9802cb39debde96ee01ebcf87d7eab",
+        "expected_bytes": 350257,
+        "expected_sha256": "cfbf1d90b294feeb65beeaec3143e604ae9802cb39debde96ee01ebcf87d7eab",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/disaronno-originale-canada-1140-commons-back.jpg",
+        "status": 200,
+        "bytes": 350758,
+        "sha256": "feec351ace449b4e64a7c60fcc370e1050aecab77f63fb8114c01fb5cd6ee923",
+        "expected_bytes": 350758,
+        "expected_sha256": "feec351ace449b4e64a7c60fcc370e1050aecab77f63fb8114c01fb5cd6ee923",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/hennessy-v-s-commons-front.jpg",
+        "status": 200,
+        "bytes": 443553,
+        "sha256": "3e67af2cb20c2eb8b2081537381488d9bbdba0ba70a684dd73f75c19b2357444",
+        "expected_bytes": 443553,
+        "expected_sha256": "3e67af2cb20c2eb8b2081537381488d9bbdba0ba70a684dd73f75c19b2357444",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bacardi-carta-blanca-historical-commons-front.jpg",
+        "status": 200,
+        "bytes": 324923,
+        "sha256": "7259bcbc9b4c15718448fd75aacd079943686b251e364abe3d4554003501d4cb",
+        "expected_bytes": 324923,
+        "expected_sha256": "7259bcbc9b4c15718448fd75aacd079943686b251e364abe3d4554003501d4cb",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bacardi-carta-blanca-historical-commons-back.jpg",
+        "status": 200,
+        "bytes": 547445,
+        "sha256": "6d6f84636307afe012126d8cd4b11ffe68515dbccf92db8b73c71fe3d81bddbe",
+        "expected_bytes": 547445,
+        "expected_sha256": "6d6f84636307afe012126d8cd4b11ffe68515dbccf92db8b73c71fe3d81bddbe",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/appleton-estate-signature-commons-front.jpg",
+        "status": 200,
+        "bytes": 425907,
+        "sha256": "cc1e262e49cc28a3450e08d16731a62ade902b766541fc5847c4bb890f27c2aa",
+        "expected_bytes": 425907,
+        "expected_sha256": "cc1e262e49cc28a3450e08d16731a62ade902b766541fc5847c4bb890f27c2aa",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/appleton-estate-signature-commons-back.jpg",
+        "status": 200,
+        "bytes": 171250,
+        "sha256": "b1df695f03a194a39655e1d484e6fb485f522f647cbc41a348298b5988f89021",
+        "expected_bytes": 171250,
+        "expected_sha256": "b1df695f03a194a39655e1d484e6fb485f522f647cbc41a348298b5988f89021",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/diplom-tico-reserva-exclusiva-commons-front.jpg",
+        "status": 200,
+        "bytes": 357307,
+        "sha256": "454a445097e0c7910802a6cbba4ecac246d80fe7ace730b021462a88ec18a125",
+        "expected_bytes": 357307,
+        "expected_sha256": "454a445097e0c7910802a6cbba4ecac246d80fe7ace730b021462a88ec18a125",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/malfy-originale-off-front.jpg",
+        "status": 200,
+        "bytes": 138163,
+        "sha256": "fd33f0e7c4e6db0c1e012ee4afd35fbe601e4cff5c51ff0d935e17820a7d3dac",
+        "expected_bytes": 138163,
+        "expected_sha256": "fd33f0e7c4e6db0c1e012ee4afd35fbe601e4cff5c51ff0d935e17820a7d3dac",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/ferdinand-s-saar-dry-gin-off-front.jpg",
+        "status": 200,
+        "bytes": 115015,
+        "sha256": "42683a54f041e9115a0edbef656221932860ae02066ceb2afe98b8d48fbec51e",
+        "expected_bytes": 115015,
+        "expected_sha256": "42683a54f041e9115a0edbef656221932860ae02066ceb2afe98b8d48fbec51e",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/dingle-original-gin-off-front.jpg",
+        "status": 200,
+        "bytes": 227809,
+        "sha256": "43c4e468ffa7f42daa4861768feecd1df89590157c0851b2feb39006c3afb5e1",
+        "expected_bytes": 227809,
+        "expected_sha256": "43c4e468ffa7f42daa4861768feecd1df89590157c0851b2feb39006c3afb5e1",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/aberlour-12-year-old-off-front.jpg",
+        "status": 200,
+        "bytes": 13053,
+        "sha256": "98cbdfc9e91b13a3db108641d417ff567830b8f374a0936b282543e3c82253f0",
+        "expected_bytes": 13053,
+        "expected_sha256": "98cbdfc9e91b13a3db108641d417ff567830b8f374a0936b282543e3c82253f0",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bombay-sapphire-off-5010677714006-front.jpg",
+        "status": 200,
+        "bytes": 210023,
+        "sha256": "d06f6e081218a625c0924ff3660f8dbe48f079416ff68f070de9b38661c99053",
+        "expected_bytes": 210023,
+        "expected_sha256": "d06f6e081218a625c0924ff3660f8dbe48f079416ff68f070de9b38661c99053",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/bombay-sapphire-off-5010677714006-back.jpg",
+        "status": 200,
+        "bytes": 214690,
+        "sha256": "fcd2bb90f7f4c75a6cf7fa68065d8bef81de954f2200b0dec9d4091a58e139a0",
+        "expected_bytes": 214690,
+        "expected_sha256": "fcd2bb90f7f4c75a6cf7fa68065d8bef81de954f2200b0dec9d4091a58e139a0",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/havana-club-7-off-8501110080439-front.jpg",
+        "status": 200,
+        "bytes": 219933,
+        "sha256": "b54c70e04d3ac6b40f0949bfc1452953cb00e8fd307a60cbba8e90510c9ce65d",
+        "expected_bytes": 219933,
+        "expected_sha256": "b54c70e04d3ac6b40f0949bfc1452953cb00e8fd307a60cbba8e90510c9ce65d",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/havana-club-7-off-8501110080439-back.jpg",
+        "status": 200,
+        "bytes": 191200,
+        "sha256": "92563afe5d0d79c83c91b8d3626af5f07fe1d8ae08acf046e74521a68c4b479c",
+        "expected_bytes": 191200,
+        "expected_sha256": "92563afe5d0d79c83c91b8d3626af5f07fe1d8ae08acf046e74521a68c4b479c",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/ballantine-s-finest-off-5010106113127-front.jpg",
+        "status": 200,
+        "bytes": 179075,
+        "sha256": "dba44475f2ae2714d53443ae64e35788db58f01c293570939e1fbe02f15641b4",
+        "expected_bytes": 179075,
+        "expected_sha256": "dba44475f2ae2714d53443ae64e35788db58f01c293570939e1fbe02f15641b4",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/ballantine-s-finest-off-5010106113127-back.jpg",
+        "status": 200,
+        "bytes": 188046,
+        "sha256": "a8bb3b65d8fdd29b22bd6bd858d8a45f9390b900d6108166239330910ec266f8",
+        "expected_bytes": 188046,
+        "expected_sha256": "a8bb3b65d8fdd29b22bd6bd858d8a45f9390b900d6108166239330910ec266f8",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/campari-bitter-off-8000040000802-front.jpg",
+        "status": 200,
+        "bytes": 252144,
+        "sha256": "2849df17eee17bf4f90fd5010851066c374912412b97c87c33113b8198a44191",
+        "expected_bytes": 252144,
+        "expected_sha256": "2849df17eee17bf4f90fd5010851066c374912412b97c87c33113b8198a44191",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/campari-bitter-off-8000040000802-back.jpg",
+        "status": 200,
+        "bytes": 246611,
+        "sha256": "46ec2ab36ba3e346b319bfe54ce50c23060302280fde3a32fdfdf8ae53770fbf",
+        "expected_bytes": 246611,
+        "expected_sha256": "46ec2ab36ba3e346b319bfe54ce50c23060302280fde3a32fdfdf8ae53770fbf",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jack-daniels-old-no7-off-5099873089798-front.jpg",
+        "status": 200,
+        "bytes": 447954,
+        "sha256": "366fc504b0f47d7d56990ac41897d184624d31691ace63f2cdf24a632f01ef3c",
+        "expected_bytes": 447954,
+        "expected_sha256": "366fc504b0f47d7d56990ac41897d184624d31691ace63f2cdf24a632f01ef3c",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/jack-daniels-old-no7-off-5099873089798-back.jpg",
+        "status": 200,
+        "bytes": 490797,
+        "sha256": "aae04122beeefeff55d7f49fd97de0c7b3068a8e551b728406d079e668cf9392",
+        "expected_bytes": 490797,
+        "expected_sha256": "aae04122beeefeff55d7f49fd97de0c7b3068a8e551b728406d079e668cf9392",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/absolut-original-off-0835229000308-front.jpg",
+        "status": 200,
+        "bytes": 116568,
+        "sha256": "cf03f065e70bedd94384275c732e421e60d5846e01b68afe917e61515bbe0e21",
+        "expected_bytes": 116568,
+        "expected_sha256": "cf03f065e70bedd94384275c732e421e60d5846e01b68afe917e61515bbe0e21",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/absolut-original-off-0835229000308-back.jpg",
+        "status": 200,
+        "bytes": 2453604,
+        "sha256": "c56d8fb383c4e6652dada774bf7181153507bb1b7f57c7af057e462a483ff520",
+        "expected_bytes": 2453604,
+        "expected_sha256": "c56d8fb383c4e6652dada774bf7181153507bb1b7f57c7af057e462a483ff520",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/kahl-a-original-coffee-liqueur-off-7610594454399-front.jpg",
+        "status": 200,
+        "bytes": 294921,
+        "sha256": "16fb03b042d97cd1c5e28fe75a59a5ae659a6abafc4597bb26b845c048906cd8",
+        "expected_bytes": 294921,
+        "expected_sha256": "16fb03b042d97cd1c5e28fe75a59a5ae659a6abafc4597bb26b845c048906cd8",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      },
+      {
+        "path": "/bottles/kahl-a-original-coffee-liqueur-off-7610594454399-back.jpg",
+        "status": 200,
+        "bytes": 266373,
+        "sha256": "78056d9e5321d630988c999f8379a9fc7b9d10f27b1ae7235f689f45949c6f98",
+        "expected_bytes": 266373,
+        "expected_sha256": "78056d9e5321d630988c999f8379a9fc7b9d10f27b1ae7235f689f45949c6f98",
+        "matches_expected_bytes": true,
+        "matches_expected_sha256": true
+      }
+    ]
+  },
+  "canonical_product_api": {
+    "expected": 55,
+    "http_200": 55,
+    "all_have_front_reference": true,
+    "all_have_rear_reference": true,
+    "all_have_sourced_price_observation": true,
+    "all_match_committed_price_counts": true,
+    "local_front_products": 44,
+    "local_rear_products": 22,
+    "products_with_twenty_year_evidence": 29,
+    "records": [
+      {
+        "slug": "monkey-47-schwarzwald",
+        "path": "/api/v1/products/monkey-47-schwarzwald",
+        "status": 200,
+        "bytes": 53867,
+        "sha256": "76709f07b80e189cf91d7b5ffa9bc53a8198db63824b1529ba7307c4f09d21cb",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 16,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2011-11-13",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 14.95
+      },
+      {
+        "slug": "bombay-sapphire",
+        "path": "/api/v1/products/bombay-sapphire",
+        "status": 200,
+        "bytes": 48434,
+        "sha256": "e8f0ebe100a5f980a35ba0068241a096b5cfd50c732b8b3ad595db4f99f3260d",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 22,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-01-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.86
+      },
+      {
+        "slug": "hendricks-original",
+        "path": "/api/v1/products/hendricks-original",
+        "status": 200,
+        "bytes": 48517,
+        "sha256": "24ff8d1e9433625f8cfbbe24b913a2bca04e4e5d2994c91ecec9d7e9e181ab98",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 20,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-04-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 22.56
+      },
+      {
+        "slug": "roku-japanese-craft",
+        "path": "/api/v1/products/roku-japanese-craft",
+        "status": 200,
+        "bytes": 31112,
+        "sha256": "319881264a80f820c78f02797e2cb0713d5367b2e2016ecbbc952cb533d054a4",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 10,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2018-10-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 7.26
+      },
+      {
+        "slug": "tanqueray-london-dry",
+        "path": "/api/v1/products/tanqueray-london-dry",
+        "status": 200,
+        "bytes": 32622,
+        "sha256": "64ca855ed3d9a2828d617a8d61029476f387b00e6c57d7e1235e3f76becc1c86",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 9,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-03-23",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 3.62
+      },
+      {
+        "slug": "the-botanist-islay",
+        "path": "/api/v1/products/the-botanist-islay",
+        "status": 200,
+        "bytes": 46375,
+        "sha256": "9ab8d55263bbeb4268a314926e232bc4da0fdedaa93bc4e6985fccd9ed29d2d2",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 16,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2011-03-01",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 15.65
+      },
+      {
+        "slug": "bacardi-carta-blanca",
+        "path": "/api/v1/products/bacardi-carta-blanca",
+        "status": 200,
+        "bytes": 34745,
+        "sha256": "299388f5f84e052dcec13586b5f0ab37f0af2b8bd547fc7335f4a5f934a4bc1d",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 18,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-02-16",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.89
+      },
+      {
+        "slug": "havana-club-7",
+        "path": "/api/v1/products/havana-club-7",
+        "status": 200,
+        "bytes": 28161,
+        "sha256": "c1d8c173bb7748dab74fcd87b1edc4decbb9207f0f53009e8dcd38973657a55e",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 10,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-01-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.8
+      },
+      {
+        "slug": "jack-daniels-old-no7",
+        "path": "/api/v1/products/jack-daniels-old-no7",
+        "status": 200,
+        "bytes": 35004,
+        "sha256": "e489480ad9ea250aa43ad8f1c14e099ede563c6751e57f98421aede88bf1e2ae",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2001-12-03",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 9.11
+      },
+      {
+        "slug": "jameson-original",
+        "path": "/api/v1/products/jameson-original",
+        "status": 200,
+        "bytes": 43487,
+        "sha256": "6cf09ac83bca86b1037b1540abeee8e5eb427075924186969a440f7eae25b336",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 24,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2003-02-01",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 23.73
+      },
+      {
+        "slug": "disaronno-originale",
+        "path": "/api/v1/products/disaronno-originale",
+        "status": 200,
+        "bytes": 21800,
+        "sha256": "c5e72ef1fa03f71168e344a66a1fb925e342f6ae3ddb792969f2d5b70c384c04",
+        "local_fronts": 3,
+        "local_rears": 2,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 8,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-01-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 14.09
+      },
+      {
+        "slug": "absolut-original",
+        "path": "/api/v1/products/absolut-original",
+        "status": 200,
+        "bytes": 20005,
+        "sha256": "fb0f7f5d286f4d7e866809371d6848ba6bf8da97764daf1eae52823e5235bf88",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 7,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-02-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.81
+      },
+      {
+        "slug": "campari-bitter",
+        "path": "/api/v1/products/campari-bitter",
+        "status": 200,
+        "bytes": 19212,
+        "sha256": "8da33bf6b54f83e6855a0775b214b5c1dfe42c0a2f2bf1902250c96733de65d0",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 12,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2005-06-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 19.16
+      },
+      {
+        "slug": "cointreau-original",
+        "path": "/api/v1/products/cointreau-original",
+        "status": 200,
+        "bytes": 34373,
+        "sha256": "01ea32a624ee891072a755f8b89490848951c02edca692c74a455cd8f52a55a9",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 17,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-01-17",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 16.59
+      },
+      {
+        "slug": "suntory-toki-blended-japanese-whisky",
+        "path": "/api/v1/products/suntory-toki-blended-japanese-whisky",
+        "status": 200,
+        "bytes": 27926,
+        "sha256": "a05409ea13635d4472db0581a8850fc100f3d62522466baba0a3e7fc2ac76dec",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 10,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2016-06-08",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 6.22
+      },
+      {
+        "slug": "suntory-hibiki-japanese-harmony",
+        "path": "/api/v1/products/suntory-hibiki-japanese-harmony",
+        "status": 200,
+        "bytes": 23823,
+        "sha256": "e714092cfce009ef5baa756e69d578d8b845698f3c898b2629898b41248b1580",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 7,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2015-01-29",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 11.14
+      },
+      {
+        "slug": "suntory-yamazaki-12-years-old",
+        "path": "/api/v1/products/suntory-yamazaki-12-years-old",
+        "status": 200,
+        "bytes": 37962,
+        "sha256": "929c904e5140aaa9195800f1a338ec48f17d5b851905b25b074781bc41c63305",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 20,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-04-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 22.56
+      },
+      {
+        "slug": "suntory-hakushu-12-years-old",
+        "path": "/api/v1/products/suntory-hakushu-12-years-old",
+        "status": 200,
+        "bytes": 31352,
+        "sha256": "5d5c50b431495b032579da98004facf432b09e7300f01f2b59ec50955fb7045f",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 13,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-04-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 13.61
+      },
+      {
+        "slug": "suntory-chita-single-grain-whisky",
+        "path": "/api/v1/products/suntory-chita-single-grain-whisky",
+        "status": 200,
+        "bytes": 16952,
+        "sha256": "5e552eac95f9c8c464a78217056e0d159f1c807a87b63d39969c7ecddb10c112",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 1,
+        "price_bases": [
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2026-10-25",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 0
+      },
+      {
+        "slug": "suntory-ao-blended-world-whisky",
+        "path": "/api/v1/products/suntory-ao-blended-world-whisky",
+        "status": 200,
+        "bytes": 19587,
+        "sha256": "c3641a682e552ace33c54f9141fc17b123509a7173c2c4bc997eaf968280a245",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 2,
+        "price_bases": [
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-04-16",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 0
+      },
+      {
+        "slug": "suntory-kakubin-blended-whisky",
+        "path": "/api/v1/products/suntory-kakubin-blended-whisky",
+        "status": 200,
+        "bytes": 38288,
+        "sha256": "5abf811994a0e6e65568e7ad510425107d1fec2f0d5345c89e567cf3a744d2fd",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2017-03-18",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 3.86
+      },
+      {
+        "slug": "suntory-haku-vodka",
+        "path": "/api/v1/products/suntory-haku-vodka",
+        "status": 200,
+        "bytes": 18967,
+        "sha256": "92db38b8386b2ea67eebf8d6ab7736c113880b15391686fc6d49440290f4668b",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 7,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2018-10-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 7.1
+      },
+      {
+        "slug": "beefeater-london-dry-gin",
+        "path": "/api/v1/products/beefeater-london-dry-gin",
+        "status": 200,
+        "bytes": 42134,
+        "sha256": "92749e42daa85c83de5183353e2b70def5155731da191aceba580f916e4ff4db",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 21,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-01-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.86
+      },
+      {
+        "slug": "plymouth-original-gin",
+        "path": "/api/v1/products/plymouth-original-gin",
+        "status": 200,
+        "bytes": 32230,
+        "sha256": "f5d00f076d6cc99ca29e98df0687c04ac3889b367c55c4d69d6a45ebc608f027",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 11,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2005-03-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 13.58
+      },
+      {
+        "slug": "ki-no-bi-kyoto-dry-gin",
+        "path": "/api/v1/products/ki-no-bi-kyoto-dry-gin",
+        "status": 200,
+        "bytes": 33760,
+        "sha256": "3020f0941a3fba7679e0af351c49b9c1fb71fdc9f0ff732854bcdc6704f3f278",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 9,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2016-09-28",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 8.83
+      },
+      {
+        "slug": "malfy-originale",
+        "path": "/api/v1/products/malfy-originale",
+        "status": 200,
+        "bytes": 20848,
+        "sha256": "a3f78ac4ae551a745dec287cc98c455d2fc1924acb8f8f025d8b4d3e90d2ea24",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 4,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-08-23",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 7.17
+      },
+      {
+        "slug": "the-glenlivet-12-year-old",
+        "path": "/api/v1/products/the-glenlivet-12-year-old",
+        "status": 200,
+        "bytes": 41881,
+        "sha256": "f6380eecb20db88d78264f08cb15c269960c208830fb236716eb1a3c145408f9",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 23,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2001-08-14",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 25.2
+      },
+      {
+        "slug": "aberlour-12-year-old",
+        "path": "/api/v1/products/aberlour-12-year-old",
+        "status": 200,
+        "bytes": 32785,
+        "sha256": "973aab49ec00520a9d8d930487f13f4eb5081eadaf85eb7566156161ca099fc2",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2005-02-08",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 11.46
+      },
+      {
+        "slug": "chivas-regal-12-year-old",
+        "path": "/api/v1/products/chivas-regal-12-year-old",
+        "status": 200,
+        "bytes": 27497,
+        "sha256": "280e352e34e92e5738793b6b55e208b0ec3c1cbe75e8b59888cb60d0950cbd8f",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 10,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2003-02-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 7.49
+      },
+      {
+        "slug": "ballantine-s-finest",
+        "path": "/api/v1/products/ballantine-s-finest",
+        "status": 200,
+        "bytes": 32242,
+        "sha256": "2910023296bd97d286eaed1209acde0696f5610603e5ca21aa0ce79e2e04bac7",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 15,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-03-23",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.74
+      },
+      {
+        "slug": "four-roses-small-batch-bourbon",
+        "path": "/api/v1/products/four-roses-small-batch-bourbon",
+        "status": 200,
+        "bytes": 33080,
+        "sha256": "6273bd2e4854557007d0a979811a39720d2cb1d46eb3cf5d90e81aef0553d3f0",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2008-03-06",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 15.61
+      },
+      {
+        "slug": "kahl-a-original-coffee-liqueur",
+        "path": "/api/v1/products/kahl-a-original-coffee-liqueur",
+        "status": 200,
+        "bytes": 24540,
+        "sha256": "b1378b7614c49685ea3d0a58150aa56741510092c47790492a31d5580522a29e",
+        "local_fronts": 2,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-01-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 4.33
+      },
+      {
+        "slug": "malibu-original",
+        "path": "/api/v1/products/malibu-original",
+        "status": 200,
+        "bytes": 22286,
+        "sha256": "9e7ef81076b6c2c427ff7feb2d380e40f5f5ac4ad3c0788370e40199407a1015",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 3,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-02-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 0.0
+      },
+      {
+        "slug": "altos-plata",
+        "path": "/api/v1/products/altos-plata",
+        "status": 200,
+        "bytes": 18212,
+        "sha256": "a08f4331236c40eb30bb1c61afb132b8e599b0d7650a6aa1d52b086232678436",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 12,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2010-04-26",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 16.5
+      },
+      {
+        "slug": "del-maguey-vida-cl-sico",
+        "path": "/api/v1/products/del-maguey-vida-cl-sico",
+        "status": 200,
+        "bytes": 10452,
+        "sha256": "0ac12280a192b85a2eb82d06e8a54d89ef4f59480960e17c6ed185bdbc75c62a",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 4,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2022-07-16",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 4.28
+      },
+      {
+        "slug": "citadelle-original",
+        "path": "/api/v1/products/citadelle-original",
+        "status": 200,
+        "bytes": 32980,
+        "sha256": "656168593648cc71a08e1f0f928c41e4d4323a04bafd6e4deb75de92a16369a1",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer",
+          "wholesale_list"
+        ],
+        "month_only_observations": 1,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2003-05",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 17.11
+      },
+      {
+        "slug": "sipsmith-london-dry-gin",
+        "path": "/api/v1/products/sipsmith-london-dry-gin",
+        "status": 200,
+        "bytes": 36480,
+        "sha256": "4dd4bd6357d6e8b1f10e330d660bbc295035c7bcf4f94762af006808774913f0",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2009-06-18",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 14.11
+      },
+      {
+        "slug": "gin-mare-mediterranean-gin",
+        "path": "/api/v1/products/gin-mare-mediterranean-gin",
+        "status": 200,
+        "bytes": 39194,
+        "sha256": "3ab38e055d81c556b5bccf606e2cba3138ff647a729dccc1d22c90819d141fad",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 15,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2010-06-16",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 16.25
+      },
+      {
+        "slug": "nord-s-atlantic-galician-gin",
+        "path": "/api/v1/products/nord-s-atlantic-galician-gin",
+        "status": 200,
+        "bytes": 34449,
+        "sha256": "ca17154b1b1acd5645dfb7854c382808de96c16e9f9650acd3b428a213b2d9e3",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 10,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2017-02-21",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 9.67
+      },
+      {
+        "slug": "isle-of-harris-gin",
+        "path": "/api/v1/products/isle-of-harris-gin",
+        "status": 200,
+        "bytes": 27096,
+        "sha256": "3d6eb5e27b7e6275c460b3d22f1cfb021f63bb5ec12b37768d998dc850babc34",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2022-04-27",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 4.5
+      },
+      {
+        "slug": "isle-of-raasay-hebridean-gin",
+        "path": "/api/v1/products/isle-of-raasay-hebridean-gin",
+        "status": 200,
+        "bytes": 27149,
+        "sha256": "37a7594797ffaf8bed1e36738ab824329976ea15caf348e55ca584eb03f0c0f2",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-07-29",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 4.88
+      },
+      {
+        "slug": "kyr-gin",
+        "path": "/api/v1/products/kyr-gin",
+        "status": 200,
+        "bytes": 26250,
+        "sha256": "c6b38accefdf376c3f1f62b53a17d7430610d2281ab673d7da8832e5d610ab96",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 7,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2017-09-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 5.46
+      },
+      {
+        "slug": "st-george-terroir-gin",
+        "path": "/api/v1/products/st-george-terroir-gin",
+        "status": 200,
+        "bytes": 29815,
+        "sha256": "94d342a622ddd2a8d89d5a1e3d4f4ddba436fcccdb2c16c968d5655d8bf3438b",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 6,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-09-15",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 7.11
+      },
+      {
+        "slug": "ferdinand-s-saar-dry-gin",
+        "path": "/api/v1/products/ferdinand-s-saar-dry-gin",
+        "status": 200,
+        "bytes": 26529,
+        "sha256": "ea8adf62fa52693c447bdbebe8b0eab6cb644ec953896172a5164596054e6d09",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 4,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2021-10-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 3.24
+      },
+      {
+        "slug": "christian-drouin-le-gin",
+        "path": "/api/v1/products/christian-drouin-le-gin",
+        "status": 200,
+        "bytes": 25746,
+        "sha256": "c040a89612ca3735dbcb799feb1824eea3e985ad5e6bf325ca0b2c15b7ac6393",
+        "local_fronts": 0,
+        "local_rears": 0,
+        "external_front_references": 1,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "launch_msrp",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2016-11-22",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 5.99
+      },
+      {
+        "slug": "dingle-original-gin",
+        "path": "/api/v1/products/dingle-original-gin",
+        "status": 200,
+        "bytes": 27567,
+        "sha256": "13af4abc205477fa739f5f7d2268cfbddcc4271d65dcdff1b49bf084d838a7b2",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 8,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-07-24",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 7.26
+      },
+      {
+        "slug": "diplom-tico-reserva-exclusiva",
+        "path": "/api/v1/products/diplom-tico-reserva-exclusiva",
+        "status": 200,
+        "bytes": 32710,
+        "sha256": "d51299c48cd9a654860f3a9848162d624928303c63f7e9e004e8ec3753069135",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 15,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2008-01-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 17.73
+      },
+      {
+        "slug": "mount-gay-eclipse",
+        "path": "/api/v1/products/mount-gay-eclipse",
+        "status": 200,
+        "bytes": 28453,
+        "sha256": "74a3868419ebceb8ca7a09b73ffcce220bb8f8f1423c5308c242a9cc1d663811",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 11,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2005-03-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 11.76
+      },
+      {
+        "slug": "appleton-estate-signature",
+        "path": "/api/v1/products/appleton-estate-signature",
+        "status": 200,
+        "bytes": 27224,
+        "sha256": "95646eba461c63f04d71d3438f86d3cbe7339c21052512250ce496c89a068436",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 9,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2003-02-01",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 23.73
+      },
+      {
+        "slug": "don-papa-7-years-old",
+        "path": "/api/v1/products/don-papa-7-years-old",
+        "status": 200,
+        "bytes": 21602,
+        "sha256": "7f30cdc7a4ebe5f3928404e3b5ab8133657e3b646c4343598e0d6ba5de34849e",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 5,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2019-08-22",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": false,
+        "comparable_single_series_span_years": 2.53
+      },
+      {
+        "slug": "hennessy-v-s",
+        "path": "/api/v1/products/hennessy-v-s",
+        "status": 200,
+        "bytes": 27933,
+        "sha256": "983da2e81dd235ac228550856f27a360f9b127e9917210d3248258dc39482952",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 19,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-01-02",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.05
+      },
+      {
+        "slug": "r-my-martin-vsop",
+        "path": "/api/v1/products/r-my-martin-vsop",
+        "status": 200,
+        "bytes": 27507,
+        "sha256": "126edf54fad40b4ce15fc1d6d857fdbe6e5c2863e7087a40418b7487667d97ed",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 18,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-03-15",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 18.3
+      },
+      {
+        "slug": "chartreuse-green-chartreuse",
+        "path": "/api/v1/products/chartreuse-green-chartreuse",
+        "status": 200,
+        "bytes": 27704,
+        "sha256": "8ffb180d2db19c9d2f714623758281ab113f5077c992681d26c3c3dbd5cd3978",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 9,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2004-01-17",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 7.26
+      },
+      {
+        "slug": "luxardo-amaretto-di-saschira",
+        "path": "/api/v1/products/luxardo-amaretto-di-saschira",
+        "status": 200,
+        "bytes": 20952,
+        "sha256": "8c0a4c0857b0715ce4611772417d9d53e10316ed1e23b03f535b5d86e125343b",
+        "local_fronts": 1,
+        "local_rears": 0,
+        "external_front_references": 0,
+        "external_rear_references": 1,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 7,
+        "price_bases": [
+          "archive_capture",
+          "historical_ad",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2006-01-04",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 5.71
+      },
+      {
+        "slug": "heering-cherry-liqueur",
+        "path": "/api/v1/products/heering-cherry-liqueur",
+        "status": 200,
+        "bytes": 30663,
+        "sha256": "a7bad7ea12f9c877a5feeaacb70f1df972592a25d0a782a0591c2931d88b8123",
+        "local_fronts": 1,
+        "local_rears": 1,
+        "external_front_references": 0,
+        "external_rear_references": 0,
+        "has_front_reference": true,
+        "has_rear_reference": true,
+        "price_observations": 14,
+        "price_bases": [
+          "archive_capture",
+          "retail_offer"
+        ],
+        "month_only_observations": 0,
+        "month_only_dates_remain_null": true,
+        "matches_committed_price_count": true,
+        "price_start": "2005-08-25",
+        "price_end": "2026-10-25",
+        "twenty_year_evidence": true,
+        "comparable_single_series_span_years": 14.38
+      }
+    ],
+    "interpretation": "Front/rear availability includes verified external publisher links. It is not a claim that all 55 rear photographs are locally hosted. Overall evidence spans can cross formats and price levels; missing years remain missing."
+  },
+  "monthly_market_index": {
+    "product": "suntory-kakubin-blended-whisky",
+    "count": 321,
+    "unique_periods": 321,
+    "first_period": "2000-01",
+    "last_period": "2026-09",
+    "consecutive_months": true,
+    "all_real_month_precision": true,
+    "all_values_positive": true,
+    "fact_sha256": "f5ec0e9a67c0f54e753c2066185f7894e620a58406f62649359fbf129ddde0e7",
+    "expected_fact_sha256": "f5ec0e9a67c0f54e753c2066185f7894e620a58406f62649359fbf129ddde0e7",
+    "fact_hash_matches": true,
+    "currency": "JPY",
+    "statistic": "median of city survey prices",
+    "source": "https://nedan-hakusho.jp/items/2033/",
+    "scope": "Secondary median across surveyed city prices. Separate from retailer observations, transactions and one unchanged ABV; no primary raw CSV claim."
+  },
+  "public_memento_http": {
+    "status": 200,
+    "capsules": 1161,
+    "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688",
+    "counts": {
+      "catalogue_context": 5,
+      "external_photo_reference": 51,
+      "licensed_asset": 85,
+      "reference": 236,
+      "research_reference": 24,
+      "source": 760
+    },
+    "pages_checked": 20,
+    "all_pages_http_200": true,
+    "listed_unique_capsules": 1161,
+    "all_capsules_listed": true,
+    "all_pages_same_snapshot": true,
+    "all_capsule_links_fixed_digest_paths": true,
+    "pages": [
+      {
+        "offset": 0,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 60,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 120,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 180,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 240,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 300,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 360,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 420,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 480,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 540,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 600,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 660,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 720,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 780,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 840,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 900,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 960,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 1020,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 1080,
+        "status": 200,
+        "items": 60,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      },
+      {
+        "offset": 1140,
+        "status": 200,
+        "items": 21,
+        "snapshot_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688"
+      }
+    ],
+    "initial_scan": {
+      "successful_pages": 6,
+      "listed_unique_capsules": 360,
+      "all_pages_http_200": false,
+      "interpretation": "The first unpaced concurrent listing was incomplete under the application rate controls. The complete scan above was paced below the configured 20 requests/second API limit; no isolation or rate control was changed. The initial exact rejection status was not retained, so no unverified status code is asserted here."
+    },
+    "capsule_http_samples": [
+      {
+        "kind": "catalogue_context",
+        "path": "/api/v1/memento/capsules/c139d24fb19ff3de357e4557dc08363b4b1fe8e7285cc5c83f87a7059e4dd074",
+        "status": 200,
+        "bytes": 4599,
+        "capsule_sha256": "c139d24fb19ff3de357e4557dc08363b4b1fe8e7285cc5c83f87a7059e4dd074",
+        "hash_valid": true
+      },
+      {
+        "kind": "external_photo_reference",
+        "path": "/api/v1/memento/capsules/609188c1a2c8bba59178cf8fe3cdd2165e7eea6ce0dcc6813b55dfd7526fc91d",
+        "status": 200,
+        "bytes": 2943,
+        "capsule_sha256": "609188c1a2c8bba59178cf8fe3cdd2165e7eea6ce0dcc6813b55dfd7526fc91d",
+        "hash_valid": true
+      },
+      {
+        "kind": "licensed_asset",
+        "path": "/api/v1/memento/capsules/b504a25741594328346bc8bda31489a5ca843d286e98d9d384566b06db2c71af",
+        "status": 200,
+        "bytes": 3432,
+        "capsule_sha256": "b504a25741594328346bc8bda31489a5ca843d286e98d9d384566b06db2c71af",
+        "hash_valid": true
+      },
+      {
+        "kind": "reference",
+        "path": "/api/v1/memento/capsules/bd19ff76a7234d924a6ca0790dbfedf1b4ea8df5966a03bbb749cec1df2fb3e7",
+        "status": 200,
+        "bytes": 2438,
+        "capsule_sha256": "bd19ff76a7234d924a6ca0790dbfedf1b4ea8df5966a03bbb749cec1df2fb3e7",
+        "hash_valid": true
+      },
+      {
+        "kind": "research_reference",
+        "path": "/api/v1/memento/capsules/098391fb19e42ce36535c490ca4e51b0b2bfb63b34449420301dab259c692874",
+        "status": 200,
+        "bytes": 2688,
+        "capsule_sha256": "098391fb19e42ce36535c490ca4e51b0b2bfb63b34449420301dab259c692874",
+        "hash_valid": true
+      },
+      {
+        "kind": "source",
+        "path": "/api/v1/memento/capsules/3ac2613facf1e3f21ad334781e2ab29e5ade10cada61915485a7b6b4c2159c76",
+        "status": 200,
+        "bytes": 2819,
+        "capsule_sha256": "3ac2613facf1e3f21ad334781e2ab29e5ade10cada61915485a7b6b4c2159c76",
+        "hash_valid": true
+      }
+    ],
+    "http_sample_scope": "One real public HTTP capsule from each of 6 kinds. All 1161 capsules independently hash-verified in the latest downloaded ZIP whose manifest matches this live snapshot; individual HTTP downloads of every capsule were avoided."
+  },
+  "downloaded_admin_memento_zip": {
+    "artifact": "Alcooltest-Memento-with-images.zip",
+    "bytes": 48979054,
+    "sha256": "e74c4094853cf123c90bfd90d1c44076a6aed230b8e8d6c42d0e4eef69b789c3",
+    "expected_capsules": 1161,
+    "expected_media_files": 85,
+    "zip_crc_ok": true,
+    "zip_entries": 1249,
+    "manifest_sha256": "3d210bcb4d83d0f6af35bd5921aec473ea9b36ca9d197335eab2a53eb8725688",
+    "manifest_hash_valid": true,
+    "manifest_capsules": 1161,
+    "capsule_entries": 1161,
+    "all_indexed_capsules_present": true,
+    "all_capsule_hashes_valid": true,
+    "capsule_hash_failures": [],
+    "media_entries": 85,
+    "media_manifest_files": 85,
+    "all_media_expected_and_hash_valid": true,
+    "media_failures": [],
+    "unexpected_zip_paths": [],
+    "forbidden_private_field_paths": [],
+    "raw_source_pages_or_research_cache_files_present": false,
+    "manifest_links_in_current_live_snapshot": 1161,
+    "manifest_snapshot_matches_live": true,
+    "offline_capsule_links_not_currently_public": 0,
+    "media_bytes": 47338589,
+    "licensed_media_included": true,
+    "source_graph": {
+      "source_capsules": 760,
+      "exact_fk_referenced_source_ids": 760,
+      "source_capsules_without_exact_public_record_fk": [],
+      "no_orphan_sources_included_by_url": true
+    }
+  },
+  "committed_metadata_memento_zip": {
+    "artifact": "data/memento/snapshot.zip",
+    "bytes": 1843834,
+    "sha256": "7ef97114fe5ad26b88d815daa53e07722ccc9119140ceeb78d9e071e51f000b0",
+    "expected_capsules": 1160,
+    "expected_media_files": 0,
+    "zip_crc_ok": true,
+    "zip_entries": 1163,
+    "manifest_sha256": "a43ba503ed98f18dfb15f51a82856212b08b5a4aca9cdbefeeaab693fd791c6c",
+    "manifest_hash_valid": true,
+    "manifest_capsules": 1160,
+    "capsule_entries": 1160,
+    "all_indexed_capsules_present": true,
+    "all_capsule_hashes_valid": true,
+    "capsule_hash_failures": [],
+    "media_entries": 0,
+    "media_manifest_files": 0,
+    "all_media_expected_and_hash_valid": true,
+    "media_failures": [],
+    "unexpected_zip_paths": [],
+    "forbidden_private_field_paths": [],
+    "raw_source_pages_or_research_cache_files_present": false,
+    "manifest_links_in_current_live_snapshot": 1026,
+    "manifest_snapshot_matches_live": false,
+    "offline_capsule_links_not_currently_public": 134,
+    "media_bytes": 0,
+    "licensed_media_included": false,
+    "link_scope": "Every index-to-capsule link is checked inside the ZIP. The immutable offline snapshot can differ from the current live manifest; public HTTP capsule downloads intentionally expose only current manifest members.",
+    "source_graph": {
+      "source_capsules": 760,
+      "exact_fk_referenced_source_ids": 760,
+      "source_capsules_without_exact_public_record_fk": [],
+      "no_orphan_sources_included_by_url": true
+    }
+  },
+  "all_checked_invariants_pass": true,
+  "complete_listing_pace_seconds": 0.085,
+  "initial_bulk_http_phase_duration_seconds": 2.127,
+  "latest_memento_rechecked_at": "2026-10-25T21:56:32.901762+00:00",
+  "prior_unmodified_data_checks_retained": {
+    "sitemap_routes": 63,
+    "canonical_product_apis": 55,
+    "served_local_image_hashes": 85,
+    "monthly_facts": 321,
+    "reason": "The final Memento publication-policy change affects source capsule selection. These previously validated application data checks are retained; this final pass rechecks the rebuilt artifacts and current Memento HTTP endpoints."
+  }
+}

@@ -501,6 +501,14 @@
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
+              "pair_key": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "barcode": {
+                "type": "string",
+                "maxLength": 14
+              },
               "view": {
                 "type": "string",
                 "maxLength": 12,
@@ -543,6 +551,79 @@
               "edition_note": {
                 "type": "string",
                 "maxLength": 20000
+              }
+            }
+          }
+        },
+        "external_photo_references": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "product_id",
+              "view",
+              "source_page",
+              "image_url",
+              "publisher",
+              "credit",
+              "rights_note",
+              "edition_note",
+              "verified_on",
+              "verified"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "view": {
+                "type": "string",
+                "maxLength": 12,
+                "enum": [
+                  "front",
+                  "back",
+                  "detail"
+                ]
+              },
+              "source_page": {
+                "type": "string",
+                "maxLength": 1000,
+                "pattern": "^https?://"
+              },
+              "image_url": {
+                "type": "string",
+                "maxLength": 2000,
+                "pattern": "^https?://"
+              },
+              "publisher": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "credit": {
+                "type": "string",
+                "maxLength": 500
+              },
+              "rights_note": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "edition_note": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "verified_on": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "verified": {
+                "type": "boolean"
               }
             }
           }
@@ -998,13 +1079,45 @@
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
+              "basis": {
+                "type": "string",
+                "maxLength": 20,
+                "enum": [
+                  "unspecified",
+                  "retail_offer",
+                  "archive_capture",
+                  "launch_msrp",
+                  "historical_ad",
+                  "wholesale_list"
+                ]
+              },
               "variant_id": {
                 "type": "string",
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
               "observed_on": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 20000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "observed_period": {
                 "type": "string",
-                "maxLength": 20000
+                "maxLength": 7,
+                "pattern": "^$|^[12]\\d{3}-(0[1-9]|1[0-2])$"
+              },
+              "date_precision": {
+                "type": "string",
+                "maxLength": 5,
+                "enum": [
+                  "day",
+                  "month"
+                ]
               },
               "amount": {
                 "type": [
@@ -1030,14 +1143,148 @@
                 "pattern": "^[0-9a-fA-F-]{36}$"
               },
               "tax_included": {
-                "type": "boolean"
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "promotion": {
-                "type": "boolean"
+                "anyOf": [
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
               },
               "notes": {
                 "type": "string",
                 "maxLength": 20000
+              }
+            }
+          }
+        },
+        "market_price_indexes": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "slug",
+              "product_id",
+              "source_id",
+              "title",
+              "currency",
+              "territory",
+              "statistic",
+              "unit_scope",
+              "method",
+              "notes",
+              "method_source_url",
+              "fact_sha256",
+              "verified"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "slug": {
+                "type": "string",
+                "maxLength": 160,
+                "pattern": "^[-a-zA-Z0-9_]+$"
+              },
+              "product_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "source_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "title": {
+                "type": "string",
+                "maxLength": 240
+              },
+              "currency": {
+                "type": "string",
+                "maxLength": 3,
+                "pattern": "^[A-Z]{3}$"
+              },
+              "territory": {
+                "type": "string",
+                "maxLength": 100
+              },
+              "statistic": {
+                "type": "string",
+                "maxLength": 160
+              },
+              "unit_scope": {
+                "type": "string",
+                "maxLength": 300
+              },
+              "method": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "notes": {
+                "type": "string",
+                "maxLength": 20000
+              },
+              "method_source_url": {
+                "type": "string",
+                "maxLength": 1000,
+                "pattern": "^https?://"
+              },
+              "fact_sha256": {
+                "type": "string",
+                "maxLength": 64
+              },
+              "verified": {
+                "type": "boolean"
+              }
+            }
+          }
+        },
+        "market_price_index_points": {
+          "type": "array",
+          "maxItems": 100000,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "index_id",
+              "period",
+              "value"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "index_id": {
+                "type": "string",
+                "pattern": "^[0-9a-fA-F-]{36}$"
+              },
+              "period": {
+                "type": "string",
+                "maxLength": 7,
+                "pattern": "^[12]\\d{3}-(0[1-9]|1[0-2])$"
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "number"
+                ],
+                "pattern": "^\\d+(\\.\\d+)?$"
               }
             }
           }

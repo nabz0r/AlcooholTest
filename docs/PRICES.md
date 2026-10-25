@@ -1,17 +1,93 @@
-# A dated price notebook
+# A dated price notebook — Volume 05
 
-Admin → Price observations → Add records a specific bottling, observation date, amount, ISO-style three-letter currency, country, retailer, tax inclusion, promotion flag and reference source. Editors can enter sourced historical observations or import them in a versioned catalogue JSON. A storefront's current price is not evidence of its earlier prices.
+Every price belongs to a named bottling, source context and source date or period. A current offer cannot establish an earlier price. A twenty-year interval between two records cannot establish twenty years of continuous coverage.
 
-The product page groups chart series by currency, country, volume, ABV, retailer and tax treatment. It never averages currencies, merges formats, converts exchange rates or manufactures past values. Points are genuine stored observations; connecting lines simply join those observations, not daily reconstructed prices. Two first observations were curated from Luxembourg seller pages consulted on 2026-10-25. They start the notebook; they do not constitute a historical trend. Commercial offer scraping is not enabled; future adapters require seller permission, market/variant matching, source timestamps and an explicit observation schedule.
+## The shipped snapshot
 
-The optimized composite index covers variant, currency, country and observation date. A uniqueness constraint prevents duplicate same-day retailer/market records for the same bottling and currency. Price records enter public JSON/JSONL and retain their source references.
+The reviewed distribution dated 25 October 2026 contains **613 individual price observations**, with price evidence for each of the **55 canonical products**. The oldest accepted record is dated 14 August 2001. These are source facts, not a live price feed or purchase ledger.
 
-## Volume 04: executed archival collection
+| Stored basis | Records | Meaning |
+| --- | ---: | --- |
+| `archive_capture` | 537 | Actual archived retailer offers; capture date is not a transaction date. |
+| `retail_offer` | 57 | Current source views on 25 October 2026, including the initial Luxembourg observations. |
+| `launch_msrp` | 12 | Manufacturer/importer recommendations in dated launch or introduction announcements. |
+| `historical_ad` | 6 | Prices in original dated advertisements or retailer publications. |
+| `wholesale_list` | 1 | A published trade price, separate from consumer retail. |
 
-`data/prices/archive-research.json` records 38 parsed captures from 2007–2015 across five reviewed retailer product identifiers. The collector used Wayback CDX annual collapse and fetched the actual archived HTML; it did not infer old prices from bottle age, present-day prices or customer memories. Each point preserves its capture URL, timestamp, title, amount, currency, market, explicit volume/ABV, retrieval time and raw-content SHA-256. Raw copyrighted page text is kept only in the ignored local research cache, not redistributed.
+There is also **one separate Kakubin survey series with 321 monthly points**, January 2000–September 2026. These statistics are not included in the 613 bottle-price observations.
 
-`backend/catalog/price_archive.py` recognizes known product-price nodes and explicit product detail formats. It rejects unrelated/recommended-product amounts and unsupported layouts. A bounded `prices` job rotates through the reviewed target registry and stages Wayback candidates. Editors open Discovery candidates, confirm the canonical product, then use **Accept reviewed archival prices**. Accepted observations and their provenance are audited; an existing observation is retained rather than silently repriced. UI imports/exports include the public normalized price rows.
+The portable [seed](../data/catalog/seed.json) contains the accepted records. [Generated coverage](../data/prices/coverage.json) reports each product's actual start/end, date precision, years with evidence, gaps, price bases and comparable span. The [Volume 04 report](../data/prices/archive-research.json) retains provenance for its initial 38 captures; it is not the current total.
 
-The initial curated distribution includes those 38 archived offers plus two earlier Luxembourg observations. These are sparse records, **not twenty years of continuous coverage and not coverage of all 55 products**. Additional URL generations, dated price lists, manufacturer announcements, tax regimes and markets require reviewed adapters. The 2005 Yamazaki community references are leads, not accepted format-verified observations. A bottle produced in 2004 but sold at auction in 2024 supplies a 2024 sale, not a 2004 retail price. Never relabel an auction hammer as VAT-inclusive retail.
+## What “twenty years” means
 
-Reproduce the bounded collector with `python3 scripts/collect_price_archives.py`, inspect its facts/errors, then rebuild seed/exports only after review. The cache is idempotent and checkpoints individual downloaded files. Missing captures and unsupported layouts remain in the report. Target IDs map to canonical records; they are not generated from sellers or fuzzy title guesses. The first provider supports GBP UK retail; this does not establish Luxembourg prices or currency-adjusted returns.
+**29 products have an overall evidence span of at least twenty years.** An overall span can cross markets, sellers, bottle sizes, strengths and price levels. Citadelle has a May 2003 wholesale quotation and later retail offers. These establish different source facts; joining them does not measure consumer price appreciation.
+
+**Five products currently reach twenty years within a comparable series.** Comparable spans retain the same variant, seller, currency, country, known tax basis and retail/wholesale level. MSRP and unknown price levels are excluded. Missing years remain missing. Currency conversion, inflation adjustment, resale returns, investment performance and daily values are not inferred.
+
+**23 products cannot have a twenty-year branded history as of this snapshot.** The registry has 21 sourced post-2006 introductions plus two owner-confirmed brand bounds: Malfy appeared in 2016 and Don Papa in 2012, while their expression-specific first-release years remain unknown. `release_not_before_year` preserves a bound separately from `first_release_year`. Distillery foundation, maturation age and category history are not substituted for a product launch.
+
+Three other early bottle-price gaps remain explicit:
+
+- **Kakubin:** individual observations begin in 2017. Its independent 2000–2026 monthly survey series does not create early retailer observations.
+- **Four Roses Small Batch:** the producer confirms September 2006 introduction; the earliest accepted exact-format bottle price is from 2008. No 2006 MSRP or retail price was verified.
+- **Diplomático Reserva Exclusiva:** the earliest accepted exact-format price is from 2008. Older bottles, vintage years and modern auctions do not supply a pre-2007 retail price.
+
+The [launch registry](../data/prices/coverage-research.json), [additional launch evidence](../data/prices/additional-launch-research.json) and [remaining-gap report](../data/prices/remaining-gap-research.json) retain the scope and unresolved work. Field presence and completed collection jobs do not mean a finished historical series.
+
+## Dates keep their source precision
+
+A daily archived offer stores the actual capture date in `observed_on`, an empty `observed_period`, and `date_precision: "day"`. A source stating only a month stores `observed_on: null`, a `YYYY-MM` period and `date_precision: "month"`. Admin, API and public dumps preserve that distinction.
+
+The May 2003 Iowa Liquor Quarterly quotation for Citadelle is **USD 19.99 per 750 ml bottle**, printed at **88 U.S. proof**, equivalent to 44% ABV. Its six-bottle case costs USD 119.94. The table explicitly identifies a wholesale list. The cover supplies May 2003, not May 1; later archive-capture, file-modification and retrieval dates are not the price date. Tax treatment is unknown. The complete PDF was integrity checked and its cover and relevant table visually reviewed; its bytes remain outside the public bundle.
+
+Elapsed spans use conservative bounds for month-only evidence: the earliest observation could fall at month end, and the latest at month start. Calculation bounds are never stored as invented observation days. See [source-date fields and migrations](SOURCE_DATES.md).
+
+## Offers, recommendations and statistics
+
+The bottle page separates series by currency, country, volume, ABV, retailer, tax treatment and price level. `null` tax or promotion means unknown. It does not mean tax excluded, a discount or an ordinary undiscounted offer. A manufacturer recommendation, wholesale quote, shop offer and completed auction transaction have different meanings; no conversion between them is inferred.
+
+Kakubin's **Japan monthly city-price median** is an independent `market_price_indexes` record with `market_price_index_points`. It retains the median statistic, JPY unit, 700 ml reference, tax scope, survey method and specification changes. It is not one retailer's price or a transaction. See [Kakubin research](../data/prices/kakubin-research.json) and [market-index sources](../data/prices/market-indexes/). January 2000 is not converted into an invented first-of-month bottle observation.
+
+Historical labels retain their context too. Appleton's owner confirms Signature was originally released as V/X in 1987 and separately confirms the 2015 rename without a liquid change at that rename. This supports four 2003–2006 V/X offers, all 700 ml / 40%, VAT included. It does not establish identical markets, age statements or formulations across every decade. [Appleton predecessor evidence](../data/prices/appleton-predecessor-research.json).
+
+## Maintain the notebook from admin
+
+Open **Admin → Products → Photographs & price archives** at `/admin/catalog/product/research/`. The all-55 workbench shows hosted-image gaps, external references, actual price years, overall/comparable spans and reviewed collection targets. Download its coverage/config JSON when needed. A year with one source record is different from a fully sampled year.
+
+1. Open a product dossier to manage bottlings, sources, prices, expression launch years and earliest brand bounds.
+2. Edit a **Price archive target**: reviewed retailer ID, permitted title words, exclusions, known URL generations and optional Actinic/TheDrinkShop mappings.
+3. Queue one target or all enabled targets. Existing queued/running targets are skipped; progress and provider errors remain visible.
+4. Open **Discovery candidates**, resolve the canonical product, inspect the primary title, format, price node, date and tax scope, then use **Accept reviewed archival prices**.
+5. Regenerate public JSON/JSONL or a **Source Memento** bundle after review. Collection and publication are separate actions.
+
+Acceptance creates no new canonical product and does not silently reprice an existing observation. Configuration and editorial changes are audited. Provider review holds preserve unresolved anomalies, including historical Campari 15% and Disaronno 29% records. Those values are not normalized to modern strengths. Clear a hold only after resolving the actual conflict.
+
+A document-only monthly quote uses the ordinary price editor with its exact period and price basis. It does not enter a parser requiring a daily Wayback capture. Schema and PostgreSQL constraints reject competing day/month representations and duplicate observations within the same declared scope.
+
+## Collection and reproduction
+
+The archived collection uses reviewed retailer IDs, bounded CDX queries and actual captured HTML. The product parser reads known primary offer nodes, not sidebar recommendations, unit prices or basket totals. The Actinic adapter requires one reviewed `PROD_REF`, title, age, explicit volume/ABV and VAT-inclusive price within the same row. TheDrinkShop has a separate source identity and exact primary bottle-price table. A category page is never treated as one product.
+
+From the repository root:
+
+```sh
+# Collect source candidates; inspect results and errors before accepting them.
+python3 scripts/collect_price_archives.py
+python3 scripts/collect_legacy_price_archives.py
+python3 scripts/collect_drinkshop_price_archives.py
+
+# After review, rebuild the accepted portable data and coverage.
+python3 scripts/build_seed.py
+python3 scripts/build_data_exports.py
+python3 scripts/build_research_audit.py
+```
+
+Collectors cache source responses and checkpoint reports. A denied request or unsupported layout is not evidence that a price did not exist. Broad Internet coverage is not guaranteed by success status. [Current browser-source offers](../data/prices/current-source-research.json) have explicitly scoped fact-extract hashes; they are not labeled as preserved full HTML or automatically reproduced daily observations.
+
+The original subset, expanded captures, documents, announcements and current views retain separate reports under [`data/prices/`](../data/prices/). The seed and generated coverage are the consolidated accepted view. Do not add report lengths together or count held candidates as published prices.
+
+## Keep facts portable
+
+Raw copyrighted retailer pages, full newspaper/catalogue PDFs and review renders stay in ignored local research directories. Public records preserve extracted price facts, source links, date precision and hash scope. A hash of extracted facts does not authenticate an unavailable complete source page.
+
+[Source Memento](MEMENTO.md) preserves public fact capsules and their provenance with immutable hashes. Its optional ZIP contains only already hosted, individually licensed bottle photographs with credit/license manifests. It does not fetch arbitrary source URLs, mirror external-only photographs or redistribute full copyrighted publications. Public exports exclude accounts, private observations and moderation queues; SQL backups remain separate and private.

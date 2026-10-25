@@ -1,0 +1,658 @@
+{
+  "schema_version": "1.0",
+  "targets": [
+    {
+      "product_slug": "monkey-47-schwarzwald",
+      "brand": "Monkey 47",
+      "product_name": "Schwarzwald Dry Gin",
+      "commons_query": "\"Monkey 47\"",
+      "openfoodfacts_brand": "monkey-47",
+      "reviewed_barcodes": [
+        "42213277"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Monkey_47_-_Schwarzwald_Dry_Gin_-_Packshot.jpg",
+        "https://world.openfoodfacts.org/product/42213277"
+      ]
+    },
+    {
+      "product_slug": "bombay-sapphire",
+      "brand": "Bombay Sapphire",
+      "product_name": "London Dry Gin",
+      "commons_query": "\"Bombay Sapphire\" bottle",
+      "openfoodfacts_brand": "bombay",
+      "reviewed_barcodes": [
+        "5010677714006"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Bombay_sapphire_bottle.jpg",
+        "https://world.openfoodfacts.org/product/5010677714006"
+      ]
+    },
+    {
+      "product_slug": "hendricks-original",
+      "brand": "Hendrick’s",
+      "product_name": "Original",
+      "commons_query": "Hendrick gin",
+      "openfoodfacts_brand": "hendricks",
+      "reviewed_barcodes": [
+        "5010327755014"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Hendrick%27s_Gin_1l.jpg",
+        "https://world.openfoodfacts.org/product/5010327755014"
+      ]
+    },
+    {
+      "product_slug": "roku-japanese-craft",
+      "brand": "Roku",
+      "product_name": "Japanese Craft Gin",
+      "commons_query": "\"Roku\" Gin",
+      "openfoodfacts_brand": "roku",
+      "reviewed_barcodes": [
+        "4901777305359"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Roku_Japanese_Craft_Gin_01.jpg",
+        "https://world.openfoodfacts.org/product/4901777305359"
+      ]
+    },
+    {
+      "product_slug": "tanqueray-london-dry",
+      "brand": "Tanqueray",
+      "product_name": "London Dry",
+      "commons_query": "\"Tanqueray\" bottle",
+      "openfoodfacts_brand": "tanqueray",
+      "reviewed_barcodes": [
+        "5000291020805"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Tanqueray_bottle_Gin.png",
+        "https://world.openfoodfacts.org/product/5000291020805"
+      ]
+    },
+    {
+      "product_slug": "the-botanist-islay",
+      "brand": "The Botanist",
+      "product_name": "Islay Dry Gin",
+      "commons_query": "\"Botanist\" gin",
+      "openfoodfacts_brand": "the-botanist",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:The_Botanist_Islay_Dry_Gin_01.jpg"
+      ]
+    },
+    {
+      "product_slug": "bacardi-carta-blanca",
+      "brand": "Bacardí",
+      "product_name": "Carta Blanca / Superior",
+      "commons_query": "\"Bacardi\" \"Carta\"",
+      "openfoodfacts_brand": "bacardi",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Bacardi_Carta_Blanca_Rum_01.jpg",
+        "https://commons.wikimedia.org/wiki/File:Bacardi_old_bottle_back.JPG",
+        "https://commons.wikimedia.org/wiki/File:Old_Bacardi_Front.JPG"
+      ]
+    },
+    {
+      "product_slug": "havana-club-7",
+      "brand": "Havana Club",
+      "product_name": "7 Años",
+      "commons_query": "\"Havana\" \"7\" bottle",
+      "openfoodfacts_brand": "havana-club",
+      "reviewed_barcodes": [
+        "8501110080439"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Havana_Club_7_anos.jpeg",
+        "https://world.openfoodfacts.org/product/8501110080439"
+      ]
+    },
+    {
+      "product_slug": "jack-daniels-old-no7",
+      "brand": "Jack Daniel’s",
+      "product_name": "Old No. 7",
+      "commons_query": "\"Jack Daniels\" bottle",
+      "openfoodfacts_brand": "jack-daniels",
+      "reviewed_barcodes": [
+        "5099873089798"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Jack_Daniels_bottle.jpg",
+        "https://world.openfoodfacts.org/product/5099873089798"
+      ]
+    },
+    {
+      "product_slug": "jameson-original",
+      "brand": "Jameson",
+      "product_name": "Original",
+      "commons_query": "Jameson bottle",
+      "openfoodfacts_brand": "jameson",
+      "reviewed_barcodes": [
+        "5011007003005"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:James_Irish_Blended_Whiskey_01.jpg",
+        "https://world.openfoodfacts.org/product/5011007003005"
+      ]
+    },
+    {
+      "product_slug": "disaronno-originale",
+      "brand": "Disaronno",
+      "product_name": "Originale",
+      "commons_query": "Disaronno bottle",
+      "openfoodfacts_brand": "disaronno",
+      "reviewed_barcodes": [
+        "3048110016372"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Disaronno_1.14L,_Canada_(obverse),_2026-03-11.jpg",
+        "https://commons.wikimedia.org/wiki/File:Disaronno_1.14L,_Canada_(reverse),_2026-03-11.jpg",
+        "https://commons.wikimedia.org/wiki/File:Disaronno_bottle,_375ml.jpg",
+        "https://world.openfoodfacts.org/product/3048110016372"
+      ]
+    },
+    {
+      "product_slug": "absolut-original",
+      "brand": "Absolut",
+      "product_name": "Original Vodka",
+      "commons_query": "Absolut Vodka bottle",
+      "openfoodfacts_brand": "absolut",
+      "reviewed_barcodes": [
+        "0835229000308"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Absolut_Vodka_01.jpg",
+        "https://world.openfoodfacts.org/product/0835229000308"
+      ]
+    },
+    {
+      "product_slug": "campari-bitter",
+      "brand": "Campari",
+      "product_name": "Bitter",
+      "commons_query": "Campari bottle",
+      "openfoodfacts_brand": "campari",
+      "reviewed_barcodes": [
+        "8000040000802"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Campari_Bitter_Aperitif_01.jpg",
+        "https://world.openfoodfacts.org/product/8000040000802"
+      ]
+    },
+    {
+      "product_slug": "cointreau-original",
+      "brand": "Cointreau",
+      "product_name": "L’Unique",
+      "commons_query": "Cointreau bottle",
+      "openfoodfacts_brand": "cointreau",
+      "reviewed_barcodes": [
+        "3035542004206"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Cointreau_Orange_Liqueur_01.jpg",
+        "https://world.openfoodfacts.org/product/3035542004206"
+      ]
+    },
+    {
+      "product_slug": "suntory-toki-blended-japanese-whisky",
+      "brand": "Suntory",
+      "product_name": "Toki Blended Japanese Whisky",
+      "commons_query": "\"Toki\" whisky",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [
+        "4901777303553"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/4901777303553"
+      ]
+    },
+    {
+      "product_slug": "suntory-hibiki-japanese-harmony",
+      "brand": "Suntory",
+      "product_name": "Hibiki Japanese Harmony",
+      "commons_query": "\"Hibiki\" \"Harmony\"",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Hibiki_Harmony_Whisky_01.tif"
+      ]
+    },
+    {
+      "product_slug": "suntory-yamazaki-12-years-old",
+      "brand": "Suntory",
+      "product_name": "Yamazaki 12 Years Old",
+      "commons_query": "\"Yamazaki\" \"12\"",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:The_Yamazaki_Single_Malt_Whisky_Aged_12_years.JPG"
+      ]
+    },
+    {
+      "product_slug": "suntory-hakushu-12-years-old",
+      "brand": "Suntory",
+      "product_name": "Hakushu 12 Years Old",
+      "commons_query": "\"Hakushu\" \"12\"",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "suntory-chita-single-grain-whisky",
+      "brand": "Suntory",
+      "product_name": "Chita Single Grain Whisky",
+      "commons_query": "\"Chita\" whisky",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "suntory-ao-blended-world-whisky",
+      "brand": "Suntory",
+      "product_name": "Ao Blended World Whisky",
+      "commons_query": "\"Suntory\" \"Ao\"",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "suntory-kakubin-blended-whisky",
+      "brand": "Suntory",
+      "product_name": "Kakubin Blended Whisky",
+      "commons_query": "\"Kakubin\"",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Suntory_Kakubin.jpg"
+      ]
+    },
+    {
+      "product_slug": "suntory-haku-vodka",
+      "brand": "Suntory",
+      "product_name": "Haku Vodka",
+      "commons_query": "\"Haku\" vodka",
+      "openfoodfacts_brand": "suntory",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Suntory_Haku_vodka_01.jpg"
+      ]
+    },
+    {
+      "product_slug": "beefeater-london-dry-gin",
+      "brand": "Beefeater",
+      "product_name": "London Dry Gin",
+      "commons_query": "\"Beefeater\" gin bottle",
+      "openfoodfacts_brand": "beefeater",
+      "reviewed_barcodes": [
+        "5000329002193"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/5000329002193"
+      ]
+    },
+    {
+      "product_slug": "plymouth-original-gin",
+      "brand": "Plymouth",
+      "product_name": "Original Gin",
+      "commons_query": "\"Plymouth\" gin bottle",
+      "openfoodfacts_brand": "plymouth",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Plymouth_Gin_1793_Black_Friars_Distillery.jpg",
+        "https://commons.wikimedia.org/wiki/File:Plymouth_Gin_1793_Black_Friars_Distillery_3.jpg"
+      ]
+    },
+    {
+      "product_slug": "ki-no-bi-kyoto-dry-gin",
+      "brand": "KI NO BI",
+      "product_name": "Kyoto Dry Gin",
+      "commons_query": "\"Ki No Bi\"",
+      "openfoodfacts_brand": "ki-no-bi",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "malfy-originale",
+      "brand": "Malfy",
+      "product_name": "Originale",
+      "commons_query": "\"Malfy\"",
+      "openfoodfacts_brand": "malfy",
+      "reviewed_barcodes": [
+        "5000299296028"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/5000299296028"
+      ]
+    },
+    {
+      "product_slug": "the-glenlivet-12-year-old",
+      "brand": "The Glenlivet",
+      "product_name": "12 Year Old",
+      "commons_query": "\"Glenlivet\" \"12\"",
+      "openfoodfacts_brand": "the-glenlivet",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:The_Glenlivet_-_12_yr_Single_Malt.JPG"
+      ]
+    },
+    {
+      "product_slug": "aberlour-12-year-old",
+      "brand": "Aberlour",
+      "product_name": "12 Year Old",
+      "commons_query": "\"Aberlour\" \"12\"",
+      "openfoodfacts_brand": "aberlour",
+      "reviewed_barcodes": [
+        "3047100056251"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/3047100056251"
+      ]
+    },
+    {
+      "product_slug": "chivas-regal-12-year-old",
+      "brand": "Chivas Regal",
+      "product_name": "12 Year Old",
+      "commons_query": "\"Chivas\" \"12\"",
+      "openfoodfacts_brand": "chivas-regal",
+      "reviewed_barcodes": [
+        "0080432402931"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Chivas_regal_12yo.jpg",
+        "https://world.openfoodfacts.org/product/0080432402931"
+      ]
+    },
+    {
+      "product_slug": "ballantine-s-finest",
+      "brand": "Ballantine’s",
+      "product_name": "Finest",
+      "commons_query": "\"Ballantine\" \"Finest\"",
+      "openfoodfacts_brand": "ballantine-s",
+      "reviewed_barcodes": [
+        "5010106113127"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:2017_Ballantine%27s_Finest.jpg",
+        "https://world.openfoodfacts.org/product/5010106113127"
+      ]
+    },
+    {
+      "product_slug": "four-roses-small-batch-bourbon",
+      "brand": "Four Roses",
+      "product_name": "Small Batch Bourbon",
+      "commons_query": "\"Four Roses\" \"Small Batch\"",
+      "openfoodfacts_brand": "four-roses",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Four_Roses_Small_Batch_Bourbon.jpg"
+      ]
+    },
+    {
+      "product_slug": "kahl-a-original-coffee-liqueur",
+      "brand": "Kahlúa",
+      "product_name": "Original Coffee Liqueur",
+      "commons_query": "\"Kahlua\" bottle",
+      "openfoodfacts_brand": "kahl-a",
+      "reviewed_barcodes": [
+        "7610594454399"
+      ],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Kahl%C3%BAa_Mexican_Coffee_Liquor_01.jpg",
+        "https://world.openfoodfacts.org/product/7610594454399"
+      ]
+    },
+    {
+      "product_slug": "malibu-original",
+      "brand": "Malibu",
+      "product_name": "Original",
+      "commons_query": "\"Malibu\" rum bottle",
+      "openfoodfacts_brand": "malibu",
+      "reviewed_barcodes": [
+        "8410024700015"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/8410024700015"
+      ]
+    },
+    {
+      "product_slug": "altos-plata",
+      "brand": "Altos",
+      "product_name": "Plata",
+      "commons_query": "\"Altos\" tequila",
+      "openfoodfacts_brand": "altos",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "del-maguey-vida-cl-sico",
+      "brand": "Del Maguey",
+      "product_name": "Vida Clásico",
+      "commons_query": "\"Del Maguey\"",
+      "openfoodfacts_brand": "del-maguey",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "citadelle-original",
+      "brand": "Citadelle",
+      "product_name": "Original",
+      "commons_query": "\"Citadelle\" gin",
+      "openfoodfacts_brand": "citadelle",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Citadelle_Bottle_(1).jpg"
+      ]
+    },
+    {
+      "product_slug": "sipsmith-london-dry-gin",
+      "brand": "Sipsmith",
+      "product_name": "London Dry Gin",
+      "commons_query": "\"Sipsmith\"",
+      "openfoodfacts_brand": "sipsmith",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "gin-mare-mediterranean-gin",
+      "brand": "Gin Mare",
+      "product_name": "Mediterranean Gin",
+      "commons_query": "\"Gin Mare\"",
+      "openfoodfacts_brand": "gin-mare",
+      "reviewed_barcodes": [
+        "8411640000480"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/8411640000480"
+      ]
+    },
+    {
+      "product_slug": "nord-s-atlantic-galician-gin",
+      "brand": "Nordés",
+      "product_name": "Atlantic Galician Gin",
+      "commons_query": "\"Nordes\" gin",
+      "openfoodfacts_brand": "nord-s",
+      "reviewed_barcodes": [
+        "8435449500002"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/8435449500002"
+      ]
+    },
+    {
+      "product_slug": "isle-of-harris-gin",
+      "brand": "Isle of Harris",
+      "product_name": "Gin",
+      "commons_query": "\"Harris\" gin bottle",
+      "openfoodfacts_brand": "isle-of-harris",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "isle-of-raasay-hebridean-gin",
+      "brand": "Isle of Raasay",
+      "product_name": "Hebridean Gin",
+      "commons_query": "\"Raasay\" gin",
+      "openfoodfacts_brand": "isle-of-raasay",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "kyr-gin",
+      "brand": "Kyrö",
+      "product_name": "Gin",
+      "commons_query": "\"Kyro\" gin",
+      "openfoodfacts_brand": "kyr",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Napue_Gin.jpg"
+      ]
+    },
+    {
+      "product_slug": "st-george-terroir-gin",
+      "brand": "St. George",
+      "product_name": "Terroir Gin",
+      "commons_query": "\"St George\" gin",
+      "openfoodfacts_brand": "st-george",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "ferdinand-s-saar-dry-gin",
+      "brand": "Ferdinand’s",
+      "product_name": "Saar Dry Gin",
+      "commons_query": "\"Ferdinand\" gin",
+      "openfoodfacts_brand": "ferdinand-s",
+      "reviewed_barcodes": [
+        "4260270190450"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/4260270190450"
+      ]
+    },
+    {
+      "product_slug": "christian-drouin-le-gin",
+      "brand": "Christian Drouin",
+      "product_name": "Le Gin",
+      "commons_query": "\"Christian Drouin\" gin",
+      "openfoodfacts_brand": "christian-drouin",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": []
+    },
+    {
+      "product_slug": "dingle-original-gin",
+      "brand": "Dingle",
+      "product_name": "Original Gin",
+      "commons_query": "\"Dingle\" gin",
+      "openfoodfacts_brand": "dingle",
+      "reviewed_barcodes": [
+        "5391518565002"
+      ],
+      "reviewed_source_pages": [
+        "https://world.openfoodfacts.org/product/5391518565002"
+      ]
+    },
+    {
+      "product_slug": "diplom-tico-reserva-exclusiva",
+      "brand": "Diplomático",
+      "product_name": "Reserva Exclusiva",
+      "commons_query": "\"Diplomatico\" \"Reserva\"",
+      "openfoodfacts_brand": "diplom-tico",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Ron_de_Venezuela,_Botucal_Reserva_Exclusiva.jpg"
+      ]
+    },
+    {
+      "product_slug": "mount-gay-eclipse",
+      "brand": "Mount Gay",
+      "product_name": "Eclipse",
+      "commons_query": "\"Mount Gay\" \"Eclipse\"",
+      "openfoodfacts_brand": "mount-gay",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Mount_Gay_Eclipse_Cocktails.JPG"
+      ]
+    },
+    {
+      "product_slug": "appleton-estate-signature",
+      "brand": "Appleton Estate",
+      "product_name": "Signature",
+      "commons_query": "\"Appleton\" \"Signature\"",
+      "openfoodfacts_brand": "appleton-estate",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Appleton_Estate_Jamaica_Rum_01.jpg",
+        "https://commons.wikimedia.org/wiki/File:Appleton_Estate_Jamaica_Rum_04.tif"
+      ]
+    },
+    {
+      "product_slug": "don-papa-7-years-old",
+      "brand": "Don Papa",
+      "product_name": "7 Years Old",
+      "commons_query": "\"Don Papa\"",
+      "openfoodfacts_brand": "don-papa",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Flasche_don_papa.jpg"
+      ]
+    },
+    {
+      "product_slug": "hennessy-v-s",
+      "brand": "Hennessy",
+      "product_name": "V.S",
+      "commons_query": "\"Hennessy\" \"VS\"",
+      "openfoodfacts_brand": "hennessy",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Cognac_Hennessy_Very_Special.jpg"
+      ]
+    },
+    {
+      "product_slug": "r-my-martin-vsop",
+      "brand": "Rémy Martin",
+      "product_name": "VSOP",
+      "commons_query": "\"Remy Martin\" \"VSOP\"",
+      "openfoodfacts_brand": "r-my-martin",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:R%C3%A9my_Martin_VSOP.jpg"
+      ]
+    },
+    {
+      "product_slug": "chartreuse-green-chartreuse",
+      "brand": "Chartreuse",
+      "product_name": "Green Chartreuse",
+      "commons_query": "\"Chartreuse\" bottle",
+      "openfoodfacts_brand": "chartreuse",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Chartreuse_verte.JPG"
+      ]
+    },
+    {
+      "product_slug": "luxardo-amaretto-di-saschira",
+      "brand": "Luxardo",
+      "product_name": "Amaretto di Saschira",
+      "commons_query": "\"Luxardo\" Amaretto",
+      "openfoodfacts_brand": "luxardo",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Luxardo_Amaretto_bottle,_750ml.jpg"
+      ]
+    },
+    {
+      "product_slug": "heering-cherry-liqueur",
+      "brand": "Heering",
+      "product_name": "Cherry Liqueur",
+      "commons_query": "\"Heering\" bottle",
+      "openfoodfacts_brand": "heering",
+      "reviewed_barcodes": [],
+      "reviewed_source_pages": [
+        "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle.jpg",
+        "https://commons.wikimedia.org/wiki/File:Cherry_Heering_-_Peter_Heering_Liqueur_70cl_bottle_rear.jpg"
+      ]
+    }
+  ]
+}

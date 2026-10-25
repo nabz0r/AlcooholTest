@@ -79,3 +79,11 @@ Catalogue cards and product detail now include coverage with documented/total/ar
 Ingredient detail responses additionally expose `plant_part`, `sensory_role`, `preparation`, `technical_notes` and nullable `profile_source`. These are editable source-linked editorial fields, not measurements. Empty/unknown parts remain explicit. Existing catalogue 1.0 ingredient rows without these new optional fields still validate.
 
 Staff may queue `{ "kind": "prices" }` at the existing jobs endpoint. The worker emits a JSONL archival-research report and stages `wayback` candidates; it does not automatically publish prices. Acceptance is an audited admin action after canonical identity review. Private observation responses also include `row_observations` and `unobserved_states`; null transition rows remain null and no physiological forecast is returned.
+
+## Volume 05 source depth
+
+Product detail includes locally hosted `photos` with optional `pair_key` and `barcode`, plus verified `external_photo_references` with explicit external-link display mode, exact source image URL, source page, rights/caption and review date. External URLs are references, never automatic server downloads or remote page image embeds. Approved community packaging remains moderated.
+
+Price records expose their basis and context. Tax and promotion may be `null`; unknown does not mean excluded tax or a normal undiscounted offer. Launch recommendations, historical documents, wholesale lists and retailer offers retain separate labels/series. Month-only documentary records keep month precision rather than an invented observed day. `market_indexes` contains separately verified survey metadata and ordered monthly values; it never enters the bottle-offer series or invents a bottling ABV.
+
+Operational permissions are explicit: queuing jobs requires `catalog.add_job`, viewing jobs requires `catalog.view_job`, and private SQL backup download/creation and committed cross-table imports are restricted to instance owners. View-only source/candidate staff cannot publish prices or photographs through bulk admin actions. Standard session and CSRF protections apply.

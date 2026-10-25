@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-25T21:17:05.252535+00:00",
+  "as_of": "2026-10-25",
+  "scope": "Additional expression-launch and eligibility research. Owner-confirmed years are separated from brand/distillery bounds. A 20-year eligible lineage is not proof of any historical price observation or continuous price series.",
+  "products": [
+    {
+      "product": "malfy-originale",
+      "year": 2016,
+      "first_release_year": null,
+      "release_not_before_year": 2016,
+      "source_url": "https://www.pernod-ricard.com/sites/default/files/news/downloads/2021-09/PERNOD%20RICARD%20RAPPORT%20ANNUEL%202020-21.pdf",
+      "publisher": "Pernod Ricard",
+      "source_kind": "brand_owner_annual_report",
+      "exact_claim_scope": "The owner’s 2020/21 annual report dates Malfy brand entry to the super-premium flavoured-gin market to 2016. It does not date Originale separately. This establishes a post-2006 brand bound, not a verified expression launch day.",
+      "twenty_year_eligibility_as_of_2026_10_25": false,
+      "notes": "Do not promote this brand year to an independently verified Originale first-release year. A contemporary distributor-announcement report explicitly dates Originale to 2016, while some retail copy says 2017; preserve both scopes rather than borrowing ancient Italian gin or distillery history.",
+      "additional_sources": [
+        {
+          "source_url": "https://www.thedrinksreport.com/news/2017/17362-biggar-leith-to-distribute-malfy-originale.html",
+          "publisher": "The Drinks Report",
+          "source_kind": "contemporary_distributor_announcement_report",
+          "published_on": "2017-10-27",
+          "claim_scope": "Names Originale, states launch 2016, quotes producer Carlo Vergnano, and reports future US national distribution from January 1 at $29.99/750 ml. Secondary publication of an importer announcement; not an independently obtained owner release."
+        },
+        {
+          "source_url": "https://theabsolutcompany.com/story/escape-to-the-world-of-malfy-gin-and-experience-a-taste-of-la-dolce-vita/",
+          "publisher": "The Absolut Company / Pernod Ricard",
+          "source_kind": "brand_owner_interview",
+          "claim_scope": "Indexed owner interview also dates the brand’s market arrival to 2016. Direct HTML retrieval returned HTTP 403 during this review; the independently downloaded owner annual report is the primary evidence used."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "pdf_page": 55,
+      "printed_page": 109,
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 18805284,
+        "sha256": "205783a8bf9386df89a2ca6c78da066b594ecf5515e1907b64c5d4ad9fe55f1d",
+        "hash_scope": "Downloaded raw PDF; full copyrighted document retained only in ignored research work directory."
+      }
+    },
+    {
+      "product": "kyr-gin",
+      "year": 2014,
+      "first_release_year": 2014,
+      "release_not_before_year": 2014,
+      "source_url": "https://kyrodistillery.de/collections/all-gins",
+      "publisher": "Kyrö Distillery Company",
+      "source_kind": "manufacturer",
+      "exact_claim_scope": "Producer says its first Finnish 100%-rye gin was sent into the world in 2014 and identifies the original Kyrö Gin alongside later Dark/Pink expressions. This is gin-product history, separate from the company founding.",
+      "twenty_year_eligibility_as_of_2026_10_25": false,
+      "notes": "Year precision only. Kyrö Napue/Kyrö Gin naming is supported by the producer; the UK 46.3% and continental 42.6% bottlings are different market/strength variants, not silently interchangeable price observations.",
+      "additional_sources": [
+        {
+          "source_url": "https://kyrodistillery.co.uk/products/kyro-gin",
+          "publisher": "Kyrö Distillery Company",
+          "source_kind": "manufacturer",
+          "claim_scope": "Producer identifies Kyrö Napue Gin 42.6%, its IWSC 2015 award, and explains that the UK product is sold as Kyrö Gin 46.3%."
+        },
+        {
+          "source_url": "https://www.kyrodistillery.co.uk/pages/story",
+          "publisher": "Kyrö Distillery Company",
+          "source_kind": "manufacturer",
+          "claim_scope": "First own still heated 2014; gin made while first whisky matured. Award and sell-out concern 2015, not first release."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 342172,
+        "sha256": "48ca0275881846242f7e8f97e72affa962c0a8407ad2bb2408d3528474f5e7bc",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      }
+    },
+    {
+      "product": "dingle-original-gin",
+      "year": 2012,
+      "first_release_year": 2012,
+      "release_not_before_year": 2012,
+      "source_url": "https://dingledistillery.ie/our-distillery/",
+      "publisher": "Dingle Distillery",
+      "source_kind": "manufacturer_with_first_person_corroboration",
+      "exact_claim_scope": "Producer dates on-site distilling and bottling to 2012. The gin-specific timing is corroborated by managing director Elliot Hughes in a first-person interview: gin/vodka began around November 2012, before whiskey in December. A contemporary November 2012 report scheduled Original Gin for Christmas.",
+      "twenty_year_eligibility_as_of_2026_10_25": false,
+      "notes": "2012 is supported for original gin production/introduction; no exact first retail-sale day is asserted. This is not a claim that all later Dingle expressions launched with the distillery. A recent producer redesign post uses an approximate 13-year retrospective and is not used to derive an exact launch day.",
+      "additional_sources": [
+        {
+          "source_url": "https://www.binnys.com/blog/post/dingle-distillery-barrel-to-bottle-talks-irish-whiskey/",
+          "publisher": "Binny’s Beverage Depot / Elliot Hughes interview",
+          "source_kind": "first_person_manufacturer_interview",
+          "claim_scope": "Hughes explicitly says gin and vodka were first distilled in the winter of 2012, around November, with whiskey following in December. This is direct producer testimony hosted by a retailer, not a distillery-foundation inference."
+        },
+        {
+          "source_url": "https://www.drinksindustryireland.ie/dingle-distillery-starts-craft-whiskey-distilling/",
+          "publisher": "Drinks Industry Ireland",
+          "source_kind": "contemporary_launch_report",
+          "published_on": "2012-11-27",
+          "claim_scope": "Reports Original Gin already in production and scheduled for Christmas retail at€25, but supplies no bottle size/tax basis; not imported as a comparable price point."
+        },
+        {
+          "source_url": "https://www.linkedin.com/posts/the-dingle-distillery_we-are-extremely-excited-to-share-a-new-chapter-activity-7465675822562009088-yaZu",
+          "publisher": "Dingle Distillery",
+          "source_kind": "manufacturer_social_post",
+          "claim_scope": "Producer describes original-bottle redesign since opening 2012 and explicitly says the liquid has not changed. Approximate 13-year wording is not converted to a precise year/date."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 103550,
+        "sha256": "754443f61251895ff1358409eb4acf0ed638cfd9b550640a138e8ffd9d2992a2",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      }
+    },
+    {
+      "product": "don-papa-7-years-old",
+      "year": 2012,
+      "first_release_year": null,
+      "release_not_before_year": 2012,
+      "source_url": "https://www.diageo.com/en/news-and-media/press-releases/2023/diageo-to-acquire-don-papa-rum",
+      "publisher": "Diageo",
+      "source_kind": "brand_owner_press_release",
+      "published_on": "2023-01-17",
+      "exact_claim_scope": "Owner acquisition announcement explicitly dates Don Papa Rum brand launch to 2012. It does not independently date the seven-year expression launch.2012 is retained as the branded product earliest-possible bound.",
+      "twenty_year_eligibility_as_of_2026_10_25": false,
+      "notes": "No 20-year Don Papa 7 branded price history can predate the 2012 brand. The seven-year maturation age is not a commercial launch year. Do not conflate the current original seven-year expression with later MassKara, Baroko, ten-year or cask-finish products.",
+      "additional_sources": [
+        {
+          "source_url": "https://zamoracompany.com/usa/prensa-y-medios/comunicacion/zamora-company-usa-adds-super-premium-don-papa-rum-to-fast-growing-portfolio/",
+          "publisher": "Zamora Company USA",
+          "source_kind": "official_importer_press_release",
+          "claim_scope": "Official importer names Don Papa 7-year-old and 10-year-old leading the portfolio and separately dates the brand establishment to 2012. It does not specify a first 7-year-old launch date."
+        },
+        {
+          "source_url": "https://www.donpaparum.com/blogs/press",
+          "publisher": "Don Papa Rum",
+          "source_kind": "manufacturer_press_index",
+          "claim_scope": "Brand-owned press index repeats the 2012 brand origin and records 2013 Don Papa awards; no expression-specific first-sale day is supplied."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 321199,
+        "sha256": "920d48592fada5eb8e11727549f1a061ff1c4171c599d42df88bd57c8aba6c16",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      }
+    },
+    {
+      "product": "altos-plata",
+      "year": 2009,
+      "first_release_year": 2009,
+      "release_not_before_year": 2009,
+      "source_url": "https://wecommerce.pernod-ricard.com/products/product?id=PRPECOM001262",
+      "publisher": "Pernod Ricard",
+      "source_kind": "manufacturer_product_history_with_contemporary_corroboration",
+      "exact_claim_scope": "Owner’s Plata product record dates Altos creation to 2009. The contemporaneous November 2009 launch report explicitly names Plata and Reposado as the introduced styles. Brand history 1967 for ordinary Olmeca is not used for Altos.",
+      "twenty_year_eligibility_as_of_2026_10_25": false,
+      "notes": "Year precision only: the November 9 London event was a market/press launch, while August 2009 travel-retail introduction was also reported. No global first-on-sale day or country-universal launch date is inferred.",
+      "additional_sources": [
+        {
+          "source_url": "https://www.pernod-ricard.com/en/brands/altos",
+          "publisher": "Pernod Ricard",
+          "source_kind": "brand_owner",
+          "claim_scope": "Owner dates Altos creation to 2009 and identifies Plata in its portfolio."
+        },
+        {
+          "source_url": "https://www.thedrinksbusiness.com/2009/11/olmeca-tequila-unveils-altos/",
+          "publisher": "The Drinks Business",
+          "source_kind": "contemporary_launch_report_with_producer_testimony",
+          "published_on": "2009-11-10",
+          "claim_scope": "Reports November 9 London launch, quotes master distiller Jesus Hernandez and co-creator Henry Besant, and explicitly states Plata and Reposado styles. Publication footer also prints 11.11.2009; retain year, not a purported global first-sale date."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 135462,
+        "sha256": "ebc94f076f60a863cd7b55f1a077116bd05288d883c636d638a90c36f4c8b5f5",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      }
+    },
+    {
+      "product": "appleton-estate-signature",
+      "year": 1987,
+      "first_release_year": 1987,
+      "release_not_before_year": 1987,
+      "source_url": "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+      "publisher": "Campari Academy",
+      "source_kind": "brand_owner_educational_publication",
+      "exact_claim_scope": "Owner educational booklet explicitly dates Appleton Estate Signature’s original release under the V/X name to 1987. This supports predecessor-lineage eligibility; Signature naming itself began in 2015.",
+      "twenty_year_eligibility_as_of_2026_10_25": true,
+      "name_introduced_year": 2015,
+      "name_introduced_period": "2015-04",
+      "historical_alias": "Appleton Estate V/X",
+      "alias_same_liquid_explicit_owner_confirmation": true,
+      "notes": "The alias is evidenced by the owner, not inferred from seller descriptions. Preserve historic package/market/strength/size per observation. A 1987 lineage does not make a 1990 s 43%75 cl import comparable to a current 40%70 cl bottle. The owner confirms no liquid change at the 2015 rename only; this does not establish indefinite formula identity across all years.",
+      "additional_sources": [
+        {
+          "source_url": "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+          "publisher": "Gruppo Campari",
+          "source_kind": "brand_owner_financial_report",
+          "published_on": "2015-09-30",
+          "page": 9,
+          "claim_scope": "Report states April 2015 naming/packaging launch: V/X renamed Signature Blend; US, Canada, Australia first; other markets follow."
+        },
+        {
+          "source_url": "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf",
+          "publisher": "Gruppo Campari",
+          "source_kind": "brand_owner_investor_presentation",
+          "published_on": "2016-03-01",
+          "page": 33,
+          "claim_scope": "2015 premium-range naming/packaging change explicitly left the award-winning liquid unchanged."
+        }
+      ],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 9554305,
+        "sha256": "3f5deebbc529af9c0d346918e53d6b67fc5307e73ad34a462312c730950f5d8c",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      },
+      "pdf_page": 7
+    },
+    {
+      "product": "four-roses-small-batch-bourbon",
+      "year": 2006,
+      "first_release_year": 2006,
+      "release_period": "2006-09",
+      "release_not_before_year": 2006,
+      "source_url": "https://www.fourrosesbourbon.com/blog/the-story-of-small-batch",
+      "publisher": "Four Roses Distillery",
+      "source_kind": "manufacturer",
+      "published_on": "2019-08-06",
+      "exact_claim_scope": "Producer explicitly dates standard Small Batch introduction to the Kentucky Bourbon Festival in September 2006, distinct from Single Barrel 2004, Small Batch Select 2019 and annual limited editions.",
+      "twenty_year_eligibility_as_of_2026_10_25": true,
+      "notes": "September 2006 makes this standard expression at least 20 years old by 2026-10-25. Launch day and 2006 official MSRP were not found. A 2007 owner article is mentioned retrospectively but its own full primary release/price has not been recovered. Do not substitute 2026 limited-edition MSRP or a modern auction price for a 2006 retail observation.",
+      "additional_sources": [],
+      "reviewed_on": "2026-10-25",
+      "source_retrieval": {
+        "checked_on": "2026-10-25",
+        "http_status": 200,
+        "bytes": 276013,
+        "sha256": "6be5bd21b746ec329f760e2159425aa8d3dce51cb0711d64e85ac90d804f9fe8",
+        "hash_scope": "Downloaded raw source response; full response retained only in ignored research work directory."
+      }
+    }
+  ],
+  "price_leads": [
+    {
+      "product": "dingle-original-gin",
+      "source_url": "https://www.bevnet.com/spirits/2014/dingle-gin-makes-u-s-debut",
+      "publisher": "A. Hardy USA, Ltd. / press release hosted by BevNET",
+      "source_kind": "official_importer_press_release",
+      "published_on": "2014-01-13",
+      "amount": "35.99",
+      "currency": "USD",
+      "volume_ml": 750,
+      "abv_as_published": "43",
+      "country": "United States",
+      "basis": "market_introduction_recommended_price",
+      "price_label": "ARP",
+      "tax_included": null,
+      "promotion": null,
+      "status": "needs_editorial_price_import",
+      "claim_scope": "Actual distributor recommendation in a dated US-debut release; not an observed shop offer or completed transaction. Source says 43% and 85 proof, which disagree; preserve the published values and flag instead of silently correcting."
+    },
+    {
+      "product": "malfy-originale",
+      "source_url": "https://www.thedrinksreport.com/news/2017/17362-biggar-leith-to-distribute-malfy-originale.html",
+      "publisher": "The Drinks Report / Biggar & Leith distribution announcement",
+      "source_kind": "contemporary_distributor_announcement_report",
+      "published_on": "2017-10-27",
+      "amount": "29.99",
+      "currency": "USD",
+      "volume_ml": 750,
+      "abv_as_published": "41",
+      "country": "United States",
+      "basis": "market_introduction_recommended_price",
+      "price_label": "average SRP",
+      "tax_included": null,
+      "promotion": null,
+      "status": "needs_editorial_price_import",
+      "claim_scope": "SRP recorded on publication date. Planned nationwide January 1 rollout is forward availability; its year is not explicit and is not converted into an exact observed-sale date."
+    }
+  ],
+  "limits": [
+    "Malfy 2016 and Don Papa 2012 primary owner dates are brand bounds; their expression-specific first_release_year remains null.",
+    "Dingle and Altos production/creation years are corroborated by direct producer testimony and contemporary expression launch reports; no exact global first-on-sale day is supplied.",
+    "Appleton 1987 represents owner-confirmed V/X predecessor lineage;2015 is the Signature naming event, not a new proven liquid launch.",
+    "Nothing in this file fills a missing price year or establishes a continuous 20-year price series."
+  ]
+}

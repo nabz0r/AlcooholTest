@@ -1,4 +1,5 @@
 import uuid
+from decimal import Decimal
 from io import BytesIO
 from django.db import models
 from django.conf import settings
@@ -104,6 +105,8 @@ class Product(Entity):
     def __str__(self): return f'{self.brand.name} · {self.name}'
 
 class BottleAsset(Entity):
+    pair_key=models.CharField(max_length=100,blank=True,default='',help_text='Shared only by verified views of the same packaging reference.')
+    barcode=models.CharField(max_length=14,blank=True,default='',validators=[RegexValidator(r'^\d{8,14}$')])
     view=models.CharField(max_length=12,choices=[('front','Front'),('back','Rear label'),('detail','Detail')],default='front')
     product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='assets')
     local_path=models.CharField(max_length=180,validators=[RegexValidator(r'^/bottles/[-a-z0-9]+\.(jpg|png|webp)$')])
@@ -201,7 +204,8 @@ class Collection(Entity):
     class Meta: constraints=[models.UniqueConstraint(fields=['user','product'],name='unique_collection_item')]
 
 class Job(Entity):
-    kind=models.CharField(max_length=20,choices=[(x,x.title()) for x in ['json','jsonl','sql','import','discover','research','prices']])
+    parameters=models.JSONField(default=dict,blank=True)
+    kind=models.CharField(max_length=20,choices=[(x,x.title()) for x in ['json','jsonl','sql','import','discover','research','prices','memento']])
     status=models.CharField(max_length=12,default='queued',db_index=True,choices=[(x,x.title()) for x in ['queued','running','done','failed']])
     created_by=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.SET_NULL,null=True)
     created_at=models.DateTimeField(auto_now_add=True)
@@ -278,21 +282,34 @@ class DiscoveryCandidate(Entity):
     def __str__(self): return f'{self.label} ({self.external_id})'
 
 class PriceObservation(Entity):
+    basis=models.CharField(max_length=20,default='unspecified',choices=[('unspecified','Unspecified price basis'),('retail_offer','Retail offer'),('archive_capture','Archived retail offer'),('launch_msrp','Manufacturer launch recommendation'),('historical_ad','Published historical price'),('wholesale_list','Published wholesale list')])
     variant=models.ForeignKey(Variant,on_delete=models.CASCADE,related_name='prices')
-    observed_on=models.DateField()
+    observed_on=models.DateField(null=True,blank=True,help_text='Use only an actual source day. Leave empty when the source gives a month.')
+    observed_period=models.CharField(max_length=7,blank=True,default='',validators=[RegexValidator(r'^[12]\d{3}-(0[1-9]|1[0-2])$')],help_text='Source month YYYY-MM, without a manufactured day.')
+    date_precision=models.CharField(max_length=5,default='day',choices=[('day','Exact source day'),('month','Source month only')])
     amount=models.DecimalField(max_digits=10,decimal_places=2,validators=[MinValueValidator(0)])
     currency=models.CharField(max_length=3,validators=[RegexValidator(r'^[A-Z]{3}$')])
     country=models.CharField(max_length=80)
     retailer=models.CharField(max_length=160)
     source=models.ForeignKey(Source,on_delete=models.PROTECT)
-    tax_included=models.BooleanField(default=True)
-    promotion=models.BooleanField(default=False)
+    tax_included=models.BooleanField(default=None,null=True,blank=True)
+    promotion=models.BooleanField(default=None,null=True,blank=True)
     notes=models.TextField(blank=True)
     class Meta:
-        indexes=[models.Index(fields=['variant','currency','country','observed_on'])]
-        constraints=[models.UniqueConstraint(fields=['variant','observed_on','retailer','currency','country'],name='unique_price_observation')]
+        indexes=[models.Index(fields=['variant','currency','country','observed_on']),models.Index(fields=['variant','currency','country','observed_period'])]
+        constraints=[
+            models.UniqueConstraint(fields=['variant','observed_on','retailer','currency','country'],name='unique_price_observation'),
+            models.UniqueConstraint(fields=['variant','observed_period','retailer','currency','country'],condition=models.Q(date_precision='month'),name='unique_monthly_price_observation'),
+            models.CheckConstraint(condition=(models.Q(date_precision='day',observed_on__isnull=False,observed_period='')|models.Q(date_precision='month',observed_on__isnull=True,observed_period__regex=r'^[12]\d{3}-(0[1-9]|1[0-2])$')),name='valid_price_date_precision'),
+        ]
+    def clean(self):
+        from .price_dates import price_bounds
+        try:price_bounds(self)
+        except (TypeError,ValueError) as exc:raise ValidationError({'date_precision':str(exc)})
 
 class BottlePhoto(Entity):
+    pair_key=models.CharField(max_length=100,blank=True,default='',help_text='Assign in editorial review only after matching the same source packaging reference.')
+    barcode=models.CharField(max_length=14,blank=True,default='',validators=[RegexValidator(r'^\d{8,14}$')])
     product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='community_photos')
     user=models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=models.SET_NULL,null=True,blank=True)
     view=models.CharField(max_length=12,choices=[('front','Front'),('back','Rear label'),('detail','Detail')])
@@ -311,3 +328,127 @@ class BottlePhoto(Entity):
                 image.load();image.thumbnail((2400,2400));out=BytesIO();image.convert('RGB').save(out,format='JPEG',quality=92)
                 self.photo=ContentFile(out.getvalue(),name=f'{uuid.uuid4()}.jpg')
             except Exception:raise ValidationError('Use a valid JPEG, PNG or WebP under 16 megapixels.')
+
+class PriceArchiveTarget(Entity):
+    review_rules=models.JSONField(default=dict,blank=True,help_text='Provider-specific review holds, e.g. {"drinkshop":{"blocked_abv":["15"]}}. Clear only after resolving the source conflict.')
+    drinkshop_id=models.PositiveIntegerField(null=True,blank=True,validators=[MinValueValidator(1),MaxValueValidator(999999)],help_text='Optional exact historical TheDrinkShop product ID. This provider uses a separate parser and source identity.')
+    drinkshop_titles=models.JSONField(default=list,blank=True,help_text='Exact historical primary titles verified for this expression.')
+    drinkshop_volume_ml=models.PositiveIntegerField(null=True,blank=True,validators=[MinValueValidator(1),MaxValueValidator(30000)],help_text='Exact reviewed single-bottle row; case and miniature prices are rejected.')
+    legacy_url=models.URLField(max_length=1000,blank=True,help_text='Reviewed pre-2007 Actinic category URL; never an arbitrary provider.')
+    legacy_ref=models.CharField(max_length=80,blank=True,help_text='Exact reviewed Actinic PROD_REF for this expression.')
+    legacy_titles=models.JSONField(default=list,blank=True,help_text='Exact names permitted in this one reviewed catalogue row.')
+    legacy_age=models.CharField(max_length=30,blank=True,help_text='Exact age cell, e.g. 12yo; empty for an explicitly unaged row.')
+    product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='price_archive_targets')
+    retailer_id=models.PositiveIntegerField(validators=[MinValueValidator(1),MaxValueValidator(999999)],help_text='Verified The Whisky Exchange product ID. Never infer one from a brand.')
+    tokens=models.JSONField(help_text='Required words or phrases in the primary product heading, e.g. ["yamazaki", "12"].')
+    exclude_tokens=models.JSONField(default=list,blank=True,help_text='Reject headings containing another expression or edition.')
+    original_urls=models.JSONField(default=list,blank=True,help_text='Optional verified aliases on the same retailer product ID. Legacy and canonical patterns are always searched.')
+    source_url=models.URLField(max_length=1000,help_text='Page used to verify the exact retailer/product identity.')
+    enabled=models.BooleanField(default=True,db_index=True)
+    notes=models.TextField(blank=True)
+    last_checked=models.DateTimeField(null=True,blank=True)
+    last_result=models.JSONField(default=dict,blank=True)
+    class Meta: constraints=[models.UniqueConstraint(fields=['product','retailer_id'],name='unique_product_archive_target')]
+    def clean(self):
+        from urllib.parse import urlparse
+        from .price_archive import archive_urls
+        errors={}
+        try:
+            if not isinstance(self.review_rules,dict) or set(self.review_rules)-{'drinkshop'}:raise ValueError()
+            if 'drinkshop' in self.review_rules:
+                rules=self.review_rules['drinkshop']
+                if not isinstance(rules,dict) or set(rules)-{'blocked_abv','reason'}:raise ValueError()
+                blocked=rules.get('blocked_abv',[])
+                if not isinstance(blocked,list) or len(blocked)>20:raise ValueError()
+                for value in blocked:
+                    number=Decimal(str(value))
+                    if isinstance(value,bool) or not number.is_finite() or not 0<=number<=100:raise ValueError()
+                reason=rules.get('reason','')
+                if not isinstance(reason,str) or len(reason)>1000:raise ValueError()
+        except (ValueError,TypeError,ArithmeticError):errors['review_rules']='Use only a drinkshop object with up to 20 finite blocked_abv values from 0 to 100 and an optional reason of at most 1000 characters.'
+        for field in ['tokens','exclude_tokens']:
+            value=getattr(self,field)
+            if not isinstance(value,list) or len(value)>20 or (field=='tokens' and not value) or any(not isinstance(t,str) or not t.strip() or len(t)>80 for t in value):errors[field]='Use a list of up to 20 nonempty words or phrases.'
+        if not isinstance(self.original_urls,list) or len(self.original_urls)>2 or any(not isinstance(u,str) or len(u)>1000 for u in self.original_urls):errors['original_urls']='Use up to two reviewed retailer aliases.'
+        if not errors:
+            try:archive_urls({'retailer_id':self.retailer_id,'original_urls':self.original_urls,**({f:getattr(self,f) for f in ['drinkshop_id','drinkshop_titles','drinkshop_volume_ml']} if self.drinkshop_id else {}),**({f:getattr(self,f) for f in ['legacy_url','legacy_ref','legacy_titles','legacy_age']} if self.legacy_url else {})})
+            except (ValueError,TypeError):errors['original_urls']='Aliases must belong to this exact retailer product ID.'
+        parsed=urlparse(self.source_url)
+        if parsed.scheme!='https' or parsed.hostname not in ['thewhiskyexchange.com','www.thewhiskyexchange.com']:errors['source_url']='Use the verified HTTPS retailer product page.'
+        import re
+        if not re.match(rf'^/(?:[Pp]/{self.retailer_id}/|[Pp]-{self.retailer_id}\.aspx$)',parsed.path):errors['source_url']='The reviewed page must match this retailer product ID.'
+        if self.legacy_url or self.legacy_ref or self.legacy_titles:
+            legacy=urlparse(self.legacy_url)
+            if legacy.scheme not in ['http','https'] or legacy.hostname not in ['www.thewhiskyexchange.com','thewhiskyexchange.com'] or legacy.query or not re.fullmatch(r'/acatalog/The_Whisky_Exchange__[A-Za-z0-9_]+\.html',legacy.path):errors['legacy_url']='Use a reviewed Actinic category on the fixed retailer host.'
+            if not re.fullmatch(r'[A-Za-z]+/[A-Za-z0-9]+',self.legacy_ref):errors['legacy_ref']='Use the exact reviewed product reference.'
+            if not isinstance(self.legacy_titles,list) or not self.legacy_titles or len(self.legacy_titles)>5 or any(not isinstance(t,str) or not t.strip() or len(t)>160 for t in self.legacy_titles):errors['legacy_titles']='Use up to five reviewed exact row titles.'
+        if self.drinkshop_id or self.drinkshop_titles or self.drinkshop_volume_ml:
+            if not self.drinkshop_id:errors['drinkshop_id']='A reviewed provider identifier is required.'
+            if not self.drinkshop_volume_ml:errors['drinkshop_volume_ml']='A reviewed single-bottle format is required.'
+            if not isinstance(self.drinkshop_titles,list) or not self.drinkshop_titles or len(self.drinkshop_titles)>5 or any(not isinstance(t,str) or not t.strip() or len(t)>160 for t in self.drinkshop_titles):errors['drinkshop_titles']='Use up to five reviewed exact primary titles.'
+        if errors:raise ValidationError(errors)
+    def as_target(self):
+        return {'product':self.product.slug,'retailer_id':self.retailer_id,'tokens':self.tokens,'exclude_tokens':self.exclude_tokens,'original_urls':self.original_urls,'review_rules':self.review_rules,**({f:getattr(self,f) for f in ['drinkshop_id','drinkshop_titles','drinkshop_volume_ml']} if self.drinkshop_id else {}),**({f:getattr(self,f) for f in ['legacy_url','legacy_ref','legacy_titles','legacy_age']} if self.legacy_url else {})}
+    def __str__(self):return f'{self.product} / retailer #{self.retailer_id}'
+
+class ProductResearch(Entity):
+    product=models.OneToOneField(Product,on_delete=models.CASCADE,related_name='research_plan')
+    first_release_year=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(1700),MaxValueValidator(2100)],help_text='Expression launch year, not the distillery founding date. Leave unknown without evidence.')
+    release_not_before_year=models.PositiveSmallIntegerField(null=True,blank=True,validators=[MinValueValidator(1700),MaxValueValidator(2100)],help_text='Sourced earliest possible year, for example a brand launch. This bound is not an exact expression launch year.')
+    release_source_url=models.URLField(max_length=1000,blank=True)
+    notes=models.TextField(blank=True,help_text='Research scope, checked sources and unresolved identity/rights/coverage questions.')
+    def clean(self):
+        if (self.first_release_year or self.release_not_before_year) and not self.release_source_url:raise ValidationError({'release_source_url':'A launch year or earliest possible year requires a source.'})
+        if self.first_release_year and self.release_not_before_year and self.first_release_year<self.release_not_before_year:raise ValidationError({'first_release_year':'An expression cannot precede its sourced earliest possible year.'})
+    def __str__(self):return str(self.product)
+
+class ExternalPhotoReference(Entity):
+    product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='external_photo_references')
+    view=models.CharField(max_length=12,choices=[('front','Front'),('back','Rear label'),('detail','Detail')])
+    source_page=models.URLField(max_length=1000)
+    image_url=models.URLField(max_length=2000,help_text='Verified source image URL for inspection. Never fetched or mirrored by the public application.')
+    publisher=models.CharField(max_length=160)
+    credit=models.CharField(max_length=500,blank=True)
+    rights_note=models.TextField(help_text='Exact reuse status. A publicly visible image is not automatically licensed for redistribution.')
+    edition_note=models.TextField(help_text='What the verified image actually shows: product, side, packaging, format and limitations.')
+    verified_on=models.DateField()
+    verified=models.BooleanField(default=False,db_index=True,help_text='Only check after visually confirming this expression and side. Public display is an external link, never a locally hosted image.')
+    class Meta:constraints=[models.UniqueConstraint(fields=['product','view','image_url'],name='unique_external_photo_reference')]
+    def clean(self):
+        from urllib.parse import urlparse
+        for field in ['source_page','image_url']:
+            if urlparse(getattr(self,field)).scheme!='https':raise ValidationError({field:'Use a public HTTPS source reference.'})
+        if self.verified and (not self.rights_note.strip() or not self.edition_note.strip()):raise ValidationError('Verified references require rights and packaging notes.')
+    def __str__(self):return f'{self.product} — {self.view} at {self.publisher}'
+
+
+class MarketPriceIndex(Entity):
+    """A survey statistic, separate from offers for a particular bottling."""
+    slug=models.SlugField(max_length=160,unique=True)
+    product=models.ForeignKey(Product,on_delete=models.CASCADE,related_name='market_indexes')
+    source=models.ForeignKey(Source,on_delete=models.PROTECT,related_name='market_indexes')
+    title=models.CharField(max_length=240)
+    currency=models.CharField(max_length=3,validators=[RegexValidator(r'^[A-Z]{3}$')])
+    territory=models.CharField(max_length=100)
+    statistic=models.CharField(max_length=160,help_text='What is measured, e.g. median of city survey prices; never a particular retailer offer.')
+    unit_scope=models.CharField(max_length=300,help_text='Survey unit and specification scope. Do not assert one unchanged ABV across changing definitions.')
+    method=models.TextField(help_text='Collection, processing, specification changes and limits, including the secondary/primary-source distinction.')
+    notes=models.TextField(blank=True)
+    method_source_url=models.URLField(max_length=1000,blank=True,help_text='Optional original survey metadata or dataset reference. This does not claim the raw dataset was downloaded.')
+    fact_sha256=models.CharField(max_length=64,blank=True,validators=[RegexValidator(r'^[0-9a-f]{64}$')],help_text='Optional hash of the documented source fact extraction, not of an unavailable original CSV.')
+    verified=models.BooleanField(default=False,db_index=True,help_text='Only reviewed series are exposed in the public API and public exports.')
+    def __str__(self):return self.title
+
+
+class MarketPriceIndexPoint(Entity):
+    index=models.ForeignKey(MarketPriceIndex,on_delete=models.CASCADE,related_name='points')
+    period=models.CharField(max_length=7,validators=[RegexValidator(r'^[12]\d{3}-(0[1-9]|1[0-2])$')],help_text='Actual monthly period YYYY-MM. No day is fabricated.')
+    value=models.DecimalField(max_digits=12,decimal_places=2,validators=[MinValueValidator(Decimal('0.01'))])
+    class Meta:
+        ordering=['period']
+        constraints=[
+            models.UniqueConstraint(fields=['index','period'],name='unique_market_index_period'),
+            models.CheckConstraint(condition=models.Q(value__gt=0),name='positive_market_index_value'),
+            models.CheckConstraint(condition=models.Q(period__regex=r'^[12]\d{3}-(0[1-9]|1[0-2])$'),name='valid_market_index_month'),
+        ]
+    def __str__(self):return f'{self.index}: {self.period} / {self.value}'

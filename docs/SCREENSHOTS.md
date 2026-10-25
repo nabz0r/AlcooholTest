@@ -1,3 +1,19 @@
+# Volume 05 — source notebook and evidence
+
+Actual Docker UI captures from 2026-10-25. Each source snapshot keeps its own version; counts can change after editorial updates.
+
+| View | What it establishes |
+|---|---|
+| [Source Memento](screenshots/v5-memento.jpg) | Public source search, dated fact capsules and licensed image records. |
+| [Botanical source capsule](screenshots/v5-memento-capsule.jpg) | Original source link, saved botanical assertions and downloadable provenance. |
+| [Monkey 47 reverse photograph](screenshots/v5-monkey-rear-label.jpg) | Actual historical Swiss 500 ml rear label, source credit and fit/zoom controls. |
+| [Kakubin monthly context](screenshots/v5-kakubin-monthly.jpg) | 321 monthly city-survey values, January 2000 to September 2026, separate from retail offers. |
+| [Yamazaki reverse source](screenshots/v5-yamazaki-external-rear.jpg) | Verified external rear-image and publisher links; no local reuse rights claimed. |
+| [Source Memento administration](screenshots/v5-admin-memento.jpg) | Authenticated regeneration and downloadable licensed-media bundle. |
+| [Photograph and price workbench](screenshots/v5-admin-research.jpg) | Per-bottle coverage, editable targets and protected job queuing. |
+
+[Dimensions and SHA-256](screenshots/manifest-v5.json). These are desktop captures. A requested 390 px override still measured 1280 px, so a new mobile validation result is not claimed. Earlier captures below retain their original release scope.
+
 # Screenshot journal — Volume 04
 
 Eleven actual captures of the Docker application, 2026-10-25. [Dimensions and SHA-256 manifest](screenshots/manifest-v4.json). No generated product photograph, human account data or invented 3D footage is presented as a screenshot. The admin identity is a disposable QA account, removed after verification.

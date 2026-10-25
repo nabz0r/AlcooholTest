@@ -1,7 +1,1487 @@
 [
- {"product":"suntory-yamazaki-12-years-old","retailer_id":2940,"tokens":["yamazaki","12"]},
- {"product":"jameson-original","retailer_id":2863,"tokens":["jameson"]},
- {"product":"the-glenlivet-12-year-old","retailer_id":2393,"tokens":["glenlivet","12"]},
- {"product":"bombay-sapphire","retailer_id":2249,"tokens":["bombay","sapphire"]},
- {"product":"monkey-47-schwarzwald","retailer_id":14553,"tokens":["monkey","47"]}
+  {
+    "product": "suntory-yamazaki-12-years-old",
+    "retailer_id": 2940,
+    "tokens": [
+      "yamazaki",
+      "12"
+    ],
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/P-2940.aspx",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "jameson-original",
+    "retailer_id": 2863,
+    "tokens": [
+      "jameson"
+    ],
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "black barrel",
+      "caskmates",
+      "18 year",
+      "12 year",
+      "crested",
+      "orange",
+      "triple triple"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/P-2863.aspx",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "the-glenlivet-12-year-old",
+    "retailer_id": 2393,
+    "tokens": [
+      "glenlivet",
+      "12"
+    ],
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/P-2393.aspx",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "bombay-sapphire",
+    "retailer_id": 2249,
+    "tokens": [
+      "bombay",
+      "sapphire"
+    ],
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "east",
+      "premier",
+      "citron",
+      "sunset"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/P-2249.aspx",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "monkey-47-schwarzwald",
+    "retailer_id": 14553,
+    "tokens": [
+      "monkey",
+      "47"
+    ],
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "sloe",
+      "barrel",
+      "distiller"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/P-14553.aspx",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "hendricks-original",
+    "retailer_id": 2261,
+    "tokens": [
+      "hendrick",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/2261/hendricks-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "orbium",
+      "flora",
+      "cabaret",
+      "midsummer",
+      "neptunia",
+      "lunar",
+      "another"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/2261/hendricks-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "roku-japanese-craft",
+    "retailer_id": 41546,
+    "tokens": [
+      "roku",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/41546/roku-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "noryo",
+      "sakura"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/41546/roku-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "tanqueray-london-dry",
+    "retailer_id": 72138,
+    "tokens": [
+      "tanqueray",
+      "london",
+      "dry"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/72138/tanqueray-london-dry-gin-413",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "no.ten",
+      "no.10",
+      "rangpur",
+      "sevilla",
+      "malacca"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/72138/tanqueray-london-dry-gin-413",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "the-botanist-islay",
+    "retailer_id": 13847,
+    "tokens": [
+      "botanist",
+      "islay"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/13847/the-botanist-islay-dry-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/13847/the-botanist-islay-dry-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "beefeater-london-dry-gin",
+    "retailer_id": 2243,
+    "tokens": [
+      "beefeater",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/2243/beefeater-london-dry-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "24",
+      "pink",
+      "blood orange",
+      "blackberry"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/2243/beefeater-london-dry-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time. The same reviewed listing used the shorter heading Beefeater Gin in 2007\u20132021 captures; specialty expressions remain excluded.",
+    "historical_titles": [
+      "Beefeater Gin"
+    ]
+  },
+  {
+    "product": "plymouth-original-gin",
+    "retailer_id": 18973,
+    "tokens": [
+      "plymouth",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/18973/plymouth-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/18973/plymouth-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "ki-no-bi-kyoto-dry-gin",
+    "retailer_id": 37540,
+    "tokens": [
+      "ki no bi",
+      "kyoto"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/37540/ki-no-bi-kyoto-dry-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/37540/ki-no-bi-kyoto-dry-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "malfy-originale",
+    "retailer_id": 44805,
+    "tokens": [
+      "malfy",
+      "originale"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/44805/malfy-originale-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/44805/malfy-originale-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "citadelle-original",
+    "retailer_id": 2254,
+    "tokens": [
+      "citadelle",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/2254/citadelle-french-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/2254/citadelle-french-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "sipsmith-london-dry-gin",
+    "retailer_id": 11584,
+    "tokens": [
+      "sipsmith",
+      "london"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/11584/sipsmith-london-dry-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/11584/sipsmith-london-dry-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "gin-mare-mediterranean-gin",
+    "retailer_id": 12329,
+    "tokens": [
+      "mare",
+      "mediterranean"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/12329/mare-mediterranean-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/12329/mare-mediterranean-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "nord-s-atlantic-galician-gin",
+    "retailer_id": 24268,
+    "tokens": [
+      "nordes",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/24268/nordes-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/24268/nordes-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "isle-of-harris-gin",
+    "retailer_id": 46091,
+    "tokens": [
+      "harris",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/46091/isle-of-harris-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/46091/isle-of-harris-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "isle-of-raasay-hebridean-gin",
+    "retailer_id": 59413,
+    "tokens": [
+      "raasay",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/59413/isle-of-raasay-hebridean-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/59413/isle-of-raasay-hebridean-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "bacardi-carta-blanca",
+    "retailer_id": 4418,
+    "tokens": [
+      "bacardi"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/4418/bacardi-carta-blanca-rum",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/4418/bacardi-carta-blanca-rum",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "havana-club-7",
+    "retailer_id": 79589,
+    "tokens": [
+      "havana",
+      "7"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/79589/havana-club-7-year-old-anejo-rum",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "2023",
+      "gold label"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/79589/havana-club-7-year-old-anejo-rum",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "jack-daniels-old-no7",
+    "retailer_id": 1110,
+    "tokens": [
+      "jack",
+      "daniel",
+      "7"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/1110/jack-daniels-old-no-7-tennessee-whiskey",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/1110/jack-daniels-old-no-7-tennessee-whiskey",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "disaronno-originale",
+    "retailer_id": 3141,
+    "tokens": [
+      "disaronno"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3141/amaretto-disaronno-originale-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3141/amaretto-disaronno-originale-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "absolut-original",
+    "retailer_id": 5060,
+    "tokens": [
+      "absolut",
+      "vodka"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/5060/absolut-vodka",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/5060/absolut-vodka",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "campari-bitter",
+    "retailer_id": 5031,
+    "tokens": [
+      "campari"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/5031/campari",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "cask tales"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/5031/campari",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "cointreau-original",
+    "retailer_id": 3217,
+    "tokens": [
+      "cointreau"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3217/cointreau-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "noir"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3217/cointreau-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-toki-blended-japanese-whisky",
+    "retailer_id": 36362,
+    "tokens": [
+      "suntory",
+      "toki"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/36362/suntory-toki",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "black"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/36362/suntory-toki",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-hibiki-japanese-harmony",
+    "retailer_id": 29388,
+    "tokens": [
+      "hibiki",
+      "harmony"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/29388/hibiki-harmony",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "master",
+      "blender",
+      "anniversary"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/29388/hibiki-harmony",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-hakushu-12-years-old",
+    "retailer_id": 2922,
+    "tokens": [
+      "hakushu",
+      "12"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/2922/hakushu-12-year-old",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/2922/hakushu-12-year-old",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-chita-single-grain-whisky",
+    "retailer_id": 37317,
+    "tokens": [
+      "chita"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/37317/the-chita-whisky",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/37317/the-chita-whisky",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-kakubin-blended-whisky",
+    "retailer_id": 33964,
+    "tokens": [
+      "kakubin",
+      "yellow"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/33964/suntory-kakubin-yellow-label",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/33964/suntory-kakubin-yellow-label",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "suntory-haku-vodka",
+    "retailer_id": 48680,
+    "tokens": [
+      "haku",
+      "vodka"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/48680/haku-vodka",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/48680/haku-vodka",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "aberlour-12-year-old",
+    "retailer_id": 66503,
+    "tokens": [
+      "aberlour",
+      "12",
+      "double"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/66503/aberlour-12-year-old-double-cask",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/66503/aberlour-12-year-old-double-cask",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "chivas-regal-12-year-old",
+    "retailer_id": 455,
+    "tokens": [
+      "chivas",
+      "12"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/455/chivas-regal-12-year-old",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/455/chivas-regal-12-year-old",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "ballantine-s-finest",
+    "retailer_id": 419,
+    "tokens": [
+      "ballantine",
+      "finest"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/419/ballantines-finest",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/419/ballantines-finest",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "four-roses-small-batch-bourbon",
+    "retailer_id": 6562,
+    "tokens": [
+      "four",
+      "roses",
+      "small",
+      "batch"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/6562/four-roses-small-batch-bourbon",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "limited edition",
+      "barrel strength",
+      "select"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/6562/four-roses-small-batch-bourbon",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "kahl-a-original-coffee-liqueur",
+    "retailer_id": 3242,
+    "tokens": [
+      "kahlua",
+      "coffee"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3242/kahlua-coffee-liqueur-16",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3242/kahlua-coffee-liqueur-16",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "malibu-original",
+    "retailer_id": 3254,
+    "tokens": [
+      "malibu"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3254/malibu-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3254/malibu-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "altos-plata",
+    "retailer_id": 11297,
+    "tokens": [
+      "altos",
+      "plata"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/11297/olmeca-altos-plata-tequila",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/11297/olmeca-altos-plata-tequila",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "kyr-gin",
+    "retailer_id": 30223,
+    "tokens": [
+      "kyro",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/30223/kyro-gin-463",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "pink",
+      "dark",
+      "barrel"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/30223/kyro-gin-463",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "st-george-terroir-gin",
+    "retailer_id": 17111,
+    "tokens": [
+      "george",
+      "terroir"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/17111/st-george-terroir-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/17111/st-george-terroir-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "christian-drouin-le-gin",
+    "retailer_id": 45365,
+    "tokens": [
+      "drouin",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/45365/le-gin-de-christian-drouin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/45365/le-gin-de-christian-drouin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "dingle-original-gin",
+    "retailer_id": 37523,
+    "tokens": [
+      "dingle",
+      "gin"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/37523/dingle-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/37523/dingle-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "diplom-tico-reserva-exclusiva",
+    "retailer_id": 4475,
+    "tokens": [
+      "diplomatico",
+      "exclusiva"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/4475/diplomatico-reserva-exclusiva-rum",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/4475/diplomatico-reserva-exclusiva-rum",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "mount-gay-eclipse",
+    "retailer_id": 4519,
+    "tokens": [
+      "mount",
+      "gay",
+      "eclipse"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/4519/mount-gay-eclipse-rum",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/4519/mount-gay-eclipse-rum",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "appleton-estate-signature",
+    "retailer_id": 55387,
+    "tokens": [
+      "appleton",
+      "signature"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/55387/appleton-estate-signature",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "reserve",
+      "eight",
+      "8 year",
+      "12 year"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/55387/appleton-estate-signature",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "don-papa-7-years-old",
+    "retailer_id": 18228,
+    "tokens": [
+      "don",
+      "papa",
+      "7"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/18228/don-papa-7-year-old-small-batch-rum",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/18228/don-papa-7-year-old-small-batch-rum",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "r-my-martin-vsop",
+    "retailer_id": 1778,
+    "tokens": [
+      "martin",
+      "vsop"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/1778/remy-martin-vsop-cognac",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/1778/remy-martin-vsop-cognac",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "chartreuse-green-chartreuse",
+    "retailer_id": 3208,
+    "tokens": [
+      "chartreuse",
+      "green"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3208/chartreuse-green-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "vep",
+      "yellow",
+      "reine",
+      "foudre"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3208/chartreuse-green-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "luxardo-amaretto-di-saschira",
+    "retailer_id": 24783,
+    "tokens": [
+      "luxardo",
+      "amaretto"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/24783/luxardo-amaretto-di-saschira-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/24783/luxardo-amaretto-di-saschira-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "heering-cherry-liqueur",
+    "retailer_id": 3213,
+    "tokens": [
+      "heering",
+      "cherry"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/3213/heering-cherry-liqueur",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "coffee"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/3213/heering-cherry-liqueur",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "ferdinand-s-saar-dry-gin",
+    "retailer_id": 44393,
+    "tokens": [
+      "ferdinand",
+      "saar",
+      "dry"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/44393/ferdinands-saar-dry-gin",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/44393/ferdinands-saar-dry-gin",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "hennessy-v-s",
+    "retailer_id": 1732,
+    "tokens": [
+      "hennessy",
+      "vs"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/1732/hennessy-vs-cognac",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "vsop",
+      "xo",
+      "paradis",
+      "very special old pale"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/1732/hennessy-vs-cognac",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "del-maguey-vida-cl-sico",
+    "retailer_id": 64310,
+    "tokens": [
+      "del",
+      "maguey",
+      "vida"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/64310/del-maguey-vida-clasico-mezcal",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "puebla",
+      "muertos"
+    ],
+    "source_url": "https://www.thewhiskyexchange.com/p/64310/del-maguey-vida-clasico-mezcal",
+    "notes": "Reviewed product listing. Captured size, strength, market and offer date must remain separate; changes do not imply identical liquid over time."
+  },
+  {
+    "product": "tanqueray-london-dry",
+    "retailer_id": 2279,
+    "tokens": [
+      "tanqueray",
+      "london",
+      "dry"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/2279/tanqueray-london-dry-gin-431",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or live retailer category link; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "no.ten",
+      "no.10",
+      "rangpur",
+      "sevilla",
+      "malacca"
+    ],
+    "notes": "Historical 43.1% listing, separate from current 41.3% source. Retain captured ABV and size.",
+    "source_url": "https://www.thewhiskyexchange.com/p/2279/tanqueray-london-dry-gin-431"
+  },
+  {
+    "product": "aberlour-12-year-old",
+    "retailer_id": 143,
+    "tokens": [
+      "aberlour",
+      "12",
+      "double"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/143/aberlour-12-year-old-double-cask-bot2000s",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of"
+    ],
+    "notes": "Listing now resells a historical bottle. Earlier archived primary retail offers may qualify only if the capture title does not describe a collectible resale.",
+    "source_url": "https://www.thewhiskyexchange.com/p/143/aberlour-12-year-old-double-cask-bot2000s"
+  },
+  {
+    "product": "havana-club-7",
+    "retailer_id": 4488,
+    "tokens": [
+      "havana",
+      "7"
+    ],
+    "modern_url": "https://www.thewhiskyexchange.com/p/4488/havana-club-7-year-old-anejo-rum-2023-limited-ediiton-gold-label",
+    "verified_on": "2026-10-25",
+    "verification": "Live retailer product page or indexed retailer product page; retailer ID identifies the source listing, not a new canonical product.",
+    "exclude_tokens": [
+      "miniature",
+      "sample",
+      "gift set",
+      "glass set",
+      "bot.",
+      "bot19",
+      "bot20",
+      "price marked",
+      "pack of",
+      "case of",
+      "2023",
+      "gold label"
+    ],
+    "notes": "Listing now carries a 2023 packaging occurrence. Earlier archived retail offers require their own captured product heading; reject modern limited packaging.",
+    "source_url": "https://www.thewhiskyexchange.com/p/4488/havana-club-7-year-old-anejo-rum-2023-limited-ediiton-gold-label"
+  }
 ]

@@ -1,0 +1,291 @@
+{
+  "scope": "Current retailer offers on retrieval date, not twenty-year historical coverage. Exact heading, volume and strength required. Raw copyrighted HTML stays local.",
+  "points": [],
+  "errors": [
+    {
+      "product": "suntory-yamazaki-12-years-old",
+      "retailer_id": 2940,
+      "error": "Current page does not match reviewed retailer ID"
+    },
+    {
+      "product": "jameson-original",
+      "retailer_id": 2863,
+      "error": "Current page does not match reviewed retailer ID"
+    },
+    {
+      "product": "the-glenlivet-12-year-old",
+      "retailer_id": 2393,
+      "error": "Current page does not match reviewed retailer ID"
+    },
+    {
+      "product": "bombay-sapphire",
+      "retailer_id": 2249,
+      "error": "Current page does not match reviewed retailer ID"
+    },
+    {
+      "product": "monkey-47-schwarzwald",
+      "retailer_id": 14553,
+      "error": "Current page does not match reviewed retailer ID"
+    },
+    {
+      "product": "hendricks-original",
+      "retailer_id": 2261,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "roku-japanese-craft",
+      "retailer_id": 41546,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "tanqueray-london-dry",
+      "retailer_id": 72138,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "the-botanist-islay",
+      "retailer_id": 13847,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "plymouth-original-gin",
+      "retailer_id": 18973,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "beefeater-london-dry-gin",
+      "retailer_id": 2243,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "malfy-originale",
+      "retailer_id": 44805,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "ki-no-bi-kyoto-dry-gin",
+      "retailer_id": 37540,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "citadelle-original",
+      "retailer_id": 2254,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "sipsmith-london-dry-gin",
+      "retailer_id": 11584,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "gin-mare-mediterranean-gin",
+      "retailer_id": 12329,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "nord-s-atlantic-galician-gin",
+      "retailer_id": 24268,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "isle-of-harris-gin",
+      "retailer_id": 46091,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "isle-of-raasay-hebridean-gin",
+      "retailer_id": 59413,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "bacardi-carta-blanca",
+      "retailer_id": 4418,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "havana-club-7",
+      "retailer_id": 79589,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "jack-daniels-old-no7",
+      "retailer_id": 1110,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "disaronno-originale",
+      "retailer_id": 3141,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "absolut-original",
+      "retailer_id": 5060,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "campari-bitter",
+      "retailer_id": 5031,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "cointreau-original",
+      "retailer_id": 3217,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-toki-blended-japanese-whisky",
+      "retailer_id": 36362,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-hibiki-japanese-harmony",
+      "retailer_id": 29388,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-hakushu-12-years-old",
+      "retailer_id": 2922,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-chita-single-grain-whisky",
+      "retailer_id": 37317,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-kakubin-blended-whisky",
+      "retailer_id": 33964,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "suntory-haku-vodka",
+      "retailer_id": 48680,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "aberlour-12-year-old",
+      "retailer_id": 66503,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "chivas-regal-12-year-old",
+      "retailer_id": 455,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "ballantine-s-finest",
+      "retailer_id": 419,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "kahl-a-original-coffee-liqueur",
+      "retailer_id": 3242,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "four-roses-small-batch-bourbon",
+      "retailer_id": 6562,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "malibu-original",
+      "retailer_id": 3254,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "altos-plata",
+      "retailer_id": 11297,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "kyr-gin",
+      "retailer_id": 30223,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "st-george-terroir-gin",
+      "retailer_id": 17111,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "christian-drouin-le-gin",
+      "retailer_id": 45365,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "dingle-original-gin",
+      "retailer_id": 37523,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "diplom-tico-reserva-exclusiva",
+      "retailer_id": 4475,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "mount-gay-eclipse",
+      "retailer_id": 4519,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "appleton-estate-signature",
+      "retailer_id": 55387,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "don-papa-7-years-old",
+      "retailer_id": 18228,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "r-my-martin-vsop",
+      "retailer_id": 1778,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "chartreuse-green-chartreuse",
+      "retailer_id": 3208,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "luxardo-amaretto-di-saschira",
+      "retailer_id": 24783,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "heering-cherry-liqueur",
+      "retailer_id": 3213,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "ferdinand-s-saar-dry-gin",
+      "retailer_id": 44393,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "hennessy-v-s",
+      "retailer_id": 1732,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "del-maguey-vida-cl-sico",
+      "retailer_id": 64310,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "tanqueray-london-dry",
+      "retailer_id": 2279,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "aberlour-12-year-old",
+      "retailer_id": 143,
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "product": "havana-club-7",
+      "retailer_id": 4488,
+      "error": "HTTP Error 403: Forbidden"
+    }
+  ]
+}

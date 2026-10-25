@@ -1,0 +1,116 @@
+[
+  {
+    "product": "suntory-yamazaki-12-years-old",
+    "retailer_id": 2940,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__JAPANESE_263.html",
+    "legacy_ref": "JAPAN/008",
+    "legacy_titles": [
+      "Suntory Yamazaki"
+    ],
+    "legacy_age": "12yo",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "suntory-hakushu-12-years-old",
+    "retailer_id": 2922,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__JAPANESE_263.html",
+    "legacy_ref": "JAPAN/010",
+    "legacy_titles": [
+      "Suntory Hakushu"
+    ],
+    "legacy_age": "12yo",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "hendricks-original",
+    "retailer_id": 2261,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__GIN_162.html",
+    "legacy_ref": "Gin/007",
+    "legacy_titles": [
+      "Hendrick's Gin"
+    ],
+    "legacy_age": "",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "jameson-original",
+    "retailer_id": 2863,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__IRISH_WHISKEY_139.html",
+    "legacy_ref": "IRISH/0020",
+    "legacy_titles": [
+      "Jameson"
+    ],
+    "legacy_age": "",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "the-glenlivet-12-year-old",
+    "retailer_id": 2393,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange___GLENLIVET_61.html",
+    "legacy_ref": "SM/0450",
+    "legacy_titles": [
+      "Glenlivet"
+    ],
+    "legacy_age": "12yo",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "aberlour-12-year-old",
+    "retailer_id": 66503,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange___ABERLOUR_3.html",
+    "legacy_ref": "SM/0006a",
+    "legacy_titles": [
+      "Aberlour"
+    ],
+    "legacy_age": "12yo",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "jack-daniels-old-no7",
+    "retailer_id": 1110,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__BOURBON_149.html",
+    "legacy_ref": "BBON/0062",
+    "legacy_titles": [
+      "Jack Daniel's - Original"
+    ],
+    "legacy_age": "",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "chivas-regal-12-year-old",
+    "retailer_id": 455,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__BLENDED_SCOTCH_WHISKY_138.html",
+    "legacy_ref": "BLENDED/2321",
+    "legacy_titles": [
+      "Chivas Regal"
+    ],
+    "legacy_age": "12yo",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Actinic product code, product name and age reviewed against the original category capture; size and strength must be transcribed from each capture. Historical formulations are separate bottling observations."
+  },
+  {
+    "product": "appleton-estate-signature",
+    "retailer_id": 55387,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__RUM_155.html",
+    "legacy_ref": "RUM/0011",
+    "legacy_titles": [
+      "Appleton Estate VX"
+    ],
+    "legacy_age": "",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Appleton Estate VX row/reference checked in the source. Campari Academy explicitly identifies Signature as first released under V/X in1987; Campari confirms April2015 rename and no liquid change at that rename. Preserve actual historical format, market and strength.",
+    "historical_alias": "Appleton Estate V/X",
+    "identity_sources": [
+      "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+      "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+      "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+    ]
+  }
+]

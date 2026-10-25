@@ -1,0 +1,3397 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-25T00:00:00Z",
+  "scope": "55 canonical products. Distinct annual editions are not substituted or counted as additional canonical products.",
+  "method": "Bounded Commons title/category/API search and selected Open Food Facts barcode/brand lookups, followed by visual label/side review, license metadata review and pinned local bytes. Candidate counts are retrieval results, not accepted photographs. A second targeted pass visually reviewed retailer/manufacturer image bytes, decoded visible barcodes locally to improve OFF lookups and retained verified external-only image metadata with rights caveats.",
+  "totals": {
+    "canonical_products": 55,
+    "photographs": 85,
+    "front_products": 44,
+    "rear_products": 22,
+    "paired_products": 22,
+    "missing_front_products": 11,
+    "missing_rear_products": 33,
+    "checked_provider_requests": 203,
+    "external_references": 51,
+    "external_front_references": 11,
+    "external_rear_references": 40,
+    "front_referenced_products": 55,
+    "rear_referenced_products": 55,
+    "all_sides_referenced_products": 55
+  },
+  "products": [
+    {
+      "product_slug": "monkey-47-schwarzwald",
+      "brand": "Monkey 47",
+      "product_name": "Schwarzwald Dry Gin",
+      "front_files": [
+        "/bottles/monkey-47-schwarzwald.jpg",
+        "/bottles/monkey-47-schwarzwald-off-42213277-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/monkey-47-schwarzwald-off-42213277-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-42213277-3-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Monkey+47%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Monkey 47\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/42213277",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=monkey-47",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "bombay-sapphire",
+      "brand": "Bombay Sapphire",
+      "product_name": "London Dry Gin",
+      "front_files": [
+        "/bottles/bombay-sapphire.jpg",
+        "/bottles/bombay-sapphire-off-5010677714006-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/bombay-sapphire-off-5010677714006-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5010677714006-12-14"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Bombay+Sapphire%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Bombay Sapphire\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=bombay",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010677710497",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 4,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=bombay",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010677713009",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010677714006",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 18,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=bombay",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 20,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "Open Food Facts barcode 5010677710497 shows Bombay Original London Dry rather than Sapphire; rejected. Barcode 5010677710596 shows a carton, not a rear bottle label; not counted as a rear photograph.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://sklep-domwhisky.pl/product-pol-7202-Bombay-Sapphire-London-Dry-Gin-40-0-7l.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "hendricks-original",
+      "brand": "Hendrick’s",
+      "product_name": "Original",
+      "front_files": [
+        "/bottles/hendricks-original.jpg",
+        "/bottles/hendricks-original-off-5010327755014-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/hendricks-original-off-5010327755014-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5010327755014-19-20"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Hendrick+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Hendrick gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010327755014",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 21,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=hendricks",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "Open Food Facts image 18 in barcode 5010327755014 is a Monkey 47 bottle; rejected despite the source record brand. Reviewed images 19/20 show Hendrick’s.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "roku-japanese-craft",
+      "brand": "Roku",
+      "product_name": "Japanese Craft Gin",
+      "front_files": [
+        "/bottles/roku-japanese-craft.jpg",
+        "/bottles/roku-japanese-craft-off-4901777305359-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/roku-japanese-craft-off-4901777305359-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-4901777305359-1-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Roku%22+Gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Roku\" Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777305359",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=roku",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "tanqueray-london-dry",
+      "brand": "Tanqueray",
+      "product_name": "London Dry",
+      "front_files": [
+        "/bottles/tanqueray-london-dry.png",
+        "/bottles/tanqueray-london-dry-off-5000291020805-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/tanqueray-london-dry-off-5000291020805-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5000291020805-1-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Tanqueray%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Tanqueray\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000291020805",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=tanqueray",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "the-botanist-islay",
+      "brand": "The Botanist",
+      "product_name": "Islay Dry Gin",
+      "front_files": [
+        "/bottles/the-botanist-islay.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Botanist%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Botanist\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=the-botanist",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://maudau.com.ua/product/dzhyn-the-botanist-islay-dry-gin-46-07-l"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "bacardi-carta-blanca",
+      "brand": "Bacardí",
+      "product_name": "Carta Blanca / Superior",
+      "front_files": [
+        "/bottles/bacardi-carta-blanca.jpg",
+        "/bottles/bacardi-carta-blanca-historical-commons-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/bacardi-carta-blanca-historical-commons-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "commons-bacardi-old-superior"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Bacardi%22+%22Carta%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Bacardi\" \"Carta\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010677012846",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=bacardi",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "havana-club-7",
+      "brand": "Havana Club",
+      "product_name": "7 Años",
+      "front_files": [
+        "/bottles/havana-club-7.jpg",
+        "/bottles/havana-club-7-off-8501110080439-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/havana-club-7-off-8501110080439-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-8501110080439-4-3"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Havana%22+%227%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Havana\" \"7\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8501110080434",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8501110080439",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=havana-club",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://whic.de/havana-club-7-jahre.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "jack-daniels-old-no7",
+      "brand": "Jack Daniel’s",
+      "product_name": "Old No. 7",
+      "front_files": [
+        "/bottles/jack-daniels-old-no7.jpg",
+        "/bottles/jack-daniels-old-no7-off-5099873089798-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/jack-daniels-old-no7-off-5099873089798-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5099873089798-1-4"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Jack+Daniels%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Jack Daniels\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5099873045361",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5099873089798",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 12,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=jack-daniels",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://abcfws.com/jack-daniels-old-no-7-tennessee-whiskey/475905"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "jameson-original",
+      "brand": "Jameson",
+      "product_name": "Original",
+      "front_files": [
+        "/bottles/jameson-original.jpg",
+        "/bottles/jameson-original-off-5011007003005-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/jameson-original-off-5011007003005-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5011007003005-3-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Jameson+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Jameson bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5011007003005",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 11,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=jameson",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "disaronno-originale",
+      "brand": "Disaronno",
+      "product_name": "Originale",
+      "front_files": [
+        "/bottles/disaronno-originale.jpg",
+        "/bottles/disaronno-originale-off-3048110016372-front.jpg",
+        "/bottles/disaronno-originale-canada-1140-commons-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/disaronno-originale-off-3048110016372-back.jpg",
+        "/bottles/disaronno-originale-canada-1140-commons-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-3048110016372-1-2",
+        "commons-disaronno-canada-1140-2026"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Disaronno+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Disaronno bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 11,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/3048110016372",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8001110038015",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=disaronno",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 8,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "absolut-original",
+      "brand": "Absolut",
+      "product_name": "Original Vodka",
+      "front_files": [
+        "/bottles/absolut-original.jpg",
+        "/bottles/absolut-original-off-0835229000308-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/absolut-original-off-0835229000308-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-0835229000308-1-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Absolut+Vodka+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Absolut Vodka bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0835229000308",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/7312040017430",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/7312040552801",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=absolut",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 20,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://whisky.auction/auctions/lot/163663/absolut-vodka"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "campari-bitter",
+      "brand": "Campari",
+      "product_name": "Bitter",
+      "front_files": [
+        "/bottles/campari-bitter.jpg",
+        "/bottles/campari-bitter-off-8000040000802-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/campari-bitter-off-8000040000802-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-8000040000802-2-3"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Campari+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Campari bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8000040000802",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 12,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8000040001007",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=campari",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "An initial barcode lookup returned SKYY vodka photographs; rejected and never published as Campari.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://alcomag.ua/ua/nastoyka-gorkaya-campari-1-l-/"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "cointreau-original",
+      "brand": "Cointreau",
+      "product_name": "L’Unique",
+      "front_files": [
+        "/bottles/cointreau-original.jpg",
+        "/bottles/cointreau-original-off-3035542004206-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/cointreau-original-off-3035542004206-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-3035542004206-7-8"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=Cointreau+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Cointreau bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/3035542004206",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 14,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=cointreau",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-toki-blended-japanese-whisky",
+      "brand": "Suntory",
+      "product_name": "Toki Blended Japanese Whisky",
+      "front_files": [
+        "/bottles/suntory-toki-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Toki%22+whisky&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Toki\" whisky",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AToki+filetype%3Abitmap&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Toki filetype:bitmap",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 30,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3ASuntory+Toki&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:Suntory Toki",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777270701",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777303553",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://jpha.co.uk/products/suntory-toki"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-hibiki-japanese-harmony",
+      "brand": "Suntory",
+      "product_name": "Hibiki Japanese Harmony",
+      "front_files": [
+        "/bottles/suntory-hibiki-japanese-harmony-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Hibiki%22+%22Harmony%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Hibiki\" \"Harmony\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0080686007913",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777270688",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777275652",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://secretbottleshop.co.uk/products/suntory-hibiki-harmony-japanese-blended-whisky-70cl-43-abv-1"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-yamazaki-12-years-old",
+      "brand": "Suntory",
+      "product_name": "Yamazaki 12 Years Old",
+      "front_files": [
+        "/bottles/suntory-yamazaki-12-years-old.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Yamazaki%22+%2212%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Yamazaki\" \"12\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=suntory-yamazaki-12-years-old",
+          "query": "suntory-yamazaki-12-years-old",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0088857001616",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777020313",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777188914",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://freerangebrooklyn.com/product/yamazaki-12-year-single-malt-japanese-whisky/"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-hakushu-12-years-old",
+      "brand": "Suntory",
+      "product_name": "Hakushu 12 Years Old",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Hakushu%22+%2212%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Hakushu\" \"12\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AHakushu+filetype%3Abitmap&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Hakushu filetype:bitmap",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 30,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3AHakushu+bottles&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:Hakushu bottles",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777228894",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777361770",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Current manufacturer imagery is not mirrored without a documented reuse grant; no look-alike Suntory expression is substituted.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://item.rakuten.co.jp/brandox/1000068684500/"
+      ],
+      "external_back_sources": [
+        "https://whiskyparis.com/products/hakushu-12-ans-43"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-chita-single-grain-whisky",
+      "brand": "Suntory",
+      "product_name": "Chita Single Grain Whisky",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Chita%22+whisky&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Chita\" whisky",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AChita+intitle%3AWhisky&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Chita intitle:Whisky",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3AThe+Chita&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:The Chita",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777286175",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777286177",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Current manufacturer imagery is not mirrored without a documented reuse grant; no look-alike Suntory expression is substituted.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://senseoftaste.com.au/products/the-chita-japanese-whisky"
+      ],
+      "external_back_sources": [
+        "https://jamesfox.ie/products/suntory-chita"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-ao-blended-world-whisky",
+      "brand": "Suntory",
+      "product_name": "Ao Blended World Whisky",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Suntory%22+%22Ao%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Suntory\" \"Ao\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 7,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3ASuntory+intitle%3AAo&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Suntory intitle:Ao",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3ASuntory+Ao&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:Suntory Ao",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0080686957195",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0080686957386",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777329843",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Current manufacturer imagery is not mirrored without a documented reuse grant; no look-alike Suntory expression is substituted.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://maizurushuhan.myshopify.com/products/10004340"
+      ],
+      "external_back_sources": [
+        "https://jamesfox.ie/products/suntory-world-whiskey-ao"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-kakubin-blended-whisky",
+      "brand": "Suntory",
+      "product_name": "Kakubin Blended Whisky",
+      "front_files": [
+        "/bottles/suntory-kakubin-blended-whisky-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Kakubin%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Kakubin\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 14,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=suntory-kakubin-blended-whisky",
+          "query": "suntory-kakubin-blended-whisky",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777169043",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777284289",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.delicando.com/nl/14999/suntory-whisky-kakubin-yellow-label-special-blend-40-vol-07l"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "suntory-haku-vodka",
+      "brand": "Suntory",
+      "product_name": "Haku Vodka",
+      "front_files": [
+        "/bottles/suntory-haku-vodka.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Haku%22+vodka&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Haku\" vodka",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777284920",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4901777323401",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=suntory",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.bodeboca.pt/destilados-licores/haku-vodka"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "beefeater-london-dry-gin",
+      "brand": "Beefeater",
+      "product_name": "London Dry Gin",
+      "front_files": [
+        "/bottles/beefeater-london-dry-gin-off-5000329002193-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/beefeater-london-dry-gin-off-5000329002193-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5000329002193-2-1"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Beefeater%22+gin+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Beefeater\" gin bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 11,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3ABeefeater+intitle%3AGin&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Beefeater intitle:Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=beefeater-london-dry-gin",
+          "query": "beefeater-london-dry-gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000329002193",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 7,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=beefeater",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "plymouth-original-gin",
+      "brand": "Plymouth",
+      "product_name": "Original Gin",
+      "front_files": [
+        "/bottles/plymouth-original-gin-historical-commons-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/plymouth-original-gin-historical-commons-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "commons-plymouth-clear-package"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Plymouth%22+gin+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Plymouth\" gin bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000299608005",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000299612293",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=plymouth",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "ki-no-bi-kyoto-dry-gin",
+      "brand": "KI NO BI",
+      "product_name": "Kyoto Dry Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Ki+No+Bi%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Ki No Bi\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4589633901152",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=ki-no-bi",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://www.totalwine.com/spirits/gin/kinobi-kyoto-dry-gin/p/218609750"
+      ],
+      "external_back_sources": [
+        "https://whiskyparis.com/products/ki-no-bi-kyoto-dry-gin-45-7"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "malfy-originale",
+      "brand": "Malfy",
+      "product_name": "Originale",
+      "front_files": [
+        "/bottles/malfy-originale-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Malfy%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Malfy\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000299296028",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=malfy",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.finestore.ro/malfy-originale-07l"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "the-glenlivet-12-year-old",
+      "brand": "The Glenlivet",
+      "product_name": "12 Year Old",
+      "front_files": [
+        "/bottles/the-glenlivet-12-year-old-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Glenlivet%22+%2212%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Glenlivet\" \"12\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AGlenlivet+filetype%3Abitmap&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Glenlivet filetype:bitmap",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 30,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3AGlenlivet+bottles&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:Glenlivet bottles",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 12,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4005971767156",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=the-glenlivet",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://whiskyauctioneer.com/lot/8108778/glenlivet-12-year-old-pre-2004"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "aberlour-12-year-old",
+      "brand": "Aberlour",
+      "product_name": "12 Year Old",
+      "front_files": [
+        "/bottles/aberlour-12-year-old-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Aberlour%22+%2212%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Aberlour\" \"12\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AAberlour+filetype%3Abitmap&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Aberlour filetype:bitmap",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 30,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=categorymembers&gcmtitle=Category%3AAberlour+bottles&gcmnamespace=6&gcmlimit=100&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "Category:Aberlour bottles",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 7,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/3047100056251",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=aberlour",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://hammondvillecellars.shop.supercellars.com.au/lines/aberlour-highland-single-malt-scotch-whisky-12-years-old-700ml"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "chivas-regal-12-year-old",
+      "brand": "Chivas Regal",
+      "product_name": "12 Year Old",
+      "front_files": [
+        "/bottles/chivas-regal-12-year-old-off-0080432402931-front.jpg",
+        "/bottles/chivas-regal-12-year-old-commons-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/chivas-regal-12-year-old-off-0080432402931-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-0080432402931-2-1"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Chivas%22+%2212%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Chivas\" \"12\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AChivas+intitle%3ARegal&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Chivas intitle:Regal",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 22,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0080432402931",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 14,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5000299225004",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 13,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=chivas-regal",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "Open Food Facts barcode 5000299225004 contains 18-year-old Chivas photographs; rejected for this 12-year-old canonical product.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "ballantine-s-finest",
+      "brand": "Ballantine’s",
+      "product_name": "Finest",
+      "front_files": [
+        "/bottles/ballantine-s-finest-commons-front.jpg",
+        "/bottles/ballantine-s-finest-off-5010106113127-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/ballantine-s-finest-off-5010106113127-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-5010106113127-8-10"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Ballantine%22+%22Finest%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Ballantine\" \"Finest\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3ABallantine+filetype%3Abitmap&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Ballantine filetype:bitmap",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 30,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5010106113127",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 13,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=ballantine-s",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://clink.ph/products/ballantines-finest"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "four-roses-small-batch-bourbon",
+      "brand": "Four Roses",
+      "product_name": "Small Batch Bourbon",
+      "front_files": [
+        "/bottles/four-roses-small-batch-bourbon-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Four+Roses%22+%22Small+Batch%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Four Roses\" \"Small Batch\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=four-roses",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://lovescotch.com/products/four-roses-small-batch-bourbon-whiskey"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "kahl-a-original-coffee-liqueur",
+      "brand": "Kahlúa",
+      "product_name": "Original Coffee Liqueur",
+      "front_files": [
+        "/bottles/kahl-a-original-coffee-liqueur-commons-front.jpg",
+        "/bottles/kahl-a-original-coffee-liqueur-off-7610594454399-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/kahl-a-original-coffee-liqueur-off-7610594454399-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-7610594454399-6-9"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Kahlua%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Kahlua\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 13,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/7610594454399",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 10,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=kahl-a",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://whic.de/kahlua-coffee-liqueur.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "malibu-original",
+      "brand": "Malibu",
+      "product_name": "Original",
+      "front_files": [
+        "/bottles/malibu-original-off-8410024700015-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/malibu-original-off-8410024700015-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-8410024700015-5-4"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Malibu%22+rum+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Malibu\" rum bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 7,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AMalibu+intitle%3ARum&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Malibu intitle:Rum",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=malibu-original",
+          "query": "malibu-original",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=malibu",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=malibu",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 9,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=malibu",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 4,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=malibu",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 20,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "altos-plata",
+      "brand": "Altos",
+      "product_name": "Plata",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Altos%22+tequila&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Altos\" tequila",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=altos",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://www.gianteagle.com/grocery/search/product/00080432106846"
+      ],
+      "external_back_sources": [
+        "https://www.callmewine.com/en/tequila-blanco-olmeca-altos-P23606.htm"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "del-maguey-vida-cl-sico",
+      "brand": "Del Maguey",
+      "product_name": "Vida Clásico",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Del+Maguey%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Del Maguey\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0618397200929",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=del-maguey",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://whic.de/del-maguey-vida-mezcal-clasico.html"
+      ],
+      "external_back_sources": [
+        "https://whic.de/del-maguey-vida-mezcal-clasico.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "citadelle-original",
+      "brand": "Citadelle",
+      "product_name": "Original",
+      "front_files": [
+        "/bottles/citadelle-original.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Citadelle%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Citadelle\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=citadelle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=citadelle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.barfish.de/Citadelle-Gin-Original-Pot-Still-07-Liter-44-Vol.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "sipsmith-london-dry-gin",
+      "brand": "Sipsmith",
+      "product_name": "London Dry Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Sipsmith%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Sipsmith\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5060204340000",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=sipsmith",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://thechamber.my/product-detail/sipsmith"
+      ],
+      "external_back_sources": [
+        "https://sklep-domwhisky.pl/product-pol-35354-Sipsmith-London-Dry-Gin-41-6-0-7l.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "gin-mare-mediterranean-gin",
+      "brand": "Gin Mare",
+      "product_name": "Mediterranean Gin",
+      "front_files": [
+        "/bottles/gin-mare-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [
+        "/bottles/gin-mare-off-detail.jpg"
+      ],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Gin+Mare%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Gin Mare\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AMare+intitle%3AGin&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Mare intitle:Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 2,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5099873029053",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=gin-mare",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=gin-mare",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 4,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=gin-mare",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "The real rear inscription is retained as a detail view and does not satisfy the complete rear photograph check.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.spesaonline.unes.it/u2/Birra%2C-vino-e-alcolici/Distillati/Gin-e-vodka/Gin-Mare-700-ml/p/55611"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "nord-s-atlantic-galician-gin",
+      "brand": "Nordés",
+      "product_name": "Atlantic Galician Gin",
+      "front_files": [
+        "/bottles/nord-s-atlantic-galician-gin-off-8435449500002-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/nord-s-atlantic-galician-gin-off-8435449500002-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "off-8435449500002-1-2"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Nordes%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Nordes\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=nord-s-atlantic-galician-gin",
+          "query": "nord-s-atlantic-galician-gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8435449500002",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 3,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=nord-s",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "isle-of-harris-gin",
+      "brand": "Isle of Harris",
+      "product_name": "Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Harris%22+gin+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Harris\" gin bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=isle-of-harris-gin",
+          "query": "isle-of-harris-gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0810039720004",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5060527740006",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=isle-of-harris",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://www.bittersandbottles.com/products/isle-of-harris-gin"
+      ],
+      "external_back_sources": [
+        "https://whic.fr/isle-of-harris-gin.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "isle-of-raasay-hebridean-gin",
+      "brand": "Isle of Raasay",
+      "product_name": "Hebridean Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Raasay%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Raasay\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 13,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=isle-of-raasay-hebridean-gin",
+          "query": "isle-of-raasay-hebridean-gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5060221851060",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5060221851077",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=isle-of-raasay",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://furordivino.com/products/isle-of-raasay-gin-hebridean-scotland-700m%E2%84%93-con-astuccio"
+      ],
+      "external_back_sources": [
+        "https://aitkenwines.com/products/raasay-gin"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "kyr-gin",
+      "brand": "Kyrö",
+      "product_name": "Gin",
+      "front_files": [
+        "/bottles/kyr-gin.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Kyro%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Kyro\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 14,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=kyr",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://kirschwhisky.de/kyroe-rye-gin-42-6-710760-01"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "st-george-terroir-gin",
+      "brand": "St. George",
+      "product_name": "Terroir Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22St+George%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"St George\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3ATerroir+intitle%3AGin&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Terroir intitle:Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0027724227506",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=st-george",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://curiada.com/products/st-george-terroir-gin"
+      ],
+      "external_back_sources": [
+        "https://shopwoodmans.com/store/woodmans-food-markets/products/212156-st-george-gin-terroir-750-ml"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "ferdinand-s-saar-dry-gin",
+      "brand": "Ferdinand’s",
+      "product_name": "Saar Dry Gin",
+      "front_files": [
+        "/bottles/ferdinand-s-saar-dry-gin-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Ferdinand%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Ferdinand\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3AFerdinand+intitle%3AGin&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Ferdinand intitle:Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/4260270190450",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=ferdinand-s",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.spirituosenwelt.at/Ferdinands-Saar-Dry-Gin-05l-44.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "christian-drouin-le-gin",
+      "brand": "Christian Drouin",
+      "product_name": "Le Gin",
+      "front_files": [],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "missing",
+      "missing_views": [
+        "front",
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Christian+Drouin%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Christian Drouin\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/3297364270027",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=christian-drouin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable front and rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [
+        "https://www.bittersandbottles.com/products/christian-drouin-le-gin"
+      ],
+      "external_back_sources": [
+        "https://www.topdrinks.fr/christian-drouin-le-gin-70cl"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "dingle-original-gin",
+      "brand": "Dingle",
+      "product_name": "Original Gin",
+      "front_files": [
+        "/bottles/dingle-original-gin-off-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Dingle%22+gin&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Dingle\" gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=intitle%3ADingle+intitle%3AGin&gsrnamespace=6&gsrlimit=30&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "intitle:Dingle intitle:Gin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5391518565002",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=dingle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://whic.fr/dingle-original-pot-still-gin.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "diplom-tico-reserva-exclusiva",
+      "brand": "Diplomático",
+      "product_name": "Reserva Exclusiva",
+      "front_files": [
+        "/bottles/diplom-tico-reserva-exclusiva-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Diplomatico%22+%22Reserva%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Diplomatico\" \"Reserva\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=diplom-tico-reserva-exclusiva",
+          "query": "diplom-tico-reserva-exclusiva",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=diplom-tico-reserva-exclusiva",
+          "query": "diplom-tico-reserva-exclusiva",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/5099873027301",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=diplom-tico",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.gopuff.com/p/diplomatico-reserva-exclusiva-rum-750-ml-80-proof/p21582"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "mount-gay-eclipse",
+      "brand": "Mount Gay",
+      "product_name": "Eclipse",
+      "front_files": [
+        "/bottles/mount-gay-eclipse-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Mount+Gay%22+%22Eclipse%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Mount Gay\" \"Eclipse\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=mount-gay-eclipse",
+          "query": "mount-gay-eclipse",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=mount-gay-eclipse",
+          "query": "mount-gay-eclipse",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=mount-gay",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.topdrinks.fr/mount-gay-eclipse-1ltr"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "appleton-estate-signature",
+      "brand": "Appleton Estate",
+      "product_name": "Signature",
+      "front_files": [
+        "/bottles/appleton-estate-signature-commons-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/appleton-estate-signature-commons-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "commons-appleton-signature-series"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Appleton%22+%22Signature%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Appleton\" \"Signature\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=appleton-estate-signature",
+          "query": "appleton-estate-signature",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=appleton-estate-signature",
+          "query": "appleton-estate-signature",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=appleton-estate",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "don-papa-7-years-old",
+      "brand": "Don Papa",
+      "product_name": "7 Years Old",
+      "front_files": [
+        "/bottles/don-papa-7-years-old.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Don+Papa%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Don Papa\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=don-papa",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.topdrinks.de/don-papa-7-years-0-7-liter"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "hennessy-v-s",
+      "brand": "Hennessy",
+      "product_name": "V.S",
+      "front_files": [
+        "/bottles/hennessy-v-s-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Hennessy%22+%22VS%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Hennessy\" \"VS\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=hennessy-v-s",
+          "query": "hennessy-v-s",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=hennessy-v-s",
+          "query": "hennessy-v-s",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/3245990250302",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=hennessy",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.topdrinks.at/hennessy-vs-35cl"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "r-my-martin-vsop",
+      "brand": "Rémy Martin",
+      "product_name": "VSOP",
+      "front_files": [
+        "/bottles/r-my-martin-vsop-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Remy+Martin%22+%22VSOP%22&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Remy Martin\" \"VSOP\"",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 5,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=r-my-martin",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "checked",
+          "error": ""
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://sklep-domwhisky.pl/product-pol-30049--Cognac-Remy-Martin-VSOP-Fine-Champagne-bez-opakowania-40-0-7l.html"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "chartreuse-green-chartreuse",
+      "brand": "Chartreuse",
+      "product_name": "Green Chartreuse",
+      "front_files": [
+        "/bottles/chartreuse-green-chartreuse-commons-front.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Chartreuse%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Chartreuse\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/wiki/Special:Search?search=chartreuse-green-chartreuse",
+          "query": "chartreuse-green-chartreuse",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 429: Too Many Requests"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0089744329615",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=chartreuse",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://unwindbottleshop.com/products/chartreuse-green-liqueur-750ml"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "luxardo-amaretto-di-saschira",
+      "brand": "Luxardo",
+      "product_name": "Amaretto di Saschira",
+      "front_files": [
+        "/bottles/luxardo-amaretto-di-saschira.jpg"
+      ],
+      "back_files": [],
+      "detail_files": [],
+      "paired_keys": [],
+      "status": "front-only",
+      "missing_views": [
+        "back"
+      ],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Luxardo%22+Amaretto&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Luxardo\" Amaretto",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 6,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/0086891026251",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 404: Not Found"
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/product/8000353003149",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 1,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=luxardo",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "No reviewed reusable rear photograph is pinned yet. This bounded search is not proof that no such photograph exists.",
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [
+        "https://www.topdrinks.fr/luxardo-amaretto-di-saschira-0-7-liter"
+      ],
+      "missing_reference_views": []
+    },
+    {
+      "product_slug": "heering-cherry-liqueur",
+      "brand": "Heering",
+      "product_name": "Cherry Liqueur",
+      "front_files": [
+        "/bottles/heering-cherry-front.jpg"
+      ],
+      "back_files": [
+        "/bottles/heering-cherry-back.jpg"
+      ],
+      "detail_files": [],
+      "paired_keys": [
+        "commons-heering-historical-70cl"
+      ],
+      "status": "paired-reference",
+      "missing_views": [],
+      "checks": [
+        {
+          "provider": "wikimedia",
+          "request_url": "https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrsearch=%22Heering%22+bottle&gsrnamespace=6&gsrlimit=15&prop=imageinfo&iiprop=url%7Cextmetadata%7Csize&iiurlwidth=640",
+          "query": "\"Heering\" bottle",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 15,
+          "status": "checked",
+          "error": ""
+        },
+        {
+          "provider": "openfoodfacts",
+          "request_url": "https://world.openfoodfacts.org/api/v2/search?brands_tags=heering",
+          "retrieved_on": "2026-10-25",
+          "candidate_count": 0,
+          "status": "failed",
+          "error": "HTTP Error 503: Service Temporarily Unavailable"
+        }
+      ],
+      "evidence_notes": [
+        "Real photographs include historical, market-specific and close-up references. Consult each asset note before comparing a source pair with a current bottling.",
+        "External source links were visually checked against actual image bytes. They do not grant permission to mirror the photographs or increase the local-file coverage count."
+      ],
+      "external_front_sources": [],
+      "external_back_sources": [],
+      "missing_reference_views": []
+    }
+  ]
+}

@@ -11,6 +11,9 @@ jobs:
         run: ./scripts/bootstrap.sh
       - name: PostgreSQL integration tests
         run: docker compose exec -T api python manage.py test catalog --noinput
+      - name: Offline photographic and market-index integrity tests
+        run: |
+          docker compose run --rm --no-deps -v "$PWD/scripts:/research/scripts:ro" -v "$PWD/data:/research/data:ro" -v "$PWD/frontend/public:/research/frontend/public:ro" init python -m unittest discover -s /research/scripts -p 'test_*tools.py'
       - name: Schema and migration checks
         run: |
           docker compose exec -T api python manage.py makemigrations --check --dry-run

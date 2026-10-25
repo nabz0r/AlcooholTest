@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-25T21:17:34Z",
+  "product": "suntory-kakubin-blended-whisky",
+  "requested_scope": "Find primary, exact-format 2006-or-earlier manufacturer recommendations. Preserve actual statistical histories separately.",
+  "points": [],
+  "leads": [
+    {
+      "source_url": "https://www.suntory.co.jp/news/article/14342.html",
+      "source_kind": "manufacturer",
+      "published_on": "2023-03-22",
+      "effective_on": "2023-07-01",
+      "facts": {
+        "product": "Suntory Whisky Kakubin",
+        "volume_ml": 700,
+        "old_recommended_price": "1590",
+        "new_recommended_price": "1910",
+        "currency": "JPY",
+        "tax_included": false,
+        "abv": null
+      },
+      "status": "held_incomplete_bottle_format",
+      "notes": "Official recommended-price revision for existing Kakubin. Table does not state ABV. Not a launch price and does not establish the date from which the old recommendation applied.",
+      "content_sha256": "e95be4a1c4f11719e7db54eb58920e05ea7b6a87ffc0534b3fbc439d4116597e",
+      "hash_scope": "canonical JSON structured facts; not raw page HTML"
+    },
+    {
+      "source_url": "https://www.nikkankeizai.co.jp/publication/daily-news/backnumber/detail.php?id=170",
+      "source_kind": "secondary_trade_press",
+      "published_on": "2015-12-22",
+      "announcement_reported_on": "2015-12-21",
+      "effective_on": "2016-04-01",
+      "facts": {
+        "product": "Suntory Whisky Kakubin",
+        "volume_ml": 700,
+        "old_recommended_price": "1414",
+        "new_recommended_price": "1590",
+        "currency": "JPY",
+        "tax_included": false,
+        "abv": null
+      },
+      "status": "held_incomplete_bottle_format",
+      "notes": "Contemporary report of Suntory price revision. The article date is December 22, 2015. ABV is absent. The old 1414-yen recommendation cannot be backdated to 2005/2006 from this evidence.",
+      "content_sha256": "4eae1f3954285c47ffe6b69b9f8f1fa34b580fdcda6c4c87b5fd2b95a8f76a49",
+      "hash_scope": "canonical JSON structured facts; not raw page HTML"
+    },
+    {
+      "source_url": "https://www.j-cast.com/2008/06/11021615.html?p=all",
+      "source_kind": "secondary_news",
+      "published_on": "2008-06-11",
+      "effective_on": "2008-09-01",
+      "facts": {
+        "product": "Suntory Whisky Kakubin",
+        "recommendation_unchanged_in_this_revision": true,
+        "amount": null,
+        "volume_ml": null,
+        "abv": null
+      },
+      "status": "not_a_price_observation",
+      "notes": "Reports the 2008 increase did not affect Kakubin or Red. No Kakubin amount/format, so it does not prove a dated 2005/2006 price.",
+      "content_sha256": "fb4654047d1ffe3ab69e3e9fdb96ab7d6a6d1839e5293dcd31bef0f44bd5bc9d",
+      "hash_scope": "canonical JSON structured facts; not raw page HTML"
+    },
+    {
+      "source_url": "https://nedan-hakusho.jp/items/2033/",
+      "source_kind": "secondary_statistical_processing",
+      "status": "collected_as_separate_monthly_index",
+      "artifact": "data/prices/market-indexes/kakubin.json",
+      "point_count": 321,
+      "first_period": "2000-01",
+      "last_period": "2026-09",
+      "notes": "Exact visible chart observations retrieved and validated. Independent survey medians with documented specification changes; not individual-retailer offers."
+    },
+    {
+      "source_url": "https://nedan-hakusho.jp/items/2033.csv",
+      "source_kind": "secondary_statistical_processing",
+      "status": "csv_bytes_not_obtained",
+      "content_sha256": null,
+      "notes": "Source page advertises 321 monthly values. Direct HTTP access returned403; browser download methods did not complete. The actual 321 tooltip values were collected instead and their fact extract was hashed."
+    },
+    {
+      "source_url": "https://www.e-stat.go.jp/dbview?sid=0003421913",
+      "source_kind": "government_primary",
+      "status": "dataset_identity_verified_raw_records_not_obtained",
+      "notes": "Official table title and item2033 were read in browser. Data refresh remained Processing and no verified whisky city data export was obtained. No API credential was used."
+    }
+  ],
+  "result": "No complete 2006-or-earlier manufacturer price point verified. A separate 321-month survey-median series was actually extracted and validated, with monthly precision and explicit bottle-specification changes."
+}

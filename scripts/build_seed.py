@@ -2,7 +2,7 @@
 import json, uuid
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-T={k:[] for k in ['sources','places','brands','ingredients','compounds','ingredient_compounds','products','bottle_assets','variants','recipes','recipe_ingredients','studies','measurements','mechanisms','critic_reviews','price_observations']}
+T={k:[] for k in ['sources','places','brands','ingredients','compounds','ingredient_compounds','products','bottle_assets','external_photo_references','variants','recipes','recipe_ingredients','studies','measurements','mechanisms','critic_reviews','price_observations']}
 def uid(s): return str(uuid.uuid5(uuid.NAMESPACE_URL,'https://alcooltest.local/'+s))
 def add(table,key,**kw):
     obj={'id':uid(table+'/'+key),**kw}; T[table].append(obj); return obj['id']
@@ -176,7 +176,19 @@ assets_path=ROOT/'data/assets.json'
 if assets_path.exists():
     for asset in json.loads(assets_path.read_text()):
         p=next((p for p in T['products'] if p['slug']==asset['product_slug']),None)
-        if p: add('bottle_assets',p['slug']+('/'+asset['view'] if asset.get('view','front')!='front' else ''),view=asset.get('view','front'),product_id=p['id'],local_path=asset['file'],source_page=asset['source_page'],author=asset['author'][:500],license=asset['license'],license_url=asset['license_url'],sha256=asset['sha256'],edition_note=asset['edition_note'])
+        legacy_file=asset['file'] in [f"/bottles/{asset['product_slug']}.jpg",f"/bottles/{asset['product_slug']}.png",'/bottles/heering-cherry-front.jpg','/bottles/heering-cherry-back.jpg']
+        asset_key=p['slug']+('/'+asset['view'] if asset.get('view','front')!='front' else '') if p and legacy_file else asset['file']
+        if p: add('bottle_assets',asset_key,pair_key=asset.get('pair_key',''),barcode=asset.get('barcode',''),view=asset.get('view','front'),product_id=p['id'],local_path=asset['file'],source_page=asset['source_page'],author=asset['author'][:500],license=asset['license'],license_url=asset['license_url'],sha256=asset['sha256'],edition_note=asset['edition_note'])
+# External-only photographic references retain the original publisher's control.
+external_path=ROOT/'data/photography/external-references.json'
+if external_path.exists():
+    external=json.loads(external_path.read_text())
+    for reference in (external.get('references',[]) if isinstance(external,dict) else external):
+        p=next((p for p in T['products'] if p['slug']==reference['product_slug']),None)
+        if p and reference.get('verified'):
+            import hashlib
+            key=p['slug']+'/'+reference['view']+'/'+hashlib.sha256(reference['image_url'].encode()).hexdigest()[:24]
+            add('external_photo_references',key,product_id=p['id'],**{f:reference.get(f,'') for f in ['view','source_page','image_url','publisher','credit','rights_note','edition_note','verified_on']},verified=True)
 # Additional primary research and explicit mechanism assertions.
 s['ethanol']=source('ethanol','Lovinger et al. 1989 — ethanol and NMDA current','https://pubmed.ncbi.nlm.nih.gov/2467382/','Science','research')
 s['linalool-mice']=source('linalool-mice','Harada et al. 2018 — linalool odour and anxiety','https://pubmed.ncbi.nlm.nih.gov/30405369/','Frontiers in Behavioral Neuroscience','research')
@@ -226,7 +238,7 @@ for key,variant_key,amount,retailer,url in [
 ('bombay-lu-20261025','bombay-eu','16.95','Centre Bohey via Letzshop','https://letzshop.lu/en/products/bombay-sapphire-e1ec1f'),
 ('monkey-lu-20261025','monkey-eu','47.28','Munhowen Drinx Sandweiler via Letzshop','https://letzshop.lu/de/sandweiler/products/monkey-47-schwarzwald-dry-gin-47-9517f0')]:
     src=source('price-'+key,retailer+' dated reference',url,retailer,'secondary')
-    add('price_observations',key,variant_id=uid('variants/'+variant_key),observed_on='2026-10-25',amount=amount,currency='EUR',country='Luxembourg',retailer=retailer,source_id=src,tax_included=True,promotion=False,notes='Price displayed in the source consulted on this date. Not a checkout guarantee or historical reconstruction; shipping excluded.')
+    add('price_observations',key,basis='retail_offer',variant_id=uid('variants/'+variant_key),observed_on='2026-10-25',amount=amount,currency='EUR',country='Luxembourg',retailer=retailer,source_id=src,tax_included=True,promotion=False,notes='Price displayed in the source consulted on this date. Not a checkout guarantee or historical reconstruction; shipping excluded.')
 
 for perspective in json.loads((ROOT/'data/navigation/critic-perspectives.json').read_text()):
     ref=source(perspective['key'],perspective['title'],perspective['url'],perspective['critic'],'secondary')
@@ -239,6 +251,8 @@ from enrich_catalogue import apply_enrichment
 apply_enrichment(T,uid)
 from enrich_prices import apply_prices
 apply_prices(T,uid)
+from apply_market_indexes import apply_market_indexes
+apply_market_indexes(T,uid)
 
 doc={'schema_version':'1.0','generated_at':'2026-10-25T00:00:00Z','tables':T}
 (ROOT/'data/catalog/seed.json').write_text(json.dumps(doc,indent=2,ensure_ascii=False)+'\n')

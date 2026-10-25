@@ -10,7 +10,8 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 from jsonschema import Draft202012Validator
 from . import models as m
-TABLES={'sources':m.Source,'places':m.Place,'brands':m.Brand,'ingredients':m.Ingredient,'compounds':m.Compound,'ingredient_compounds':m.IngredientCompound,'products':m.Product,'bottle_assets':m.BottleAsset,'variants':m.Variant,'recipes':m.Recipe,'recipe_ingredients':m.RecipeIngredient,'studies':m.Study,'measurements':m.Measurement,'mechanisms':m.Mechanism,'critic_reviews':m.CriticReview,'price_observations':m.PriceObservation}
+TABLES={'sources':m.Source,'places':m.Place,'brands':m.Brand,'ingredients':m.Ingredient,'compounds':m.Compound,'ingredient_compounds':m.IngredientCompound,'products':m.Product,'bottle_assets':m.BottleAsset,'external_photo_references':m.ExternalPhotoReference,'variants':m.Variant,'recipes':m.Recipe,'recipe_ingredients':m.RecipeIngredient,'studies':m.Study,'measurements':m.Measurement,'mechanisms':m.Mechanism,'critic_reviews':m.CriticReview,'price_observations':m.PriceObservation}
+TABLES.update({'market_price_indexes':m.MarketPriceIndex,'market_price_index_points':m.MarketPriceIndexPoint})
 
 def encode(value):
     if isinstance(value,(UUID,Decimal)): return str(value)
@@ -24,14 +25,19 @@ def validate_document(doc):
     seen={}
     for key,model in TABLES.items():
         seen[key]=set()
-        for row in doc['tables'][key]:
+        for row in doc['tables'].get(key,[]):
             if row['id'] in seen[key]: raise ValueError(f'Duplicate ID in {key}.')
             seen[key].add(row['id'])
             obj=model(**row); obj.full_clean(validate_unique=False,validate_constraints=False,exclude=[f.name for f in model._meta.fields if f.many_to_one])
+    periods=set()
+    for row in doc['tables'].get('market_price_index_points',[]):
+        key=(row['index_id'],row['period'])
+        if key in periods:raise ValueError('Duplicate monthly period in market price index.')
+        periods.add(key)
     # Cross-reference against the document, never silently rely on an existing DB.
     reverse={model:key for key,model in TABLES.items()}
     for key,model in TABLES.items():
-        for row in doc['tables'][key]:
+        for row in doc['tables'].get(key,[]):
             for f in model._meta.fields:
                 if f.many_to_one and row.get(f.attname) is not None and row.get(f.attname) not in seen[reverse[f.related_model]]: raise ValueError(f'Missing reference {key}.{f.attname}')
     return {k:len(v) for k,v in doc['tables'].items()}
@@ -43,7 +49,7 @@ def import_document(doc):
     if connection.vendor=='postgresql':
         with connection.cursor() as cur: cur.execute('SELECT pg_advisory_xact_lock(72470521)')
     for key,model in TABLES.items():
-        for row in doc['tables'][key]:
+        for row in doc['tables'].get(key,[]):
             values=dict(row); pk=values.pop('id'); values.pop('updated_at',None)
             if model is m.Product: values.pop('photo',None) # Never accept filesystem paths from imports.
             if model is m.Product: values.pop('edition_of_id',None); values.pop('merged_into_id',None)
@@ -58,6 +64,9 @@ def rows_for(key,model):
     if key=='products': qs=qs.filter(status='published')
     if key in ['variants','recipes']: qs=qs.filter(product__status='published')
     if key=='recipe_ingredients': qs=qs.filter(recipe__product__status='published')
+    if key=='external_photo_references':qs=qs.filter(product__status='published',verified=True)
+    if key=='market_price_indexes':qs=qs.filter(product__status='published',verified=True)
+    if key=='market_price_index_points':qs=qs.filter(index__product__status='published',index__verified=True)
     if key=='bottle_assets': qs=qs.filter(product__status='published')
     if key=='critic_reviews': qs=qs.filter(product__status='published')
     if key=='price_observations': qs=qs.filter(variant__product__status='published')
@@ -87,15 +96,18 @@ def export_file(path,kind):
 
 def run_job(job):
     root=settings.EXPORT_ROOT; root.mkdir(parents=True,exist_ok=True)
-    final=root/f'{job.id}.{ "json" if job.kind=="import" else ("dump" if job.kind=="sql" else "jsonl" if job.kind in ["discover","research","prices"] else job.kind)}'
+    final=root/f'{job.id}.{ "json" if job.kind=="import" else ("zip" if job.kind=="memento" else "dump" if job.kind=="sql" else "jsonl" if job.kind in ["discover","research","prices"] else job.kind)}'
     temp=root/f'{job.id}.tmp'
     try:
         if job.kind in ['discover','research']:
             from .ingestion import discover_to_file,research_to_file
             (discover_to_file if job.kind=='discover' else research_to_file)(temp)
+        elif job.kind=='memento':
+            from .memento import memento_to_file
+            memento_to_file(temp)
         elif job.kind=='prices':
             from .price_archive import price_archive_to_file
-            price_archive_to_file(temp)
+            price_archive_to_file(temp,job.parameters)
         elif job.kind=='import':
             doc=json.loads((root/f'{job.id}.input').read_text())
             result=import_document(doc)

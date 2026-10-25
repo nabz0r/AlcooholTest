@@ -1,0 +1,31 @@
+{
+  "checked_on": "2026-10-25",
+  "origin": "http://localhost:8088",
+  "actual_viewport": {
+    "width": 1280,
+    "screenshot_width": 1265,
+    "height": 712
+  },
+  "passed": [
+    "Public Memento search finds a precise botanical source",
+    "Capsule opens with attributed recipe and ingredient records",
+    "Capsule and source hash scopes are disclosed independently",
+    "Memento bottle chapter groups sources behind one tab",
+    "Monkey 47 actual front/rear barcode pairing",
+    "Rear photograph dialog: 125% and 150% zoom and fit verified",
+    "Readable photograph inspector controls after contrast correction",
+    "Yamazaki external rear-image and publisher links render without automatic remote embedding",
+    "Kakubin monthly chart stays inside its price journal and labels January 2000 to September 2026",
+    "Disposable admin sign-in and sign-out",
+    "Staff Memento job queued, completed, downloaded and independently verified",
+    "Archival collection queued through the admin form"
+  ],
+  "viewport_override_attempt": {
+    "requested_width": 390,
+    "measured_width": 1280,
+    "validated_mobile": false,
+    "override_reset": true
+  },
+  "screenshots": "../screenshots/manifest-v5.json",
+  "private_data_in_report": false
+}

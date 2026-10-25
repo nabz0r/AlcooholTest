@@ -6,7 +6,7 @@ from django.http import HttpResponse,Http404,HttpResponsePermanentRedirect
 from django.shortcuts import render,get_object_or_404
 from .models import Product
 
-PAGES={'':'A world within','discover':'Find your next bottle','catalogue':'The spirits collection','stories':'Stories, craft and culture','research':'Research with context','compare':'Compare spirits','shelf':'Your private shelf','contribute':'Contribute a discovery','account':'Your account','setup':'Set up your instance','studio':'Editorial operations'}
+PAGES={'':'A world within','discover':'Find your next bottle','catalogue':'The spirits collection','stories':'Stories, craft and culture','research':'Research with context','memento':'Source Memento','compare':'Compare spirits','shelf':'Your private shelf','contribute':'Contribute a discovery','account':'Your account','setup':'Set up your instance','studio':'Editorial operations'}
 def page(request,section='',slug=None):
     origin=settings.PUBLIC_BASE_URL.rstrip('/')
     product=None;products=Product.objects.filter(status='published',edition_of__isnull=True).select_related('brand').order_by('brand__name','name')
@@ -27,7 +27,7 @@ def page(request,section='',slug=None):
     return response
 
 def sitemap(request):
-    origin=settings.PUBLIC_BASE_URL.rstrip('/');entries=[(origin+p,None) for p in ['/','/discover/','/catalogue/','/stories/','/research/']]
+    origin=settings.PUBLIC_BASE_URL.rstrip('/');entries=[(origin+p,None) for p in ['/','/discover/','/catalogue/','/stories/','/research/','/memento/']]
     entries += [(origin+'/spirits/'+p.slug+'/',p.updated_at.date().isoformat()) for p in Product.objects.filter(status='published')]
     xml='<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+escape(url)+'</loc>'+('<lastmod>'+date+'</lastmod>' if date else '')+'</url>' for url,date in entries)+'</urlset>'
     return HttpResponse(xml,content_type='application/xml')

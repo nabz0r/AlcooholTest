@@ -1,0 +1,72 @@
+[
+  {
+    "file": "v5-memento.jpg",
+    "title": "Source Memento",
+    "caption": "Public source search, dated fact capsules and licensed image records.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "64f20c8ca9e14e9ca02992c4ea260b6c98bcbd10ee416adc9978cca254117901",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-memento-capsule.jpg",
+    "title": "Botanical source capsule",
+    "caption": "Original source link, saved botanical assertions and downloadable provenance.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "25e617a21c7cccb551b837374c22cc43d61ab371def0924362eae084ef6851cb",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-monkey-rear-label.jpg",
+    "title": "Monkey 47 reverse photograph",
+    "caption": "Actual historical Swiss 500 ml rear label, source credit and fit/zoom controls.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "ae108ec5e2e4f06e063fbdef26dd1110ddfb0bcbbccf269609be553eaa4fbd88",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-kakubin-monthly.jpg",
+    "title": "Kakubin monthly context",
+    "caption": "321 monthly city-survey values, January 2000 to September 2026, separate from retail offers.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "fa6f4c982bd945bf421c6448bc42e18bce5e417c59fc9c31fb4c8f30d710de31",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-yamazaki-external-rear.jpg",
+    "title": "Yamazaki reverse source",
+    "caption": "Verified external rear-image and publisher links; no local reuse rights claimed.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "0e825e6392afd5d44ed055ce9cf7be0eb3213983917147e0beb0e874a8972f34",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-admin-memento.jpg",
+    "title": "Source Memento administration",
+    "caption": "Authenticated regeneration and downloadable licensed-media bundle.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "ea0fcc167c79aeed9703796796901b724001859d882cd3126d095e85843db0c8",
+    "captured_on": "2026-10-25"
+  },
+  {
+    "file": "v5-admin-research.jpg",
+    "title": "Photograph and price workbench",
+    "caption": "Per-bottle coverage, editable targets and protected job queuing.",
+    "width": 1265,
+    "height": 712,
+    "format": "JPEG",
+    "sha256": "8422ea06b9fa56c8ee4bb1bb216a7b3d66843c468ddc70709bdfabf3c080803d",
+    "captured_on": "2026-10-25"
+  }
+]

@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "retrieved_at": "2026-10-25T21:22:21.130396+00:00",
+  "scope": "Actual pre-2007 Appleton Estate V/X retail captures under the owner-documented predecessor lineage to Signature. A historical label observation is not a transaction, uninterrupted price series or proof of formula identity across all years.",
+  "mapping": {
+    "product": "appleton-estate-signature",
+    "retailer_id": 55387,
+    "legacy_url": "http://www.thewhiskyexchange.com/acatalog/The_Whisky_Exchange__RUM_155.html",
+    "legacy_ref": "RUM/0011",
+    "legacy_titles": [
+      "Appleton Estate VX"
+    ],
+    "legacy_age": "",
+    "verified_on": "2026-10-25",
+    "verification": "Exact Appleton Estate VX row/reference checked in the source. Campari Academy explicitly identifies Signature as first released under V/X in1987; Campari confirms April2015 rename and no liquid change at that rename. Preserve actual historical format, market and strength.",
+    "historical_alias": "Appleton Estate V/X",
+    "identity_sources": [
+      "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+      "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+      "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+    ]
+  },
+  "points": [
+    {
+      "product": "appleton-estate-signature",
+      "retailer_id": 55387,
+      "legacy_product_ref": "RUM/0011",
+      "title": "Appleton Estate VX",
+      "observed_on": "2006-02-05",
+      "timestamp": "20060205040338",
+      "amount": "17.99",
+      "currency": "GBP",
+      "country": "United Kingdom",
+      "retailer": "The Whisky Exchange",
+      "volume_ml": 700,
+      "abv": "40",
+      "tax_included": true,
+      "basis": "archive_capture",
+      "parser": "actinic_catalogue_row",
+      "source_url": "https://web.archive.org/web/20060205040338/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html#aRUM_2f0011",
+      "original_url": "http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "content_sha256": "1dcbf56c639f68d012f22d9b76a0a1739d2dae9027432b527ef5555156b49ff0",
+      "retrieved_at": "2026-10-25T21:22:21.133286+00:00",
+      "date_scope": "Archive capture date; not a transaction or guaranteed start of the offer.",
+      "notes": "Historical Appleton Estate VX 70cl40% offer, mapped through owner-confirmed V/X-to-Signature lineage. The category description states minimum five years; current Signature is NAS and no timeless recipe equivalence is asserted. Capture date is not transaction date. VAT-inclusive Inc. amount retained; unexplained adjacent amount is not substituted.",
+      "historical_expression": "Appleton Estate V/X",
+      "canonical_expression": "Appleton Estate Signature",
+      "identity_source_urls": [
+        "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+      ],
+      "promotion": null
+    },
+    {
+      "product": "appleton-estate-signature",
+      "retailer_id": 55387,
+      "legacy_product_ref": "RUM/0011",
+      "title": "Appleton Estate VX",
+      "observed_on": "2003-02-01",
+      "timestamp": "20030201230026",
+      "amount": "15.99",
+      "currency": "GBP",
+      "country": "United Kingdom",
+      "retailer": "The Whisky Exchange",
+      "volume_ml": 700,
+      "abv": "40",
+      "tax_included": true,
+      "basis": "archive_capture",
+      "parser": "actinic_catalogue_row",
+      "source_url": "https://web.archive.org/web/20030201230026/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html#aRUM_2f0011",
+      "original_url": "http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "content_sha256": "c025e311a6a5772c5a9d5f0d706a2ce950556fdfe44b5fdb5731b6486c799f58",
+      "retrieved_at": "2026-10-25T21:22:28.381834+00:00",
+      "date_scope": "Archive capture date; not a transaction or guaranteed start of the offer.",
+      "notes": "Historical Appleton Estate VX 70cl40% offer, mapped through owner-confirmed V/X-to-Signature lineage. The category description states minimum five years; current Signature is NAS and no timeless recipe equivalence is asserted. Capture date is not transaction date. VAT-inclusive Inc. amount retained; unexplained adjacent amount is not substituted.",
+      "historical_expression": "Appleton Estate V/X",
+      "canonical_expression": "Appleton Estate Signature",
+      "identity_source_urls": [
+        "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+      ],
+      "promotion": null
+    },
+    {
+      "product": "appleton-estate-signature",
+      "retailer_id": 55387,
+      "legacy_product_ref": "RUM/0011",
+      "title": "Appleton Estate VX",
+      "observed_on": "2004-02-02",
+      "timestamp": "20040202095549",
+      "amount": "15.99",
+      "currency": "GBP",
+      "country": "United Kingdom",
+      "retailer": "The Whisky Exchange",
+      "volume_ml": 700,
+      "abv": "40",
+      "tax_included": true,
+      "basis": "archive_capture",
+      "parser": "actinic_catalogue_row",
+      "source_url": "https://web.archive.org/web/20040202095549/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html#aRUM_2f0011",
+      "original_url": "http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "content_sha256": "8695dcffd9a2980613950b6a3488858eaf96a857fac1edadd2d7ac82f0333046",
+      "retrieved_at": "2026-10-25T21:22:29.446586+00:00",
+      "date_scope": "Archive capture date; not a transaction or guaranteed start of the offer.",
+      "notes": "Historical Appleton Estate VX 70cl40% offer, mapped through owner-confirmed V/X-to-Signature lineage. The category description states minimum five years; current Signature is NAS and no timeless recipe equivalence is asserted. Capture date is not transaction date. VAT-inclusive Inc. amount retained; unexplained adjacent amount is not substituted.",
+      "historical_expression": "Appleton Estate V/X",
+      "canonical_expression": "Appleton Estate Signature",
+      "identity_source_urls": [
+        "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+      ],
+      "promotion": null
+    },
+    {
+      "product": "appleton-estate-signature",
+      "retailer_id": 55387,
+      "legacy_product_ref": "RUM/0011",
+      "title": "Appleton Estate VX",
+      "observed_on": "2005-02-07",
+      "timestamp": "20050207212103",
+      "amount": "17.99",
+      "currency": "GBP",
+      "country": "United Kingdom",
+      "retailer": "The Whisky Exchange",
+      "volume_ml": 700,
+      "abv": "40",
+      "tax_included": true,
+      "basis": "archive_capture",
+      "parser": "actinic_catalogue_row",
+      "source_url": "https://web.archive.org/web/20050207212103/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html#aRUM_2f0011",
+      "original_url": "http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "content_sha256": "b52e61d6547088555a6f85b8e1f7821a960608f7d3932b79b666a9c0a7170339",
+      "retrieved_at": "2026-10-25T21:22:30.510055+00:00",
+      "date_scope": "Archive capture date; not a transaction or guaranteed start of the offer.",
+      "notes": "Historical Appleton Estate VX 70cl40% offer, mapped through owner-confirmed V/X-to-Signature lineage. The category description states minimum five years; current Signature is NAS and no timeless recipe equivalence is asserted. Capture date is not transaction date. VAT-inclusive Inc. amount retained; unexplained adjacent amount is not substituted.",
+      "historical_expression": "Appleton Estate V/X",
+      "canonical_expression": "Appleton Estate Signature",
+      "identity_source_urls": [
+        "https://www.campariacademy.com/en-au/wp-content/uploads/sites/6/2023/01/TP2-MAI-TAI-WEB-BOOKLET.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/campari_interim_report_30_september_2015-en.pdf",
+        "https://www.camparigroup.com/sites/default/files/downloads/20160301_present_fy_2015_vfinal_1.pdf"
+      ],
+      "promotion": null
+    }
+  ],
+  "errors": [
+    {
+      "timestamp": "20010809001907",
+      "source_url": "https://web.archive.org/web/20010809001907id_/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "error": "Reviewed product reference is absent or duplicated"
+    },
+    {
+      "timestamp": "20020217044217",
+      "source_url": "https://web.archive.org/web/20020217044217id_/http://www.thewhiskyexchange.com:80/acatalog/The_Whisky_Exchange__RUM_155.html",
+      "error": "Reviewed product reference is absent or duplicated"
+    }
+  ],
+  "leads": [],
+  "point_count": 4
+}

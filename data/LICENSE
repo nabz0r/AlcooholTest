@@ -4,3 +4,11 @@ To the extent permitted by law, the authors waive copyright and related rights i
 https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 This does not grant rights in third-party publications, photographs, trademarks, product packaging or user-contributed private records. Those retain their own rights. The application source is licensed separately under the repository's GPL-2.0 LICENSE.
+
+Scope and third-party exceptions (Volume 05)
+------------------------------------------
+The CC0 dedication applies only to original Alcooltest data and original research decisions. It does not waive third-party rights.
+
+The photographic source metadata collection in data/assets.json and Open Food Facts-derived portions of data/photography/ is distributed under the Open Database License 1.0 and Database Contents License 1.0. The corresponding bottle_assets table in public JSON/JSONL exports retains those source terms and attribution. Source metadata is available in this repository for reproducibility. See data/photography/LICENSE.md and https://opendatacommons.org/licenses/odbl/1-0/ .
+
+Photograph bytes retain each file's separately recorded image license and attribution. External-only image references do not grant redistribution permission and do not contain the image bytes. Original brand artwork and trademarks retain applicable rights. Source-code licensing does not replace image or database terms.

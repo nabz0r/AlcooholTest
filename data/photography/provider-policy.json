@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "retrieved_on": "2026-10-25",
+  "image_hosts": [
+    "upload.wikimedia.org",
+    "thumb.wikimedia.org",
+    "openfoodfacts-images.s3.eu-west-3.amazonaws.com"
+  ],
+  "max_image_bytes": 8388608,
+  "publication_policy": "Only individually reviewed product/side matches with source attribution, reusable image license, pinned SHA-256 and explicit historical/market caveats. A candidate never publishes automatically.",
+  "openfoodfacts": {
+    "image_license": "CC BY-SA 3.0",
+    "image_license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "metadata_license": "ODbL 1.0 / DbCL 1.0",
+    "license_evidence": "https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/tutorials/license-be-on-the-legal-side/",
+    "dataset_documentation": "https://openfoodfacts.github.io/openfoodfacts-server/api/aws-images-dataset/",
+    "read_requests_per_minute": 15,
+    "search_requests_per_minute": 10,
+    "rate_limit_documentation": "https://openfoodfacts.github.io/documentation/docs/Product-Opener/api/"
+  },
+  "review_requirements": [
+    "Product expression",
+    "Actual image side",
+    "Visible size/market when legible",
+    "Historical packaging status",
+    "Author and license",
+    "Matching source series or barcode for pairs",
+    "No synthetic or reconstructed labels",
+    "No carton counted as a rear bottle",
+    "No ingredients crop presumed to be a rear bottle"
+  ],
+  "known_rejections": [
+    {
+      "requested_product": "bombay-sapphire",
+      "source_barcode": "5010677710497",
+      "reason": "Visible photograph is Bombay Original London Dry, not Bombay Sapphire."
+    },
+    {
+      "requested_product": "hendricks-original",
+      "source_barcode": "5010327755014",
+      "source_image_id": "18",
+      "reason": "Visible photograph is Monkey 47 despite its Hendrick's source record."
+    },
+    {
+      "requested_product": "campari-bitter",
+      "source_barcode": "8000040001007",
+      "reason": "Visible photographs are SKYY vodka."
+    },
+    {
+      "requested_product": "chivas-regal-12-year-old",
+      "source_barcode": "5000299225004",
+      "reason": "Visible source photographs are Chivas Regal 18-year-old; age expression does not match."
+    }
+  ],
+  "external_source_rejections": [
+    {
+      "product": "kahl-a-original-coffee-liqueur",
+      "reason": "Image search pointed a genuine Kahlúa rear image at an unrelated FairPrice Yuzu product URL. Rejected in favour of a verified exact Kahlúa product source."
+    },
+    {
+      "product": "ki-no-bi-kyoto-dry-gin",
+      "reason": "Five Elements limited-edition rear alternative excluded; original KI NO BI rear source retained."
+    },
+    {
+      "product": "kyr-gin",
+      "reason": "Amber Kyrö Dark Gin rear excluded from original clear Rye Gin reference."
+    },
+    {
+      "product": "the-glenlivet-12-year-old",
+      "reason": "Front bottle paired with rear carton is not a bottle rear; a true historical bottle rear was found instead."
+    },
+    {
+      "product": "isle-of-raasay-hebridean-gin",
+      "reason": "Whisky bottles and repeated gin-front pictures are not gin rear evidence. Verified a shop’s actual current gin rear photograph."
+    }
+  ],
+  "external_reference_policy": "External source metadata only until reuse rights are established. A verified identity/side does not mean a redistribution license, physical-bottle pair or current-market package."
+}

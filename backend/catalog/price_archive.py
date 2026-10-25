@@ -1,5 +1,7 @@
 """Bounded Wayback price research. Only an explicit product-price node is parsed."""
-import json,re,html,time,hashlib,urllib.request,urllib.parse
+import json,re,html,time,hashlib,urllib.request,urllib.parse,gzip,unicodedata
+from io import BytesIO
+from html.parser import HTMLParser
 from datetime import datetime,timezone
 from pathlib import Path
 AGENT='Alcooltest/1.0 (https://github.com/nabz0r/AlcooholTest; archival price research)'
@@ -9,78 +11,207 @@ def fetch(url,cache):
     cache=Path(cache);cache.parent.mkdir(parents=True,exist_ok=True)
     if cache.exists():return cache.read_bytes()
     req=urllib.request.Request(url,headers={'User-Agent':AGENT,'Accept':'application/json,text/html'})
-    with urllib.request.urlopen(req,timeout=35) as response:
+    with urllib.request.urlopen(req,timeout=20) as response:
         final=urllib.parse.urlparse(response.url)
         if final.hostname!=HOST:raise ValueError('Archive redirected outside archive')
         if '/web/' in url and '/web/'+url.split('/web/')[1].split('/')[0][:14] not in response.url:raise ValueError('Capture timestamp changed')
         raw=response.read(4*1024*1024+1)
         if len(raw)>4*1024*1024:raise ValueError('Archive response too large')
+    if raw.startswith(b'\x1f\x8b'):
+        with gzip.GzipFile(fileobj=BytesIO(raw)) as stream:raw=stream.read(4*1024*1024+1)
+        if len(raw)>4*1024*1024:raise ValueError('Decompressed archive response too large')
     tmp=cache.with_suffix(cache.suffix+'.tmp');tmp.write_bytes(raw);tmp.replace(cache);return raw
 
+class ProductNodes(HTMLParser):
+    """Read only known primary nodes, including minified HTML with implicit p endings."""
+    def __init__(self):
+        super().__init__(convert_charrefs=True);self.nodes={};self.active=None;self.parts=[];self.script=False;self.scripts=[];self.script_parts=[]
+    def flush(self):
+        if self.active:self.nodes.setdefault(self.active,[]).append(' '.join(''.join(self.parts).split()))
+        self.active=None;self.parts=[]
+    def handle_starttag(self,tag,attrs):
+        attrs=dict(attrs);classes=(attrs.get('class') or '').split()
+        if self.active and tag in ['p','div','h1','h2','section','ul','table']:self.flush()
+        if tag=='script' and (attrs.get('type') or '').lower()=='application/ld+json':self.script=True;self.script_parts=[]
+        key=('heading_primary' if attrs.get('itemprop')=='name' or 'product-main__name' in classes else 'heading') if tag=='h1' else next((c for c in classes if c in ['product-main__data','product-action__price']),None)
+        if key:self.flush();self.active=key
+    def handle_endtag(self,tag):
+        if self.script and tag=='script':self.scripts.append(''.join(self.script_parts));self.script=False
+        if self.active and tag in ['p','div','h1']:self.flush()
+    def handle_data(self,data):
+        if self.script:self.script_parts.append(data)
+        elif self.active:self.parts.append(data)
+    def close(self):super().close();self.flush()
+
+def target_matches(title,target):
+    def normalize(value):return ' '.join(re.findall(r'[\w]+',''.join(c for c in unicodedata.normalize('NFKD',str(value).casefold()) if not unicodedata.combining(c))))
+    normalized=normalize(title)
+    def contains(token):return (' '+normalize(token)+' ') in (' '+normalized+' ')
+    return bool(normalized) and all(contains(t) for t in target['tokens']) and not any(contains(t) for t in target.get('exclude_tokens',[]))
+
 def parse_capture(raw,target,timestamp,original):
+    if raw.startswith(b'\x1f\x8b'):
+        with gzip.GzipFile(fileobj=BytesIO(raw)) as stream:raw=stream.read(4*1024*1024+1)
+    if len(raw)>4*1024*1024:raise ValueError('Archive response too large')
+    if not re.fullmatch(r'\d{14}',timestamp):raise ValueError('Invalid capture timestamp')
     text=raw.decode('utf-8',errors='replace');plain=lambda s:html.unescape(re.sub('<[^>]+>',' ',s)).strip()
-    heading=re.search(r'<h1\b[^>]*>(.*?)</h1>',text,re.S|re.I)
-    title=plain(heading.group(1)) if heading else ''
-    if not title or any(token.lower() not in title.lower() for token in target['tokens']):raise ValueError('Product heading does not match reviewed target')
-    # The old taxed-price node excludes ex-VAT and recommendation prices.
+    nodes=ProductNodes();nodes.feed(text);nodes.close()
+    headings=nodes.nodes.get('heading_primary') or nodes.nodes.get('heading',[]);title=headings[0] if len(headings)==1 else ''
+    if not target_matches(title,target):raise ValueError('Product heading does not match reviewed target')
     price=re.search(r'<span[^>]+id=["\'][^"\']*LblPriceTaxed["\'][^>]*>(.*?)</span>',text,re.S|re.I)
-    if not price:
-        candidates=list(re.finditer(r'<span[^>]+itemprop=[\"\']price[\"\'][^>]*>(.*?)</span>',text,re.S|re.I))
-        if len(candidates)==1:price=candidates[0]
-    if not price:
-        basket=re.search(r'<div[^>]+id=[\"\']basket[\"\'][^>]*>(.*?)<!-- End: Offer, Price and Basket -->',text,re.S|re.I)
-        if basket:price=re.search(r'<div[^>]+class=[\"\']price[\"\'][^>]*>(.*?)</div>',basket.group(1),re.S|re.I)
-    if not price:raise ValueError('No supported product-specific taxed price node; review required')
-    amount=re.search(r'£\s*([\d,]+\.\d{2})',plain(price.group(1)))
-    if not amount:raise ValueError('No unambiguous GBP amount in taxed price')
-    # Require adjacent detail-table cells, not arbitrary mentions elsewhere in the page.
+    price_text=plain(price.group(1)) if price else None
+    if not price_text:
+        candidates=list(re.finditer(r'<span[^>]+itemprop=["\']price["\'][^>]*>(.*?)</span>',text,re.S|re.I))
+        if len(candidates)==1:price_text=plain(candidates[0].group(1))
+    if not price_text:
+        basket=re.search(r'<div[^>]+id=["\']basket["\'][^>]*>(.*?)<!-- End: Offer, Price and Basket -->',text,re.S|re.I)
+        price=re.search(r'<div[^>]+class=["\']price["\'][^>]*>(.*?)</div>',basket.group(1),re.S|re.I) if basket else None
+        if price:price_text=plain(price.group(1))
+    if not price_text:
+        offers=re.findall(r'<div[^>]+class=["\']price-content["\'][^>]*>(.*?)</div>',text,re.S|re.I)
+        if len(offers)==1:
+            offer=offers[0]
+            currency=re.search(r'<meta[^>]+itemprop=["\']priceCurrency["\'][^>]+content=["\']GBP["\']',offer,re.I)
+            primary_price=re.search(r'<span[^>]+class=["\']price["\'][^>]*>(.*?)</span>',offer,re.S|re.I)
+            if currency and primary_price:price_text=plain(primary_price.group(1))
+    if not price_text:
+        primary=nodes.nodes.get('product-action__price',[])
+        if len(primary)==1:price_text=primary[0]
+    if not price_text:raise ValueError('No supported product-specific taxed price node; review required')
+    amounts=re.findall(r'£\s*([\d,]+(?:\.\d{2})?)(?![\d.])',price_text)
+    if len(amounts)!=1:raise ValueError('No unambiguous GBP amount in primary taxed price')
     cells=[plain(v) for v in re.findall(r'<td[^>]*class=["\']detailBox02["\'][^>]*>(.*?)</td>',text,re.S|re.I)]
     volume=next((re.fullmatch(r'(\d+(?:\.\d+)?)\s*cl',v,re.I) for v in cells if re.fullmatch(r'(\d+(?:\.\d+)?)\s*cl',v,re.I)),None)
     abv=next((re.fullmatch(r'(\d+(?:\.\d+)?)\s*%',v) for v in cells if re.fullmatch(r'(\d+(?:\.\d+)?)\s*%',v)),None)
     if not volume or not abv:
-        formats=re.findall(r'<(?:div|span)[^>]+class=[\"\'](?:size|strength)[\"\'][^>]*>(.*?)</(?:div|span)>',text,re.S|re.I)
-        matches=[re.fullmatch(r'(\d+(?:\.\d+)?)\s*cl\s*/\s*(\d+(?:\.\d+)?)\s*%',plain(f),re.I) for f in formats]
-        matches=[m for m in matches if m]
-        if len(matches)==1:
-            volume=re.match(r'(.*)',matches[0].group(1));abv=re.match(r'(.*)',matches[0].group(2))
+        formats=[plain(f) for f in re.findall(r'<(?:div|span)[^>]+class=["\'](?:size|strength)["\'][^>]*>(.*?)</(?:div|span)>',text,re.S|re.I)]+nodes.nodes.get('product-main__data',[])
+        matches=[re.fullmatch(r'(\d+(?:\.\d+)?)\s*cl\s*/\s*(\d+(?:\.\d+)?)\s*%',f,re.I) for f in formats];matches=[m for m in matches if m]
+        if len(matches)==1:volume=re.match(r'(.*)',matches[0].group(1));abv=re.match(r'(.*)',matches[0].group(2))
     if not volume or not abv:raise ValueError('Bottling volume or ABV is not explicit in the capture')
-    return {'product':target['product'],'retailer_id':target['retailer_id'],'title':title,'observed_on':datetime.strptime(timestamp,'%Y%m%d%H%M%S').date().isoformat(),'timestamp':timestamp,'amount':amount.group(1).replace(',',''),'currency':'GBP','country':'United Kingdom','retailer':'The Whisky Exchange','volume_ml':round(float(volume.group(1))*10),'abv':abv.group(1),'tax_included':True,'basis':'archive_capture','source_url':'https://web.archive.org/web/'+timestamp+'/'+original,'original_url':original,'content_sha256':hashlib.sha256(raw).hexdigest(),'retrieved_at':datetime.now(timezone.utc).isoformat(),'date_scope':'Archive capture date; not a transaction or guaranteed start of the offer.'}
+    from decimal import Decimal
+    amount=Decimal(amounts[0].replace(',',''))
+    if not 0<amount<1000000 or not 0<float(abv.group(1))<=100:raise ValueError('Price or strength outside accepted bounds')
+    return {'product':target['product'],'retailer_id':target['retailer_id'],'title':title,'observed_on':datetime.strptime(timestamp,'%Y%m%d%H%M%S').date().isoformat(),'timestamp':timestamp,'amount':format(amount,'.2f'),'currency':'GBP','country':'United Kingdom','retailer':'The Whisky Exchange','volume_ml':round(float(volume.group(1))*10),'abv':abv.group(1),'tax_included':True,'basis':'archive_capture','source_url':'https://web.archive.org/web/'+timestamp+'/'+original,'original_url':original,'content_sha256':hashlib.sha256(raw).hexdigest(),'retrieved_at':datetime.now(timezone.utc).isoformat(),'date_scope':'Archive capture date; not a transaction or guaranteed start of the offer.'}
 
-def collect(targets,root,max_captures=8,notify=None):
+def archive_urls(target):
+    ident=int(target['retailer_id'])
+    if not 1<=ident<=999999:raise ValueError('Invalid reviewed retailer identifier')
+    urls=[f'thewhiskyexchange.com/P-{ident}.aspx',f'thewhiskyexchange.com/p/{ident}/*']
+    for url in target.get('original_urls',[]):
+        parsed=urllib.parse.urlparse(url if '://' in url else 'https://'+url)
+        if parsed.hostname not in ['www.thewhiskyexchange.com','thewhiskyexchange.com'] or not re.match(rf'^/(?:[Pp]-{ident}\.aspx|[Pp]/{ident}/)',parsed.path):raise ValueError('Original URL must match the reviewed retailer identifier')
+        clean='thewhiskyexchange.com'+parsed.path
+        if clean not in urls:urls.append(clean)
+    return urls[:4]
+
+def collect(targets,root,max_captures=24,notify=None):
     root=Path(root);root.mkdir(parents=True,exist_ok=True);points=[];errors=[];indexes=[]
+    if not 1<=max_captures<=32:raise ValueError('Capture budget must be between 1 and 32')
     for target in targets:
-        ident=int(target['retailer_id'])
-        if not 1<=ident<=999999:raise ValueError('Invalid reviewed retailer identifier')
-        query={'url':f'thewhiskyexchange.com/P-{ident}.aspx','output':'json','filter':['statuscode:200','mimetype:text/html'],'collapse':'timestamp:4','from':'1999','to':'2026','limit':'40'}
-        url='https://web.archive.org/cdx/search/cdx?'+urllib.parse.urlencode(query,doseq=True)
-        try:
-            index=json.loads(fetch(url,root/f'{ident}-index.json'));indexes.append({'product':target['product'],'url':url,'captures':len(index)-1})
-            for row in index[1:max_captures+1]:
-                stamp,original=row[1],row[2]
-                if not re.fullmatch(r'\d{14}',stamp) or urllib.parse.urlparse(original).hostname not in ['www.thewhiskyexchange.com','thewhiskyexchange.com']:raise ValueError('Invalid indexed capture')
-                try:
-                    raw=fetch('https://web.archive.org/web/'+stamp+'id_/'+original,root/f'{ident}-{stamp}.html');point=parse_capture(raw,target,stamp,original);points.append(point)
-                    if notify:notify(point)
-                except Exception as exc:errors.append({'product':target['product'],'timestamp':stamp,'error':str(exc)[:180]})
-                time.sleep(1)
-        except Exception as exc:errors.append({'product':target['product'],'error':str(exc)[:180]})
-    return {'scope':'Bounded annual captures of reviewed retailer product IDs. Missing years are not interpolated. Raw page text is not redistributed. Parsed facts require editorial review.','indexes':indexes,'points':points,'errors':errors}
+        ident=int(target['retailer_id']);captures={}
+        for pattern in archive_urls(target):
+            query={'url':pattern,'output':'json','filter':['statuscode:200','mimetype:text/html'],'collapse':'timestamp:4','from':'1999','to':str(datetime.now(timezone.utc).year),'limit':'2000'}
+            url='https://web.archive.org/cdx/search/cdx?'+urllib.parse.urlencode(query,doseq=True)
+            cachekey=hashlib.sha256(url.encode()).hexdigest()[:16]
+            try:
+                index=json.loads(fetch(url,root/f'{ident}-{cachekey}-index.json'));indexes.append({'product':target['product'],'url':url,'captures':max(0,len(index)-1)})
+                for row in index[1:]:
+                    stamp,original=row[1],row[2];parsed=urllib.parse.urlparse(original)
+                    if not re.fullmatch(r'\d{14}',stamp) or parsed.hostname not in ['www.thewhiskyexchange.com','thewhiskyexchange.com']:continue
+                    if parsed.query or not re.match(rf'^/(?:[Pp]-{ident}\.aspx|[Pp]/{ident}/)',parsed.path):continue
+                    key=stamp[:4]
+                    if key not in captures or stamp<captures[key][0]:captures[key]=(stamp,original)
+            except Exception as exc:errors.append({'product':target['product'],'index_url':url,'error':str(exc)[:180]})
+        rows=sorted(captures.values())
+        # Keep endpoints when the annual series exceeds a deliberately bounded job budget.
+        if len(rows)>max_captures:rows=rows[:max_captures-1]+rows[-1:]
+        for stamp,original in rows:
+            try:
+                raw=fetch('https://web.archive.org/web/'+stamp+'id_/'+original,root/f'{ident}-{stamp}.html');point=parse_capture(raw,target,stamp,original);points.append(point)
+                if notify:notify(point)
+            except Exception as exc:errors.append({'product':target['product'],'timestamp':stamp,'source_url':'https://web.archive.org/web/'+stamp+'/'+original,'error':str(exc)[:180]})
+            time.sleep(1)
+    return {'scope':'Bounded annual captures of reviewed retailer product IDs across legacy and canonical URLs. Missing years are not interpolated. Raw page text is not redistributed. Parsed facts require editorial review.','indexes':indexes,'points':points,'errors':errors}
+
+def collect_legacy(target,root,notify=None):
+    from .legacy_catalogue import parse_legacy_catalogue
+    source=urllib.parse.urlparse(target['legacy_url'])
+    if source.hostname not in ['www.thewhiskyexchange.com','thewhiskyexchange.com'] or source.query or not re.fullmatch(r'/acatalog/The_Whisky_Exchange__[A-Za-z0-9_]+\.html',source.path):raise ValueError('Unreviewed legacy category')
+    root=Path(root);root.mkdir(parents=True,exist_ok=True)
+    query={'url':target['legacy_url'],'output':'json','filter':['statuscode:200','mimetype:text/html'],'collapse':'timestamp:4','from':'1999','to':'2006','limit':'8'}
+    url='https://web.archive.org/cdx/search/cdx?'+urllib.parse.urlencode(query,doseq=True)
+    cachekey=hashlib.sha256(url.encode()).hexdigest()[:16];points=[];errors=[];indexes=[]
+    try:
+        rows=json.loads(fetch(url,root/f'legacy-{cachekey}-index.json'))[1:]
+        indexes.append({'product':target['product'],'url':url,'captures':len(rows)})
+        for row in rows:
+            stamp,original=row[1],row[2]
+            if not re.fullmatch(r'\d{14}',stamp):continue
+            try:
+                raw=fetch('https://web.archive.org/web/'+stamp+'id_/'+original,root/f'legacy-{cachekey}-{stamp}.html')
+                point=parse_legacy_catalogue(raw,target,stamp,original);points.append(point)
+                if notify:notify(point)
+            except Exception as exc:errors.append({'product':target['product'],'timestamp':stamp,'error':str(exc)[:180]})
+            time.sleep(1)
+    except Exception as exc:errors.append({'product':target['product'],'index_url':url,'error':str(exc)[:180]})
+    return {'points':points,'errors':errors,'indexes':indexes}
+
+def collect_drinkshop(target,root,notify=None):
+    from .legacy_catalogue import parse_drinkshop_capture
+    ident=int(target['drinkshop_id'])
+    if not 1<=ident<=999999:raise ValueError('Invalid reviewed DrinkShop ID')
+    root=Path(root);root.mkdir(parents=True,exist_ok=True)
+    original_url=f'http://www.thedrinkshop.com/products/nlpdetail.php?prodid={ident}'
+    parser_target={'product':target['product'],'retailer_id':target['retailer_id'],'source_retailer_id':ident,'legacy_titles':target['drinkshop_titles'],'volume_ml':target['drinkshop_volume_ml']}
+    query={'url':original_url,'output':'json','filter':['statuscode:200','mimetype:text/html'],'collapse':'timestamp:4','from':'1999','to':'2006','limit':'8'}
+    url='https://web.archive.org/cdx/search/cdx?'+urllib.parse.urlencode(query,doseq=True)
+    points=[];errors=[];indexes=[]
+    try:
+        rows=json.loads(fetch(url,root/f'drinkshop-{ident}-index.json'))[1:]
+        indexes.append({'product':target['product'],'url':url,'captures':len(rows)})
+        for row in rows:
+            stamp,original=row[1],row[2]
+            if not re.fullmatch(r'\d{14}',stamp):continue
+            try:
+                raw=fetch('https://web.archive.org/web/'+stamp+'id_/'+original,root/f'drinkshop-{ident}-{stamp}.html')
+                point=parse_drinkshop_capture(raw,parser_target,stamp,original);points.append(point)
+                if notify:notify(point)
+            except Exception as exc:errors.append({'product':target['product'],'timestamp':stamp,'error':str(exc)[:180]})
+            time.sleep(1)
+    except Exception as exc:errors.append({'product':target['product'],'index_url':url,'error':str(exc)[:180]})
+    return {'points':points,'errors':errors,'indexes':indexes}
 
 def stage_price(point):
     from . import models as m
     product=m.Product.objects.filter(slug=point['product'],merged_into__isnull=True).first()
-    candidate,_=m.DiscoveryCandidate.objects.get_or_create(provider='wayback',external_id=f"{point['retailer_id']}:{point['timestamp']}",defaults={'label':point['title'][:240],'category':product.category if product else 'Whisky','source_url':point['source_url'],'payload':point,'resolved_product':product})
+    candidate,_=m.DiscoveryCandidate.objects.get_or_create(provider='wayback',external_id=(f"drinkshop:{point['source_retailer_id']}:{point['timestamp']}" if point.get('parser')=='drinkshop_primary_price_table' else f"{point['retailer_id']}:{point['timestamp']}"),defaults={'label':point['title'][:240],'category':product.category if product else 'Whisky','source_url':point['source_url'],'payload':point,'resolved_product':product})
     return candidate
 
-def price_archive_to_file(path):
+def price_archive_to_file(path,parameters=None):
     from django.conf import settings
-    from .models import DiscoveryCursor
-    targets=json.loads((settings.SEED_FILE.parent.parent/'prices/targets.json').read_text())
-    cursor,_=DiscoveryCursor.objects.get_or_create(key='price-archive:targets')
-    index=int(cursor.cursor or '0')%len(targets)
-    report=collect([targets[index]],settings.EXPORT_ROOT/'price-archive-cache',max_captures=20,notify=stage_price)
-    cursor.cursor=str((index+1)%len(targets));cursor.save()
+    from django.utils import timezone as django_timezone
+    from .models import DiscoveryCursor,PriceArchiveTarget
+    parameters=parameters or {}
+    if set(parameters)-{'target_id'}:raise ValueError('Unsupported archival job parameters')
+    targets=PriceArchiveTarget.objects.filter(enabled=True,product__merged_into__isnull=True).select_related('product').order_by('product__slug','retailer_id')
+    if parameters.get('target_id'):
+        target=targets.get(pk=parameters['target_id'])
+    else:
+        cursor,_=DiscoveryCursor.objects.get_or_create(key='price-archive:targets')
+        count=targets.count()
+        if not count:raise ValueError('Configure an enabled archive target in the editorial admin first')
+        index=int(cursor.cursor or '0')%count;target=targets[index]
+        cursor.cursor=str((index+1)%count);cursor.save()
+    target.full_clean()
+    report=collect([target.as_target()],settings.EXPORT_ROOT/'price-archive-cache',max_captures=24,notify=stage_price)
+    if target.legacy_url:
+        legacy=collect_legacy(target.as_target(),settings.EXPORT_ROOT/'price-archive-cache',notify=stage_price)
+        for key in ['points','errors','indexes']:report[key].extend(legacy[key])
+    if target.drinkshop_id:
+        oldshop=collect_drinkshop(target.as_target(),settings.EXPORT_ROOT/'price-archive-cache',notify=stage_price)
+        for key in ['points','errors','indexes']:report[key].extend(oldshop[key])
+    target.last_checked=django_timezone.now();target.last_result={'parsed':len(report['points']),'errors':report['errors'],'indexes':report['indexes']};target.save(update_fields=['last_checked','last_result','updated_at'])
     with path.open('w') as stream:
-        stream.write(json.dumps({'type':'manifest','scope':report['scope'],'target':targets[index],'requires_editorial_acceptance':True})+'\n')
+        stream.write(json.dumps({'type':'manifest','scope':report['scope'],'target':target.as_target(),'requires_editorial_acceptance':True})+'\n')
         for row in report['points']:stream.write(json.dumps({'type':'price_candidate',**row})+'\n')
         stream.write(json.dumps({'type':'summary','parsed':len(report['points']),'errors':report['errors']})+'\n')

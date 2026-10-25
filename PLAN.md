@@ -47,3 +47,14 @@ Audit every one of the 55 canonical records. Research exact products using produ
 - Validate the expanded source-linked dataset and admin workbench/price-candidate acceptance, public dumps and schema compatibility.
 - Deliver a GitHub-native visual README: animated vector artwork with static fallback, actual motion capture, audio excerpt, diagrams and current screenshots.
 - Record incomplete twenty-year archival coverage and missing rear-label photography. Android gyro/camera APK and a possible C/WASM engine remain explicit roadmap work, not shipped claims.
+
+## Volume 05 — photographic and archival completion
+
+User requests genuine sourced front/rear photographs and at least twenty years of historical price evidence for all 55 canonical bottles, full editorial administration, tested and published on main. Work starts with exact product/format matching, source and reuse-right review, archive target expansion, per-record coverage and launch-date eligibility. Never manufacture missing years, back labels or licensed status. Keep newer expressions and incomplete coverage explicit. Validate actual collection runs, admin workflows, PostgreSQL tests, frontend build, local UI and remote CI before publication.
+
+
+### Volume 05 delivery boundary
+
+- Implemented: authenticated editorial targets and photo references, reviewed price ingestion with exact date precision and price basis, monthly market indexes, public/source-admin Memento, portable fact snapshots and licensed-media bundles.
+- Verified locally: actual collection and browser exports, image/capsule integrity, catalogue coverage, PostgreSQL permissions/provenance checks and production frontend build. Final remote main/CI evidence is recorded after publication.
+- Still incomplete: locally reusable rear images for 33 products, locally reusable front images for 11, continuous annual retail coverage for every older product, and the two unresolved earliest retail gaps. Twenty-three products have post-2006 expression launches or brand bounds. All 55 have genuine front/rear source references, but these distinctions must stay visible.

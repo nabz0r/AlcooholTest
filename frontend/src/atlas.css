@@ -45,3 +45,6 @@ footer{color:#786a50;border-color:var(--line)}footer a{color:#534631}.loading{co
 #main a.source{color:#7b4933}#main a.source span{color:#78674d}#main .price-graph text{fill:#736044}#main .price-graph polyline{stroke:#8f5b37}#main .price-graph circle{fill:#885b3a}
 .atlas-immersive .detail-visual{min-height:0}.atlas-immersive #bottle-view{height:min(52dvh,560px)}.atlas-immersive #atlas-controls{padding:8px 18px}.atlas-immersive #atlas-controls a{padding:6px 0;color:#e9d9b8;display:inline}.atlas-immersive #atlas-controls button{min-height:36px}.atlas-immersive #atlas-controls .atlas-home{color:#ceb075}.atlas-immersive .atlas-volume input{height:18px}
 @media(max-width:800px){.atlas-immersive #bottle-view{height:420px}.atlas-immersive #atlas-controls{padding:5px 12px}}
+
+/* Keep label controls legible against the dark photograph inspection surface. */
+.label-lightbox .lightbox-toolbar .button{color:#eee4ca;background:#293b2d;border-color:#a9aa84}.label-lightbox .lightbox-toolbar .button:hover,.label-lightbox .lightbox-toolbar .button:focus-visible{color:#192218;background:#ead7aa}.label-lightbox .lightbox-toolbar output{color:#eee4ca}

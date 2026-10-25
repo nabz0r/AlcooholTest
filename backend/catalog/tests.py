@@ -126,6 +126,34 @@ class CatalogueTests(TestCase):
     def test_editor_without_operations_permission(self):
         user=get_user_model().objects.create_user('limited-editor',password='long-editor-password',is_staff=True)
         self.client.force_login(user);self.assertEqual(self.post('jobs',{'kind':'sql'}).status_code,403)
+    def test_view_only_staff_cannot_use_operation_api_or_create_imports(self):
+        from django.contrib.auth.models import Permission
+        user=get_user_model().objects.create_user('read-only-operations',is_staff=True)
+        user.user_permissions.add(Permission.objects.get(codename='view_job'))
+        public=m.Job.objects.create(kind='json',status='done',filename='public.json',created_by=self.admin)
+        private=m.Job.objects.create(kind='sql',status='done',filename='private.dump',created_by=self.admin)
+        count=m.Job.objects.count();self.client.force_login(user)
+        self.assertEqual(self.client.get('/api/v1/operations').status_code,403)
+        for kind in ['json','sql','prices']:self.assertEqual(self.post('jobs',{'kind':kind}).status_code,403)
+        for commit in [False,True]:self.assertEqual(self.post('imports',{'document':self.doc,'commit':commit}).status_code,403)
+        for job in [public,private]:self.assertEqual(self.client.get(f'/api/v1/jobs/{job.pk}/download').status_code,403)
+        self.assertEqual(m.Job.objects.count(),count)
+    def test_job_creator_needs_view_permission_and_owner_for_sensitive_operations(self):
+        from django.contrib.auth.models import Permission
+        user=get_user_model().objects.create_user('queue-operator',is_staff=True)
+        user.user_permissions.add(Permission.objects.get(codename='add_job'))
+        private=m.Job.objects.create(kind='sql',status='done',filename='private.dump',created_by=self.admin)
+        self.client.force_login(user)
+        self.assertEqual(self.post('jobs',{'kind':'json'}).status_code,202)
+        self.assertEqual(self.post('jobs',{'kind':'sql'}).status_code,403)
+        self.assertEqual(self.client.get('/api/v1/operations').status_code,403)
+        self.assertEqual(self.client.get(f'/api/v1/jobs/{private.pk}/download').status_code,403)
+        self.assertEqual(self.post('imports',{'document':self.doc,'commit':False}).status_code,200)
+        self.assertEqual(self.post('imports',{'document':self.doc,'commit':True}).status_code,403)
+        user.user_permissions.add(Permission.objects.get(codename='view_job'))
+        self.client.logout();self.client.force_login(user)
+        self.assertEqual(self.client.get('/api/v1/operations').status_code,200)
+        self.assertEqual(self.client.get(f'/api/v1/jobs/{private.pk}/download').status_code,403)
     def test_valid_submission_becomes_draft(self):
         self.client.force_login(self.member)
         response=self.post('submissions',{'brand':'New Brand','name':'Botanical Edition','country':'France','market':'EU','abv':42,'volume_ml':700,'description':'Contributor proposal','source_url':'https://example.org/source','ingredients':'Juniper, Coriander'})
@@ -161,7 +189,9 @@ class CatalogueTests(TestCase):
         self.assertEqual(len(self.client.get('/api/v1/products?q=monkey&editions=all').json()['items']),3)
     def test_market_bottlings_share_product(self):
         p=self.client.get('/api/v1/products/roku-japanese-craft').json()
-        self.assertEqual(len(p['variants']),2)
+        self.assertEqual(p['slug'],'roku-japanese-craft')
+        self.assertTrue({('43.0',700),('47.0',700)}.issubset({(v['abv'],v['volume_ml']) for v in p['variants']}))
+        self.assertEqual(m.Product.objects.filter(slug='roku-japanese-craft').count(),1)
     def test_private_transition_matrix(self):
         p=m.Product.objects.first();self.client.force_login(self.member)
         path=f'products/{p.slug}/observations'
@@ -192,7 +222,7 @@ class CatalogueTests(TestCase):
     def test_price_observation_roundtrip(self):
         v=m.Variant.objects.first()
         m.PriceObservation.objects.create(variant=v,observed_on='2026-10-25',amount='39.90',currency='EUR',country='Test country',retailer='Test fixture',source=m.Source.objects.first())
-        r=self.client.get('/api/v1/products/'+v.product.slug).json()['prices'][0]
+        r=next(row for row in self.client.get('/api/v1/products/'+v.product.slug).json()['prices'] if row['retailer']=='Test fixture')
         self.assertEqual(r['amount'],'39.90');self.assertEqual(r['currency'],'EUR')
     def test_candidate_links_existing_without_fork(self):
         from .admin import accept_candidates
@@ -340,9 +370,150 @@ class EnrichedAtlasTests(TestCase):
         from .prices import accept_price_capture
         import json
         point=json.loads((settings.SEED_FILE.parent.parent/'prices/archive-research.json').read_text())['points'][0]
+        call_command('sync_research',verbosity=0)
         p=m.Product.objects.get(slug=point['product'])
         candidate=m.DiscoveryCandidate.objects.create(provider='wayback',external_id='test-archive',label='Reviewed archive test',category=p.category,source_url=point['source_url'],payload=point,resolved_product=p)
         price=accept_price_capture(candidate,self.admin)
         self.assertEqual(str(price.amount),point['amount']);self.assertEqual(price.variant.product,p)
         self.assertTrue(m.Audit.objects.filter(action='price.archive.accepted',target=str(price.id)).exists())
         with self.assertRaises(ValueError):accept_price_capture(candidate,self.admin)
+
+class ArchivalResearchTests(TestCase):
+    setUpTestData=classmethod(CatalogueTests.setUpTestData.__func__)
+    def make_target(self):
+        return m.PriceArchiveTarget.objects.create(product=m.Product.objects.get(slug='suntory-yamazaki-12-years-old'),retailer_id=2940,tokens=['yamazaki','12'],source_url='https://www.thewhiskyexchange.com/p/2940/yamazaki-12-year-old')
+    def pre_bound_fixture(self):
+        point=copy.deepcopy(next(row for row in json.loads((settings.SEED_FILE.parent.parent/'prices/archive-research.json').read_text())['points'] if row['product']=='malfy-originale'))
+        # Deliberately invalid chronology in a test fixture, never research data.
+        point['source_url']=point['source_url'].replace('/web/'+point['timestamp']+'/', '/web/20150615120000/')
+        point.update(timestamp='20150615120000',observed_on='2015-06-15')
+        return point
+    def test_acceptance_rejects_before_sourced_bound_without_exact_launch_year(self):
+        from .prices import accept_price_capture
+        point=self.pre_bound_fixture();product=m.Product.objects.get(slug=point['product'])
+        m.ProductResearch.objects.update_or_create(product=product,defaults={'first_release_year':None,'release_not_before_year':2016,'release_source_url':'https://example.org/reviewed-brand-launch'})
+        candidate=m.DiscoveryCandidate.objects.create(provider='wayback',external_id='pre-bound-fixture',label='Deliberately invalid chronology fixture',category=product.category,source_url=point['source_url'],payload=point,resolved_product=product)
+        sources=m.Source.objects.count();prices=m.PriceObservation.objects.count()
+        with self.assertRaisesRegex(ValueError,'earliest possible year'):accept_price_capture(candidate,self.admin)
+        candidate.refresh_from_db();self.assertEqual(candidate.status,'pending')
+        self.assertEqual(m.Source.objects.count(),sources);self.assertEqual(m.PriceObservation.objects.count(),prices)
+    def drinkshop_candidate(self,external_id):
+        point=next(row for row in json.loads((settings.SEED_FILE.parent.parent/'prices/archive-research.json').read_text())['points'] if row.get('parser')=='drinkshop_primary_price_table' and row['product']=='bombay-sapphire')
+        call_command('sync_research',verbosity=0)
+        product=m.Product.objects.get(slug=point['product'])
+        candidate=m.DiscoveryCandidate.objects.create(provider='wayback',external_id=external_id,label='Reviewed DrinkShop query fixture',category=product.category,source_url=point['source_url'],payload=point,resolved_product=product)
+        return candidate
+    def test_drinkshop_original_query_is_preserved_during_reviewed_acceptance(self):
+        from .prices import accept_price_capture
+        candidate=self.drinkshop_candidate('drinkshop-valid-query')
+        self.assertIn('?prodid=',candidate.payload['source_url'])
+        price=accept_price_capture(candidate,self.admin)
+        self.assertEqual(price.retailer,'TheDrinkShop.com')
+        self.assertEqual(price.variant.product.slug,'bombay-sapphire')
+        self.assertEqual(str(price.amount),candidate.payload['amount'])
+    def test_drinkshop_acceptance_rejects_changed_identifier_extra_query_and_review_holds(self):
+        from .prices import accept_price_capture
+        candidate=self.drinkshop_candidate('drinkshop-tampered-query');original=copy.deepcopy(candidate.payload)
+        for suffix in ['&prodid=999','&redirect=https://example.org/']:
+            candidate.payload=copy.deepcopy(original)
+            for field in ['original_url','source_url']:candidate.payload[field]+=suffix
+            candidate.save()
+            with self.subTest(suffix=suffix),self.assertRaises(ValueError):accept_price_capture(candidate,self.admin)
+        target=m.PriceArchiveTarget.objects.get(product=candidate.resolved_product,retailer_id=original['retailer_id'])
+        target.review_rules={'drinkshop':{'blocked_abv':[original['abv']],'reason':'Unresolved strength QA hold.'}};target.save()
+        candidate.payload=original;candidate.save()
+        with self.assertRaisesRegex(ValueError,'Unresolved strength QA hold'):accept_price_capture(candidate,self.admin)
+        candidate.refresh_from_db();self.assertEqual(candidate.status,'pending')
+    def test_primary_modern_price_minified_and_gzip(self):
+        import gzip
+        from .price_archive import parse_capture
+        target={'product':'test','retailer_id':2940,'tokens':['yamazaki','12'],'exclude_tokens':['18','miniature']}
+        body=b'<h1 class=product-main__name>Yamazaki 12 Year Old</h1><p class=product-main__data>70cl / 43%<div><p class=product-action__price>\xc2\xa3139<p class=product-action__vat-price>\xc2\xa3115.83 ex VAT</div><h1>Reviews</h1>'
+        row=parse_capture(gzip.compress(body),target,'20250903041823','https://www.thewhiskyexchange.com/p/2940/yamazaki-12-year-old')
+        self.assertEqual((row['amount'],row['volume_ml'],row['abv']),('139.00',700,'43'))
+        with self.assertRaises(ValueError):parse_capture(body.replace(b'12 Year',b'18 Year'),target,'20250903041823',row['original_url'])
+    def test_primary_2016_offer_excludes_exvat_and_related_prices(self):
+        from .price_archive import parse_capture
+        body='<h1 itemprop="name">Jameson</h1><span class="strength">70cl / 40%</span><div class="price-content" itemprop="offers"><meta itemprop="priceCurrency" content="GBP"><span class="price">£20.95</span><span class="exvat">£17.46 ex VAT</span></div><h1>Jameson Reviews</h1><span class="price">£99.99</span>'
+        target={'product':'test','retailer_id':2863,'tokens':['jameson']}
+        point=parse_capture(body.encode(),target,'20160809211012','https://www.thewhiskyexchange.com/p/2863/jameson')
+        self.assertEqual(point['amount'],'20.95')
+        with self.assertRaises(ValueError):parse_capture(body.replace('GBP','USD').replace('£20.95','$20.95').encode(),target,'20160809211012',point['original_url'])
+    def test_research_target_cannot_fetch_arbitrary_origin_or_product(self):
+        target=self.make_target();target.full_clean()
+        target.original_urls=['http://127.0.0.1/private']
+        with self.assertRaises(ValidationError):target.full_clean()
+        target.original_urls=['https://www.thewhiskyexchange.com/p/2863/jameson']
+        with self.assertRaises(ValidationError):target.full_clean()
+        target.original_urls=[];target.tokens='yamazaki'
+        with self.assertRaises(ValidationError):target.full_clean()
+        target.tokens=['yamazaki'];target.source_url='https://www.thewhiskyexchange.com/p/2863/jameson'
+        with self.assertRaises(ValidationError):target.full_clean()
+    def test_research_queue_permissions_csrf_and_duplicate_jobs(self):
+        target=self.make_target();url='/admin/catalog/product/research/'
+        self.assertEqual(self.client.get(url).status_code,302)
+        self.client.force_login(self.member);self.assertEqual(self.client.post(url,{'scope':'all'}).status_code,302)
+        self.client.force_login(self.admin)
+        self.assertEqual(self.client.post(url,{'target_id':str(target.pk)}).status_code,302)
+        self.client.post(url,{'target_id':str(target.pk)})
+        jobs=m.Job.objects.filter(kind='prices',parameters={'target_id':str(target.pk)})
+        self.assertEqual(jobs.count(),1);self.assertTrue(m.Audit.objects.filter(action='price.archive.queued').exists())
+        client=Client(enforce_csrf_checks=True);client.force_login(self.admin)
+        self.assertEqual(client.post(url,{'scope':'all'}).status_code,403)
+    def test_coverage_does_not_join_incomparable_formats_or_prelaunch_years(self):
+        from .research import coverage_rows
+        from datetime import date
+        p=m.Product.objects.get(slug='roku-japanese-craft');m.ProductResearch.objects.create(product=p,first_release_year=2017,release_source_url='https://house.suntory.com/heritage')
+        m.PriceObservation.objects.filter(variant__product=p).delete()
+        variants=list(p.variants.all());source=m.Source.objects.first()
+        for variant,year in [(variants[0],2000),(variants[1],2026)]:m.PriceObservation.objects.create(variant=variant,observed_on=date(year,1,1),amount='20',currency='GBP',country='United Kingdom',retailer='QA',source=source)
+        row=coverage_rows(m.Product.objects.filter(pk=p.pk))[0]
+        self.assertFalse(row['twenty_year_series']);self.assertFalse(row['twenty_year_evidence']);self.assertEqual(row['comparable_span_years'],0)
+        self.assertEqual(row['years'][0]['year'],2017);self.assertNotIn(2000,row['missing_years'])
+    def test_config_sync_preserves_editor_changes_and_exports_coverage(self):
+        call_command('sync_research',verbosity=0)
+        target=m.PriceArchiveTarget.objects.first();target.enabled=False;target.tokens=['editor revised identity'];target.save()
+        call_command('sync_research',verbosity=0);target.refresh_from_db()
+        self.assertFalse(target.enabled);self.assertEqual(target.tokens,['editor revised identity'])
+        self.client.force_login(self.admin);response=self.client.get('/admin/catalog/product/research/?format=json')
+        self.assertEqual(response.status_code,200);self.assertEqual(len(response.json()['rows']),55)
+        self.assertIn('attachment',response['Content-Disposition'])
+
+    def test_all_canonical_products_have_sourced_current_price_and_paired_views_are_real(self):
+        products=m.Product.objects.filter(status='published',edition_of__isnull=True,merged_into__isnull=True)
+        self.assertEqual(products.count(),55)
+        for p in products:
+            self.assertTrue(m.PriceObservation.objects.filter(variant__product=p).exclude(source__url__contains='example.com').exists(),p.slug)
+        p=m.Product.objects.get(slug='monkey-47-schwarzwald')
+        photos=self.client.get('/api/v1/products/'+p.slug).json()['photos']
+        pairs={x['pair_key'] for x in photos if x.get('pair_key')}
+        self.assertTrue(any({'front','back'}.issubset({x['view'] for x in photos if x.get('pair_key')==pair}) for pair in pairs))
+    def test_price_basis_and_unknown_tax_survive_public_export_and_api(self):
+        p=m.Product.objects.get(slug='roku-japanese-craft');variant=p.variants.first();source=m.Source.objects.first()
+        price=m.PriceObservation.objects.create(variant=variant,observed_on='2017-01-01',amount='4000',currency='JPY',country='Japan',retailer='Manufacturer recommended price',source=source,basis='launch_msrp',tax_included=None,notes='Announced recommended price, not a transaction.')
+        row=next(r for r in self.client.get('/api/v1/products/'+p.slug).json()['prices'] if r['retailer']=='Manufacturer recommended price')
+        self.assertIsNone(row['tax_included']);self.assertEqual(row['basis'],'launch_msrp');self.assertIn('not a transaction',row['notes'])
+        with tempfile.TemporaryDirectory() as tmp:
+            path=Path(tmp)/'public.json';export_file(path,'json');doc=json.loads(path.read_text())
+            data=next(r for r in doc['tables']['price_observations'] if r['id']==str(price.id));self.assertIsNone(data['tax_included']);self.assertEqual(data['basis'],'launch_msrp');validate_document(doc)
+    def test_external_photo_reference_requires_visual_review_and_remains_a_link(self):
+        p=m.Product.objects.get(slug='suntory-yamazaki-12-years-old')
+        ref=m.ExternalPhotoReference.objects.create(product=p,view='back',source_page='https://example.com/product',image_url='https://example.com/rear.jpg',publisher='Fixture source',rights_note='All rights retained; external reference only.',edition_note='QA reference',verified_on='2026-10-25')
+        self.assertNotIn('Fixture source',[r['publisher'] for r in self.client.get('/api/v1/products/'+p.slug).json()['external_photo_references']])
+        ref.verified=True;ref.full_clean();ref.save()
+        item=next(r for r in self.client.get('/api/v1/products/'+p.slug).json()['external_photo_references'] if r['publisher']=='Fixture source')
+        self.assertEqual(item['source_page'],ref.source_page);self.assertEqual(item['image_url'],ref.image_url);self.assertEqual(item['display_mode'],'external_link')
+        old=copy.deepcopy(self.doc);old['tables'].pop('external_photo_references',None);validate_document(old)
+    def test_view_only_staff_cannot_accept_prices_or_publish_photos(self):
+        from django.contrib.auth.models import Permission
+        from django.contrib.admin.sites import AdminSite
+        from django.test import RequestFactory
+        from .admin import CandidateAdmin,accept_price_captures,approve_photos
+        from django.core.exceptions import PermissionDenied
+        user=get_user_model().objects.create_user('view-only-editor',is_staff=True)
+        user.user_permissions.add(Permission.objects.get(codename='view_discoverycandidate'))
+        request=RequestFactory().post('/admin/catalog/discoverycandidate/');request.user=user
+        admin=CandidateAdmin(m.DiscoveryCandidate,AdminSite())
+        self.assertNotIn('accept_price_captures',admin.get_actions(request))
+        with self.assertRaises(PermissionDenied):accept_price_captures(admin,request,m.DiscoveryCandidate.objects.none())
+        with self.assertRaises(PermissionDenied):approve_photos(admin,request,m.BottlePhoto.objects.none())

@@ -15,6 +15,7 @@ from django.shortcuts import get_object_or_404
 from . import models as m
 from .interchange import validate_document, encode
 from .cache import public_cache
+from .price_dates import price_bounds
 
 
 def reply(data,status=200): return JsonResponse(data,safe=not isinstance(data,list),status=status,json_dumps_params={'default':encode})
@@ -149,11 +150,13 @@ def product(request,slug):
         recipes.append({'id':r.id,'version':r.version,'declared_count':r.declared_count,'process':r.process,'notes':r.notes,'source':source_data(r.source),'ingredients':[{'id':x.ingredient.id,'slug':x.ingredient.slug,'name':x.ingredient.name,'scientific_name':x.ingredient.scientific_name,'certainty':x.certainty,'stage':x.stage,'amount':x.amount,'unit':x.unit,'notes':x.notes,'source':source_data(x.source)} for x in r.ingredients.all()]})
     result['recipes']=recipes
     result['alternatives']=[{**card(x),'shared_ingredients':shared,'basis':'Shared indexed ingredients' if shared else 'Same category; no ingredient overlap established'} for x,shared in related(p)]
-    result['photos']=[{'id':x.id,'view':x.view,'url':x.local_path,'credit':x.author,'license':x.license,'source_url':x.source_page,'caption':x.edition_note} for x in p.assets.all()]+[{'id':x.id,'view':x.view,'url':x.photo.url,'credit':x.credit,'license':x.license,'source_url':x.source_url,'caption':x.caption} for x in p.community_photos.filter(approved=True)]
+    result['photos']=[{'id':x.id,'view':x.view,'url':x.local_path,'pair_key':x.pair_key,'barcode':x.barcode,'credit':x.author,'license':x.license,'source_url':x.source_page,'caption':x.edition_note} for x in p.assets.all()]+[{'id':x.id,'view':x.view,'url':x.photo.url,'pair_key':x.pair_key,'barcode':x.barcode,'credit':x.credit,'license':x.license,'source_url':x.source_url,'caption':x.caption} for x in p.community_photos.filter(approved=True)]
+    result['external_photo_references']=[{'view':x.view,'source_page':x.source_page,'image_url':x.image_url,'display_mode':'external_link','publisher':x.publisher,'rights_note':x.rights_note,'edition_note':x.edition_note,'verified_on':x.verified_on} for x in p.external_photo_references.filter(verified=True)]
     result['review_dimensions']=p.reviews.filter(approved=True).aggregate(**{key:Avg(key) for key in ['aroma','taste','finish','value','design']}) | p.reviews.filter(approved=True).aggregate(**{key+'_count':Count(key) for key in ['aroma','taste','finish','value','design']})
     ids=m.RecipeIngredient.objects.filter(recipe__product=p).values_list('ingredient_id',flat=True)
     compounds=m.Compound.objects.filter(ingredientcompound__ingredient_id__in=ids).distinct().prefetch_related('studies__source')
-    result['prices']=[{'variant_id':v.variant_id,'date':v.observed_on,'amount':v.amount,'currency':v.currency,'country':v.country,'retailer':v.retailer,'variant':str(v.variant),'volume_ml':v.variant.volume_ml,'abv':v.variant.abv,'promotion':v.promotion,'tax_included':v.tax_included,'source':source_data(v.source)} for v in m.PriceObservation.objects.filter(variant__product=p).select_related('variant__product__brand','source').order_by('observed_on')]
+    result['prices']=[{'variant_id':v.variant_id,'date':v.observed_on,'period':v.observed_period or None,'date_precision':v.date_precision,'amount':v.amount,'currency':v.currency,'country':v.country,'retailer':v.retailer,'variant':str(v.variant),'volume_ml':v.variant.volume_ml,'abv':v.variant.abv,'basis':v.basis,'notes':v.notes,'promotion':v.promotion,'tax_included':v.tax_included,'source':source_data(v.source)} for v in sorted(m.PriceObservation.objects.filter(variant__product=p).select_related('variant__product__brand','source'),key=price_bounds)]
+    result['market_indexes']=[{'id':x.id,'slug':x.slug,'title':x.title,'currency':x.currency,'territory':x.territory,'statistic':x.statistic,'unit_scope':x.unit_scope,'method':x.method,'notes':x.notes,'method_source_url':x.method_source_url,'fact_sha256':x.fact_sha256,'source':source_data(x.source),'date_precision':'month','points':[{'period':point.period,'value':point.value} for point in x.points.all()]} for x in p.market_indexes.filter(verified=True).select_related('source').prefetch_related('points')]
     result['compounds']=[{'id':c.id,'name':c.name,'ingredients':list(c.ingredientcompound_set.filter(ingredient_id__in=ids).values_list('ingredient__name',flat=True)),'notes':c.notes,'mechanisms':[{'target':x.target,'action':x.action,'evidence_context':x.evidence_context,'limitation':x.limitation,'source':source_data(x.source)} for x in c.mechanisms.select_related('source').all()],'studies':[{'title':s.title,'design':s.design,'population':s.population,'finding':s.finding,'limitation':s.limitation,'beverage_evidence':s.beverage_evidence,'source':source_data(s.source)} for s in c.studies.all()]} for c in compounds]
     result['critic_reviews']=[{'critic':x.critic,'summary':x.summary,'score':x.score,'score_max':x.score_max,'source':source_data(x.source)} for x in p.critic_reviews.select_related('source').all()]
     ethanol=m.Compound.objects.filter(slug='ethanol').first()
@@ -219,14 +222,17 @@ def collection(request):
 @require_GET
 @auth(True)
 def operations(request):
+    if not request.user.has_perm('catalog.view_job'):return reply({'error':'Job viewing permission is required.'},403)
     return reply({'jobs':[{'id':j.id,'kind':j.kind,'status':j.status,'created_at':j.created_at,'size':j.size,'sha256':j.checksum,'error':j.error} for j in m.Job.objects.order_by('-created_at')[:50]],'discovery_candidates':m.DiscoveryCandidate.objects.count(),'discovery_images':m.DiscoveryCandidate.objects.exclude(image_path='').count(),'cursors':list(m.DiscoveryCursor.objects.values('key','cursor','exhausted')),'pending_submissions':m.Submission.objects.filter(status='pending').count(),'pending_reviews':m.Review.objects.filter(approved=False).count(),'pending_photos':m.BottlePhoto.objects.filter(approved=False).count()})
 
 @require_POST
 @auth(True)
 @api
 def create_job(request):
+    if not request.user.has_perm('catalog.add_job'):return reply({'error':'Job creation permission is required.'},403)
     data=body(request); kind=data.get('kind')
-    if kind not in ['json','jsonl','sql','discover','research','prices']: raise ValueError('Choose json, jsonl, sql, discover, research or prices.')
+    if kind=='sql' and not request.user.is_superuser:return reply({'error':'Private database backups are restricted to instance owners.'},403)
+    if kind not in ['json','jsonl','sql','discover','research','prices','memento']: raise ValueError('Choose json, jsonl, sql, discover, research, prices or memento.')
     if m.Job.objects.filter(status__in=['queued','running']).count()>=5: return reply({'error':'Queue is full. Wait for current jobs.'},429)
     job=m.Job.objects.create(kind=kind,created_by=request.user); audit(request,'export.queued',job.id,{'kind':kind})
     return reply({'id':job.id,'status':job.status},202)
@@ -235,7 +241,9 @@ def create_job(request):
 @auth(True)
 @api
 def import_data(request):
+    if not request.user.has_perm('catalog.add_job'):return reply({'error':'Job creation permission is required.'},403)
     data=body(request); doc=data['document']; counts=validate_document(doc)
+    if data.get('commit') and not request.user.is_superuser:return reply({'error':'Cross-table catalogue imports are restricted to instance owners.'},403)
     if not data.get('commit'): return reply({'valid':True,'counts':counts,'mode':'Upsert by UUID; no deletion. Replaces fields on matching records.'})
     if m.Job.objects.filter(status__in=['queued','running']).count()>=5: return reply({'error':'Queue is full.'},429)
     job=m.Job.objects.create(kind='import',created_by=request.user)
@@ -247,7 +255,9 @@ def import_data(request):
 @auth(True)
 @api
 def download(request,job_id,manifest=False):
+    if not request.user.has_perm('catalog.view_job'):return reply({'error':'Job viewing permission is required.'},403)
     job=get_object_or_404(m.Job,id=job_id,status='done')
+    if job.kind=='sql' and not request.user.is_superuser:return reply({'error':'Private database backups are restricted to instance owners.'},403)
     filename=f'{job.id}.manifest.json' if manifest else job.filename
     path=settings.EXPORT_ROOT/filename
     if path.parent!=settings.EXPORT_ROOT or not path.is_file(): raise Http404()
